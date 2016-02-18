@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87836591C768A1A00DDFF27 /* AppDelegate.swift */; };
 		D878365C1C768A1A00DDFF27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878365B1C768A1A00DDFF27 /* ViewController.swift */; };
 		D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878365D1C768A1A00DDFF27 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836561C768A1A00DDFF27 /* Palliative Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palliative Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836591C768A1A00DDFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D878365B1C768A1A00DDFF27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B68356638F6722864756B63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D878364D1C768A1A00DDFF27 = {
 			isa = PBXGroup;
 			children = (
 				D87836581C768A1A00DDFF27 /* Palliative Mobile */,
 				D87836571C768A1A00DDFF27 /* Products */,
+				FE77B35328373E1EA5CD62EC /* Pods */,
+				7B68356638F6722864756B63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "Palliative Mobile";
 			sourceTree = "<group>";
 		};
+		FE77B35328373E1EA5CD62EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */,
+				82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D87836681C768A1A00DDFF27 /* Build configuration list for PBXNativeTarget "Palliative Mobile" */;
 			buildPhases = (
+				483DD494468ECBF7ECB85292 /* Check Pods Manifest.lock */,
 				D87836521C768A1A00DDFF27 /* Sources */,
 				D87836531C768A1A00DDFF27 /* Frameworks */,
 				D87836541C768A1A00DDFF27 /* Resources */,
+				F79E06EEA07957175AFE017D /* Embed Pods Frameworks */,
+				0F159BFEA45AFBB30E8E6CD9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F159BFEA45AFBB30E8E6CD9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		483DD494468ECBF7ECB85292 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F79E06EEA07957175AFE017D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D87836521C768A1A00DDFF27 /* Sources */ = {
@@ -247,6 +322,7 @@
 		};
 		D87836691C768A1A00DDFF27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Palliative Mobile/Info.plist";
@@ -259,6 +335,7 @@
 		};
 		D878366A1C768A1A00DDFF27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Palliative Mobile/Info.plist";
@@ -288,6 +365,7 @@
 				D878366A1C768A1A00DDFF27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
