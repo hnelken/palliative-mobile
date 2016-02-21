@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
+		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87836591C768A1A00DDFF27 /* AppDelegate.swift */; };
 		D878365C1C768A1A00DDFF27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878365B1C768A1A00DDFF27 /* ViewController.swift */; };
 		D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878365D1C768A1A00DDFF27 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87679301C7A645F00F23541 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
 		D87836561C768A1A00DDFF27 /* Palliative Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palliative Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836591C768A1A00DDFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D878365B1C768A1A00DDFF27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				D87836601C768A1A00DDFF27 /* Assets.xcassets */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
 				D87836651C768A1A00DDFF27 /* Info.plist */,
+				D87679301C7A645F00F23541 /* WebInterface.swift */,
 			);
 			path = "Palliative Mobile";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				D878365C1C768A1A00DDFF27 /* ViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
