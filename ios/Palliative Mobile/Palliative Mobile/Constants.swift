@@ -8,6 +8,15 @@
 
 import Foundation
 
+// SEGUE IDENTIFIERS
+let kBookmarkSegueID = "toBookmarks"
+let kArticleSegueID = "toArticleDisplay"
+
+
+// CELL IDENTIFIERS
+let kHomeCellID = "homeCell"
+
+// SERVER URL STRINGS
 let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
