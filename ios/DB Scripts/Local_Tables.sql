@@ -5,13 +5,13 @@
 -- all pages for heirachical structure
 CREATE TABLE pages (
   id               integer PRIMARY KEY,
-  parent_id        integer,
+  parent_id        integer NOT NULL,
   title            text,
   subtitle         text,
-  is_bookmarked    integer(1),
-  allow_bookmarked integer(1),
+  is_bookmarked    integer(1) NOT NULL,
+  allow_bookmarked integer(1) NOT NULL,
   text             blob,
-  link_text        text,
+  link_text        text,	
   content_id       integer
 );
 
