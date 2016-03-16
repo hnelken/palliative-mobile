@@ -21,3 +21,6 @@ let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
 
+public extension String {
+    var NS: NSString { return (self as NSString) }
+}
