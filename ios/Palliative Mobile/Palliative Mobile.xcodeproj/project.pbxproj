@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
-		D826B3621C99FAC400BF83CC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3571C99FAC400BF83CC /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D826B3631C99FAC400BF83CC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3591C99FAC400BF83CC /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D826B3641C99FAC400BF83CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B35B1C99FAC400BF83CC /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D826B3651C99FAC400BF83CC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B35D1C99FAC400BF83CC /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D826B3661C99FAC400BF83CC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3601C99FAC400BF83CC /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D826B3671C99FAC400BF83CC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D826B3611C99FAC400BF83CC /* Info.plist */; };
 		D826B3691C99FB5F00BF83CC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */; };
 		D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */ = {isa = PBXBuildFile; fileRef = D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */; };
+		D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B36C1C9A022800BF83CC /* DBInterface.swift */; };
+		D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37D1C9A106000BF83CC /* FMDatabase.m */; };
+		D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37F1C9A106000BF83CC /* FMDatabaseAdditions.m */; };
+		D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3811C9A106000BF83CC /* FMDatabasePool.m */; };
+		D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3831C9A106000BF83CC /* FMDatabaseQueue.m */; };
+		D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3861C9A106000BF83CC /* FMResultSet.m */; };
 		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D87679361C7A686200F23541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679351C7A686200F23541 /* Constants.swift */; };
 		D876793B1C7A87BF00F23541 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D876793A1C7A87BF00F23541 /* logo.png */; };
@@ -234,20 +234,21 @@
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDisplayViewController.swift; sourceTree = "<group>"; };
-		D826B3561C99FAC400BF83CC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		D826B3571C99FAC400BF83CC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		D826B3581C99FAC400BF83CC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		D826B3591C99FAC400BF83CC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		D826B35A1C99FAC400BF83CC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		D826B35B1C99FAC400BF83CC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		D826B35C1C99FAC400BF83CC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		D826B35D1C99FAC400BF83CC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		D826B35E1C99FAC400BF83CC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		D826B35F1C99FAC400BF83CC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		D826B3601C99FAC400BF83CC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		D826B3611C99FAC400BF83CC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hierarchy_test.db; sourceTree = "<group>"; };
+		D826B36C1C9A022800BF83CC /* DBInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
+		D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Palliative Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		D826B37C1C9A106000BF83CC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		D826B37D1C9A106000BF83CC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		D826B37E1C9A106000BF83CC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		D826B37F1C9A106000BF83CC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		D826B3801C9A106000BF83CC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		D826B3811C9A106000BF83CC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		D826B3821C9A106000BF83CC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		D826B3831C9A106000BF83CC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D826B3841C9A106000BF83CC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		D826B3851C9A106000BF83CC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		D826B3861C9A106000BF83CC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		D87679301C7A645F00F23541 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
 		D87679351C7A686200F23541 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D876793A1C7A87BF00F23541 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -484,23 +485,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D826B3551C99FAC400BF83CC /* fmdb */ = {
+		D826B38C1C9A106900BF83CC /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				D826B3561C99FAC400BF83CC /* FMDatabase.h */,
-				D826B3571C99FAC400BF83CC /* FMDatabase.m */,
-				D826B3581C99FAC400BF83CC /* FMDatabaseAdditions.h */,
-				D826B3591C99FAC400BF83CC /* FMDatabaseAdditions.m */,
-				D826B35A1C99FAC400BF83CC /* FMDatabasePool.h */,
-				D826B35B1C99FAC400BF83CC /* FMDatabasePool.m */,
-				D826B35C1C99FAC400BF83CC /* FMDatabaseQueue.h */,
-				D826B35D1C99FAC400BF83CC /* FMDatabaseQueue.m */,
-				D826B35E1C99FAC400BF83CC /* FMDB.h */,
-				D826B35F1C99FAC400BF83CC /* FMResultSet.h */,
-				D826B3601C99FAC400BF83CC /* FMResultSet.m */,
-				D826B3611C99FAC400BF83CC /* Info.plist */,
+				D826B37C1C9A106000BF83CC /* FMDatabase.h */,
+				D826B37D1C9A106000BF83CC /* FMDatabase.m */,
+				D826B37E1C9A106000BF83CC /* FMDatabaseAdditions.h */,
+				D826B37F1C9A106000BF83CC /* FMDatabaseAdditions.m */,
+				D826B3801C9A106000BF83CC /* FMDatabasePool.h */,
+				D826B3811C9A106000BF83CC /* FMDatabasePool.m */,
+				D826B3821C9A106000BF83CC /* FMDatabaseQueue.h */,
+				D826B3831C9A106000BF83CC /* FMDatabaseQueue.m */,
+				D826B3841C9A106000BF83CC /* FMDB.h */,
+				D826B3851C9A106000BF83CC /* FMResultSet.h */,
+				D826B3861C9A106000BF83CC /* FMResultSet.m */,
 			);
-			path = fmdb;
+			name = FMDB;
 			sourceTree = "<group>";
 		};
 		D87679371C7A761400F23541 /* Data Model */ = {
@@ -509,6 +509,8 @@
 				D87836591C768A1A00DDFF27 /* AppDelegate.swift */,
 				D87679301C7A645F00F23541 /* WebInterface.swift */,
 				D87679351C7A686200F23541 /* Constants.swift */,
+				D826B36C1C9A022800BF83CC /* DBInterface.swift */,
+				D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */,
 				D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */,
 			);
 			name = "Data Model";
@@ -772,7 +774,7 @@
 		D87836581C768A1A00DDFF27 /* Palliative Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				D826B3551C99FAC400BF83CC /* fmdb */,
+				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
@@ -855,7 +857,6 @@
 				D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */,
 				D8767A951C7A8BC500F23541 /* rss.png in Resources */,
 				D8767A4F1C7A8BC500F23541 /* hand-search.png in Resources */,
-				D826B3671C99FAC400BF83CC /* Info.plist in Resources */,
 				D8767A061C7A8BC500F23541 /* !.png in Resources */,
 				D8767A151C7A8BC500F23541 /* box.png in Resources */,
 				D8767A131C7A8BC500F23541 /* box-down.png in Resources */,
@@ -1120,14 +1121,15 @@
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
-				D826B3621C99FAC400BF83CC /* FMDatabase.m in Sources */,
-				D826B3641C99FAC400BF83CC /* FMDatabasePool.m in Sources */,
-				D826B3651C99FAC400BF83CC /* FMDatabaseQueue.m in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
-				D826B3661C99FAC400BF83CC /* FMResultSet.m in Sources */,
+				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
+				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
-				D826B3631C99FAC400BF83CC /* FMDatabaseAdditions.m in Sources */,
+				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
+				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,
+				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
+				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1241,11 +1243,14 @@
 			baseConfigurationReference = 47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Palliative Mobile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cwru.sp16.Palliative-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Palliative Mobile/Palliative Mobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1254,11 +1259,13 @@
 			baseConfigurationReference = 82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Palliative Mobile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cwru.sp16.Palliative-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Palliative Mobile/Palliative Mobile-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
         // Database filename can have extension db/sqlite.
         let documentsDirectory = paths[0]
-        let appDBPath = documentsDirectory.NS.stringByAppendingString("hierarchy_test.db")
+        let appDBPath = documentsDirectory.NS.stringByAppendingString(kDBName)
         
         success = fileManager.fileExistsAtPath(appDBPath)
         if (success) {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             // The writable database does not exist, so copy the default to the appropriate location.
-            let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent("hierarchy_test.db");
+            let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
             try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
             print("Successfully copied database from bundle to app's document")
         }
