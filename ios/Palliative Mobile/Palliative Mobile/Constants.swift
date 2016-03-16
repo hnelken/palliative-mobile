@@ -8,10 +8,13 @@
 
 import Foundation
 
+// GLOBAL OBJECTS
+let web = WebInterface()
+let db = DBInterface()
+
 // SEGUE IDENTIFIERS
 let kBookmarkSegueID = "toBookmarks"
 let kArticleSegueID = "toArticleDisplay"
-
 
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
@@ -20,4 +23,10 @@ let kHomeCellID = "homeCell"
 let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
+// DATABASE STRINGS
+let kDBName = "hierarchy_test.db"
 
+
+public extension String {
+    var NS: NSString { return (self as NSString) }
+}

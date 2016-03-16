@@ -24,6 +24,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        db.getAllData()
+        
         rapidButton.layer.cornerRadius = 20
         rapidButton.clipsToBounds = true
         
