@@ -13,9 +13,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func createCopyOfDatabaseIfNeeded() {
+        var success: Bool
+        let fileManager = NSFileManager.defaultManager()
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
+        // Database filename can have extension db/sqlite.
+        let documentsDirectory = paths[0]
+        let appDBPath = documentsDirectory.NS.stringByAppendingString(kDBName)
+        
+        success = fileManager.fileExistsAtPath(appDBPath)
+        if (success) {
+            print("Database already exists in app's document")
+            return;
+        }
+        
+        do {
+            // The writable database does not exist, so copy the default to the appropriate location.
+            let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
+            try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
+            print("Successfully copied database from bundle to app's document")
+        }
+        catch {
+            print("Failed to create writable database file")
+        }
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        createCopyOfDatabaseIfNeeded()
+        
         return true
     }
 
