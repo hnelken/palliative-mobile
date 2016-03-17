@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        db.getPage(1)
+        //db.getPage(1)
         
         self.tableView.separatorStyle = .None
     }
@@ -106,6 +106,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if let id = segueID {
            performSegueWithIdentifier(id, sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destVC = segue.destinationViewController as? ArticleDisplayViewController {
+            
+            let page = db.getPage(1)
+            let pageContent = page[kPageContentKey] as! [AnyObject]
+            
+            destVC.titleText = pageContent[kContentTitleIndex] as? String
+            destVC.subtitleText = pageContent[kContentSubtitleIndex] as? String
+            destVC.descriptionText = pageContent[kContentTextIndex] as? String
+            destVC.links = page[kPageLinksKey] as! [[AnyObject]]
         }
     }
 }

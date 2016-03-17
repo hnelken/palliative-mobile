@@ -11,24 +11,42 @@ import UIKit
 class DBInterface: NSObject {
 
     func getPage(id: Int32) -> [String : AnyObject] {
-        let page = [
-            kPageContentKey : [ "Title", "Subtitle", "Content/Description"],
-            kPageLinksKey : [["LinkTitle", 0], ["LinkTitle2", 1]]
-        ]
         
+        var page: [String : AnyObject] = [ : ]
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
+        let getPageQuery = "SELECT * FROM pages WHERE id=\(id)"
+        let getLinksQuery = "SELECT id, link_text FROM pages WHERE parent_id=\(id)"
         
         // Query results
         do {
-            let results = try database.executeQuery(sqlSelectQuery, values: [])
+            var results = try database.executeQuery(getPageQuery, values: [])
             while(results.next()) {
+                // Get the page with the given ID
                 
-                // loading your data into the array, dictionaries.
-                print("Title = \(results.stringForColumn("title"))")
+                let title = results.stringForColumn("title")
+                let subtitle = results.stringForColumn("subtitle")
+                let text = results.stringForColumn("text")
+                let content = [title, subtitle, text]
+                
+                page[kPageContentKey] = content
             }
+            
+            var links: [[AnyObject]] = []
+            results = try database.executeQuery(getLinksQuery, values: [])
+            while results.next() {
+                // Get the children of the given page ID
+                
+                let link_text = results.stringForColumn("link_text")
+                let link_id = NSNumber(int: results.intForColumn("id"))
+                let link: [AnyObject] = [link_text, link_id]
+                
+                links.append(link)
+            }
+            
+            page[kPageLinksKey] = links
+            
             database.close()
         }
         catch {

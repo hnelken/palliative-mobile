@@ -17,8 +17,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = [
-        ["Rapid PC Assessment", 0],
-        ["Care for the Frail", 1]
+        ["Random Link 1", 1],
+        ["Random Link 2", 2]
     ]
     
     var titleText: String?
@@ -40,6 +40,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         if let description = descriptionText {
             descriptionLabel.text = description
         }
+        
+        // Update table
+        
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
@@ -77,7 +80,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         // Get link titles
         let link = links[indexPath.row]
-        cell.textLabel?.text = link[0] as? String
+        cell.textLabel?.text = link[kLinkNameIndex] as? String
         cell.accessoryType = .DisclosureIndicator
         
         return cell
@@ -100,7 +103,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         self.descriptionText = nextContent[kContentTextIndex]
         self.links = nextLinks
         
+        tableView.reloadData()
         self.viewDidLoad()
+        
     }
 
     /*
