@@ -12,8 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var firstTime: Bool = false
+    
     func createCopyOfDatabaseIfNeeded() {
+        firstTime = false
         var success: Bool
         let fileManager = NSFileManager.defaultManager()
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
@@ -32,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
             try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
             print("Successfully copied database from bundle to app's document")
+            firstTime = true
         }
         catch {
             print("Failed to create writable database file")

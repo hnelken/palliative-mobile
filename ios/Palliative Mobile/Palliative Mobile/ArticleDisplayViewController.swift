@@ -8,12 +8,18 @@
 
 import UIKit
 
-class ArticleDisplayViewController: UIViewController {
+class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var nextPage: [String : AnyObject]?
+    var links: [[AnyObject]] = [
+        ["Rapid PC Assessment", 0],
+        ["Care for the Frail", 1]
+    ]
     
     var titleText: String?
     var subtitleText: String?
@@ -48,6 +54,54 @@ class ArticleDisplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //
+    // MARK: Table View Delegate/Data Source
+    //
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return links.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return tableView.frame.height / 2
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath)
+        
+        // Get link titles
+        let link = links[indexPath.row]
+        cell.textLabel?.text = link[0] as? String
+        cell.accessoryType = .DisclosureIndicator
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Look up page in DB
+        let link = links[indexPath.row]
+        let dstID = link[kLinkIDIndex] as! NSNumber
+        
+        let page = db.getPage(dstID.intValue)
+        
+        let nextContent: [String] = page[kPageContentKey] as! [String]
+        let nextLinks: [[AnyObject]] = page[kPageLinksKey] as! [[AnyObject]]
+        
+        self.titleText = nextContent[kContentTitleIndex]
+        self.subtitleText = nextContent[kContentSubtitleIndex]
+        self.descriptionText = nextContent[kContentTextIndex]
+        self.links = nextLinks
+        
+        self.viewDidLoad()
+    }
 
     /*
     // MARK: - Navigation

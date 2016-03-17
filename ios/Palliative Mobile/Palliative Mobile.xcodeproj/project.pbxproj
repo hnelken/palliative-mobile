@@ -17,6 +17,7 @@
 		D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3811C9A106000BF83CC /* FMDatabasePool.m */; };
 		D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3831C9A106000BF83CC /* FMDatabaseQueue.m */; };
 		D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3861C9A106000BF83CC /* FMResultSet.m */; };
+		D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */; };
 		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D87679361C7A686200F23541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679351C7A686200F23541 /* Constants.swift */; };
 		D876793B1C7A87BF00F23541 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D876793A1C7A87BF00F23541 /* logo.png */; };
@@ -249,6 +250,7 @@
 		D826B3841C9A106000BF83CC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		D826B3851C9A106000BF83CC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		D826B3861C9A106000BF83CC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RapidPCViewController.swift; sourceTree = "<group>"; };
 		D87679301C7A645F00F23541 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
 		D87679351C7A686200F23541 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D876793A1C7A87BF00F23541 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		D87679391C7A765000F23541 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */,
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
@@ -1122,6 +1125,7 @@
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,

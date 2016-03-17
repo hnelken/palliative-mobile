@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var links: [String] = [
+        "Rapid PC Assessment",
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
@@ -18,7 +19,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     ]
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var rapidButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +26,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         db.getAllData()
         
-        rapidButton.layer.cornerRadius = 20
-        rapidButton.clipsToBounds = true
-        
         self.tableView.separatorStyle = .None
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let del = UIApplication.sharedApplication().delegate as! AppDelegate
+        if del.firstTime {
+            del.firstTime = false
+            //Create the AlertController
+            let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "It appears this is your first time here, complete this survey.", preferredStyle: .ActionSheet)
+            
+            //Create and add the Cancel action
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Skip", style: .Cancel) { action -> Void in
+                //Just dismiss the action sheet
+            }
+            actionSheetController.addAction(cancelAction)
+            //Create and add first option action
+            let takePictureAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
+                //Code for launching the camera goes here
+                self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
+            }
+            actionSheetController.addAction(takePictureAction)
+            //Present the AlertController
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +60,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLayoutSubviews() {
         navigationController?.navigationBarHidden = true
+        self.tableView.separatorStyle = .None
     }
 
     @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
 
+    
+    //
+    // MARK: Table View Delegate/Data Source
+    //
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -72,7 +99,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 3: segueID = kBookmarkSegueID
+        case 0: segueID = kRapidPCSegueID
+        case 4: segueID = kBookmarkSegueID
         default: segueID = kArticleSegueID
         }
         
