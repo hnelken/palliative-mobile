@@ -18,14 +18,16 @@ CREATE TABLE pages (
 -- table for looking up content ids matched with the location on disk
 CREATE TABLE contents (
   id       integer PRIMARY KEY,
-  location text
+  type     integer(1),
+  content  text
 );
 
 -- table for verifying that the local DB is up to date with the Master one
-CREATE TABLE db_version (
-  id           integer PRIMARY KEY,
-  version      text,
-  updated_date text
+-- this will also store demographic information, area, age, experience, dept.
+CREATE TABLE settings (
+  id    integer PRIMARY KEY,
+  name  text,
+  value 
 );
 
 CREATE TABLE bookmarks (
