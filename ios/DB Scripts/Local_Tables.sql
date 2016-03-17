@@ -9,7 +9,6 @@ CREATE TABLE pages (
   title            text,
   subtitle         text,
   is_bookmarked    integer(1) NOT NULL,
-  allow_bookmarked integer(1) NOT NULL,
   text             blob,
   link_text        text,	
   content_id       integer
@@ -22,18 +21,36 @@ CREATE TABLE contents (
   content  text
 );
 
--- table for verifying that the local DB is up to date with the Master one
--- this will also store demographic information, area, age, experience, dept.
-CREATE TABLE settings (
-  id    integer PRIMARY KEY,
-  name  text,
-  value 
-);
-
 CREATE TABLE bookmarks (
   id      integer PRIMARY KEY,
   page_id integer
 );
 
+-- table for verifying that the local DB is up to date with the Master one
+-- this will also store demographic information, area, age, experience, dept.
+CREATE TABLE settings (
+  id    integer PRIMARY KEY,
+  name  text,
+  value text
+);
+-------------------------QUIZ STUFF-----------------------------
+CREATE TABLE quizzes (
+  id   integer PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE questions (
+  id      integer PRIMARY KEY,
+  quiz_id integer,
+  text    integer
+);
+
+CREATE TABLE quiz_session (
+
+);
+
+CREATE TABLE question_session (
+
+);
 
 
