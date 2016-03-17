@@ -14,6 +14,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bookmarkButton: UIButton!
     
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = [
@@ -24,6 +25,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     var titleText: String?
     var subtitleText: String?
     var descriptionText: String?
+    var bookmarked: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +43,18 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             descriptionLabel.text = description
         }
         
-        // Update table
-        
+        if let marked = bookmarked {
+            if !marked {
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            }
+            else {
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            }
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
@@ -55,6 +67,21 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func bookmarkPressed(sender: AnyObject) {
+        
+        if let marked = bookmarked {
+            if !marked {
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+                bookmarked = true
+            }
+            else {
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+                bookmarked = false
+            }
+        }
+        
     }
     
     //

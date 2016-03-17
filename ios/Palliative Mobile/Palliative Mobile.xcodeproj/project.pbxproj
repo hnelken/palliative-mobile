@@ -223,6 +223,8 @@
 		D8767ACD1C7A90A000F23541 /* mic-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D8767ACB1C7A90A000F23541 /* mic-white.png */; };
 		D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */; };
 		D8767AD11C7A9E8700F23541 /* home-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D8767AD01C7A9E8700F23541 /* home-white.png */; };
+		D87754901C9B5556002D831E /* bookmark-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D877548F1C9B5556002D831E /* bookmark-white.png */; };
+		D87754921C9B58FC002D831E /* bookmark-red.png in Resources */ = {isa = PBXBuildFile; fileRef = D87754911C9B58FC002D831E /* bookmark-red.png */; };
 		D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87836591C768A1A00DDFF27 /* AppDelegate.swift */; };
 		D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878365B1C768A1A00DDFF27 /* HomeViewController.swift */; };
 		D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878365D1C768A1A00DDFF27 /* Main.storyboard */; };
@@ -456,6 +458,8 @@
 		D8767ACB1C7A90A000F23541 /* mic-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic-white.png"; sourceTree = "<group>"; };
 		D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		D8767AD01C7A9E8700F23541 /* home-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-white.png"; sourceTree = "<group>"; };
+		D877548F1C9B5556002D831E /* bookmark-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-white.png"; sourceTree = "<group>"; };
+		D87754911C9B58FC002D831E /* bookmark-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-red.png"; sourceTree = "<group>"; };
 		D87836561C768A1A00DDFF27 /* Palliative Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palliative Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836591C768A1A00DDFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D878365B1C768A1A00DDFF27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -524,6 +528,8 @@
 				D8767ACA1C7A90A000F23541 /* look-white.png */,
 				D8767ACB1C7A90A000F23541 /* mic-white.png */,
 				D8767AD01C7A9E8700F23541 /* home-white.png */,
+				D877548F1C9B5556002D831E /* bookmark-white.png */,
+				D87754911C9B58FC002D831E /* bookmark-red.png */,
 				D876793C1C7A8BC500F23541 /* 192 Vector icons($4.99) */,
 				D876793A1C7A87BF00F23541 /* logo.png */,
 				D87836651C768A1A00DDFF27 /* Info.plist */,
@@ -870,6 +876,7 @@
 				D8767A241C7A8BC500F23541 /* cart2.png in Resources */,
 				D8767A1E1C7A8BC500F23541 /* call.png in Resources */,
 				D8767A2E1C7A8BC500F23541 /* custom.png in Resources */,
+				D87754901C9B5556002D831E /* bookmark-white.png in Resources */,
 				D8767A2F1C7A8BC500F23541 /* CUT.png in Resources */,
 				D8767A111C7A8BC500F23541 /* book-tags.png in Resources */,
 				D8767A3A1C7A8BC500F23541 /* earphone.png in Resources */,
@@ -937,6 +944,7 @@
 				D8767AA61C7A8BC500F23541 /* step.png in Resources */,
 				D8767A071C7A8BC500F23541 /* 360.png in Resources */,
 				D8767A5F1C7A8BC500F23541 /* link.png in Resources */,
+				D87754921C9B58FC002D831E /* bookmark-red.png in Resources */,
 				D8767AB71C7A8BC500F23541 /* USB.png in Resources */,
 				D8767A7F1C7A8BC500F23541 /* pic.png in Resources */,
 				D8767AC81C7A8BC500F23541 /* readme.txt in Resources */,
