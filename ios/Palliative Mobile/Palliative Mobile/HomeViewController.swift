@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        db.getAllData()
+        db.getPage(1)
         
         self.tableView.separatorStyle = .None
     }

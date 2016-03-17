@@ -16,30 +16,24 @@ class DBInterface: NSObject {
             kPageLinksKey : [["LinkTitle", 0], ["LinkTitle2", 1]]
         ]
         
-//        // Look the page up in the database
-//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-//        let docsPath = paths[0]
-//        let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
-//        
-//        let database = FMDatabase(path: dbPath)
-//        database.open()
-//        
-//        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
-//        
-//        // Query results
-//        do {
-//            let results = try database.executeQuery(sqlSelectQuery, values: [])
-//            while(results.next()) {
-//                let strID = "\(results.intForColumn(results.columnNameForIndex(0)))"
-//                
-//                // loading your data into the array, dictionaries.
-//                print("ID = \(strID)")
-//            }
-//            database.close()
-//        }
-//        catch {
-//            database.close()
-//        }
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
+        
+        // Query results
+        do {
+            let results = try database.executeQuery(sqlSelectQuery, values: [])
+            while(results.next()) {
+                
+                // loading your data into the array, dictionaries.
+                print("Title = \(results.stringForColumn("title"))")
+            }
+            database.close()
+        }
+        catch {
+            database.close()
+        }
         
         return page
     }
@@ -47,25 +41,23 @@ class DBInterface: NSObject {
     
     func getAllData() {
         // Getting the database path.
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let docsPath = paths[0]
-        let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
-    
+  
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        let sqlSelectQuery = "SELECT 254"
-    
+        let sqlSelectQuery = "SELECT name FROM sqlite_master WHERE type='table'"
+        
         // Query results
         do {
-            
+            var count = 0
             let results = try database.executeQuery(sqlSelectQuery, values: [])
             while(results.next()) {
                 //let strID = "\(results.intForColumn("ID"))"
-    
+                print(results.stringForColumn("name"))
                 // loading your data into the array, dictionaries.
-                print(results.stringForColumnIndex(0))
+                count++
             }
+            print(count)
             database.close()
         }
         catch {

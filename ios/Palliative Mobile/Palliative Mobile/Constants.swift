@@ -28,7 +28,7 @@ let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
 // DATABASE CONSTANTS
-let kDBName = "hierarchy_test.db"
+let kDBName = "app_test.db"
 let kLinkNameIndex = 0
 let kLinkIDIndex = 1
 let kContentTitleIndex = 0
@@ -36,6 +36,13 @@ let kContentSubtitleIndex = 1
 let kContentTextIndex = 2
 let kPageContentKey = "content"
 let kPageLinksKey = "links"
+
+var dbPath: String {
+    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    let docsPath = paths[0]
+    let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
+    return dbPath
+}
 
 
 public extension String {

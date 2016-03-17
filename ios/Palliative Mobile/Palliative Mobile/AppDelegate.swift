@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
         // Database filename can have extension db/sqlite.
         let documentsDirectory = paths[0]
-        let appDBPath = documentsDirectory.NS.stringByAppendingString(kDBName)
+        let appDBPath = documentsDirectory.NS.stringByAppendingPathComponent(kDBName)
         
         success = fileManager.fileExistsAtPath(appDBPath)
         if (success) {
