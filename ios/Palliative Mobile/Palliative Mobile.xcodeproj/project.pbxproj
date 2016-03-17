@@ -10,7 +10,6 @@
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
 		D826B3691C99FB5F00BF83CC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */; };
-		D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */ = {isa = PBXBuildFile; fileRef = D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */; };
 		D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B36C1C9A022800BF83CC /* DBInterface.swift */; };
 		D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37D1C9A106000BF83CC /* FMDatabase.m */; };
 		D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37F1C9A106000BF83CC /* FMDatabaseAdditions.m */; };
@@ -236,7 +235,6 @@
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDisplayViewController.swift; sourceTree = "<group>"; };
 		D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hierarchy_test.db; sourceTree = "<group>"; };
 		D826B36C1C9A022800BF83CC /* DBInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
 		D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Palliative Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		D826B37C1C9A106000BF83CC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -513,7 +511,6 @@
 				D87679351C7A686200F23541 /* Constants.swift */,
 				D826B36C1C9A022800BF83CC /* DBInterface.swift */,
 				D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */,
-				D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -857,7 +854,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */,
 				D8767A951C7A8BC500F23541 /* rss.png in Resources */,
 				D8767A4F1C7A8BC500F23541 /* hand-search.png in Resources */,
 				D8767A061C7A8BC500F23541 /* !.png in Resources */,

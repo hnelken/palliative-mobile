@@ -16,30 +16,30 @@ class DBInterface: NSObject {
             kPageLinksKey : [["LinkTitle", 0], ["LinkTitle2", 1]]
         ]
         
-        // Look the page up in the database
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let docsPath = paths[0]
-        let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
-        
-        let database = FMDatabase(path: dbPath)
-        database.open()
-        
-        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
-        
-        // Query results
-        do {
-            let results = try database.executeQuery(sqlSelectQuery, values: [])
-            while(results.next()) {
-                let strID = "\(results.intForColumn(results.columnNameForIndex(0)))"
-                
-                // loading your data into the array, dictionaries.
-                print("ID = \(strID)")
-            }
-            database.close()
-        }
-        catch {
-            database.close()
-        }
+//        // Look the page up in the database
+//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+//        let docsPath = paths[0]
+//        let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
+//        
+//        let database = FMDatabase(path: dbPath)
+//        database.open()
+//        
+//        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
+//        
+//        // Query results
+//        do {
+//            let results = try database.executeQuery(sqlSelectQuery, values: [])
+//            while(results.next()) {
+//                let strID = "\(results.intForColumn(results.columnNameForIndex(0)))"
+//                
+//                // loading your data into the array, dictionaries.
+//                print("ID = \(strID)")
+//            }
+//            database.close()
+//        }
+//        catch {
+//            database.close()
+//        }
         
         return page
     }
@@ -54,18 +54,17 @@ class DBInterface: NSObject {
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        let sqlSelectQuery = "SELECT * FROM 'pages'"
+        let sqlSelectQuery = "SELECT 254"
     
         // Query results
         do {
             
-            try database.executeStatements("CREATE TABLE pages")
-            let resultsWithNameLocation = try database.executeQuery(sqlSelectQuery, values: [])
-            while(resultsWithNameLocation.next()) {
-                let strID = "\(resultsWithNameLocation.intForColumn("ID"))"
+            let results = try database.executeQuery(sqlSelectQuery, values: [])
+            while(results.next()) {
+                //let strID = "\(results.intForColumn("ID"))"
     
                 // loading your data into the array, dictionaries.
-                print("ID = \(strID)")
+                print(results.stringForColumnIndex(0))
             }
             database.close()
         }
