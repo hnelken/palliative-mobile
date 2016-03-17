@@ -10,7 +10,7 @@ import UIKit
 
 class DBInterface: NSObject {
 
-    func getPage(id: Int32) -> [String : AnyObject] {
+    func getPage(id: Int) -> [String : AnyObject] {
         
         var page: [String : AnyObject] = [ : ]
         let database = FMDatabase(path: dbPath)

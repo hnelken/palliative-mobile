@@ -225,6 +225,7 @@
 		D8767AD11C7A9E8700F23541 /* home-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D8767AD01C7A9E8700F23541 /* home-white.png */; };
 		D87754901C9B5556002D831E /* bookmark-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D877548F1C9B5556002D831E /* bookmark-white.png */; };
 		D87754921C9B58FC002D831E /* bookmark-red.png in Resources */ = {isa = PBXBuildFile; fileRef = D87754911C9B58FC002D831E /* bookmark-red.png */; };
+		D87754941C9B6524002D831E /* backarrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D87754931C9B6524002D831E /* backarrow-white.png */; };
 		D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87836591C768A1A00DDFF27 /* AppDelegate.swift */; };
 		D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878365B1C768A1A00DDFF27 /* HomeViewController.swift */; };
 		D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878365D1C768A1A00DDFF27 /* Main.storyboard */; };
@@ -460,6 +461,7 @@
 		D8767AD01C7A9E8700F23541 /* home-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-white.png"; sourceTree = "<group>"; };
 		D877548F1C9B5556002D831E /* bookmark-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-white.png"; sourceTree = "<group>"; };
 		D87754911C9B58FC002D831E /* bookmark-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-red.png"; sourceTree = "<group>"; };
+		D87754931C9B6524002D831E /* backarrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backarrow-white.png"; sourceTree = "<group>"; };
 		D87836561C768A1A00DDFF27 /* Palliative Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palliative Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836591C768A1A00DDFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D878365B1C768A1A00DDFF27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				D8767AD01C7A9E8700F23541 /* home-white.png */,
 				D877548F1C9B5556002D831E /* bookmark-white.png */,
 				D87754911C9B58FC002D831E /* bookmark-red.png */,
+				D87754931C9B6524002D831E /* backarrow-white.png */,
 				D876793C1C7A8BC500F23541 /* 192 Vector icons($4.99) */,
 				D876793A1C7A87BF00F23541 /* logo.png */,
 				D87836651C768A1A00DDFF27 /* Info.plist */,
@@ -1033,6 +1036,7 @@
 				D8767ACC1C7A90A000F23541 /* look-white.png in Resources */,
 				D8767A841C7A8BC500F23541 /* prev1.png in Resources */,
 				D8767AA41C7A8BC500F23541 /* star1.png in Resources */,
+				D87754941C9B6524002D831E /* backarrow-white.png in Resources */,
 				D8767A8D1C7A8BC500F23541 /* refresh2.png in Resources */,
 				D8767AC71C7A8BC500F23541 /* preview.jpg in Resources */,
 				D8767A641C7A8BC500F23541 /* mac_folder-check.png in Resources */,

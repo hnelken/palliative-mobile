@@ -15,6 +15,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = [
@@ -22,10 +23,12 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         ["Random Link 2", 2]
     ]
     
+    var parentID: Int?
     var titleText: String?
     var subtitleText: String?
     var descriptionText: String?
     var bookmarked: Bool?
+    var initMarked: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +46,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             descriptionLabel.text = description
         }
         
+        // Check bookmarked status
         if let marked = bookmarked {
+            initMarked = marked
             if !marked {
                 bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
             }
@@ -54,6 +59,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         else {
             bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
             bookmarked = false
+            initMarked = false
         }
         
         // Resize labels and scroll view
@@ -84,6 +90,44 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+    @IBAction func backPressed(sender: AnyObject) {
+        // Commit bookmark changes
+        
+        self.navigationController?.popViewControllerAnimated(true)
+//        // Get predecessor page id
+//        if let parent = parentID {
+//            transitionToPage(parent)
+//        }
+//        else {
+//            performSegueWithIdentifier("backToHomeSegue", sender: self)
+//        }
+        
+    }
+    
+    //
+    // MARK: Private api
+    //
+    private func transitionToPage(dstID: Int) {//, tableView: UITableView) {
+        
+        
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
+        let page = db.getPage(dstID)
+        
+        let nextContent: [String] = page[kPageContentKey] as! [String]
+        let nextLinks: [[AnyObject]] = page[kPageLinksKey] as! [[AnyObject]]
+        
+        vc.titleText = nextContent[kContentTitleIndex]
+        vc.subtitleText = nextContent[kContentSubtitleIndex]
+        vc.descriptionText = nextContent[kContentTextIndex]
+        vc.links = nextLinks
+//
+//        tableView.reloadData()
+        //        self.viewDidLoad()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
     //
     // MARK: Table View Delegate/Data Source
     //
@@ -92,46 +136,42 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         return 1
     }
     
+    // Cell count
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return links.count
     }
     
+    // Cell height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         return tableView.frame.height / 2
     }
     
+    // Formats the cells in the table
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath)
         
         // Get link titles
         let link = links[indexPath.row]
-        cell.textLabel?.text = link[kLinkNameIndex] as? String
+        if let linkName = link[kLinkNameIndex] as? String {
+            cell.textLabel?.text = linkName
+        }
+        else {  // Link text is missing in db
+            cell.textLabel?.text = "(title missing)"
+        }
         cell.accessoryType = .DisclosureIndicator
         
         return cell
     }
     
+    // Reformats article upon select
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        // Look up page in DB
         let link = links[indexPath.row]
         let dstID = link[kLinkIDIndex] as! NSNumber
-        
-        let page = db.getPage(dstID.intValue)
-        
-        let nextContent: [String] = page[kPageContentKey] as! [String]
-        let nextLinks: [[AnyObject]] = page[kPageLinksKey] as! [[AnyObject]]
-        
-        self.titleText = nextContent[kContentTitleIndex]
-        self.subtitleText = nextContent[kContentSubtitleIndex]
-        self.descriptionText = nextContent[kContentTextIndex]
-        self.links = nextLinks
-        
-        tableView.reloadData()
-        self.viewDidLoad()
+        transitionToPage(dstID.integerValue)//, tableView: tableView)
         
     }
 
