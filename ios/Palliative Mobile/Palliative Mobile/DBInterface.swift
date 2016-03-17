@@ -24,7 +24,7 @@ class DBInterface: NSObject {
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        let sqlSelectQuery = "SELECT * FROM 'pages' WHERE id=\(id)"
+        let sqlSelectQuery = "SELECT * FROM pages WHERE id=\(id)"
         
         // Query results
         do {
