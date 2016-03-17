@@ -28,5 +28,10 @@ CREATE TABLE db_version (
   updated_date text
 );
 
+CREATE TABLE bookmarks (
+  id      integer PRIMARY KEY,
+  page_id integer
+);
+
 
 
