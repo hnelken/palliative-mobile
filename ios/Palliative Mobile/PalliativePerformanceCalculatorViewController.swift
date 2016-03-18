@@ -12,6 +12,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
 
     @IBOutlet weak var ambulation: UIButton!
     @IBOutlet weak var activity: UIButton!
+    @IBOutlet weak var selfCare: UIButton!
     
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         
         ambulation.setTitle("ambuation", forState: UIControlState.Normal)
         activity.setTitle("Activity & Evidence of Disease", forState: UIControlState.Normal)
+        selfCare.setTitle("Self-Care", forState: UIControlState.Normal)
         
         // Do any additional setup after loading the view.
     }
@@ -38,11 +40,17 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         self.performSegueWithIdentifier("activity", sender: self)
     }
     
+    @IBAction func selfCare(sender: AnyObject) {
+        self.performSegueWithIdentifier("selfCare", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //let segue: String = segue.identifier!
         
-        if segue.identifier == "ambulation" || segue.identifier == "activity"
+        let id = segue.identifier
+        
+        if id == "ambulation" || id == "activity" || id == "selfCare"
         {
             let vc = segue.destinationViewController 
             

@@ -46,29 +46,48 @@
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Y1n-ap-gdR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-GN-FYw">
+                                <rect key="frame" x="20" y="172" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="hga-ZU-aWs"/>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Oux-Wn-7mc"/>
+                                    <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="qg4-lo-kEy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xaQ-mn-q0e" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="6zG-nc-Za5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kBs-GN-FYw" secondAttribute="trailing" id="BcR-fk-tYq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iZW-36-Xvq" secondAttribute="leading" id="I1H-aW-qWZ"/>
                             <constraint firstItem="HoI-gs-sLc" firstAttribute="top" secondItem="iZW-36-Xvq" secondAttribute="bottom" constant="8" id="Jr5-uZ-JQ2"/>
+                            <constraint firstItem="kBs-GN-FYw" firstAttribute="top" secondItem="HoI-gs-sLc" secondAttribute="bottom" constant="8" id="MIn-QU-IhP"/>
                             <constraint firstItem="iZW-36-Xvq" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="PFM-6Y-FS9"/>
                             <constraint firstItem="iZW-36-Xvq" firstAttribute="top" secondItem="xaQ-mn-q0e" secondAttribute="bottom" constant="19.5" id="Rxj-oQ-OqV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iZW-36-Xvq" secondAttribute="trailing" id="ULa-Ef-WSW"/>
                             <constraint firstItem="HoI-gs-sLc" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="UP2-AE-9Fm"/>
+                            <constraint firstItem="kBs-GN-FYw" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="dyY-rs-tgl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HoI-gs-sLc" secondAttribute="trailing" id="jBJ-Sb-DtS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xaQ-mn-q0e" secondAttribute="leading" id="lrr-Oa-bhJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xaQ-mn-q0e" secondAttribute="trailing" id="ugY-ft-HR5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kBs-GN-FYw" secondAttribute="leading" id="vvi-I7-FWM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="HoI-gs-sLc" secondAttribute="leading" id="yFd-rO-4iE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activity" destination="HoI-gs-sLc" id="EPf-Jc-Cc5"/>
                         <outlet property="ambulation" destination="iZW-36-Xvq" id="e46-MS-rcg"/>
+                        <outlet property="selfCare" destination="kBs-GN-FYw" id="B8o-Sa-MEY"/>
                         <segue destination="5Hv-y8-rxa" kind="popoverPresentation" identifier="ambulation" popoverAnchorView="iZW-36-Xvq" id="Qvz-mJ-4Wz">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                         <segue destination="mnj-dE-ZCH" kind="popoverPresentation" identifier="activity" popoverAnchorView="HoI-gs-sLc" id="Vvm-xX-SSc">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="dde-No-khK" kind="popoverPresentation" identifier="selfCare" popoverAnchorView="kBs-GN-FYw" id="QYB-kz-lMI">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -132,6 +151,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKo-M9-uKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2202" y="-303"/>
+        </scene>
+        <!--Self Care View Controller-->
+        <scene sceneID="HFl-Dj-Gt8">
+            <objects>
+                <tableViewController id="dde-No-khK" customClass="SelfCareViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JhD-bl-ynt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="selfCareCell" id="ORT-CW-Vco">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORT-CW-Vco" id="Pgv-5T-Zdz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dde-No-khK" id="87w-lf-44Q"/>
+                            <outlet property="delegate" destination="dde-No-khK" id="GXS-LJ-KDm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRe-IH-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2202" y="395"/>
         </scene>
     </scenes>
 </document>

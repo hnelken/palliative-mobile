@@ -17,6 +17,7 @@ let kArticleSegueID = "toArticleDisplay"
 let kHomeCellID = "homeCell"
 let kAmbulationCellID = "ambulationCell"
 let kActivityCellID = "activityCell"
+let kSelfCareCellID = "selfCareCell"
 
 // SERVER URL STRINGS
 let kServerURL = "http://our server domain here/api/"
