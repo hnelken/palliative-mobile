@@ -13,14 +13,17 @@ let web = WebInterface()
 let db = DBInterface()
 
 // SEGUE IDENTIFIERS
+let kHomeSegueID = "toHome"
 let kRapidPCSegueID = "toRapidPC"
 let kBookmarkSegueID = "toBookmarks"
 let kArticleSegueID = "toArticleDisplay"
 let kFirstTimeSegueID = "toFirstTime"
 let kUnstableSegueID = "toUnstable"
+let kShowBookmarkSegueID = "displayBookmark"
 
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
+let kBookmarkCellID = "bookmarkCell"
 let kArticleLinkCellID = "articleLinkCell"
 
 // SERVER URL CONSTANTS
@@ -36,6 +39,7 @@ let kContentSubtitleIndex = 1
 let kContentTextIndex = 2
 let kPageContentKey = "content"
 let kPageLinksKey = "links"
+let kPageBookmarkedKey = "bookmarked"
 
 var dbPath: String {
     let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)

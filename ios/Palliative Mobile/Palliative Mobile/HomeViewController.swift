@@ -110,15 +110,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destVC = segue.destinationViewController as? ArticleDisplayViewController {
-            
-            let page = db.getPage(1)
-            let pageContent = page[kPageContentKey] as! [AnyObject]
-            
-            destVC.titleText = pageContent[kContentTitleIndex] as? String
-            destVC.subtitleText = pageContent[kContentSubtitleIndex] as? String
-            destVC.descriptionText = pageContent[kContentTextIndex] as? String
-            destVC.links = page[kPageLinksKey] as! [[AnyObject]]
+        if let vc = segue.destinationViewController as? ArticleDisplayViewController {
+            // Pass on page ID
+            vc.pageID = 1
         }
     }
 }

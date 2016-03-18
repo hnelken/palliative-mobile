@@ -18,56 +18,28 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var backButton: UIButton!
     
     var nextPage: [String : AnyObject]?
-    var links: [[AnyObject]] = [
-        ["Random Link 1", 1],
-        ["Random Link 2", 2]
-    ]
+    var links: [[AnyObject]] = []
     
-    var parentID: Int?
-    var titleText: String?
-    var subtitleText: String?
-    var descriptionText: String?
-    var bookmarked: Bool?
-    var initMarked: Bool?
+    var pageID: Int?
+    private var titleText: String?
+    private var subtitleText: String?
+    private var descriptionText: String?
+    private var bookmarked: Bool = false
+    private var initMarked: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        formatView()
         
-        // Update text labels with article text
-        if let title = titleText {
-            titleLabel.text = title
-        }
-        if let subtitle = subtitleText {
-            subtitleLabel.text = subtitle
-        }
-        if let description = descriptionText {
-            descriptionLabel.text = description
-        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let page = db.getPage(pageID!)
+        let isBookmarked: Bool = (page[kPageBookmarkedKey] as! NSNumber).boolValue
         
-        // Check bookmarked status
-        if let marked = bookmarked {
-            initMarked = marked
-            if !marked {
-                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
-            }
-            else {
-                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
-            }
-        }
-        else {
-            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
-            bookmarked = false
-            initMarked = false
-        }
-        
-        // Resize labels and scroll view
-        titleLabel.sizeToFit()
-        subtitleLabel.sizeToFit()
-        descriptionLabel.sizeToFit()
-        scrollView.sizeToFit()
-        
+        bookmarked = isBookmarked
+        initMarked = isBookmarked
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,52 +49,76 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func bookmarkPressed(sender: AnyObject) {
         
-        if let marked = bookmarked {
-            if !marked {
-                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
-                bookmarked = true
-            }
-            else {
-                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
-                bookmarked = false
-            }
+        if !bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            bookmarked = true
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
+    }
+    
+    @IBAction func homePressed(sender: AnyObject) {
+        // Commit bookmark changes
+        if bookmarked != initMarked {
+            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
         }
         
+        performSegueWithIdentifier(kHomeSegueID, sender: self)
     }
+    
     
     @IBAction func backPressed(sender: AnyObject) {
         // Commit bookmark changes
+        if bookmarked != initMarked {
+            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
+        }
         
         self.navigationController?.popViewControllerAnimated(true)
-//        // Get predecessor page id
-//        if let parent = parentID {
-//            transitionToPage(parent)
-//        }
-//        else {
-//            performSegueWithIdentifier("backToHomeSegue", sender: self)
-//        }
-        
     }
     
     //
-    // MARK: Private api
+    // MARK: Private
     //
-    private func transitionToPage(dstID: Int) {//, tableView: UITableView) {
+    private func formatView() {
+        // Get page
+        let page = db.getPage(pageID!)
+        let content: [String] = page[kPageContentKey] as! [String]
+        links = page[kPageLinksKey] as! [[AnyObject]]
+        bookmarked = (page[kPageBookmarkedKey] as! NSNumber).boolValue
+        initMarked = bookmarked
         
+        // Pass on the next article's info for display
+        titleText = content[kContentTitleIndex]
+        subtitleText = content[kContentSubtitleIndex]
+        descriptionText = content[kContentTextIndex]
+        
+        // Update text labels with article text
+        titleLabel.text = titleText
+        subtitleLabel.text = subtitleText
+        descriptionLabel.text = descriptionText
+        
+        // Check bookmarked status
+        if bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+        }
+        
+        // Resize labels and scroll view
+        titleLabel.sizeToFit()
+        subtitleLabel.sizeToFit()
+        descriptionLabel.sizeToFit()
+        scrollView.sizeToFit()
+    }
+    
+    private func transitionToPage(dstID: Int) {
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
-        let page = db.getPage(dstID)
         
-        let nextContent: [String] = page[kPageContentKey] as! [String]
-        let nextLinks: [[AnyObject]] = page[kPageLinksKey] as! [[AnyObject]]
-        
-        vc.titleText = nextContent[kContentTitleIndex]
-        vc.subtitleText = nextContent[kContentSubtitleIndex]
-        vc.descriptionText = nextContent[kContentTextIndex]
-        vc.links = nextLinks
-//
-//        tableView.reloadData()
-        //        self.viewDidLoad()
+        vc.pageID = dstID
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -169,9 +165,14 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        // Commit bookmark changes
+        if bookmarked != initMarked {
+            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
+        }
+        
         let link = links[indexPath.row]
         let dstID = link[kLinkIDIndex] as! NSNumber
-        transitionToPage(dstID.integerValue)//, tableView: tableView)
+        transitionToPage(dstID.integerValue)
         
     }
 

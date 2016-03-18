@@ -13,10 +13,6 @@ class RapidPCViewController: UIViewController {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
-    var titleText = "UNSTABLE patient"
-    var subtitleText = "Rapid screen for those on EOL trajectory"
-    var content = "For unstable patients use most resuscitative measures until you have more information. Ask yourself: “How do I reverse life threat as usual (ABCs, VS)?” ...but also ask yourself: “Does patient have cachexia, contractures, open wounds?” (b4 screen: relieve critical/unstable distress. 1st decrease suffering, stress, and anxiety for both the patient and family caregivers. In addition to considering how symptom-related suffering can be made better, consider how  underlying condition can be made better. The clinical condition may warrant antibiotics for infection, anticoagulation for thromboembolism, or intravenous fluids for dehydration. Careful attention must be paid when death is imminent. Goals of care must be assessed to determine the most appropriate next step for making things better, especially whether attempts for disease modification are warranted."
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,9 +43,7 @@ class RapidPCViewController: UIViewController {
         
         if let destVC = segue.destinationViewController as? ArticleDisplayViewController {
             
-            destVC.titleText = titleText
-            destVC.subtitleText = subtitleText
-            destVC.descriptionText = content
+            destVC.pageID = 8
         }
     }
 

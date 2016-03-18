@@ -184,7 +184,7 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="home-white.png"/>
                                         <connections>
-                                            <segue destination="5ec-uJ-Hfm" kind="unwind" identifier="backToHomeSegue" unwindAction="backToHomeSegue:" id="cPI-lf-elP"/>
+                                            <action selector="homePressed:" destination="iEU-RJ-q1D" eventType="touchUpInside" id="iBm-33-Onj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCD-gJ-Yot">
@@ -339,6 +339,7 @@
                         <outlet property="scrollView" destination="9xa-81-9sN" id="MUF-yb-EDM"/>
                         <outlet property="subtitleLabel" destination="8Rw-56-xGb" id="Qej-vI-fQe"/>
                         <outlet property="titleLabel" destination="Pfs-dF-Jfj" id="ikc-W6-fcr"/>
+                        <segue destination="5ec-uJ-Hfm" kind="unwind" identifier="toHome" unwindAction="backToHomeSegue:" id="dSp-Ca-r6X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vny-rl-ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,7 +491,7 @@
                                 <rect key="frame" x="20" y="77" width="560" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="n6z-DH-VK0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" id="n6z-DH-VK0">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6z-DH-VK0" id="F6d-bQ-5Ab">
@@ -499,6 +500,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GFE-em-qob" id="t0t-rw-1uV"/>
+                                    <outlet property="delegate" destination="GFE-em-qob" id="8qa-0g-gF7"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9S-7m-ASG">
                                 <rect key="frame" x="246" y="33" width="109" height="24"/>
@@ -530,6 +535,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bookmarkTableView" destination="iPm-yl-L7Y" id="MjS-iA-T6Y"/>
                         <segue destination="iEU-RJ-q1D" kind="show" identifier="displayBookmark" id="G7E-bF-vQr"/>
                     </connections>
                 </viewController>
@@ -566,6 +572,6 @@
         <image name="mic-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vme-qT-3dB"/>
+        <segue reference="G7E-bF-vQr"/>
     </inferredMetricsTieBreakers>
 </document>
