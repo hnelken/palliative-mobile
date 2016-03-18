@@ -18,13 +18,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         "Bookmarks"
     ]
     
+    var searchResults: [[AnyObject]] = []
+    
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var searchText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //db.getPage(1)
         
         self.tableView.separatorStyle = .None
     }
@@ -65,6 +65,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
 
+    @IBAction func searchPressed(sender: AnyObject) {
+        
+        if let query = searchText.text {
+            if query != "" {
+                searchResults = db.performSearch(query)
+                performSegueWithIdentifier(kShowSearchSegueID, sender: self)
+            }
+        }
+    }
     
     //
     // MARK: Table View Delegate/Data Source
@@ -113,6 +122,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let vc = segue.destinationViewController as? ArticleDisplayViewController {
             // Pass on page ID
             vc.pageID = 1
+        }
+        else if let vc = segue.destinationViewController as? SearchViewController {
+            
+            vc.results = searchResults
         }
     }
 }

@@ -92,6 +92,7 @@ class DBInterface: NSObject {
         
     }
     
+    // Retrieves all bookmarks as links
     func getBookmarks() -> [[AnyObject]] {
         var bookmarks: [[AnyObject]] = []
         let database = FMDatabase(path: dbPath)
@@ -111,7 +112,6 @@ class DBInterface: NSObject {
                     let bookmark = [text, pageID]
                     bookmarks.append(bookmark)
                 }
-                print(pageID)
             }
             database.close()
         }
@@ -121,30 +121,33 @@ class DBInterface: NSObject {
         return bookmarks
     }
     
-    func getAllData() {
-        // Getting the database path.
-  
+    // Performs search and returns all results as links
+    func performSearch(query: String) -> [[AnyObject]] {
+        var searchResults: [[AnyObject]] = []
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        let sqlSelectQuery = "SELECT name FROM sqlite_master WHERE type='table'"
-        
-        // Query results
+        // Get all bookmarks of the form [Link text, page id]
         do {
-            var count = 0
-            let results = try database.executeQuery(sqlSelectQuery, values: [])
+            let titleSearch = "title LIKE '%\(query)%' OR "
+            let subtitleSearch = "subtitle LIKE '%\(query)%' OR "
+            let textSearch = "text LIKE '%\(query)%'"
+
+            let searchQuery = "SELECT * FROM pages WHERE \(titleSearch)\(subtitleSearch)\(textSearch)"
+            let results = try database.executeQuery(searchQuery, values: [])
+            
             while results.next() {
-                //let strID = "\(results.intForColumn("ID"))"
-                print(results.stringForColumn("name"))
-                // loading your data into the array, dictionaries.
-                count++
+                let pageID = NSNumber(int: results.intForColumn("id"))
+                let text = results.stringForColumn("link_text")
+                let searchResult = [text, pageID]
+                searchResults.append(searchResult)
             }
-            print(count)
             database.close()
         }
         catch {
             database.close()
         }
-        
+        return searchResults
     }
+    
 }

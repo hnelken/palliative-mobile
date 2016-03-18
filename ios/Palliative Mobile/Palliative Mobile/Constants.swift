@@ -20,11 +20,14 @@ let kArticleSegueID = "toArticleDisplay"
 let kFirstTimeSegueID = "toFirstTime"
 let kUnstableSegueID = "toUnstable"
 let kShowBookmarkSegueID = "displayBookmark"
+let kShowSearchSegueID = "showSearchResults"
+let kShowSearchResultSegueID = "displaySearchResult"
 
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
 let kBookmarkCellID = "bookmarkCell"
 let kArticleLinkCellID = "articleLinkCell"
+let kSearchCellID = "searchCell"
 
 // SERVER URL CONSTANTS
 let kServerURL = "http://our server domain here/api/"
