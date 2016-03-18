@@ -4,11 +4,11 @@
 
 -- all pages for heirachical structure
 CREATE TABLE pages (
-  id               integer PRIMARY KEY,
-  parent_id        integer NOT NULL,
+  id               integer,--  PRIMARY KEY,
+  parent_id        integer,-- NOT NULL,
   title            text,
   subtitle         text,
-  is_bookmarked    integer(1) NOT NULL,
+  is_bookmarked    integer(1),-- NOT NULL,
   text             blob,
   link_text        text,	
   content_id       integer
@@ -46,11 +46,11 @@ CREATE TABLE questions (
 );
 
 CREATE TABLE quiz_session (
-
+  id integer
 );
 
 CREATE TABLE question_session (
-
+  id integer
 );
 
 
