@@ -42,6 +42,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="i5K-SW-u5J"/>
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Y1n-ap-gdR"/>
                                 </connections>
                             </button>
@@ -62,11 +63,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activity" destination="HoI-gs-sLc" id="EPf-Jc-Cc5"/>
                         <outlet property="ambulation" destination="iZW-36-Xvq" id="e46-MS-rcg"/>
                         <segue destination="5Hv-y8-rxa" kind="popoverPresentation" identifier="ambulation" popoverAnchorView="iZW-36-Xvq" id="Qvz-mJ-4Wz">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
-                        <segue destination="mnj-dE-ZCH" kind="popoverPresentation" identifier="activity" id="Vvm-xX-SSc">
+                        <segue destination="mnj-dE-ZCH" kind="popoverPresentation" identifier="activity" popoverAnchorView="HoI-gs-sLc" id="Vvm-xX-SSc">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -103,16 +105,16 @@
             </objects>
             <point key="canvasLocation" x="1448" y="-303"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Activity List View Controller-->
         <scene sceneID="3S6-Fh-cv3">
             <objects>
-                <tableViewController id="mnj-dE-ZCH" sceneMemberID="viewController">
+                <tableViewController id="mnj-dE-ZCH" customClass="ActivityListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qbD-ht-dZD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MS1-gN-RaU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" id="MS1-gN-RaU">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MS1-gN-RaU" id="lwm-4p-SFH">

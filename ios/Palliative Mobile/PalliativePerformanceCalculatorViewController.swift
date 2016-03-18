@@ -11,12 +11,14 @@ import UIKit
 class PalliativePerformanceCalculatorViewController: UIViewController, UIPopoverPresentationControllerDelegate{
 
     @IBOutlet weak var ambulation: UIButton!
+    @IBOutlet weak var activity: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ambulation.setTitle("ambuation", forState: UIControlState.Normal)
+        activity.setTitle("Activity & Evidence of Disease", forState: UIControlState.Normal)
         
         // Do any additional setup after loading the view.
     }
@@ -32,9 +34,15 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         
     }
     
+    @IBAction func activity(sender: AnyObject) {
+        self.performSegueWithIdentifier("activity", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "ambulation"
+        //let segue: String = segue.identifier!
+        
+        if segue.identifier == "ambulation" || segue.identifier == "activity"
         {
             let vc = segue.destinationViewController 
             
