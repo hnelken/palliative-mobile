@@ -34,7 +34,7 @@ let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
 // DATABASE CONSTANTS
-let kDBName = "app_test.db"
+let kDBName = "master_local.db"
 let kLinkNameIndex = 0
 let kLinkIDIndex = 1
 let kContentTitleIndex = 0

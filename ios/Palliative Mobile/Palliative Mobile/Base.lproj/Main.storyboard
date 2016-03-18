@@ -367,7 +367,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vny-rl-ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5ec-uJ-Hfm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1406" y="909"/>
+            <point key="canvasLocation" x="1310" y="1103"/>
         </scene>
         <!--RapidPC View Controller-->
         <scene sceneID="Moo-Hy-Kpc">
@@ -398,6 +398,9 @@
                                 <state key="normal" title="YES">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iEU-RJ-q1D" kind="show" identifier="toStable" id="x0i-8j-ew7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGx-aG-Hsf">
                                 <rect key="frame" x="316" y="327" width="100" height="40"/>
@@ -482,7 +485,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3H-UA-uPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MLe-km-i6O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1374" y="236"/>
+            <point key="canvasLocation" x="1536" y="276"/>
         </scene>
         <!--BookmarksViewController-->
         <scene sceneID="nYu-OE-ZPF">
@@ -661,6 +664,6 @@
         <image name="mic-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yxc-af-N95"/>
+        <segue reference="x0i-8j-ew7"/>
     </inferredMetricsTieBreakers>
 </document>

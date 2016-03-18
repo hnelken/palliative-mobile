@@ -43,7 +43,12 @@ class RapidPCViewController: UIViewController {
         
         if let destVC = segue.destinationViewController as? ArticleDisplayViewController {
             
-            destVC.pageID = 8
+            if (segue.identifier == kUnstableSegueID) {
+                destVC.pageID = 3
+            }
+            else {
+                destVC.pageID = 9
+            }
         }
     }
 

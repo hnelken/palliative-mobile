@@ -18,7 +18,7 @@ class DBInterface: NSObject {
         database.open()
         
         let getPageQuery = "SELECT * FROM pages WHERE id=\(id)"
-        let getLinksQuery = "SELECT id, link_text FROM pages WHERE parent_id=\(id)"
+        let getLinksQuery = "SELECT id, title FROM pages WHERE parent_id=\(id)"
         
         // Query results
         do {
@@ -42,7 +42,7 @@ class DBInterface: NSObject {
             while results.next() {
                 // Get the children of the given page ID
                 
-                let link_text = results.stringForColumn("link_text")
+                let link_text = results.stringForColumn("title")//"link_text")
                 let link_id = NSNumber(int: results.intForColumn("id"))
                 let link: [AnyObject] = [link_text, link_id]
                 
@@ -105,10 +105,10 @@ class DBInterface: NSObject {
             
             while results.next() {
                 let pageID = NSNumber(int: results.intForColumn("page_id"))
-                let getBookmarksQuery: String = "SELECT link_text FROM pages WHERE id=\(pageID)"
+                let getBookmarksQuery: String = "SELECT title FROM pages WHERE id=\(pageID)"
                 let pages = try database.executeQuery(getBookmarksQuery, values: [])
                 while pages.next() {
-                    let text = pages.stringForColumn("link_text")
+                    let text = pages.stringForColumn("title")//"link_text")
                     let bookmark = [text, pageID]
                     bookmarks.append(bookmark)
                 }
@@ -138,7 +138,7 @@ class DBInterface: NSObject {
             
             while results.next() {
                 let pageID = NSNumber(int: results.intForColumn("id"))
-                let text = results.stringForColumn("link_text")
+                let text = results.stringForColumn("title")
                 let searchResult = [text, pageID]
                 searchResults.append(searchResult)
             }

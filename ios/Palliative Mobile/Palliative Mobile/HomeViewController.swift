@@ -121,7 +121,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? ArticleDisplayViewController {
             // Pass on page ID
-            vc.pageID = 1
+            vc.pageID = 51
         }
         else if let vc = segue.destinationViewController as? SearchViewController {
             
