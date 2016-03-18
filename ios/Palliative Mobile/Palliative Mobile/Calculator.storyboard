@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TGS-pI-KLS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Palliative Performance Calculator View Controller-->
+        <scene sceneID="RMr-AT-a1R">
+            <objects>
+                <viewController storyboardIdentifier="palliativePerformanceCalculator" id="TGS-pI-KLS" customClass="PalliativePerformanceCalculatorViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="btC-Yz-Mo1"/>
+                        <viewControllerLayoutGuide type="bottom" id="tmE-oc-eTP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNy-ww-vpE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Palliative performance scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaQ-mn-q0e">
+                                <rect key="frame" x="20" y="20" width="560" height="56.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56.5" id="l1M-LB-v9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZW-36-Xvq">
+                                <rect key="frame" x="20" y="96" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="OHj-Dz-1Ln"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoI-gs-sLc">
+                                <rect key="frame" x="20" y="134" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Y1n-ap-gdR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xaQ-mn-q0e" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="6zG-nc-Za5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iZW-36-Xvq" secondAttribute="leading" id="I1H-aW-qWZ"/>
+                            <constraint firstItem="HoI-gs-sLc" firstAttribute="top" secondItem="iZW-36-Xvq" secondAttribute="bottom" constant="8" id="Jr5-uZ-JQ2"/>
+                            <constraint firstItem="iZW-36-Xvq" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="PFM-6Y-FS9"/>
+                            <constraint firstItem="iZW-36-Xvq" firstAttribute="top" secondItem="xaQ-mn-q0e" secondAttribute="bottom" constant="19.5" id="Rxj-oQ-OqV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iZW-36-Xvq" secondAttribute="trailing" id="ULa-Ef-WSW"/>
+                            <constraint firstItem="HoI-gs-sLc" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="UP2-AE-9Fm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HoI-gs-sLc" secondAttribute="trailing" id="jBJ-Sb-DtS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xaQ-mn-q0e" secondAttribute="leading" id="lrr-Oa-bhJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xaQ-mn-q0e" secondAttribute="trailing" id="ugY-ft-HR5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HoI-gs-sLc" secondAttribute="leading" id="yFd-rO-4iE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ambulation" destination="iZW-36-Xvq" id="e46-MS-rcg"/>
+                        <segue destination="5Hv-y8-rxa" kind="popoverPresentation" identifier="ambulation" popoverAnchorView="iZW-36-Xvq" id="Qvz-mJ-4Wz">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="mnj-dE-ZCH" kind="popoverPresentation" identifier="activity" id="Vvm-xX-SSc">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtW-Ih-Qnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="395"/>
+        </scene>
+        <!--Ambulation List View Controller-->
+        <scene sceneID="5Bs-wh-TVp">
+            <objects>
+                <tableViewController id="5Hv-y8-rxa" customClass="AmbulationListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="03q-MG-cqe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ambulationCell" id="yYK-dw-r0P">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yYK-dw-r0P" id="L70-gA-Yc8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Hv-y8-rxa" id="vWE-rx-Y3d"/>
+                            <outlet property="delegate" destination="5Hv-y8-rxa" id="ZvB-oN-zuq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-P4-dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="-303"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="3S6-Fh-cv3">
+            <objects>
+                <tableViewController id="mnj-dE-ZCH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qbD-ht-dZD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MS1-gN-RaU">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MS1-gN-RaU" id="lwm-4p-SFH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mnj-dE-ZCH" id="Ze6-fr-IhQ"/>
+                            <outlet property="delegate" destination="mnj-dE-ZCH" id="rOS-2c-iIS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKo-M9-uKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2202" y="-303"/>
+        </scene>
+    </scenes>
+</document>

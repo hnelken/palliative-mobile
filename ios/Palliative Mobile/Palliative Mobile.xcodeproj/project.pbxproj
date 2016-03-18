@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21B6C09B1C7D29CC0068E28A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B6C09A1C7D29CC0068E28A /* Storyboard.storyboard */; };
+		21B6C09B1C7D29CC0068E28A /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B6C09A1C7D29CC0068E28A /* Questions.storyboard */; };
 		21B6C09D1C7D2DD40068E28A /* QuestionsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6C09C1C7D2DD40068E28A /* QuestionsHomeViewController.swift */; };
 		21B6C09F1C7D32740068E28A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6C09E1C7D32740068E28A /* QuestionsViewController.swift */; };
+		21E3F7A81C9B0EA20011B36A /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E3F7A71C9B0EA20011B36A /* Calculator.storyboard */; };
+		21E3F7AD1C9B50640011B36A /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7AC1C9B50640011B36A /* PalliativePerformanceCalculatorViewController.swift */; };
+		21E3F7B31C9BBBCD0011B36A /* AmbulationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7B21C9BBBCD0011B36A /* AmbulationListViewController.swift */; };
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D87679361C7A686200F23541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679351C7A686200F23541 /* Constants.swift */; };
@@ -224,9 +227,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21B6C09A1C7D29CC0068E28A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		21B6C09A1C7D29CC0068E28A /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
 		21B6C09C1C7D2DD40068E28A /* QuestionsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsHomeViewController.swift; sourceTree = "<group>"; };
 		21B6C09E1C7D32740068E28A /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		21E3F7A71C9B0EA20011B36A /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		21E3F7AC1C9B50640011B36A /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = ../PalliativePerformanceCalculatorViewController.swift; sourceTree = "<group>"; };
+		21E3F7B21C9BBBCD0011B36A /* AmbulationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbulationListViewController.swift; sourceTree = "<group>"; };
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +462,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21E3F7AE1C9BB7F90011B36A /* calculator view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21E3F7AC1C9B50640011B36A /* PalliativePerformanceCalculatorViewController.swift */,
+				21E3F7B21C9BBBCD0011B36A /* AmbulationListViewController.swift */,
+			);
+			name = "calculator view controllers";
+			sourceTree = "<group>";
+		};
 		7B68356638F6722864756B63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,9 +748,11 @@
 		D87836581C768A1A00DDFF27 /* Palliative Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				21E3F7A71C9B0EA20011B36A /* Calculator.storyboard */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
-				21B6C09A1C7D29CC0068E28A /* Storyboard.storyboard */,
+				21B6C09A1C7D29CC0068E28A /* Questions.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
+				21E3F7AE1C9BB7F90011B36A /* calculator view controllers */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
 				D87679381C7A762E00F23541 /* Extras */,
@@ -878,7 +895,7 @@
 				D8767A081C7A8BC500F23541 /* add-database.png in Resources */,
 				D8767A171C7A8BC500F23541 /* brush.png in Resources */,
 				D8767A631C7A8BC500F23541 /* mac_folder-add.png in Resources */,
-				21B6C09B1C7D29CC0068E28A /* Storyboard.storyboard in Resources */,
+				21B6C09B1C7D29CC0068E28A /* Questions.storyboard in Resources */,
 				D87836641C768A1A00DDFF27 /* LaunchScreen.storyboard in Resources */,
 				D8767A3B1C7A8BC500F23541 /* face.png in Resources */,
 				D8767A461C7A8BC500F23541 /* file-x.png in Resources */,
@@ -1009,6 +1026,7 @@
 				D8767A261C7A8BC500F23541 /* choose1.png in Resources */,
 				D8767ABA1C7A8BC500F23541 /* video2.png in Resources */,
 				D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */,
+				21E3F7A81C9B0EA20011B36A /* Calculator.storyboard in Resources */,
 				D8767AB01C7A8BC500F23541 /* Thumbs.db in Resources */,
 				D8767A7B1C7A8BC500F23541 /* pencil2.png in Resources */,
 				D8767AA01C7A8BC500F23541 /* signal1.png in Resources */,
@@ -1079,8 +1097,10 @@
 			files = (
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				21B6C09F1C7D32740068E28A /* QuestionsViewController.swift in Sources */,
+				21E3F7B31C9BBBCD0011B36A /* AmbulationListViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				21E3F7AD1C9B50640011B36A /* PalliativePerformanceCalculatorViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				21B6C09D1C7D2DD40068E28A /* QuestionsHomeViewController.swift in Sources */,
