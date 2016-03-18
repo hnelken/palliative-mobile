@@ -4,12 +4,11 @@
 
 -- all pages for heirachical structure
 CREATE TABLE pages (
-  id               integer PRIMARY KEY,
-  parent_id        integer NOT NULL,
+  id               integer,--  PRIMARY KEY,
+  parent_id        integer,-- NOT NULL,
   title            text,
   subtitle         text,
-  is_bookmarked    integer(1) NOT NULL,
-  allow_bookmarked integer(1) NOT NULL,
+  is_bookmarked    integer(1),-- NOT NULL,
   text             blob,
   link_text        text,	
   content_id       integer
@@ -18,14 +17,8 @@ CREATE TABLE pages (
 -- table for looking up content ids matched with the location on disk
 CREATE TABLE contents (
   id       integer PRIMARY KEY,
-  location text
-);
-
--- table for verifying that the local DB is up to date with the Master one
-CREATE TABLE db_version (
-  id           integer PRIMARY KEY,
-  version      text,
-  updated_date text
+  type     integer(1),
+  content  text
 );
 
 CREATE TABLE bookmarks (
@@ -33,5 +26,31 @@ CREATE TABLE bookmarks (
   page_id integer
 );
 
+-- table for verifying that the local DB is up to date with the Master one
+-- this will also store demographic information, area, age, experience, dept.
+CREATE TABLE settings (
+  id    integer PRIMARY KEY,
+  name  text,
+  value text
+);
+-------------------------QUIZ STUFF-----------------------------
+CREATE TABLE quizzes (
+  id   integer PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE questions (
+  id      integer PRIMARY KEY,
+  quiz_id integer,
+  text    integer
+);
+
+CREATE TABLE quiz_session (
+  id integer
+);
+
+CREATE TABLE question_session (
+  id integer
+);
 
 
