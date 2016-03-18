@@ -18,11 +18,12 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var linksLabel: UILabel!
     
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
     
-    var pageID: Int?
+    var pageID: Int!
     private var titleText: String?
     private var subtitleText: String?
     private var descriptionText: String?
@@ -37,7 +38,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidAppear(animated: Bool) {
-        let page = db.getPage(pageID!)
+        let page = db.getPage(pageID)
         let isBookmarked: Bool = (page[kPageBookmarkedKey] as! NSNumber).boolValue
         
         bookmarked = isBookmarked
@@ -48,7 +49,12 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         tableViewHeight.constant = 0
         tableView.setNeedsLayout()
         tableView.layoutIfNeeded()
-        tableViewHeight.constant = tableView.contentSize.height
+        tableViewHeight.constant = (tableView.contentSize.height > 150)
+            ? 150 : tableView.contentSize.height
+        
+        if links.count == 0 {
+            linksLabel.text = "No Links Avaliable"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +77,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBAction func homePressed(sender: AnyObject) {
         // Commit bookmark changes
         if bookmarked != initMarked {
-            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
+            db.commitBookmarkChanges(bookmarked, pageID: pageID)
         }
         
         performSegueWithIdentifier(kHomeSegueID, sender: self)
@@ -81,7 +87,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBAction func backPressed(sender: AnyObject) {
         // Commit bookmark changes
         if bookmarked != initMarked {
-            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
+            db.commitBookmarkChanges(bookmarked, pageID: pageID)
         }
         
         self.navigationController?.popViewControllerAnimated(true)
@@ -92,7 +98,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     //
     private func formatView() {
         // Get page
-        let page = db.getPage(pageID!)
+        let page = db.getPage(pageID)
         let content: [String] = page[kPageContentKey] as! [String]
         links = page[kPageLinksKey] as! [[AnyObject]]
         bookmarked = (page[kPageBookmarkedKey] as! NSNumber).boolValue
@@ -149,7 +155,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     // Cell height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 40
+        return 50
     }
     
     // Formats the cells in the table
@@ -176,7 +182,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         // Commit bookmark changes
         if bookmarked != initMarked {
-            db.commitBookmarkChanges(bookmarked, pageID: pageID!)
+            db.commitBookmarkChanges(bookmarked, pageID: pageID)
         }
         
         let link = links[indexPath.row]

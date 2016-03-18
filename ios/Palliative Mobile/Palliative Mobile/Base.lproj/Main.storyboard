@@ -274,11 +274,11 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rit-7s-2bz">
-                                        <rect key="frame" x="20" y="78" width="40" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rit-7s-2bz">
+                                        <rect key="frame" x="224" y="75" width="152" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Ikq-L0-aRM"/>
-                                            <constraint firstAttribute="width" constant="40" id="oSj-by-NxQ"/>
+                                            <constraint firstAttribute="width" constant="152" id="oSj-by-NxQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,6 +293,7 @@
                                     <constraint firstItem="gCD-gJ-Yot" firstAttribute="leading" secondItem="p9u-qt-SFp" secondAttribute="trailing" constant="-28" id="D8h-Wa-u4s"/>
                                     <constraint firstItem="gCD-gJ-Yot" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Rw-56-xGb" secondAttribute="trailing" constant="10" id="EMO-1Q-eg2"/>
                                     <constraint firstItem="p9u-qt-SFp" firstAttribute="top" secondItem="9xa-81-9sN" secondAttribute="top" constant="16" id="ERr-6g-r5K"/>
+                                    <constraint firstItem="rit-7s-2bz" firstAttribute="centerX" secondItem="9xa-81-9sN" secondAttribute="centerX" id="EwI-jc-g0g"/>
                                     <constraint firstItem="p9u-qt-SFp" firstAttribute="top" secondItem="9xa-81-9sN" secondAttribute="top" constant="8" id="KNE-g0-6ry"/>
                                     <constraint firstAttribute="trailing" secondItem="Fcq-8e-IvB" secondAttribute="trailing" constant="20" id="Kaw-go-MkU"/>
                                     <constraint firstItem="p9u-qt-SFp" firstAttribute="top" secondItem="Pfs-dF-Jfj" secondAttribute="bottom" constant="-30" id="O96-QF-agL"/>
@@ -324,6 +325,7 @@
                                     <mask key="constraints">
                                         <exclude reference="Qwa-yh-yux"/>
                                         <exclude reference="cMo-Ub-QBS"/>
+                                        <exclude reference="OSR-JG-LFn"/>
                                         <exclude reference="g1B-CG-cb8"/>
                                         <exclude reference="uee-S9-XhT"/>
                                         <exclude reference="ERr-6g-r5K"/>
@@ -335,7 +337,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9xa-81-9sN" firstAttribute="top" secondItem="JRy-sK-UXI" secondAttribute="bottom" id="BmY-Sb-Shu"/>
                             <constraint firstItem="9xa-81-9sN" firstAttribute="leading" secondItem="Rss-nC-1eQ" secondAttribute="leading" id="DWU-ET-iNG"/>
@@ -353,6 +355,7 @@
                         <outlet property="backButton" destination="ZAe-8A-1ML" id="6xC-4r-NZp"/>
                         <outlet property="bookmarkButton" destination="gCD-gJ-Yot" id="Z6j-e2-RgE"/>
                         <outlet property="descriptionLabel" destination="fSL-ld-KDc" id="Blo-TY-mNj"/>
+                        <outlet property="linksLabel" destination="rit-7s-2bz" id="7dy-Sf-6Rf"/>
                         <outlet property="scrollView" destination="9xa-81-9sN" id="MUF-yb-EDM"/>
                         <outlet property="subtitleLabel" destination="8Rw-56-xGb" id="Qej-vI-fQe"/>
                         <outlet property="tableView" destination="Fcq-8e-IvB" id="Qb6-oR-1GE"/>
