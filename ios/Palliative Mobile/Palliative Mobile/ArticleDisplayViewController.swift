@@ -16,6 +16,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
@@ -40,6 +42,13 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         bookmarked = isBookmarked
         initMarked = isBookmarked
+    }
+    
+    override func viewDidLayoutSubviews() {
+        tableViewHeight.constant = 0
+        tableView.setNeedsLayout()
+        tableView.layoutIfNeeded()
+        tableViewHeight.constant = tableView.contentSize.height
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,7 +149,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     // Cell height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return tableView.frame.height / 2
+        return 40
     }
     
     // Formats the cells in the table
