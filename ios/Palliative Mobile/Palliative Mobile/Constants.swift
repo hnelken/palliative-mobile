@@ -18,6 +18,7 @@ let kHomeCellID = "homeCell"
 let kAmbulationCellID = "ambulationCell"
 let kActivityCellID = "activityCell"
 let kSelfCareCellID = "selfCareCell"
+let kIntakeCellID = "inatkeCell"
 
 // SERVER URL STRINGS
 let kServerURL = "http://our server domain here/api/"

@@ -13,6 +13,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     @IBOutlet weak var ambulation: UIButton!
     @IBOutlet weak var activity: UIButton!
     @IBOutlet weak var selfCare: UIButton!
+    @IBOutlet weak var intake: UIButton!
     
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         ambulation.setTitle("ambuation", forState: UIControlState.Normal)
         activity.setTitle("Activity & Evidence of Disease", forState: UIControlState.Normal)
         selfCare.setTitle("Self-Care", forState: UIControlState.Normal)
+        intake.setTitle("Intake", forState: UIControlState.Normal)
         
         // Do any additional setup after loading the view.
     }
@@ -31,7 +33,6 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     }
     
     @IBAction func ambulation(sender: AnyObject) {
-        
         self.performSegueWithIdentifier("ambulation", sender: self)
         
     }
@@ -44,13 +45,18 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         self.performSegueWithIdentifier("selfCare", sender: self)
     }
     
+    @IBAction func intake(sender: AnyObject) {
+        self.performSegueWithIdentifier("intake", sender: self)
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //let segue: String = segue.identifier!
         
         let id = segue.identifier
         
-        if id == "ambulation" || id == "activity" || id == "selfCare"
+        if id == "ambulation" || id == "activity" || id == "selfCare" || id == "intake"
         {
             let vc = segue.destinationViewController 
             
@@ -61,12 +67,6 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
                 controller?.delegate = self
             }
         }
-    }
-    
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        
-        return .None
-        
     }
     
     
