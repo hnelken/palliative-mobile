@@ -69,12 +69,27 @@
                                     <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="NtP-JT-vLl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uE-nI-6Rb">
+                                <rect key="frame" x="20" y="248" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="fLf-9E-JNr"/>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="DeX-IJ-fse"/>
+                                    <action selector="conscious:" destination="TGS-pI-KLS" eventType="touchUpInside" id="ksZ-TN-7aj"/>
+                                    <action selector="intake:" destination="TGS-pI-KLS" eventType="touchUpInside" id="bZm-Xg-e0y"/>
+                                    <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="q81-So-9Pi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xaQ-mn-q0e" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="6zG-nc-Za5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2uE-nI-6Rb" secondAttribute="trailing" id="BWg-BN-1XB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kBs-GN-FYw" secondAttribute="trailing" id="BcR-fk-tYq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="XSn-zP-fUN" secondAttribute="leading" id="GX0-NQ-7F2"/>
+                            <constraint firstItem="2uE-nI-6Rb" firstAttribute="top" secondItem="XSn-zP-fUN" secondAttribute="bottom" constant="8" id="Gvs-xB-4jO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iZW-36-Xvq" secondAttribute="leading" id="I1H-aW-qWZ"/>
                             <constraint firstItem="XSn-zP-fUN" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="ILX-ZO-VHN"/>
                             <constraint firstItem="HoI-gs-sLc" firstAttribute="top" secondItem="iZW-36-Xvq" secondAttribute="bottom" constant="8" id="Jr5-uZ-JQ2"/>
@@ -83,8 +98,10 @@
                             <constraint firstItem="iZW-36-Xvq" firstAttribute="top" secondItem="xaQ-mn-q0e" secondAttribute="bottom" constant="19.5" id="Rxj-oQ-OqV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iZW-36-Xvq" secondAttribute="trailing" id="ULa-Ef-WSW"/>
                             <constraint firstItem="HoI-gs-sLc" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="UP2-AE-9Fm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2uE-nI-6Rb" secondAttribute="leading" id="VbA-CO-YZq"/>
                             <constraint firstItem="XSn-zP-fUN" firstAttribute="top" secondItem="kBs-GN-FYw" secondAttribute="bottom" constant="8" id="b7A-BS-W2Y"/>
                             <constraint firstItem="kBs-GN-FYw" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="dyY-rs-tgl"/>
+                            <constraint firstItem="2uE-nI-6Rb" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="eTV-et-QNK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HoI-gs-sLc" secondAttribute="trailing" id="jBJ-Sb-DtS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xaQ-mn-q0e" secondAttribute="leading" id="lrr-Oa-bhJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XSn-zP-fUN" secondAttribute="trailing" id="mlV-N1-KSI"/>
@@ -96,6 +113,7 @@
                     <connections>
                         <outlet property="activity" destination="HoI-gs-sLc" id="EPf-Jc-Cc5"/>
                         <outlet property="ambulation" destination="iZW-36-Xvq" id="e46-MS-rcg"/>
+                        <outlet property="conscious" destination="2uE-nI-6Rb" id="Diu-nN-DPB"/>
                         <outlet property="intake" destination="XSn-zP-fUN" id="kNo-6A-snb"/>
                         <outlet property="selfCare" destination="kBs-GN-FYw" id="B8o-Sa-MEY"/>
                         <segue destination="5Hv-y8-rxa" kind="popoverPresentation" identifier="ambulation" popoverAnchorView="iZW-36-Xvq" id="Qvz-mJ-4Wz">
@@ -110,11 +128,42 @@
                         <segue destination="zpZ-85-lAb" kind="popoverPresentation" identifier="intake" popoverAnchorView="XSn-zP-fUN" id="lNV-Hy-1bM">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
+                        <segue destination="yuD-Xe-q48" kind="popoverPresentation" identifier="conscious" popoverAnchorView="2uE-nI-6Rb" id="IdM-4a-tVO">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtW-Ih-Qnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1448" y="395"/>
+        </scene>
+        <!--Conscious List View Controller-->
+        <scene sceneID="YNU-tV-LJM">
+            <objects>
+                <tableViewController id="yuD-Xe-q48" customClass="ConsciousListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="llw-bB-rbr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="consciousCell" selectionStyle="default" indentationWidth="10" id="qrP-RA-0GJ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrP-RA-0GJ" id="b6G-Yi-Heb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yuD-Xe-q48" id="Rj4-CX-LKU"/>
+                            <outlet property="delegate" destination="yuD-Xe-q48" id="VtE-J4-rfP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPx-Ey-QCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448" y="1120"/>
         </scene>
         <!--Ambulation List View Controller-->
         <scene sceneID="5Bs-wh-TVp">

@@ -19,6 +19,7 @@ let kAmbulationCellID = "ambulationCell"
 let kActivityCellID = "activityCell"
 let kSelfCareCellID = "selfCareCell"
 let kIntakeCellID = "inatkeCell"
+let kConsciousCellID = "consciousCell"
 
 // SERVER URL STRINGS
 let kServerURL = "http://our server domain here/api/"

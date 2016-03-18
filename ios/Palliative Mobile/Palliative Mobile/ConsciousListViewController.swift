@@ -1,5 +1,5 @@
 //
-//  IntakeListViewController.swift
+//  ConsciousListViewController.swift
 //  Palliative Mobile
 //
 //  Created by Andrew Marmorstein on 3/18/16.
@@ -8,14 +8,16 @@
 
 import UIKit
 
-class IntakeListViewController: UITableViewController {
+class ConsciousListViewController: UITableViewController {
 
-    var intakeOptions = [
-        "Normal",
-        "Normal or Reduced",
-        "Minimal to sips",
-        "Mouth care only",
+    var consciousOptions = [
+        "Full",
+        "Full or Confusion",
+        "Full or Drousy +/- Confusion",
+        "Drowsy or Coma +/- Confusion"
     ]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +45,13 @@ class IntakeListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return intakeOptions.count
+        return consciousOptions.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kIntakeCellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kConsciousCellID, forIndexPath: indexPath)
         
-        cell.textLabel?.text = intakeOptions[indexPath.row]
+        cell.textLabel?.text = consciousOptions[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
         cell.textLabel?.numberOfLines = 0;
         

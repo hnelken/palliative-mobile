@@ -14,6 +14,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     @IBOutlet weak var activity: UIButton!
     @IBOutlet weak var selfCare: UIButton!
     @IBOutlet weak var intake: UIButton!
+    @IBOutlet weak var conscious: UIButton!
     
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         activity.setTitle("Activity & Evidence of Disease", forState: UIControlState.Normal)
         selfCare.setTitle("Self-Care", forState: UIControlState.Normal)
         intake.setTitle("Intake", forState: UIControlState.Normal)
+        conscious.setTitle("Counscious Level", forState: UIControlState.Normal)
         
         // Do any additional setup after loading the view.
     }
@@ -49,6 +51,9 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         self.performSegueWithIdentifier("intake", sender: self)
     }
     
+    @IBAction func conscious(sender: AnyObject) {
+        self.performSegueWithIdentifier("conscious", sender: self)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -56,7 +61,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         
         let id = segue.identifier
         
-        if id == "ambulation" || id == "activity" || id == "selfCare" || id == "intake"
+        if id == "ambulation" || id == "activity" || id == "selfCare" || id == "intake" || id == "consious"
         {
             let vc = segue.destinationViewController 
             
@@ -68,6 +73,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
             }
         }
     }
+    
     
     
     /*

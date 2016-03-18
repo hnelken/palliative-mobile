@@ -16,6 +16,7 @@
 		21E3F7B61C9BCE580011B36A /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7B51C9BCE580011B36A /* ActivityListViewController.swift */; };
 		21E3F7B81C9BD7F40011B36A /* SelfCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7B71C9BD7F40011B36A /* SelfCareViewController.swift */; };
 		21E3F7BA1C9BE1AE0011B36A /* IntakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7B91C9BE1AE0011B36A /* IntakeListViewController.swift */; };
+		21E3F7BC1C9BF1EA0011B36A /* ConsciousListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F7BB1C9BF1EA0011B36A /* ConsciousListViewController.swift */; };
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D87679361C7A686200F23541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679351C7A686200F23541 /* Constants.swift */; };
@@ -239,6 +240,7 @@
 		21E3F7B51C9BCE580011B36A /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
 		21E3F7B71C9BD7F40011B36A /* SelfCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfCareViewController.swift; sourceTree = "<group>"; };
 		21E3F7B91C9BE1AE0011B36A /* IntakeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntakeListViewController.swift; sourceTree = "<group>"; };
+		21E3F7BB1C9BF1EA0011B36A /* ConsciousListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsciousListViewController.swift; sourceTree = "<group>"; };
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -476,6 +478,7 @@
 				21E3F7B51C9BCE580011B36A /* ActivityListViewController.swift */,
 				21E3F7B71C9BD7F40011B36A /* SelfCareViewController.swift */,
 				21E3F7B91C9BE1AE0011B36A /* IntakeListViewController.swift */,
+				21E3F7BB1C9BF1EA0011B36A /* ConsciousListViewController.swift */,
 			);
 			name = "calculator view controllers";
 			sourceTree = "<group>";
@@ -1107,6 +1110,7 @@
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				21B6C09F1C7D32740068E28A /* QuestionsViewController.swift in Sources */,
 				21E3F7B31C9BBBCD0011B36A /* AmbulationListViewController.swift in Sources */,
+				21E3F7BC1C9BF1EA0011B36A /* ConsciousListViewController.swift in Sources */,
 				21E3F7B81C9BD7F40011B36A /* SelfCareViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				21E3F7B61C9BCE580011B36A /* ActivityListViewController.swift in Sources */,
