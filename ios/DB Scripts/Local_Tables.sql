@@ -10,6 +10,7 @@ CREATE TABLE pages (
   subtitle         text,
   is_bookmarked    integer(1),-- NOT NULL,
   text             blob,
+  detail           blob,
   link_text        text,	
   content_id       integer
 );

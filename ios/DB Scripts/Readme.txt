@@ -28,4 +28,5 @@ if changing this:
 ===Steps to populate DB with CSV===
 - start new sqlite3 with master_local.db
 - read the table definitons
+- use ".mode csv" to get ready for import
 - import the csv
