@@ -15,7 +15,7 @@ let kArticleSegueID = "toArticleDisplay"
 
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
-let kAmbulationCellID = "ambulationCell"
+let kPalliativePerformanceCellID = "palliativePerformanceCell"
 let kActivityCellID = "activityCell"
 let kSelfCareCellID = "selfCareCell"
 let kIntakeCellID = "inatkeCell"

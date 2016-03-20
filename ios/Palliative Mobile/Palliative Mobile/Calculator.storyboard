@@ -34,6 +34,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="OHj-Dz-1Ln"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="ambulation" id="RPv-w7-yTd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoI-gs-sLc">
@@ -44,6 +45,7 @@
                                 <connections>
                                     <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="i5K-SW-u5J"/>
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Y1n-ap-gdR"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="activity" id="kAS-Jj-JqC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-GN-FYw">
@@ -55,6 +57,7 @@
                                     <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="hga-ZU-aWs"/>
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Oux-Wn-7mc"/>
                                     <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="qg4-lo-kEy"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="selfCare" id="zdz-PA-WAT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSn-zP-fUN">
@@ -67,6 +70,7 @@
                                     <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Zzf-4o-w4a"/>
                                     <action selector="intake:" destination="TGS-pI-KLS" eventType="touchUpInside" id="2YE-kN-R9f"/>
                                     <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="NtP-JT-vLl"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="intake" id="o5P-ii-LpJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uE-nI-6Rb">
@@ -80,6 +84,7 @@
                                     <action selector="conscious:" destination="TGS-pI-KLS" eventType="touchUpInside" id="ksZ-TN-7aj"/>
                                     <action selector="intake:" destination="TGS-pI-KLS" eventType="touchUpInside" id="bZm-Xg-e0y"/>
                                     <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="q81-So-9Pi"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="conscious" id="XjB-lB-hUQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,71 +121,33 @@
                         <outlet property="conscious" destination="2uE-nI-6Rb" id="Diu-nN-DPB"/>
                         <outlet property="intake" destination="XSn-zP-fUN" id="kNo-6A-snb"/>
                         <outlet property="selfCare" destination="kBs-GN-FYw" id="B8o-Sa-MEY"/>
-                        <segue destination="5Hv-y8-rxa" kind="popoverPresentation" identifier="ambulation" popoverAnchorView="iZW-36-Xvq" id="Qvz-mJ-4Wz">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="mnj-dE-ZCH" kind="popoverPresentation" identifier="activity" popoverAnchorView="HoI-gs-sLc" id="Vvm-xX-SSc">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="dde-No-khK" kind="popoverPresentation" identifier="selfCare" popoverAnchorView="kBs-GN-FYw" id="QYB-kz-lMI">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="zpZ-85-lAb" kind="popoverPresentation" identifier="intake" popoverAnchorView="XSn-zP-fUN" id="lNV-Hy-1bM">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="yuD-Xe-q48" kind="popoverPresentation" identifier="conscious" popoverAnchorView="2uE-nI-6Rb" id="IdM-4a-tVO">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtW-Ih-Qnz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="395"/>
+            <point key="canvasLocation" x="618" y="373"/>
         </scene>
-        <!--Conscious List View Controller-->
-        <scene sceneID="YNU-tV-LJM">
-            <objects>
-                <tableViewController id="yuD-Xe-q48" customClass="ConsciousListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="llw-bB-rbr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="consciousCell" selectionStyle="default" indentationWidth="10" id="qrP-RA-0GJ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qrP-RA-0GJ" id="b6G-Yi-Heb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yuD-Xe-q48" id="Rj4-CX-LKU"/>
-                            <outlet property="delegate" destination="yuD-Xe-q48" id="VtE-J4-rfP"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YPx-Ey-QCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1448" y="1120"/>
-        </scene>
-        <!--Ambulation List View Controller-->
+        <!--Palliative Performance Table View Controller-->
         <scene sceneID="5Bs-wh-TVp">
             <objects>
-                <tableViewController id="5Hv-y8-rxa" customClass="AmbulationListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <exit id="v0K-fI-VTD" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-P4-dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="5Hv-y8-rxa" customClass="PalliativePerformanceTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="03q-MG-cqe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ambulationCell" id="yYK-dw-r0P">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="palliativePerformanceCell" id="yYK-dw-r0P">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yYK-dw-r0P" id="L70-gA-Yc8">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="v0K-fI-VTD" kind="unwind" identifier="backToHomeSegue" unwindAction="palliativePerformanceCalulatorSegue:" id="bpc-W2-cpb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -189,93 +156,11 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-P4-dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="-303"/>
-        </scene>
-        <!--Activity List View Controller-->
-        <scene sceneID="3S6-Fh-cv3">
-            <objects>
-                <tableViewController id="mnj-dE-ZCH" customClass="ActivityListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qbD-ht-dZD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" id="MS1-gN-RaU">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MS1-gN-RaU" id="lwm-4p-SFH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="mnj-dE-ZCH" id="Ze6-fr-IhQ"/>
-                            <outlet property="delegate" destination="mnj-dE-ZCH" id="rOS-2c-iIS"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DKo-M9-uKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2202" y="-303"/>
-        </scene>
-        <!--Self Care View Controller-->
-        <scene sceneID="HFl-Dj-Gt8">
-            <objects>
-                <tableViewController id="dde-No-khK" customClass="SelfCareViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JhD-bl-ynt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="selfCareCell" id="ORT-CW-Vco">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORT-CW-Vco" id="Pgv-5T-Zdz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dde-No-khK" id="87w-lf-44Q"/>
-                            <outlet property="delegate" destination="dde-No-khK" id="GXS-LJ-KDm"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fRe-IH-6jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2202" y="395"/>
-        </scene>
-        <!--Intake List View Controller-->
-        <scene sceneID="eKw-Ar-BAv">
-            <objects>
-                <tableViewController id="zpZ-85-lAb" customClass="IntakeListViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RZd-rN-O3M">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="intakeCell" id="Cv6-Xb-bYh">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cv6-Xb-bYh" id="ifG-9G-Y9I">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zpZ-85-lAb" id="Tpz-aI-f9F"/>
-                            <outlet property="delegate" destination="zpZ-85-lAb" id="fRr-ly-2e8"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l97-oO-aK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2202" y="1120"/>
+            <point key="canvasLocation" x="1368" y="373"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XjB-lB-hUQ"/>
+    </inferredMetricsTieBreakers>
 </document>
