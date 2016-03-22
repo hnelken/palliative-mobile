@@ -68,8 +68,6 @@ class PalliativePerformanceTableViewController: UITableViewController {
         
         buttonLabel = (options[indexPath.row] as? String)!
         
-        showFrom = indexPath.row
-        
         performSegueWithIdentifier("backToHomeSegue", sender: nil)
         
     }
@@ -80,10 +78,59 @@ class PalliativePerformanceTableViewController: UITableViewController {
         
         setButton(buttonLabel, vc: vc)
         
-        vc.showFrom = showFrom
-        
     }
     
+    //gets the buttons which will be valid options
+    func getShowFrom(vc: PalliativePerformanceCalculatorViewController) -> Int {
+        
+        if button == 1
+        {
+            return 0
+        }
+        else if button == 2
+        {
+            if vc.button1 == vc.ambulationOptions[0] {return 0}
+            if vc.button1 == vc.ambulationOptions[1] {return 3}
+            if vc.button1 == vc.ambulationOptions[2] {return 5}
+            if vc.button1 == vc.ambulationOptions[3] {return 6}
+            if vc.button1 == vc.ambulationOptions[4] {return 7}
+            else {return 0} // this will never be reached
+        }
+        else if button == 3
+        {
+            if vc.button2 == vc.activityOptions[0] {return 0}
+            if vc.button2 == vc.activityOptions[1] {return 0}
+            if vc.button2 == vc.activityOptions[2] {return 0}
+            if vc.button2 == vc.activityOptions[3] {return 0}
+            if vc.button2 == vc.activityOptions[4] {return 1}
+            if vc.button2 == vc.activityOptions[5] {return 2}
+            if vc.button2 == vc.activityOptions[6] {return 3}
+            if vc.button2 == vc.activityOptions[7] {return 4}
+            else {return 0} // this will never be reached
+        }
+        else if button == 4
+        {
+            if vc.button3 == vc.selfCareOptions[0] && (vc.button2 == vc.activityOptions[0] || vc.button2 == vc.activityOptions[1]) {return 0}
+            if vc.button3 == vc.selfCareOptions[0] && (vc.button2 == vc.activityOptions[2] || vc.button2 == vc.activityOptions[3]) {return 1}
+            if vc.button3 == vc.selfCareOptions[1] {return 1}
+            if vc.button3 == vc.selfCareOptions[2] {return 1}
+            if vc.button3 == vc.selfCareOptions[3] {return 1}
+            if vc.button3 == vc.selfCareOptions[4] {return 2}
+            else {return 0} // this will never be reached
+        }
+        else
+        {
+            if vc.button4 == vc.intakeOptions[0] {return 0}
+            if vc.button4 == vc.intakeOptions[1] && vc.button3 == vc.selfCareOptions[0] {return 0}
+            if vc.button4 == vc.intakeOptions[1] && (vc.button3 == vc.selfCareOptions[1] || vc.button3 == vc.selfCareOptions[2]) {return 1}
+            if vc.button4 == vc.intakeOptions[1] {return 2}
+            if vc.button4 == vc.intakeOptions[2] {return 2}
+            if vc.button4 == vc.intakeOptions[3] {return 3}
+            else {return 0} // this will bever be reached
+        }
+    }
+    
+    //gets the variables that will be avaialable for the user to choose from
     func getViableOptions(optionList: [String]) -> [String] {
         var newOptionList = [String]()
         for index in showFrom...(optionList.count - 1){
