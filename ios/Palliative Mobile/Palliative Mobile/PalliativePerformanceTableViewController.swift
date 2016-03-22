@@ -69,6 +69,7 @@ class PalliativePerformanceTableViewController: UITableViewController {
         let vc = segue.destinationViewController as! PalliativePerformanceCalculatorViewController
         
         setButton(buttonLabel, vc: vc)
+        
     }
     
     func setButton(newLabel: String, vc: PalliativePerformanceCalculatorViewController) {

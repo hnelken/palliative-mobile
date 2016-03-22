@@ -96,24 +96,20 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func ambulation(sender: AnyObject) {
-        self.performSegueWithIdentifier("ambulation", sender: self)
     }
     
     @IBAction func activity(sender: AnyObject) {
-        self.performSegueWithIdentifier("activity", sender: self)
     }
     
     @IBAction func selfCare(sender: AnyObject) {
-        self.performSegueWithIdentifier("selfCare", sender: self)
     }
     
     @IBAction func intake(sender: AnyObject) {
-        self.performSegueWithIdentifier("intake", sender: self)
     }
     
     @IBAction func conscious(sender: AnyObject) {
-        self.performSegueWithIdentifier("conscious", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

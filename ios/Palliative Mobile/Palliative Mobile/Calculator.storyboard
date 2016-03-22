@@ -33,7 +33,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="OHj-Dz-1Ln"/>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="V1U-cD-AZb"/>
                                     <segue destination="5Hv-y8-rxa" kind="show" identifier="ambulation" id="RPv-w7-yTd"/>
                                 </connections>
                             </button>
@@ -161,6 +161,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XjB-lB-hUQ"/>
+        <segue reference="o5P-ii-LpJ"/>
     </inferredMetricsTieBreakers>
 </document>
