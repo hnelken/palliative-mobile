@@ -18,9 +18,14 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     
     var ambulationOptions = [
         "Full",
+        "Full",
+        "Full",
+        "Reduced",
         "Reduced",
         "Mainly Sit/Lie",
         "Mainly in Bed",
+        "Totally bed bound",
+        "Totally bed bound",
         "Totally bed bound",
         "Death"
     ]
@@ -33,19 +38,32 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         "Unable hobby/house work" + "\n" + "significant disease",
         "Unable to do any work" + "\n" + "Extensive disease",
         "unable to do most activity" + "\n" + "Extensive disease",
+        "unable to do any activity" + "\n" + "Extensive disease",
+        "unable to do any activity" + "\n" + "Extensive disease",
         "unable to do any activity" + "\n" + "Extensive disease"
     ]
     
     var selfCareOptions = [
         "Full",
+        "Full",
+        "Full",
+        "Full",
         "Occasional assistance necessary",
         "Considerable assistance required",
         "Mainly assistance",
+        "Total Care",
+        "Total Care",
         "Total Care"
     ]
     
     var intakeOptions = [
         "Normal",
+        "Normal",
+        "Normal or Reduced",
+        "Normal or Reduced",
+        "Normal or Reduced",
+        "Normal or Reduced",
+        "Normal or Reduced",
         "Normal or Reduced",
         "Minimal to sips",
         "Mouth care only",
@@ -53,10 +71,22 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     
     var consciousOptions = [
         "Full",
+        "Full",
+        "Full",
+        "Full",
         "Full or Confusion",
+        "Full or Confusion",
+        "Full or Drousy +/- Confusion",
+        "Full or Drousy +/- Confusion",
         "Full or Drousy +/- Confusion",
         "Drowsy or Coma +/- Confusion"
     ]
+    
+    var button1Type = "Ambulation"
+    var button2Type = "Activity & Evidence of Disease"
+    var button3Type = "Self-Care"
+    var button4Type = "Intake"
+    var button5Type = "Conscious Level"
     
     var button1 = "Ambulation"
     var button2 = "Activity & Evidence of Disease"
@@ -64,18 +94,20 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     var button4 = "Intake"
     var button5 = "Conscious Level"
     
+    var showFrom = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ambulation.setTitle(button1, forState: UIControlState.Normal)
+        ambulation.setTitle(button1Type, forState: UIControlState.Normal)
         ambulation.hidden = false
-        activity.setTitle(button2, forState: UIControlState.Normal)
+        activity.setTitle(button2Type, forState: UIControlState.Normal)
         activity.hidden = true
-        selfCare.setTitle(button3, forState: UIControlState.Normal)
+        selfCare.setTitle(button3Type, forState: UIControlState.Normal)
         selfCare.hidden = true
-        intake.setTitle(button4, forState: UIControlState.Normal)
+        intake.setTitle(button4Type, forState: UIControlState.Normal)
         intake.hidden = true
-        conscious.setTitle(button5, forState: UIControlState.Normal)
+        conscious.setTitle(button5Type, forState: UIControlState.Normal)
         conscious.hidden = true
         
         // Do any additional setup after loading the view.
@@ -119,6 +151,9 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         let id = segue.identifier
         
         let vc = segue.destinationViewController as! PalliativePerformanceTableViewController
+        
+        //tells the option page which oiptions to show
+        vc.showFrom = showFrom
         
         if id == "ambulation"
         {
