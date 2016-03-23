@@ -7,7 +7,6 @@ CREATE TABLE pages (
   id               integer,--  PRIMARY KEY,
   parent_id        integer,-- NOT NULL,
   title            text,
-  subtitle         text,
   is_bookmarked    integer(1),-- NOT NULL,
   text             blob,
   detail           blob,
