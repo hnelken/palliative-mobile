@@ -19,6 +19,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     ]
     
     var searchResults: [[AnyObject]] = []
+    var destination: Int = -1
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchText: UITextField!
@@ -108,9 +109,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 0: segueID = kRapidPCSegueID
+        case 0:
+            destination = 2;
+            segueID = kArticleSegueID
+        case 1, 2, 3:
+            destination = 51;
+            segueID = kArticleSegueID
         case 4: segueID = kBookmarkSegueID
-        default: segueID = kArticleSegueID
+        default:
+            destination = 51;
+            segueID = kArticleSegueID
         }
         
         if let id = segueID {
@@ -121,10 +129,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? ArticleDisplayViewController {
             // Pass on page ID
-            vc.pageID = 51
+            vc.pageID = destination
         }
         else if let vc = segue.destinationViewController as? SearchViewController {
-            
             vc.results = searchResults
         }
     }

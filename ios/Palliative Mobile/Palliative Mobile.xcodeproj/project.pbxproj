@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
+		D81E12B91CA3501A0011FACE /* foldback-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D81E12B81CA3501A0011FACE /* foldback-white.png */; };
+		D81E12BC1CA3640C0011FACE /* ArticleLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E12BB1CA3640C0011FACE /* ArticleLinkCell.swift */; };
 		D826B3691C99FB5F00BF83CC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */; };
 		D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B36C1C9A022800BF83CC /* DBInterface.swift */; };
 		D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37D1C9A106000BF83CC /* FMDatabase.m */; };
@@ -16,7 +18,6 @@
 		D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3811C9A106000BF83CC /* FMDatabasePool.m */; };
 		D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3831C9A106000BF83CC /* FMDatabaseQueue.m */; };
 		D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B3861C9A106000BF83CC /* FMResultSet.m */; };
-		D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */; };
 		D87679311C7A645F00F23541 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679301C7A645F00F23541 /* WebInterface.swift */; };
 		D87679361C7A686200F23541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87679351C7A686200F23541 /* Constants.swift */; };
 		D876793B1C7A87BF00F23541 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D876793A1C7A87BF00F23541 /* logo.png */; };
@@ -239,6 +240,8 @@
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDisplayViewController.swift; sourceTree = "<group>"; };
+		D81E12B81CA3501A0011FACE /* foldback-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldback-white.png"; sourceTree = "<group>"; };
+		D81E12BB1CA3640C0011FACE /* ArticleLinkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleLinkCell.swift; sourceTree = "<group>"; };
 		D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D826B36C1C9A022800BF83CC /* DBInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
 		D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Palliative Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -253,7 +256,6 @@
 		D826B3841C9A106000BF83CC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		D826B3851C9A106000BF83CC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		D826B3861C9A106000BF83CC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RapidPCViewController.swift; sourceTree = "<group>"; };
 		D87679301C7A645F00F23541 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
 		D87679351C7A686200F23541 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D876793A1C7A87BF00F23541 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -495,6 +497,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D81E12BA1CA363E50011FACE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D81E12BB1CA3640C0011FACE /* ArticleLinkCell.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		D826B38C1C9A106900BF83CC /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +539,7 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D81E12B81CA3501A0011FACE /* foldback-white.png */,
 				D8767ACA1C7A90A000F23541 /* look-white.png */,
 				D8767ACB1C7A90A000F23541 /* mic-white.png */,
 				D8767AD01C7A9E8700F23541 /* home-white.png */,
@@ -546,7 +557,6 @@
 		D87679391C7A765000F23541 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D826B38D1C9A260700BF83CC /* RapidPCViewController.swift */,
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
@@ -792,6 +802,7 @@
 				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
+				D81E12BA1CA363E50011FACE /* UI */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
 				D87679381C7A762E00F23541 /* Extras */,
@@ -1002,6 +1013,7 @@
 				D8767A9B1C7A8BC500F23541 /* security-x.png in Resources */,
 				D8767AD11C7A9E8700F23541 /* home-white.png in Resources */,
 				D8767AAB1C7A8BC500F23541 /* tags-group.png in Resources */,
+				D81E12B91CA3501A0011FACE /* foldback-white.png in Resources */,
 				D8767A8B1C7A8BC500F23541 /* Refresh.png in Resources */,
 				D8767A271C7A8BC500F23541 /* click.png in Resources */,
 				D8767A2B1C7A8BC500F23541 /* colour.png in Resources */,
@@ -1140,11 +1152,11 @@
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
-				D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
+				D81E12BC1CA3640C0011FACE /* ArticleLinkCell.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
 				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,

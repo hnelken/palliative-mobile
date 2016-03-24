@@ -11,18 +11,18 @@ import UIKit
 class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bookmarkButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var linksLabel: UILabel!
+    @IBOutlet weak var detailButton: UIButton!
+    @IBOutlet weak var navUpButton: UIButton!
     
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var detailScrollView: UIScrollView!
     var nextPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
     
+    var detailShowing: Bool = false
     var pageID: Int!
     private var titleText: String?
     private var subtitleText: String?
@@ -32,9 +32,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        formatView()
         
+        formatView()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,15 +45,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewDidLayoutSubviews() {
-        tableViewHeight.constant = 0
-        tableView.setNeedsLayout()
-        tableView.layoutIfNeeded()
-        tableViewHeight.constant = (tableView.contentSize.height > 150)
-            ? 150 : tableView.contentSize.height
-        
-        if links.count == 0 {
-            linksLabel.text = "No Links Avaliable"
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +62,29 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
             bookmarked = false
         }
+    }
+    
+    @IBAction func detailPressed(sender: AnyObject) {
+        
+        if !detailShowing {
+            UIView.transitionFromView(tableView,
+                toView: detailScrollView,
+                duration: 1,
+                options: .TransitionFlipFromRight,
+                completion: nil)
+        }
+        else {
+            UIView.transitionFromView(detailScrollView,
+                toView: tableView,
+                duration: 1,
+                options: .TransitionFlipFromLeft,
+                completion: nil)
+        }
+        
+        detailShowing = !detailShowing
+    }
+    
+    @IBAction func navUpPressed(sender: AnyObject) {
     }
     
     @IBAction func homePressed(sender: AnyObject) {
@@ -111,8 +124,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         // Update text labels with article text
         titleLabel.text = titleText
-        subtitleLabel.text = subtitleText
-        descriptionLabel.text = descriptionText
+        detailLabel.text = descriptionText
         
         // Check bookmarked status
         if bookmarked {
@@ -124,9 +136,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
-        subtitleLabel.sizeToFit()
-        descriptionLabel.sizeToFit()
-        scrollView.sizeToFit()
     }
     
     private func transitionToPage(dstID: Int) {
@@ -155,22 +164,25 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     // Cell height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 50
+        return links.count > 4
+            ? tableView.frame.height / CGFloat(links.count)
+            : tableView.frame.height / 4
     }
     
     // Formats the cells in the table
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath) as! ArticleLinkCell
         
         // Get link titles
         let link = links[indexPath.row]
         if let linkName = link[kLinkNameIndex] as? String {
-            cell.textLabel?.text = linkName
+            cell.linkLabel?.text = linkName
         }
         else {  // Link text is missing in db
-            cell.textLabel?.text = "(title missing)"
+            cell.linkLabel?.text = "(title missing)"
         }
+        cell.linkLabel.sizeToFit()
         cell.accessoryType = .DisclosureIndicator
         
         return cell
