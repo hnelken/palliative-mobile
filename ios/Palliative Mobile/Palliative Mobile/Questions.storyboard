@@ -84,6 +84,50 @@
             </objects>
             <point key="canvasLocation" x="587" y="323"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lwD-qJ-1Dg">
+            <objects>
+                <viewController id="f4v-Ws-Apz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dw2-Mx-J1T"/>
+                        <viewControllerLayoutGuide type="bottom" id="apW-6W-Djm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lgH-FH-zZx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA2-6s-s1b">
+                                <rect key="frame" x="136" y="28" width="329" height="89"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amp-ps-qte">
+                                <rect key="frame" x="20" y="491" width="560" height="89"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is where there will be an explination or a hint based off of the question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u4j-pG-Zoi">
+                                <rect key="frame" x="20" y="125" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Retry Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wl-j9-CRI">
+                                <rect key="frame" x="20" y="412" width="560" height="89"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uop-as-SEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-380"/>
+        </scene>
         <!--Questions View Controller-->
         <scene sceneID="kqa-1S-8Ll">
             <objects>
@@ -102,44 +146,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="The first choice will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-y1-y7F">
-                                <rect key="frame" x="100" y="161" width="480" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="The second choice will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4B4-BX-dBP">
-                                <rect key="frame" x="100" y="233" width="480" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="The third choice will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-4V-UQO">
-                                <rect key="frame" x="100" y="305" width="480" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="The Fourth choice will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MIB-dC-kox">
-                                <rect key="frame" x="100" y="377" width="480" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-l5-ceH">
-                                <rect key="frame" x="34" y="393" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xC-Qe-fNF">
-                                <rect key="frame" x="34" y="321" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="de0-tC-a3d">
-                                <rect key="frame" x="34" y="249" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-Kv-dZT">
-                                <rect key="frame" x="34" y="177" width="51" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-1e-IOx">
-                                <rect key="frame" x="34" y="449" width="546" height="98"/>
+                                <rect key="frame" x="27" y="482" width="546" height="98"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Submit Answer">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,28 +161,80 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="home-white.png"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="The first choice will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-y1-y7F">
+                                <rect key="frame" x="60" y="161" width="480" height="109"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Tfa-4V-UQO" firstAttribute="top" secondItem="4B4-BX-dBP" secondAttribute="bottom" constant="8" id="3hH-UD-u2I"/>
                             <constraint firstItem="thQ-0A-K5J" firstAttribute="top" secondItem="Ojm-40-Zse" secondAttribute="bottom" constant="8" id="4mh-BY-U5M"/>
-                            <constraint firstItem="Tfa-4V-UQO" firstAttribute="leading" secondItem="7xC-Qe-fNF" secondAttribute="trailing" constant="17" id="5E8-Ek-dkt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ojm-40-Zse" secondAttribute="leading" id="9pf-NO-6ko"/>
-                            <constraint firstItem="lmr-y1-y7F" firstAttribute="leading" secondItem="D8g-Kv-dZT" secondAttribute="trailing" constant="17" id="A6o-ad-15d"/>
-                            <constraint firstItem="MIB-dC-kox" firstAttribute="leading" secondItem="gYN-l5-ceH" secondAttribute="trailing" constant="17" id="NDh-5V-caC"/>
-                            <constraint firstItem="MIB-dC-kox" firstAttribute="top" secondItem="Tfa-4V-UQO" secondAttribute="bottom" constant="8" id="Qbj-lk-zZY"/>
                             <constraint firstItem="oMT-7j-cpe" firstAttribute="top" secondItem="Yff-1e-IOx" secondAttribute="bottom" constant="53" id="SLd-MN-xJc"/>
-                            <constraint firstItem="4B4-BX-dBP" firstAttribute="leading" secondItem="de0-tC-a3d" secondAttribute="trailing" constant="17" id="eVg-nV-fMy"/>
-                            <constraint firstItem="4B4-BX-dBP" firstAttribute="top" secondItem="lmr-y1-y7F" secondAttribute="bottom" constant="8" id="iLc-3m-mtO"/>
                             <constraint firstItem="lmr-y1-y7F" firstAttribute="top" secondItem="thQ-0A-K5J" secondAttribute="bottom" constant="8" id="l68-r8-QEG"/>
                             <constraint firstItem="thQ-0A-K5J" firstAttribute="centerX" secondItem="S2x-Gk-Ex4" secondAttribute="centerX" id="los-26-lyg"/>
-                            <constraint firstItem="Yff-1e-IOx" firstAttribute="top" secondItem="MIB-dC-kox" secondAttribute="bottom" constant="8" id="zf3-mb-DUc"/>
+                            <constraint firstItem="lmr-y1-y7F" firstAttribute="centerX" secondItem="S2x-Gk-Ex4" secondAttribute="centerX" id="mJL-PG-CZk"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQS-xY-d8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="323"/>
+            <point key="canvasLocation" x="1306" y="323"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uKr-7h-5tE">
+            <objects>
+                <viewController id="Ccx-bh-kih" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZFq-32-fy1"/>
+                        <viewControllerLayoutGuide type="bottom" id="CoI-Lo-tDj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ekP-LG-yb1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="True or false questions will go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p02-Ng-yRr">
+                                <rect key="frame" x="20" y="34" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-YH-0PG">
+                                <rect key="frame" x="20" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EHg-uo-G0A"/>
+                                    <constraint firstAttribute="width" constant="30" id="nr8-TG-bat"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="home-white.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rX-mO-4Ld">
+                                <rect key="frame" x="61" y="154" width="480" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="True">
+                                    <color key="titleColor" red="0.30787417763157893" green="1" blue="0.095677425986842105" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-w6-tlc">
+                                <rect key="frame" x="61" y="302" width="480" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="False">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2rX-mO-4Ld" firstAttribute="top" secondItem="p02-Ng-yRr" secondAttribute="bottom" constant="8" id="YtR-x4-yKd"/>
+                            <constraint firstItem="p02-Ng-yRr" firstAttribute="top" secondItem="ZFq-32-fy1" secondAttribute="bottom" constant="14" id="k2B-51-QaQ"/>
+                            <constraint firstItem="2rX-mO-4Ld" firstAttribute="centerX" secondItem="ekP-LG-yb1" secondAttribute="centerX" id="mhw-7h-vmU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISr-pD-yQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102" y="323"/>
         </scene>
     </scenes>
     <resources>

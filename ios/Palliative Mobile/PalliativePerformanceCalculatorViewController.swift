@@ -16,6 +16,8 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     @IBOutlet weak var intake: UIButton!
     @IBOutlet weak var conscious: UIButton!
     
+    @IBOutlet weak var score: UILabel!
+    
     var ambulationOptions = [
         "Full",
         "Reduced",
@@ -70,6 +72,11 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     var button4 = "Intake"
     var button5 = "Conscious Level"
     
+    //table that will be used for caluating the score
+    var scoreTracker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
+    var PPSlevels = ["100%", "90%", "80%", "70%", "60%", "50%", "40%", "30%", "20%", "10%", "0%"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,6 +91,8 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         conscious.setTitle(button5Type, forState: UIControlState.Normal)
         conscious.hidden = true
         
+        score.hidden = true
+        
         // Do any additional setup after loading the view.
     }
     
@@ -94,7 +103,19 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         intake.setTitle(button4, forState: UIControlState.Normal)
         conscious.setTitle(button5, forState: UIControlState.Normal)
         
-        
+        if button1 == ambulationOptions[5]
+        {
+            activity.hidden = true
+            
+            score.text = PPSlevels[10]
+            score.hidden = false
+        }
+        //if all of the buttons have been selected then it should calculate the score
+        else if button5 != button5Type
+        {
+            score.text = getScore()
+            score.hidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,8 +140,6 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        //let segue: String = segue.identifier!
         
         let id = segue.identifier
         
@@ -155,7 +174,62 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
         vc.showFrom = vc.getShowFrom(self)
     }
     
+    func getScore() -> String {
+        
+        // set score from button1 (ambulation)
+        if button1 == ambulationOptions[0] {for i in 0...2 {scoreTracker[i]++}}
+        if button1 == ambulationOptions[1] {for i in 3...4 {scoreTracker[i]++}}
+        if button1 == ambulationOptions[2] {scoreTracker[5]++}
+        if button1 == ambulationOptions[3] {scoreTracker[6]++}
+        if button1 == ambulationOptions[4] {for i in 7...9 {scoreTracker[i]++}}
+        
+        // set score from button2 (activity & evidence of disease)
+        if button2 == activityOptions[0] {scoreTracker[0]++}
+        if button2 == activityOptions[1] {scoreTracker[1]++}
+        if button2 == activityOptions[2] {scoreTracker[2]++}
+        if button2 == activityOptions[3] {scoreTracker[3]++}
+        if button2 == activityOptions[4] {scoreTracker[4]++}
+        if button2 == activityOptions[5] {scoreTracker[5]++}
+        if button2 == activityOptions[6] {scoreTracker[6]++}
+        if button2 == activityOptions[7] {for i in 7...9 {scoreTracker[i]++}}
+        
+        // set score from button3 (self care)
+        if button3 == selfCareOptions[0] {for i in 0...3 {scoreTracker[i]++}}
+        if button3 == selfCareOptions[1] {scoreTracker[4]++}
+        if button3 == selfCareOptions[2] {scoreTracker[5]++}
+        if button3 == selfCareOptions[3] {scoreTracker[6]++}
+        if button3 == selfCareOptions[4] {for i in 7...9 {scoreTracker[i]++}}
+        
+        // set score from button4 (intake)
+        if button4 == intakeOptions[0] {for i in 0...1 {scoreTracker[i]++}}
+        if button4 == intakeOptions[1] {for i in 2...7 {scoreTracker[i]++}}
+        if button4 == intakeOptions[2] {scoreTracker[8]++}
+        if button4 == intakeOptions[3] {scoreTracker[9]++}
+        
+        // set score from button5 (conscious level)
+        if button5 == consciousOptions[0] {for i in 0...3 {scoreTracker[i]++}}
+        if button5 == consciousOptions[1] {for i in 4...5 {scoreTracker[i]++}}
+        if button5 == consciousOptions[2] {for i in 6...8 {scoreTracker[i]++}}
+        if button5 == consciousOptions[3] {scoreTracker[9]++}
+        
+        
+        return PPSlevels[getFinalScoreIndex()]
+    }
     
+    func getFinalScoreIndex() -> Int {
+        
+        //take a wieghted average
+        var sum = 0
+        var divisor = 0
+        
+        for i in 0..<scoreTracker.count
+        {
+            sum += (scoreTracker[i] * i)
+            divisor += scoreTracker[i]
+        }
+        
+        return sum / divisor
+    }
     
     /*
     // MARK: - Navigation

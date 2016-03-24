@@ -87,12 +87,19 @@
                                     <segue destination="5Hv-y8-rxa" kind="show" identifier="conscious" id="XjB-lB-hUQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn4-rX-Kzh">
+                                <rect key="frame" x="263" y="286" width="74" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xaQ-mn-q0e" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="6zG-nc-Za5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2uE-nI-6Rb" secondAttribute="trailing" id="BWg-BN-1XB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kBs-GN-FYw" secondAttribute="trailing" id="BcR-fk-tYq"/>
+                            <constraint firstItem="vn4-rX-Kzh" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="E9q-4s-S1M"/>
                             <constraint firstAttribute="leadingMargin" secondItem="XSn-zP-fUN" secondAttribute="leading" id="GX0-NQ-7F2"/>
                             <constraint firstItem="2uE-nI-6Rb" firstAttribute="top" secondItem="XSn-zP-fUN" secondAttribute="bottom" constant="8" id="Gvs-xB-4jO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iZW-36-Xvq" secondAttribute="leading" id="I1H-aW-qWZ"/>
@@ -105,6 +112,7 @@
                             <constraint firstItem="HoI-gs-sLc" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="UP2-AE-9Fm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2uE-nI-6Rb" secondAttribute="leading" id="VbA-CO-YZq"/>
                             <constraint firstItem="XSn-zP-fUN" firstAttribute="top" secondItem="kBs-GN-FYw" secondAttribute="bottom" constant="8" id="b7A-BS-W2Y"/>
+                            <constraint firstItem="vn4-rX-Kzh" firstAttribute="top" secondItem="2uE-nI-6Rb" secondAttribute="bottom" constant="8" id="bc9-23-Mhx"/>
                             <constraint firstItem="kBs-GN-FYw" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="dyY-rs-tgl"/>
                             <constraint firstItem="2uE-nI-6Rb" firstAttribute="centerX" secondItem="eNy-ww-vpE" secondAttribute="centerX" id="eTV-et-QNK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HoI-gs-sLc" secondAttribute="trailing" id="jBJ-Sb-DtS"/>
@@ -120,6 +128,7 @@
                         <outlet property="ambulation" destination="iZW-36-Xvq" id="e46-MS-rcg"/>
                         <outlet property="conscious" destination="2uE-nI-6Rb" id="Diu-nN-DPB"/>
                         <outlet property="intake" destination="XSn-zP-fUN" id="kNo-6A-snb"/>
+                        <outlet property="score" destination="vn4-rX-Kzh" id="AFa-6w-La2"/>
                         <outlet property="selfCare" destination="kBs-GN-FYw" id="B8o-Sa-MEY"/>
                     </connections>
                 </viewController>
@@ -130,8 +139,6 @@
         <!--Palliative Performance Table View Controller-->
         <scene sceneID="5Bs-wh-TVp">
             <objects>
-                <exit id="v0K-fI-VTD" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-P4-dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="5Hv-y8-rxa" customClass="PalliativePerformanceTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="03q-MG-cqe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -156,6 +163,8 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <exit id="v0K-fI-VTD" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pG-P4-dh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1368" y="373"/>
         </scene>
