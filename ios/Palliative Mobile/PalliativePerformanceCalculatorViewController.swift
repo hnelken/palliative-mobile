@@ -176,50 +176,112 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
     
     func getScore() -> String {
         
+        // bar will keep track of highest up on the table a value should be added
+        // this will make sure that it only applies points where it is possible to get a PPS value 
+        // the result will be a more accurate score
+        var bar = 0
+        
         // set score from button 1 (ambulation)
         switch button1 {
-        case ambulationOptions[0] : for i in 0...2 {scoreTracker[i]++}
-        case ambulationOptions[1] : for i in 3...4 {scoreTracker[i]++}
-        case ambulationOptions[2] : scoreTracker[5]++
-        case ambulationOptions[3] : scoreTracker[6]++
-        default : for i in 7...9 {scoreTracker[i]++}
+        case ambulationOptions[0] :
+            // check to see if the bar is lower then the highest loaction of this choice
+            // if it is, then rais it to this choice, else dont lower it
+            if bar <= 0 {bar = 0}
+            // check to make sure the index above the bar before adding points
+            for i in 0...2 { if bar <= i {scoreTracker[i]++}}
+        case ambulationOptions[1] :
+            if bar <= 3 {bar = 3}
+            for i in 3...4 {if bar <= i {scoreTracker[i]++}}
+        case ambulationOptions[2] :
+            // for cases where the option only exists in one index, the bar will always be either lower or the same 
+            // this is due to the structure of the table
+            bar = 5
+            scoreTracker[5]++
+        case ambulationOptions[3] :
+            bar = 5
+            scoreTracker[6]++
+        default :
+            if bar <= 7 {bar = 7}
+            for i in 7...9 {if bar <= i {scoreTracker[i]++}}
         }
         
         // set score from button 2 (activity & eveidence)
         switch button2 {
-        case activityOptions[0] : scoreTracker[0]++
-        case activityOptions[1] : scoreTracker[1]++
-        case activityOptions[2] : scoreTracker[2]++
-        case activityOptions[3] : scoreTracker[3]++
-        case activityOptions[4] : scoreTracker[4]++
-        case activityOptions[5] : scoreTracker[5]++
-        case activityOptions[6] : scoreTracker[6]++
-        default : for i in 7...9 {scoreTracker[i]++}
+        case activityOptions[0] :
+            bar = 0
+            scoreTracker[0]++
+        case activityOptions[1] :
+            bar = 1
+            scoreTracker[1]++
+        case activityOptions[2] :
+            bar = 2
+            scoreTracker[2]++
+        case activityOptions[3] :
+            bar = 3
+            scoreTracker[3]++
+        case activityOptions[4] :
+            bar = 4
+            scoreTracker[4]++
+        case activityOptions[5] :
+            bar = 5
+            scoreTracker[5]++
+        case activityOptions[6] :
+            bar = 6
+            scoreTracker[6]++
+        default :
+            if bar <= 7 {bar = 7}
+            for i in 7...9 {if bar <= i {scoreTracker[i]++}}
         }
         
         // set score from button3 (self care)
         switch button3 {
-        case selfCareOptions[0] : for i in 0...3 {scoreTracker[i]++}
-        case selfCareOptions[1] : scoreTracker[4]++
-        case selfCareOptions[2] : scoreTracker[5]++
-        case selfCareOptions[3] : scoreTracker[6]++
-        default : for i in 7...9 {scoreTracker[i]++}
+        case selfCareOptions[0] :
+            if bar <= 0 {bar = 0}
+            for i in 0...3 {if bar <= i {scoreTracker[i]++}}
+        case selfCareOptions[1] :
+            bar = 4
+            scoreTracker[4]++
+        case selfCareOptions[2] :
+            bar = 5
+            scoreTracker[5]++
+        case selfCareOptions[3] :
+            bar = 6
+            scoreTracker[6]++
+        default :
+            if bar <= 7 {bar = 7}
+            for i in 7...9 {if bar <= i {scoreTracker[i]++}}
         }
         
         // set score from button4 (intake)
         switch button4 {
-        case intakeOptions[0] : for i in 0...1 {scoreTracker[i]++}
-        case intakeOptions[1] : for i in 2...7 {scoreTracker[i]++}
-        case intakeOptions[2] : scoreTracker[8]++
-        default : scoreTracker[9]++
+        case intakeOptions[0] :
+            if bar <= 0 {bar = 0}
+            for i in 0...1 {if bar <= i {scoreTracker[i]++}}
+        case intakeOptions[1] :
+            if bar <= 0 {bar = 0}
+            for i in 2...7 {if bar <= i {scoreTracker[i]++}}
+        case intakeOptions[2] :
+            bar = 8
+            scoreTracker[8]++
+        default :
+            bar = 9
+            scoreTracker[9]++
         }
         
         // set score from button5 (conscious level)
         switch button5 {
-        case consciousOptions[0] : for i in 0...3 {scoreTracker[i]++}
-        case consciousOptions[1] : for i in 4...5 {scoreTracker[i]++}
-        case consciousOptions[2] : for i in 6...8 {scoreTracker[i]++}
-        default : scoreTracker[9]++
+        case consciousOptions[0] :
+            if bar <= 0 {bar = 0}
+            for i in 0...3 {if bar <= i {scoreTracker[i]++}}
+        case consciousOptions[1] :
+            if bar <= 4 {bar = 4}
+            for i in 4...5 {if bar <= i {scoreTracker[i]++}}
+        case consciousOptions[2] :
+            if bar <= 6 {bar = 6}
+            for i in 6...8 {if bar <= i {scoreTracker[i]++}}
+        default :
+            bar = 9
+            scoreTracker[9]++
         }
         
 //        // set score from button1 (ambulation)
