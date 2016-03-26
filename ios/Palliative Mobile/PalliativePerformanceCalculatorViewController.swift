@@ -284,42 +284,6 @@ class PalliativePerformanceCalculatorViewController: UIViewController, UIPopover
             scoreTracker[9]++
         }
         
-//        // set score from button1 (ambulation)
-//        if button1 == ambulationOptions[0] {for i in 0...2 {scoreTracker[i]++}}
-//        if button1 == ambulationOptions[1] {for i in 3...4 {scoreTracker[i]++}}
-//        if button1 == ambulationOptions[2] {scoreTracker[5]++}
-//        if button1 == ambulationOptions[3] {scoreTracker[6]++}
-//        if button1 == ambulationOptions[4] {for i in 7...9 {scoreTracker[i]++}}
-//        
-//        // set score from button2 (activity & evidence of disease)
-//        if button2 == activityOptions[0] {scoreTracker[0]++}
-//        if button2 == activityOptions[1] {scoreTracker[1]++}
-//        if button2 == activityOptions[2] {scoreTracker[2]++}
-//        if button2 == activityOptions[3] {scoreTracker[3]++}
-//        if button2 == activityOptions[4] {scoreTracker[4]++}
-//        if button2 == activityOptions[5] {scoreTracker[5]++}
-//        if button2 == activityOptions[6] {scoreTracker[6]++}
-//        if button2 == activityOptions[7] {for i in 7...9 {scoreTracker[i]++}}
-//        
-//        // set score from button3 (self care)
-//        if button3 == selfCareOptions[0] {for i in 0...3 {scoreTracker[i]++}}
-//        if button3 == selfCareOptions[1] {scoreTracker[4]++}
-//        if button3 == selfCareOptions[2] {scoreTracker[5]++}
-//        if button3 == selfCareOptions[3] {scoreTracker[6]++}
-//        if button3 == selfCareOptions[4] {for i in 7...9 {scoreTracker[i]++}}
-//        
-//        // set score from button4 (intake)
-//        if button4 == intakeOptions[0] {for i in 0...1 {scoreTracker[i]++}}
-//        if button4 == intakeOptions[1] {for i in 2...7 {scoreTracker[i]++}}
-//        if button4 == intakeOptions[2] {scoreTracker[8]++}
-//        if button4 == intakeOptions[3] {scoreTracker[9]++}
-//        
-//        // set score from button5 (conscious level)
-//        if button5 == consciousOptions[0] {for i in 0...3 {scoreTracker[i]++}}
-//        if button5 == consciousOptions[1] {for i in 4...5 {scoreTracker[i]++}}
-//        if button5 == consciousOptions[2] {for i in 6...8 {scoreTracker[i]++}}
-//        if button5 == consciousOptions[3] {scoreTracker[9]++}
-        
         
         return PPSlevels[getFinalScoreIndex()]
     }
