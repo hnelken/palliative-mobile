@@ -13,6 +13,9 @@ class KarnofskyViewController: UIViewController {
     @IBOutlet weak var condition: UIButton!
     @IBOutlet weak var levelOfFunctionalCapacity: UIButton!
     
+    @IBOutlet weak var score: UILabel!
+    
+    
     var conditions = [
         "Able to carry on normal activity and work; no special care needed",
         "Unable to work; able to live at home and care for most personal needs; varying amount of assitance needed",

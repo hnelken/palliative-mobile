@@ -106,6 +106,7 @@
                         <outlet property="Condition" destination="QDr-se-cnr" id="l21-Z2-GHx"/>
                         <outlet property="condition" destination="QDr-se-cnr" id="Grj-gJ-2sq"/>
                         <outlet property="levelOfFunctionalCapacity" destination="KtY-FE-rlN" id="td7-t6-u6R"/>
+                        <outlet property="score" destination="luU-Ml-XV4" id="uC5-ED-gTP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bap-4c-adK" userLabel="First Responder" sceneMemberID="firstResponder"/>
