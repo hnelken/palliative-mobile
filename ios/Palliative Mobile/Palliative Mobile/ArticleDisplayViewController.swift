@@ -112,19 +112,21 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     private func formatView() {
         // Get page
         let page = db.getPage(pageID)
-        let content: [String] = page[kPageContentKey] as! [String]
+        let contentArray: [String]? = page[kPageContentKey] as? [String]
         links = page[kPageLinksKey] as! [[AnyObject]]
         bookmarked = (page[kPageBookmarkedKey] as! NSNumber).boolValue
         initMarked = bookmarked
         
         // Pass on the next article's info for display
-        titleText = content[kContentTitleIndex]
-        subtitleText = content[kContentSubtitleIndex]
-        descriptionText = content[kContentTextIndex]
-        
-        // Update text labels with article text
-        titleLabel.text = titleText
-        detailLabel.text = descriptionText
+        if let content = contentArray {
+            titleText = content[kContentTitleIndex]
+            subtitleText = content[kContentSubtitleIndex]
+            descriptionText = content[kContentTextIndex]
+            
+            // Update text labels with article text
+            titleLabel.text = titleText
+            detailLabel.text = descriptionText
+        }
         
         // Check bookmarked status
         if bookmarked {
