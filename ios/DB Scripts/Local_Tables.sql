@@ -45,12 +45,12 @@ CREATE TABLE questions (
   text    integer
 );
 
-CREATE TABLE answers {
+CREATE TABLE answers (
   id          integer PRIMARY KEY,
   question_id integer,
   text        text,
   is_correct  integer(1)
-}
+);
 
 CREATE TABLE quiz_session (
   id      integer PRIMARY KEY,
