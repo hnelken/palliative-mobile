@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fmg-c1-08V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fmg-c1-08V">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -275,7 +275,7 @@
                                     <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5g-RC-5mQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-S6-c91">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-S6-c91">
                                 <rect key="frame" x="70" y="174" width="472" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pUq-LK-jQ0"/>
@@ -415,7 +415,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BmC-wQ-N1p" id="So2-tV-BDZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="527" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="527" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-7g-V2Y">
@@ -565,7 +565,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vny-rl-ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5ec-uJ-Hfm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="1103"/>
+            <point key="canvasLocation" x="1312" y="1109"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OgX-FH-mbd">
@@ -790,6 +790,6 @@
         <image name="mic-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MzH-uR-I2B"/>
+        <segue reference="yxc-af-N95"/>
     </inferredMetricsTieBreakers>
 </document>

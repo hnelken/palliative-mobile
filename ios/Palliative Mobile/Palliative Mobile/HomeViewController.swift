@@ -35,15 +35,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if del.firstTime {
             del.firstTime = false
             //Create the AlertController
-            let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "It appears this is your first time here, complete this survey.", preferredStyle: .ActionSheet)
+            let actionSheetController: UIAlertController = UIAlertController(title: "Palliative Mobile Demographic Survey", message: "It appears this is your first time here, would you please take the time to complete a short, anonymous survey? We won't ask for any identifying information!", preferredStyle: .ActionSheet)
             
             //Create and add the Cancel action
-            let cancelAction: UIAlertAction = UIAlertAction(title: "Skip", style: .Cancel) { action -> Void in
+            let cancelAction: UIAlertAction = UIAlertAction(title: "No, thanks", style: .Cancel) { action -> Void in
                 //Just dismiss the action sheet
             }
             actionSheetController.addAction(cancelAction)
             //Create and add first option action
-            let takePictureAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
+            let takePictureAction: UIAlertAction = UIAlertAction(title: "Sure!", style: .Default) { action -> Void in
                 //Code for launching the camera goes here
                 self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
             }
