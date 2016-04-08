@@ -52,12 +52,18 @@ CREATE TABLE answers (
   is_correct  integer
 );
 
-CREATE TABLE quiz_session (
-  id integer
+CREATE TABLE answers (
+  id          integer PRIMARY KEY,
+  question_id integer,
+  text        text,
+  is_correct  integer(1)
 );
 
-CREATE TABLE question_session (
-  id integer
+CREATE TABLE quiz_session (
+  id      integer PRIMARY KEY,
+  quiz_id integer,
+  score   real
 );
+
 
 
