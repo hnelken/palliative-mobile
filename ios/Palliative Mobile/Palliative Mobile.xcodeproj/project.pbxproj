@@ -235,6 +235,7 @@
 		D88C1B3A1C9C3DA90078A767 /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D88C1B391C9C3DA90078A767 /* master_local.db */; };
 		D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550E1CB7526A000EFA18 /* clipboard-white.png */; };
 		D89555111CB7526A000EFA18 /* network2-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550F1CB7526A000EFA18 /* network2-white.png */; };
+		D89555131CB83AFE000EFA18 /* info-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555121CB83AFE000EFA18 /* info-white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -477,6 +478,7 @@
 		D88C1B391C9C3DA90078A767 /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
 		D895550E1CB7526A000EFA18 /* clipboard-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard-white.png"; sourceTree = "<group>"; };
 		D895550F1CB7526A000EFA18 /* network2-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network2-white.png"; sourceTree = "<group>"; };
+		D89555121CB83AFE000EFA18 /* info-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-white.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +545,7 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D89555121CB83AFE000EFA18 /* info-white.png */,
 				D895550E1CB7526A000EFA18 /* clipboard-white.png */,
 				D895550F1CB7526A000EFA18 /* network2-white.png */,
 				D81E12B81CA3501A0011FACE /* foldback-white.png */,
@@ -1045,6 +1048,7 @@
 				D8767A201C7A8BC500F23541 /* card.png in Resources */,
 				D8767A531C7A8BC500F23541 /* house.png in Resources */,
 				D8767A931C7A8BC500F23541 /* right1.png in Resources */,
+				D89555131CB83AFE000EFA18 /* info-white.png in Resources */,
 				D8767A671C7A8BC500F23541 /* mac_folder.png in Resources */,
 				D8767A351C7A8BC500F23541 /* download-171.png in Resources */,
 				D8767A371C7A8BC500F23541 /* DV.png in Resources */,

@@ -17,6 +17,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var textButton: UIButton!
     
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
@@ -186,6 +187,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         // Set first view
         if links.count == 0 {
+            segmentControl.setEnabled(false, forSegmentAtIndex: 0)
+            segmentControl.selectedSegmentIndex = 2
+            
             viewType = .Detail
             currentView = detailScrollView
             textScrollView.hidden = true
@@ -196,11 +200,50 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             currentView = tableView
             textScrollView.hidden = true
             detailScrollView.hidden = true
+            
+            if (descriptionText!.isEmpty) {
+                segmentControl.setEnabled(false, forSegmentAtIndex: 2)
+            }
         }
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
         tableView.reloadData()
+    }
+    
+    @IBAction func sectionPressed(sender: AnyObject) {
+        
+        var nextType: ViewType?
+        var nextView: UIView?
+        
+        switch (sender.selectedSegmentIndex) {
+        case 0: nextType = .Links
+        case 1: nextType = .Text
+        case 2: nextType = .Detail
+        default: break
+        }
+        
+        if nextType == .Links && links.count > 0 {
+            nextView = tableView
+        }
+        else if nextType == .Detail && !descriptionText!.isEmpty {
+            nextView = detailScrollView
+        }
+        else if nextType == .Text {
+            nextView = textScrollView
+        }
+        
+        if let toView = nextView {
+            UIView.transitionFromView(
+                currentView!,
+                toView: toView,
+                duration: 1,
+                options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
+                completion: nil)
+            
+            currentView = toView
+            viewType = nextType
+        }
     }
     
     private func transitionToPage(dstID: Int) {
