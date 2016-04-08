@@ -40,9 +40,16 @@ CREATE TABLE quizzes (
 );
 
 CREATE TABLE questions (
-  id      integer PRIMARY KEY,
-  quiz_id integer,
-  text    integer
+  id       integer PRIMARY KEY,
+  quiz_id  integer,
+  question text
+);
+
+CREATE TABLE answers (
+  id          integer,
+  question_id integer,
+  answer      text,
+  is_correct  integer
 );
 
 CREATE TABLE quiz_session (
