@@ -17,22 +17,22 @@ class KarnofskyViewController: UIViewController {
     
     
     var conditions = [
-        "Able to carry on normal activity and work; no special care needed",
-        "Unable to work; able to live at home and care for most personal needs; varying amount of assitance needed",
-        "Unable to care for self; requires equivalent of instatutional or hospital care; diseases may be progressing rapidly"
+        "Able to carry on normal activity and work; \n no special care needed",
+        "Unable to work;" + "\n" + "able to live at home and care for most personal needs;" + "\n" + "varying amount of assitance needed",
+        "Unable to care for self;" + "\n" + "requires equivalent of instatutional or hospital care;" + "\n" + "diseases may be progressing rapidly"
     ]
     
     var levelsOfFunctionalCapcity = [
         "No complaints, no evidence of disease",
-        "Able to carry on normal activity; minor signs or symptoms of disease",
-        "Normal activity with effort; some signs or symptoms of disease",
-        "Care for self; unable to carry on normal activity or to do active work",
+        "Able to carry on normal activity;" +  "\n" + "minor signs or symptoms of disease",
+        "Normal activity with effort;" + "\n" + "some signs or symptoms of disease",
+        "Care for self;" + "\n" + "unable to carry on normal activity or to do active work",
         "Requires occasional assistance but is able to care for most personal needs",
         "Requires considerable assistance and frequent medical care",
         "Disabled; requires special care and assistance",
-        "Severely disabled; hospital admission indicated although death not imminent",
-        "very sick; hospital admission necessary; active supportive treatment necessary",
-        "Moribund; fatal processes progressing rapidly",
+        "Severely disabled;" + "\n" + "hospital admission indicated although death not imminent",
+        "very sick;" + "\n" + "hospital admission necessary; \n active supportive treatment necessary",
+        "Moribund;" + "\n" + "fatal processes progressing rapidly",
         "Death"
     ]
     
@@ -66,6 +66,8 @@ class KarnofskyViewController: UIViewController {
             score.text = getScore()
             score.hidden = false
         }
+        
+        condition.titleLabel?.numberOfLines = 0
     }
 
 
@@ -75,11 +77,11 @@ class KarnofskyViewController: UIViewController {
     }
     
     
-    @IBAction func conditionSegue(sender: AnyObject) {
+    @IBAction func condition(sender: AnyObject) {
     }
     
     
-    @IBAction func levelSegue(sender: AnyObject) {
+    @IBAction func level(sender: AnyObject) {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

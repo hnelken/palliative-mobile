@@ -51,7 +51,7 @@ class KernofskyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kPalliativePerformanceCellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kKarnofskyCellID, forIndexPath: indexPath)
         
         cell.textLabel?.text = options[indexPath.row] as? String
         cell.textLabel?.numberOfLines = 0;
@@ -84,6 +84,7 @@ class KernofskyTableViewController: UITableViewController {
             vc.button2 = vc.button2Type
             
             vc.levelOfFunctionalCapacity.hidden = false
+            vc.score.hidden = true
         }
         else
         {

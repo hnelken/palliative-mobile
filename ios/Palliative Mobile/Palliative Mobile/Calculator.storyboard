@@ -67,9 +67,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ConditionSegue:" destination="pBh-MK-oeg" eventType="touchUpInside" id="BmQ-v8-WMB"/>
-                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="k6V-ep-ERJ"/>
-                                    <action selector="conditionSegue:" destination="pBh-MK-oeg" eventType="touchUpInside" id="Zxa-YY-G8v"/>
+                                    <action selector="condition:" destination="pBh-MK-oeg" eventType="touchUpInside" id="Y9e-vP-OBS"/>
                                     <segue destination="CGL-AQ-FEt" kind="show" identifier="conditionSegue" id="eI0-SZ-PCh"/>
                                 </connections>
                             </button>
@@ -79,8 +77,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="35U-Ef-F57"/>
-                                    <action selector="levelSegue:" destination="pBh-MK-oeg" eventType="touchUpInside" id="WfU-ag-YiW"/>
+                                    <action selector="level:" destination="pBh-MK-oeg" eventType="touchUpInside" id="tWj-rk-y2A"/>
                                     <segue destination="CGL-AQ-FEt" kind="show" identifier="levelSegue" id="ay4-ga-kvt"/>
                                 </connections>
                             </button>
@@ -108,7 +105,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Condition" destination="QDr-se-cnr" id="l21-Z2-GHx"/>
                         <outlet property="condition" destination="QDr-se-cnr" id="Grj-gJ-2sq"/>
                         <outlet property="levelOfFunctionalCapacity" destination="KtY-FE-rlN" id="td7-t6-u6R"/>
                         <outlet property="score" destination="luU-Ml-XV4" id="uC5-ED-gTP"/>
@@ -127,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NDF-XW-KIA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="karnofskyCell" id="NDF-XW-KIA">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDF-XW-KIA" id="SdN-uW-0eO">
@@ -135,7 +131,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="VQu-6q-078" kind="unwind" unwindAction="backToHomeSegue:" id="hfv-GA-BZI"/>
+                                    <segue destination="VQu-6q-078" kind="unwind" identifier="backToHomeSegue" unwindAction="karnofskyCalulatorSegue:" id="hfv-GA-BZI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,18 +188,6 @@
                                     <segue destination="5Hv-y8-rxa" kind="show" identifier="activity" id="kAS-Jj-JqC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-GN-FYw">
-                                <rect key="frame" x="20" y="172" width="560" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="hga-ZU-aWs"/>
-                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Oux-Wn-7mc"/>
-                                    <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="qg4-lo-kEy"/>
-                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="selfCare" id="zdz-PA-WAT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSn-zP-fUN">
                                 <rect key="frame" x="20" y="210" width="560" height="30"/>
                                 <state key="normal" title="Button">
@@ -237,6 +221,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-GN-FYw">
+                                <rect key="frame" x="20" y="172" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="activity:" destination="TGS-pI-KLS" eventType="touchUpInside" id="hga-ZU-aWs"/>
+                                    <action selector="ambulation:" destination="TGS-pI-KLS" eventType="touchUpInside" id="Oux-Wn-7mc"/>
+                                    <action selector="selfCare:" destination="TGS-pI-KLS" eventType="touchUpInside" id="qg4-lo-kEy"/>
+                                    <segue destination="5Hv-y8-rxa" kind="show" identifier="selfCare" id="zdz-PA-WAT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -314,7 +310,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ay4-ga-kvt"/>
         <segue reference="o5P-ii-LpJ"/>
+        <segue reference="eI0-SZ-PCh"/>
     </inferredMetricsTieBreakers>
 </document>

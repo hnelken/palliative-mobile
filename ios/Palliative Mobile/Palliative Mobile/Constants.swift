@@ -26,6 +26,7 @@ let kShowSearchResultSegueID = "displaySearchResult"
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
 let kPalliativePerformanceCellID = "palliativePerformanceCell"
+let kKarnofskyCellID = "karnofskyCell"
 let kActivityCellID = "activityCell"
 let kSelfCareCellID = "selfCareCell"
 let kIntakeCellID = "inatkeCell"

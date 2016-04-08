@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PalliativePerformanceCalculatorViewController: UIViewController, UIPopoverPresentationControllerDelegate{
+class PalliativePerformanceCalculatorViewController: UIViewController{
 
     @IBOutlet weak var ambulation: UIButton!
     @IBOutlet weak var activity: UIButton!

@@ -500,9 +500,9 @@
 			isa = PBXGroup;
 			children = (
 				21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */,
-				21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */,
-				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
 				21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */,
+				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
+				21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */,
 			);
 			name = "calculator view controllers";
 			sourceTree = "<group>";
