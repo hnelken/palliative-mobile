@@ -32,7 +32,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        detailScrollView.hidden = true
         formatView()
     }
     
@@ -70,14 +70,16 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             UIView.transitionFromView(tableView,
                 toView: detailScrollView,
                 duration: 1,
-                options: .TransitionFlipFromRight,
+                options: [.TransitionFlipFromRight, .ShowHideTransitionViews],
                 completion: nil)
+            
+            
         }
         else {
             UIView.transitionFromView(detailScrollView,
                 toView: tableView,
                 duration: 1,
-                options: .TransitionFlipFromLeft,
+                options: [.TransitionFlipFromLeft, .ShowHideTransitionViews],
                 completion: nil)
         }
         

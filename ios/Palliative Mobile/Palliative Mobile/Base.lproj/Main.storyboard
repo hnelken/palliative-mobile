@@ -433,7 +433,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BmC-wQ-N1p" id="So2-tV-BDZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="527" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="527" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-7g-V2Y">
@@ -479,15 +479,23 @@
                                     <constraint firstItem="qSV-f3-kL6" firstAttribute="top" secondItem="MhU-t1-MNp" secondAttribute="top" constant="51" id="52y-Po-WlU"/>
                                     <constraint firstItem="DAB-YE-wcH" firstAttribute="centerX" secondItem="MhU-t1-MNp" secondAttribute="centerX" id="99y-VF-CYL"/>
                                     <constraint firstItem="DAB-YE-wcH" firstAttribute="leading" secondItem="MhU-t1-MNp" secondAttribute="leadingMargin" id="DvV-YM-Pop"/>
+                                    <constraint firstItem="DAB-YE-wcH" firstAttribute="leading" secondItem="MhU-t1-MNp" secondAttribute="leading" constant="8" id="Iwu-Z5-3Qq"/>
+                                    <constraint firstAttribute="bottom" secondItem="DAB-YE-wcH" secondAttribute="bottom" constant="12" id="LuK-ye-VNh"/>
                                     <constraint firstItem="qSV-f3-kL6" firstAttribute="centerX" secondItem="MhU-t1-MNp" secondAttribute="centerX" id="Nwk-Ek-fQx"/>
                                     <constraint firstAttribute="bottom" secondItem="qSV-f3-kL6" secondAttribute="bottom" constant="9" id="ULB-ro-xLV"/>
                                     <constraint firstItem="qSV-f3-kL6" firstAttribute="top" secondItem="MhU-t1-MNp" secondAttribute="top" id="b1j-lj-ri4"/>
+                                    <constraint firstItem="DAB-YE-wcH" firstAttribute="top" secondItem="MhU-t1-MNp" secondAttribute="top" id="dLb-Gs-PoV"/>
                                     <constraint firstAttribute="bottom" secondItem="DAB-YE-wcH" secondAttribute="bottom" constant="12" id="dVf-QD-kf3"/>
+                                    <constraint firstAttribute="trailing" secondItem="DAB-YE-wcH" secondAttribute="trailing" constant="7" id="vBQ-aD-rWk"/>
                                     <constraint firstItem="qSV-f3-kL6" firstAttribute="top" secondItem="DAB-YE-wcH" secondAttribute="top" id="xvl-w0-HRy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="52y-Po-WlU"/>
+                                        <exclude reference="xvl-w0-HRy"/>
+                                        <exclude reference="99y-VF-CYL"/>
+                                        <exclude reference="DvV-YM-Pop"/>
+                                        <exclude reference="dVf-QD-kf3"/>
                                     </mask>
                                 </variation>
                             </view>
