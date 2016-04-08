@@ -43,6 +43,10 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         return bookmarks.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(kBookmarkCellID, forIndexPath: indexPath)

@@ -233,6 +233,8 @@
 		D87836611C768A1A00DDFF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87836601C768A1A00DDFF27 /* Assets.xcassets */; };
 		D87836641C768A1A00DDFF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */; };
 		D88C1B3A1C9C3DA90078A767 /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D88C1B391C9C3DA90078A767 /* master_local.db */; };
+		D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550E1CB7526A000EFA18 /* clipboard-white.png */; };
+		D89555111CB7526A000EFA18 /* network2-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550F1CB7526A000EFA18 /* network2-white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -473,6 +475,8 @@
 		D87836631C768A1A00DDFF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D87836651C768A1A00DDFF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D88C1B391C9C3DA90078A767 /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
+		D895550E1CB7526A000EFA18 /* clipboard-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard-white.png"; sourceTree = "<group>"; };
+		D895550F1CB7526A000EFA18 /* network2-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network2-white.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -539,6 +543,8 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D895550E1CB7526A000EFA18 /* clipboard-white.png */,
+				D895550F1CB7526A000EFA18 /* network2-white.png */,
 				D81E12B81CA3501A0011FACE /* foldback-white.png */,
 				D8767ACA1C7A90A000F23541 /* look-white.png */,
 				D8767ACB1C7A90A000F23541 /* mic-white.png */,
@@ -915,6 +921,7 @@
 				D8767A1F1C7A8BC500F23541 /* camera.png in Resources */,
 				D8767A231C7A8BC500F23541 /* cart1.png in Resources */,
 				D8767A651C7A8BC500F23541 /* mac_folder-font.png in Resources */,
+				D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */,
 				D8767A821C7A8BC500F23541 /* power-off.png in Resources */,
 				D8767A601C7A8BC500F23541 /* lock.png in Resources */,
 				D8767A771C7A8BC500F23541 /* next.png in Resources */,
@@ -958,6 +965,7 @@
 				D8767A1A1C7A8BC500F23541 /* calculator.png in Resources */,
 				D8767AB61C7A8BC500F23541 /* upload.png in Resources */,
 				D8767AA61C7A8BC500F23541 /* step.png in Resources */,
+				D89555111CB7526A000EFA18 /* network2-white.png in Resources */,
 				D8767A071C7A8BC500F23541 /* 360.png in Resources */,
 				D8767A5F1C7A8BC500F23541 /* link.png in Resources */,
 				D87754921C9B58FC002D831E /* bookmark-red.png in Resources */,

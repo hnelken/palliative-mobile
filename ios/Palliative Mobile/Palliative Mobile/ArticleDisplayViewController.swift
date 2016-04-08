@@ -10,35 +10,54 @@ import UIKit
 
 class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var navUpButton: UIButton!
+    @IBOutlet weak var linksButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var textButton: UIButton!
     
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textScrollView: UIScrollView!
     @IBOutlet weak var detailScrollView: UIScrollView!
-    var nextPage: [String : AnyObject]?
+    
+    var lastPage: ArticleDisplayViewController?
+    var thisPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
     
-    var detailShowing: Bool = false
     var pageID: Int!
+    private var lastPageID: Int!
+    private var parentID: Int!
+    
+    private enum ViewType {
+        case Detail
+        case Text
+        case Links
+    }
+    
+    private var viewType: ViewType!
+    private var currentView: UIView?
+    
     private var titleText: String?
     private var subtitleText: String?
     private var descriptionText: String?
+    
     private var bookmarked: Bool = false
     private var initMarked: Bool = false
+    private var backPops: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailScrollView.hidden = true
         formatView()
     }
     
     override func viewDidAppear(animated: Bool) {
-        let page = db.getPage(pageID)
-        let isBookmarked: Bool = (page[kPageBookmarkedKey] as! NSNumber).boolValue
+        //let page = db.getPage(pageID)
+        let isBookmarked: Bool = (thisPage![kPageBookmarkedKey] as! NSNumber).boolValue
         
         bookmarked = isBookmarked
         initMarked = isBookmarked
@@ -65,28 +84,54 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func detailPressed(sender: AnyObject) {
-        
-        if !detailShowing {
-            UIView.transitionFromView(tableView,
-                toView: detailScrollView,
-                duration: 1,
-                options: [.TransitionFlipFromRight, .ShowHideTransitionViews],
-                completion: nil)
+        // Show detail view if not already showing
+        if viewType != .Detail && !descriptionText!.isEmpty {
+            UIView.transitionFromView(currentView!,
+                                      toView: detailScrollView,
+                                      duration: 1,
+                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
+                                      completion: nil)
             
+            // Set current view
+            currentView = detailScrollView
+            viewType = .Detail
+        }
+    }
+    
+    @IBAction func linksPressed(sender: AnyObject) {
+        // Show links view if not already showing
+        if viewType != .Links && links.count > 0 {
+            UIView.transitionFromView(currentView!,
+                                      toView: tableView,
+                                      duration: 1,
+                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
+                                      completion: nil)
             
+            // Set current view
+            currentView = tableView
+            viewType = .Links
         }
-        else {
-            UIView.transitionFromView(detailScrollView,
-                toView: tableView,
-                duration: 1,
-                options: [.TransitionFlipFromLeft, .ShowHideTransitionViews],
-                completion: nil)
+    }
+    
+    @IBAction func textPressed(sender: AnyObject) {
+        // Show links view if not already showing
+        if viewType != .Text {
+            UIView.transitionFromView(currentView!,
+                                      toView: textScrollView,
+                                      duration: 1,
+                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
+                                      completion: nil)
+            
+            // Set current view
+            currentView = textScrollView
+            viewType = .Text
         }
-        
-        detailShowing = !detailShowing
     }
     
     @IBAction func navUpPressed(sender: AnyObject) {
+        if (parentID > 1) {
+            transitionToPage(parentID)
+        }
     }
     
     @IBAction func homePressed(sender: AnyObject) {
@@ -113,10 +158,11 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     //
     private func formatView() {
         // Get page
-        let page = db.getPage(pageID)
-        let contentArray: [String]? = page[kPageContentKey] as? [String]
-        links = page[kPageLinksKey] as! [[AnyObject]]
-        bookmarked = (page[kPageBookmarkedKey] as! NSNumber).boolValue
+        thisPage = db.getPage(pageID)
+        let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
+        links = thisPage![kPageLinksKey] as! [[AnyObject]]
+        parentID = (thisPage![kPageParentIDKey] as! NSNumber).integerValue
+        bookmarked = (thisPage![kPageBookmarkedKey] as! NSNumber).boolValue
         initMarked = bookmarked
         
         // Pass on the next article's info for display
@@ -138,18 +184,33 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
         }
         
+        // Set first view
+        if links.count == 0 {
+            viewType = .Detail
+            currentView = detailScrollView
+            textScrollView.hidden = true
+            tableView.hidden = true
+        }
+        else {
+            viewType = .Links
+            currentView = tableView
+            textScrollView.hidden = true
+            detailScrollView.hidden = true
+        }
+        
         // Resize labels and scroll view
         titleLabel.sizeToFit()
+        tableView.reloadData()
     }
     
     private func transitionToPage(dstID: Int) {
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
         
+        vc.lastPage = self
         vc.pageID = dstID
         
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     //

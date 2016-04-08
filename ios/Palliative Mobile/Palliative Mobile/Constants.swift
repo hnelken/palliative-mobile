@@ -40,6 +40,7 @@ let kLinkIDIndex = 1
 let kContentTitleIndex = 0
 let kContentSubtitleIndex = 1
 let kContentTextIndex = 2
+let kPageParentIDKey = "parentID"
 let kPageContentKey = "content"
 let kPageLinksKey = "links"
 let kPageBookmarkedKey = "bookmarked"

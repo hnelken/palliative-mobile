@@ -29,11 +29,13 @@ class DBInterface: NSObject {
                 let title = results.stringForColumn("title")
                 let subtitle = results.stringForColumn("subtitle")
                 let text = results.stringForColumn("text")
+                let parentID = results.intForColumn("parent_id")
                 let content = [title, subtitle, text]
                 
                 let bookmarked = results.intForColumn("is_bookmarked")
                 
                 page[kPageContentKey] = content
+                page[kPageParentIDKey] = NSNumber(int: parentID)
                 page[kPageBookmarkedKey] = NSNumber(int: bookmarked)
             }
             
