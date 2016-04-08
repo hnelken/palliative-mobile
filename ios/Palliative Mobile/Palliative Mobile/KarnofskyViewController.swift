@@ -39,19 +39,50 @@ class KarnofskyViewController: UIViewController {
     var button1Type = "Condition"
     var button2Type = "Level of Functional Capacity"
     
+    var button1 = "Condition"
+    var button2 = "level of Functional Capacity"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         condition.setTitle(button1Type, forState: UIControlState.Normal)
+        condition.hidden = false
         levelOfFunctionalCapacity.setTitle(button2Type, forState: UIControlState.Normal)
+        levelOfFunctionalCapacity.hidden = true
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    @IBAction func karnofskyCalulatorSegue(segue:UIStoryboardSegue) {
+        condition.setTitle(button1, forState: UIControlState.Normal)
+        levelOfFunctionalCapacity.setTitle(button2, forState: UIControlState.Normal)
+                    //if all of the buttons have been selected then it should calculate the score
+        if button2 != button2Type
+        {
+           // score.text = getScore()
+            score.hidden = false
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func conditionSegue(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func levelSegue(sender: AnyObject) {
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let id = segue.identifier
+        
+        let vc = segue.destinationViewController
+    }
 
 }

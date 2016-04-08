@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */; };
+		21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */; };
+		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
+		21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */; };
+		21F7996E1CA9F66A0080926A /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F7996D1CA9F66A0080926A /* Calculator.storyboard */; };
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
 		D826B3691C99FB5F00BF83CC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */; };
@@ -235,6 +240,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/KarnofskyViewController.swift"; sourceTree = "<group>"; };
+		21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceTableViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/PalliativePerformanceTableViewController.swift"; sourceTree = "<group>"; };
+		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
+		21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KernofskyTableViewController.swift; sourceTree = "<group>"; };
+		21F7996D1CA9F66A0080926A /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -486,6 +496,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21C2AAF41CB725A3006C1F1E /* calculator view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */,
+				21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */,
+				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
+				21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */,
+			);
+			name = "calculator view controllers";
+			sourceTree = "<group>";
+		};
 		7B68356638F6722864756B63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,8 +810,10 @@
 		D87836581C768A1A00DDFF27 /* Palliative Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				21C2AAF41CB725A3006C1F1E /* calculator view controllers */,
 				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
+				21F7996D1CA9F66A0080926A /* Calculator.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
@@ -945,6 +968,7 @@
 				D8767A3C1C7A8BC500F23541 /* face1.png in Resources */,
 				D8767A7D1C7A8BC500F23541 /* people1.png in Resources */,
 				D8767A1A1C7A8BC500F23541 /* calculator.png in Resources */,
+				21F7996E1CA9F66A0080926A /* Calculator.storyboard in Resources */,
 				D8767AB61C7A8BC500F23541 /* upload.png in Resources */,
 				D8767AA61C7A8BC500F23541 /* step.png in Resources */,
 				D8767A071C7A8BC500F23541 /* 360.png in Resources */,
@@ -1136,7 +1160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */,
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
+				21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
@@ -1150,6 +1176,8 @@
 				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,
 				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
+				21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */,
+				21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
