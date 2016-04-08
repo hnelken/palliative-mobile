@@ -22,7 +22,7 @@ class KarnofskyViewController: UIViewController {
         "Unable to care for self; requires equivalent of instatutional or hospital care; diseases may be progressing rapidly"
     ]
     
-    var levelsOfFunctionalCpacity = [
+    var levelsOfFunctionalCapcity = [
         "No complaints, no evidence of disease",
         "Able to carry on normal activity; minor signs or symptoms of disease",
         "Normal activity with effort; some signs or symptoms of disease",
@@ -42,6 +42,8 @@ class KarnofskyViewController: UIViewController {
     var button1 = "Condition"
     var button2 = "level of Functional Capacity"
     
+    var value = ["100%", "90%", "80%", "70%", "60%", "50%", "40%", "30%", "20%", "10%", "0%"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +51,8 @@ class KarnofskyViewController: UIViewController {
         condition.hidden = false
         levelOfFunctionalCapacity.setTitle(button2Type, forState: UIControlState.Normal)
         levelOfFunctionalCapacity.hidden = true
+        
+        score.hidden = true
 
         
     }
@@ -59,7 +63,7 @@ class KarnofskyViewController: UIViewController {
                     //if all of the buttons have been selected then it should calculate the score
         if button2 != button2Type
         {
-           // score.text = getScore()
+            score.text = getScore()
             score.hidden = false
         }
     }
@@ -82,7 +86,30 @@ class KarnofskyViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController
+        let vc = segue.destinationViewController as! KernofskyTableViewController
+        
+        if id == "conditionSegue"
+        {
+            vc.options = conditions
+            vc.button = 1
+        }
+        else
+        {
+            vc.options = levelsOfFunctionalCapcity
+            vc.button = 2
+        }
+        
+        vc.showFrom = vc.getShowFrom(self)
+    }
+    
+    func getScore() -> String {
+        
+        for i in 0..<levelsOfFunctionalCapcity.count
+        {
+            if button2 == levelsOfFunctionalCapcity[i] {return value[i]}
+        }
+        
+        return "DNR" //this should never be reached
     }
 
 }
