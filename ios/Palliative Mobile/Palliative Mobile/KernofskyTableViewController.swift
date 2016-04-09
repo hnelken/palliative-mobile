@@ -14,6 +14,7 @@ class KernofskyTableViewController: UITableViewController {
     var button = 0
     var buttonLabel = ""
     var showFrom = 0
+    var showTo = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +36,8 @@ class KernofskyTableViewController: UITableViewController {
     
     func getViableOptions() -> [String] {
         var newOptionList = [String]()
-        if button == 1 || button == 2
-        {
-            for i in showFrom...(showFrom + 2) {
-                newOptionList.append(options[i] as! String)
-            }
-        }
-        else
-        {
-            for i in showFrom...(options.count - 1) {
-                newOptionList.append(options[i] as! String)
-            }
+        for i in showFrom...showTo {
+            newOptionList.append(options[i] as! String)
         }
         return newOptionList
     }
@@ -55,6 +47,7 @@ class KernofskyTableViewController: UITableViewController {
         
         cell.textLabel?.text = options[indexPath.row] as? String
         cell.textLabel?.numberOfLines = 0;
+        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         
         return cell
     }
@@ -102,6 +95,19 @@ class KernofskyTableViewController: UITableViewController {
             if vc.button1 == vc.conditions[0] {return 0}
             if vc.button1 == vc.conditions[1] {return 3}
             return 6                                        //this is the case when they select the third option for button 1
+        }
+    }
+    
+    func getShowTo(vc: KarnofskyViewController) -> Int {
+        if button == 1
+        {
+            return 2
+        }
+        else
+        {
+            if vc.button1 == vc.conditions[0] {return 2}
+            if vc.button1 == vc.conditions[1] {return 5}
+            return (vc.levelsOfFunctionalCapcity.count - 1)
         }
     }
     

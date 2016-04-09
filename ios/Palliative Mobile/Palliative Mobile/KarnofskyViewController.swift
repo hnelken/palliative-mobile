@@ -53,8 +53,6 @@ class KarnofskyViewController: UIViewController {
         levelOfFunctionalCapacity.hidden = true
         
         score.hidden = true
-
-        
     }
     
     @IBAction func karnofskyCalulatorSegue(segue:UIStoryboardSegue) {
@@ -68,6 +66,9 @@ class KarnofskyViewController: UIViewController {
         }
         
         condition.titleLabel?.numberOfLines = 0
+        condition.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
+        levelOfFunctionalCapacity.titleLabel?.numberOfLines = 0
+        levelOfFunctionalCapacity.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
     }
 
 
@@ -102,6 +103,7 @@ class KarnofskyViewController: UIViewController {
         }
         
         vc.showFrom = vc.getShowFrom(self)
+        vc.showTo = vc.getShowTo(self)
     }
     
     func getScore() -> String {
