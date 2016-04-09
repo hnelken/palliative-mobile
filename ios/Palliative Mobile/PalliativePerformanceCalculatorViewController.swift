@@ -185,7 +185,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
         switch button1 {
         case ambulationOptions[0] :
             // check to see if the bar is lower then the highest loaction of this choice
-            // if it is, then rais it to this choice, else dont lower it
+            // if it is, then raise it to this choice, else dont lower it
             if bar <= 0 {bar = 0}
             // check to make sure the index above the bar before adding points
             for i in 0...2 { if bar <= i {scoreTracker[i]++}}
