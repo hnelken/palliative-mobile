@@ -237,8 +237,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             UIView.transitionFromView(
                 currentView!,
                 toView: toView,
-                duration: 1,
-                options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
+                duration: 0.75,
+                options: [.TransitionFlipFromLeft, .ShowHideTransitionViews],
                 completion: nil)
             
             currentView = toView

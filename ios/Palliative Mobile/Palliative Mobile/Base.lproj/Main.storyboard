@@ -236,12 +236,21 @@
                                 <rect key="frame" x="20" y="224" width="560" height="356"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" id="WQb-X3-G29">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCell" textLabel="s2E-0G-XR3" style="IBUITableViewCellStyleDefault" id="WQb-X3-G29">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WQb-X3-G29" id="Kp5-D5-yLJ">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2E-0G-XR3">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -358,7 +367,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Hcg-fd-6ES"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -370,16 +379,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-t1-MNp" userLabel="ContainerView">
                                 <rect key="frame" x="12" y="171" width="575" height="409"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-Cl-d8o">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-Cl-d8o">
                                         <rect key="frame" x="7" y="0.0" width="560" height="394"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z99-Dn-JYe">
-                                                <rect key="frame" x="20" y="23" width="536" height="215"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z99-Dn-JYe" userLabel="Text Label">
+                                                <rect key="frame" x="20" y="23" width="520" height="176.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="396" id="LZo-3E-2Y9"/>
                                                 </constraints>
-                                                <string key="text">LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE </string>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="19"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
@@ -393,19 +402,22 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Z99-Dn-JYe" secondAttribute="bottom" constant="15" id="1mD-0t-kN0"/>
                                             <constraint firstAttribute="trailing" secondItem="Z99-Dn-JYe" secondAttribute="trailing" constant="15" id="1rU-2x-L6X"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z99-Dn-JYe" secondAttribute="trailing" constant="20" id="EF3-zV-tKP"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leading" constant="15" id="Pw8-il-fq7"/>
+                                            <constraint firstItem="Z99-Dn-JYe" firstAttribute="centerX" secondItem="XCD-Cl-d8o" secondAttribute="centerX" id="RpM-JM-8gQ"/>
                                             <constraint firstAttribute="width" constant="560" id="TUf-4q-uVv"/>
-                                            <constraint firstAttribute="bottom" secondItem="Z99-Dn-JYe" secondAttribute="bottom" constant="156" id="YYO-Vu-ebh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z99-Dn-JYe" secondAttribute="bottom" constant="15" id="YYO-Vu-ebh"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leading" constant="20" id="ZHu-h9-RHA"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="trailing" secondItem="XCD-Cl-d8o" secondAttribute="trailingMargin" constant="-48" id="ZZl-17-Wo3"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leadingMargin" constant="15" id="ahD-XW-OQW"/>
                                             <constraint firstAttribute="height" constant="453" id="fxQ-DR-eYi"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="centerX" secondItem="XCD-Cl-d8o" secondAttribute="centerX" constant="8" id="gmz-yS-bca"/>
                                             <constraint firstAttribute="trailing" secondItem="Z99-Dn-JYe" secondAttribute="trailing" constant="15" id="gwT-nX-27S"/>
-                                            <constraint firstAttribute="trailing" secondItem="Z99-Dn-JYe" secondAttribute="trailing" constant="4" id="i4A-nL-DPJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z99-Dn-JYe" secondAttribute="trailing" constant="15" id="i4A-nL-DPJ"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="top" secondItem="XCD-Cl-d8o" secondAttribute="topMargin" constant="15" id="j3i-OA-5Sm"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="bottom" secondItem="XCD-Cl-d8o" secondAttribute="bottomMargin" id="oDd-Yz-uvZ"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="top" secondItem="XCD-Cl-d8o" secondAttribute="top" constant="15" id="rhA-qT-yzV"/>
+                                            <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leading" constant="20" id="wAq-Ec-8MV"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -414,24 +426,27 @@
                                                 <exclude reference="1mD-0t-kN0"/>
                                                 <exclude reference="1rU-2x-L6X"/>
                                                 <exclude reference="Pw8-il-fq7"/>
+                                                <exclude reference="ZHu-h9-RHA"/>
                                                 <exclude reference="ZZl-17-Wo3"/>
                                                 <exclude reference="ahD-XW-OQW"/>
+                                                <exclude reference="gmz-yS-bca"/>
                                                 <exclude reference="gwT-nX-27S"/>
+                                                <exclude reference="i4A-nL-DPJ"/>
                                                 <exclude reference="oDd-Yz-uvZ"/>
                                                 <exclude reference="rhA-qT-yzV"/>
                                             </mask>
                                         </variation>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-f3-kL6">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-f3-kL6">
                                         <rect key="frame" x="7" y="0.0" width="560" height="394"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obt-92-u5B">
-                                                <rect key="frame" x="20" y="23" width="521" height="215"/>
+                                                <rect key="frame" x="20" y="23" width="521" height="176.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="396" id="HRM-tz-r9t"/>
                                                 </constraints>
-                                                <string key="text">LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE </string>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="19"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
@@ -457,7 +472,7 @@
                                             <constraint firstItem="Obt-92-u5B" firstAttribute="leading" secondItem="qSV-f3-kL6" secondAttribute="leadingMargin" constant="15" id="gYz-xa-DZ1"/>
                                             <constraint firstItem="Obt-92-u5B" firstAttribute="trailing" secondItem="qSV-f3-kL6" secondAttribute="trailingMargin" constant="-48" id="kLF-G4-8CY"/>
                                             <constraint firstAttribute="width" constant="560" id="sOy-NJ-F0c"/>
-                                            <constraint firstAttribute="trailing" secondItem="Obt-92-u5B" secondAttribute="trailing" constant="15" id="z2t-wi-sfM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Obt-92-u5B" secondAttribute="trailing" constant="20" id="z2t-wi-sfM"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -489,9 +504,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="526" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-7g-V2Y">
-                                                            <rect key="frame" x="18" y="11" width="491" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE LONGTITLE" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zY-7g-V2Y">
+                                                            <rect key="frame" x="18" y="11" width="490" height="21"/>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -559,7 +574,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-4S-8E3">
-                                <rect key="frame" x="19" y="127" width="560" height="44"/>
+                                <rect key="frame" x="20" y="127" width="560" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzs-cE-NJf">
                                         <rect key="frame" x="25" y="9" width="26" height="26"/>
@@ -584,10 +599,10 @@
                                         </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-PZ-dJz">
-                                        <rect key="frame" x="196" y="8" width="168" height="29"/>
+                                        <rect key="frame" x="196" y="4" width="168" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="168" id="AmH-O7-lzM"/>
-                                            <constraint firstAttribute="height" constant="28" id="sQC-lR-0fE"/>
+                                            <constraint firstAttribute="height" constant="35" id="sQC-lR-0fE"/>
                                         </constraints>
                                         <segments>
                                             <segment title="" image="network2-white.png"/>
@@ -663,7 +678,7 @@
                             <constraint firstItem="yNj-Wh-iUQ" firstAttribute="centerY" secondItem="aPY-4S-8E3" secondAttribute="centerY" id="HRj-tf-fNY"/>
                             <constraint firstItem="geD-eK-cjd" firstAttribute="leading" secondItem="aEq-AD-hWJ" secondAttribute="trailing" constant="25" id="JLh-RB-5DH"/>
                             <constraint firstItem="ilD-fq-589" firstAttribute="bottom" secondItem="d6O-hT-2Td" secondAttribute="bottom" id="KNe-l2-MzV"/>
-                            <constraint firstItem="aPY-4S-8E3" firstAttribute="leading" secondItem="Rss-nC-1eQ" secondAttribute="leadingMargin" constant="-1" id="KYk-V1-MHo"/>
+                            <constraint firstItem="aPY-4S-8E3" firstAttribute="leading" secondItem="Rss-nC-1eQ" secondAttribute="leadingMargin" id="KYk-V1-MHo"/>
                             <constraint firstItem="ilD-fq-589" firstAttribute="leading" secondItem="Rss-nC-1eQ" secondAttribute="leadingMargin" id="N6V-su-S4t"/>
                             <constraint firstItem="Y2Z-bY-gmf" firstAttribute="leading" secondItem="ilD-fq-589" secondAttribute="trailing" constant="25" id="ODY-Pw-N7h"/>
                             <constraint firstItem="d6O-hT-2Td" firstAttribute="firstBaseline" secondItem="ilD-fq-589" secondAttribute="firstBaseline" id="Oyt-hl-g2A"/>
@@ -715,6 +730,14 @@
             </objects>
             <point key="canvasLocation" x="1312" y="1109"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="DCp-Es-7uP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="wav-9D-4Aa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdY-FR-Xue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="1870"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="OgX-FH-mbd">
             <objects>
@@ -758,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSy-b7-MQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="1103"/>
+            <point key="canvasLocation" x="2491" y="785"/>
         </scene>
         <!--BookmarksViewController-->
         <scene sceneID="nYu-OE-ZPF">
@@ -776,12 +799,21 @@
                                 <rect key="frame" x="20" y="77" width="560" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" id="n6z-DH-VK0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarkCell" textLabel="wSx-VX-ixw" style="IBUITableViewCellStyleDefault" id="n6z-DH-VK0">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6z-DH-VK0" id="F6d-bQ-5Ab">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wSx-VX-ixw">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -869,12 +901,21 @@
                                 <rect key="frame" x="20" y="79" width="560" height="501"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" id="dne-EO-E43">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchCell" textLabel="fRh-Ci-dSp" style="IBUITableViewCellStyleDefault" id="dne-EO-E43">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dne-EO-E43" id="OsA-p9-ziy">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fRh-Ci-dSp">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -941,6 +982,6 @@
         <image name="network2-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yxc-af-N95"/>
+        <segue reference="MzH-uR-I2B"/>
     </inferredMetricsTieBreakers>
 </document>
