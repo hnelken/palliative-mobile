@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Palliative Mobile/PalliativePrognosticIndexViewController.swift"
-            timestampString = "481929162.514044"
+            timestampString = "481944483.35524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "setScoreLabel(_:)"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "getScoreLabel(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

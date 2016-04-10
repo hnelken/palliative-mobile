@@ -85,6 +85,7 @@ class PalliativePrognosticIndexViewController: UIViewController {
         if button5 != button5Type
         {
             score.text = getScoreLabel(getScore())
+            score.numberOfLines = 0
             score.hidden = false
         }
     }
@@ -109,29 +110,29 @@ class PalliativePrognosticIndexViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! PalliativePerformanceTableViewController
+        let vc = segue.destinationViewController as! PalliativePrognosticIndexTableViewController
         
-        if id == "ambulation"
+        if id == "palliativePerformanceScale"
         {
             vc.options = palliativePerformanceScaleOptions
             vc.button = 1
         }
-        else if id == "activity"
+        else if id == "oralIntake"
         {
             vc.options = oralIntakeOptions
             vc.button = 2
         }
-        else if id == "selfCare"
+        else if id == "edema"
         {
             vc.options = edemaOptions
             vc.button = 3
         }
-        else if id == "intake"
+        else if id == "dyspneaAtRest"
         {
             vc.options = dyspneaAtRestOptions
             vc.button = 4
         }
-        else if id == "conscious"
+        else if id == "delerium"
         {
             vc.options = deliriumOptions
             vc.button = 5
@@ -190,16 +191,16 @@ class PalliativePrognosticIndexViewController: UIViewController {
         return totalScore
     }
     
-    func getScoreLabel(PPIScore : Double) -> String {
+    func getScoreLabel(ppiScore : Double) -> String {
         
-        if PPIScore > 6 {
-             return "PPI score: " + "\(PPIScore)" + ", expected survival shorter than 3 weeks"
+        if ppiScore > 6 {
+             return "PPI score: " + "\(ppiScore)" + ", expected survival shorter than 3 weeks"
         }
-        else if PPIScore >= 4 {
-            return "PPI score: " + "\(PPIScore)" + ", expected survival shorter than 6 weeks"
+        else if ppiScore >= 4 {
+            return "PPI score: " + "\(ppiScore)" + ", expected survival shorter than 6 weeks"
         }
         else {
-            return "PPI score: " + "\(PPIScore)" + ", expected survival more than 6 weeks"
+            return "PPI score: " + "\(ppiScore)" + ", expected survival more than 6 weeks"
         }
     }
     

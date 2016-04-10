@@ -69,6 +69,7 @@
                                 </state>
                                 <connections>
                                     <action selector="palliativePerformanceButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="ndr-WC-Cr1"/>
+                                    <segue destination="5X6-zG-fcE" kind="show" identifier="palliativePerformanceScale" id="MuA-rl-9cf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-dj-9S1">
@@ -78,6 +79,7 @@
                                 </state>
                                 <connections>
                                     <action selector="oralIntakeButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="1fA-Bd-f8I"/>
+                                    <segue destination="5X6-zG-fcE" kind="show" identifier="oralIntake" id="7HC-in-oAI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmW-kK-a51">
@@ -87,6 +89,7 @@
                                 </state>
                                 <connections>
                                     <action selector="edemaButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="ae0-5j-EzB"/>
+                                    <segue destination="5X6-zG-fcE" kind="show" identifier="edema" id="rsX-BO-gt6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-v8-xmk">
@@ -96,6 +99,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dyspneaAtRestButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="nKV-ea-Nx4"/>
+                                    <segue destination="5X6-zG-fcE" kind="show" identifier="dyspneaAtRest" id="RQt-Y9-JUz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-4g-aKZ">
@@ -105,16 +109,22 @@
                                 </state>
                                 <connections>
                                     <action selector="deliriumButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="56s-sf-Yzi"/>
+                                    <segue destination="5X6-zG-fcE" kind="show" identifier="delerium" id="7gx-fp-Bez"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-u8-2OB">
-                                <rect key="frame" x="278" y="346" width="44.5" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-u8-2OB">
+                                <rect key="frame" x="20" y="346" width="560" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jJn-u8-2OB" secondAttribute="height" multiplier="37:21" id="0nd-uf-Aza"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0nd-uf-Aza"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,9 +145,11 @@
                             <constraint firstItem="xko-hm-Bqf" firstAttribute="top" secondItem="Job-F6-BbL" secondAttribute="bottom" constant="19.5" id="h3M-Y4-0zB"/>
                             <constraint firstItem="GmW-kK-a51" firstAttribute="top" secondItem="E3H-dj-9S1" secondAttribute="bottom" constant="20" id="n3F-Ze-zIC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Job-F6-BbL" secondAttribute="trailing" id="otM-1q-uZn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jJn-u8-2OB" secondAttribute="trailing" id="pv6-vF-pKo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CtF-4g-aKZ" secondAttribute="trailing" id="qi1-9X-g7j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E3H-dj-9S1" secondAttribute="trailing" constant="5" id="sl9-43-lzC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GmW-kK-a51" secondAttribute="leading" id="u3u-D5-4TG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jJn-u8-2OB" secondAttribute="leading" id="uAe-37-b1K"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CtF-4g-aKZ" secondAttribute="leading" id="ujc-4L-WQf"/>
                             <constraint firstItem="qhc-v8-xmk" firstAttribute="centerX" secondItem="cWr-4A-xGm" secondAttribute="centerX" id="vcX-ul-tLu"/>
                             <constraint firstItem="Job-F6-BbL" firstAttribute="top" secondItem="Yuc-fx-aII" secondAttribute="bottom" id="vsz-9K-cxX"/>
@@ -149,13 +161,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Edema" destination="GmW-kK-a51" id="RXf-Wa-FRC"/>
-                        <outlet property="PalliativePerformanceScale" destination="xko-hm-Bqf" id="XdS-C1-1I4"/>
                         <outlet property="delirium" destination="CtF-4g-aKZ" id="iYX-hP-cX8"/>
                         <outlet property="dyspneaAtRest" destination="qhc-v8-xmk" id="XNj-28-0ER"/>
                         <outlet property="edema" destination="GmW-kK-a51" id="jyk-7M-Px3"/>
-                        <outlet property="oralIntake" destination="E3H-dj-9S1" id="XCH-0d-J91"/>
-                        <outlet property="oralIntakeButton" destination="E3H-dj-9S1" id="lAN-Rz-aEb"/>
+                        <outlet property="oralIntake" destination="E3H-dj-9S1" id="eNC-cj-qRd"/>
                         <outlet property="palliativePerformanceScale" destination="xko-hm-Bqf" id="Sur-oL-Gn0"/>
                         <outlet property="score" destination="jJn-u8-2OB" id="EOW-rb-Cp7"/>
                     </connections>
@@ -163,6 +172,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akw-XS-La3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="-1906"/>
+        </scene>
+        <!--Palliative Prognostic Index Table View Controller-->
+        <scene sceneID="f8o-D1-wvN">
+            <objects>
+                <tableViewController id="5X6-zG-fcE" customClass="PalliativePrognosticIndexTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6kF-2T-pBn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PalliativePrognosticIndexTableCell" id="snI-c2-1cs">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="snI-c2-1cs" id="oIZ-J8-61i">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="OGm-zR-VAW" kind="unwind" identifier="backToHomeSegue" unwindAction="palliativePrognosticIndexSegue:" id="RYE-99-5lI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5X6-zG-fcE" id="lh1-wu-Sqi"/>
+                            <outlet property="delegate" destination="5X6-zG-fcE" id="VcO-FZ-GoC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZS9-Wu-mfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OGm-zR-VAW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-1906"/>
         </scene>
         <!--Karnofsky View Controller-->
         <scene sceneID="TpV-sM-A4D">
@@ -434,7 +475,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o5P-ii-LpJ"/>
         <segue reference="eI0-SZ-PCh"/>
+        <segue reference="o5P-ii-LpJ"/>
+        <segue reference="7gx-fp-Bez"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		212C78C41CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */; };
+		212C78C61CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */; };
 		21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */; };
 		21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */; };
 		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
@@ -242,6 +243,7 @@
 
 /* Begin PBXFileReference section */
 		212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePrognosticIndexViewController.swift; sourceTree = "<group>"; };
+		212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePrognosticIndexTableViewController.swift; sourceTree = "<group>"; };
 		21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/KarnofskyViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceTableViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/PalliativePerformanceTableViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
 				21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */,
 				212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */,
+				212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */,
 			);
 			name = "calculator view controllers";
 			sourceTree = "<group>";
@@ -1170,6 +1173,7 @@
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				212C78C41CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				212C78C61CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
 				D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
