@@ -12,8 +12,13 @@ import Foundation
 let web = WebInterface()
 let db = DBInterface()
 
+// PAGE ID CONSTANTS
+let kRapidPCPageID = 2
+let kCareForFrailPageID = 51
+
 // SEGUE IDENTIFIERS
 let kHomeSegueID = "toHome"
+let kSurveySegueID = "toSurvey"
 let kRapidPCSegueID = "toRapidPC"
 let kBookmarkSegueID = "toBookmarks"
 let kArticleSegueID = "toArticleDisplay"
@@ -28,6 +33,12 @@ let kHomeCellID = "homeCell"
 let kBookmarkCellID = "bookmarkCell"
 let kArticleLinkCellID = "articleLinkCell"
 let kSearchCellID = "searchCell"
+
+// STORYBOARD IDS
+let kPageContentControllerID = "PageContentController"
+let kPageViewControllerID = "PageViewController"
+let kFirstTimePageID = "FirstTimePage"
+let kOptOutPageID = "OptOutPage"
 
 // SERVER URL CONSTANTS
 let kServerURL = "http://our server domain here/api/"

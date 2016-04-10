@@ -236,6 +236,11 @@
 		D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550E1CB7526A000EFA18 /* clipboard-white.png */; };
 		D89555111CB7526A000EFA18 /* network2-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550F1CB7526A000EFA18 /* network2-white.png */; };
 		D89555131CB83AFE000EFA18 /* info-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555121CB83AFE000EFA18 /* info-white.png */; };
+		D89555151CB9C243000EFA18 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89555141CB9C243000EFA18 /* RootPageViewController.swift */; };
+		D89555171CB9F29D000EFA18 /* PageContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89555161CB9F29D000EFA18 /* PageContentController.swift */; };
+		D895551B1CB9F5B2000EFA18 /* bookshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555181CB9F5B2000EFA18 /* bookshot.png */; };
+		D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555191CB9F5B2000EFA18 /* artshot.png */; };
+		D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D895551A1CB9F5B2000EFA18 /* searchshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -479,6 +484,11 @@
 		D895550E1CB7526A000EFA18 /* clipboard-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard-white.png"; sourceTree = "<group>"; };
 		D895550F1CB7526A000EFA18 /* network2-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network2-white.png"; sourceTree = "<group>"; };
 		D89555121CB83AFE000EFA18 /* info-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-white.png"; sourceTree = "<group>"; };
+		D89555141CB9C243000EFA18 /* RootPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
+		D89555161CB9F29D000EFA18 /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
+		D89555181CB9F5B2000EFA18 /* bookshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookshot.png; sourceTree = "<group>"; };
+		D89555191CB9F5B2000EFA18 /* artshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artshot.png; sourceTree = "<group>"; };
+		D895551A1CB9F5B2000EFA18 /* searchshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,6 +555,9 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D89555181CB9F5B2000EFA18 /* bookshot.png */,
+				D89555191CB9F5B2000EFA18 /* artshot.png */,
+				D895551A1CB9F5B2000EFA18 /* searchshot.png */,
 				D89555121CB83AFE000EFA18 /* info-white.png */,
 				D895550E1CB7526A000EFA18 /* clipboard-white.png */,
 				D895550F1CB7526A000EFA18 /* network2-white.png */,
@@ -566,6 +579,8 @@
 		D87679391C7A765000F23541 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D89555141CB9C243000EFA18 /* RootPageViewController.swift */,
+				D89555161CB9F29D000EFA18 /* PageContentController.swift */,
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
@@ -971,6 +986,7 @@
 				D89555111CB7526A000EFA18 /* network2-white.png in Resources */,
 				D8767A071C7A8BC500F23541 /* 360.png in Resources */,
 				D8767A5F1C7A8BC500F23541 /* link.png in Resources */,
+				D895551B1CB9F5B2000EFA18 /* bookshot.png in Resources */,
 				D87754921C9B58FC002D831E /* bookmark-red.png in Resources */,
 				D8767AB71C7A8BC500F23541 /* USB.png in Resources */,
 				D8767A7F1C7A8BC500F23541 /* pic.png in Resources */,
@@ -989,6 +1005,7 @@
 				D8767A761C7A8BC500F23541 /* network3.png in Resources */,
 				D8767A921C7A8BC500F23541 /* right.png in Resources */,
 				D8767AA31C7A8BC500F23541 /* star.png in Resources */,
+				D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */,
 				D8767A401C7A8BC500F23541 /* file-add.png in Resources */,
 				D8767A911C7A8BC500F23541 /* right-arrow.png in Resources */,
 				D8767A611C7A8BC500F23541 /* look.png in Resources */,
@@ -1058,6 +1075,7 @@
 				D8767A2A1C7A8BC500F23541 /* clock1.png in Resources */,
 				D8767A121C7A8BC500F23541 /* books.png in Resources */,
 				D8767AB91C7A8BC500F23541 /* video1.png in Resources */,
+				D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */,
 				D8767AA91C7A8BC500F23541 /* sucker.png in Resources */,
 				D8767ACC1C7A90A000F23541 /* look-white.png in Resources */,
 				D8767A841C7A8BC500F23541 /* prev1.png in Resources */,
@@ -1162,6 +1180,7 @@
 			files = (
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
+				D89555171CB9F29D000EFA18 /* PageContentController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
@@ -1172,6 +1191,7 @@
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
 				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,
+				D89555151CB9C243000EFA18 /* RootPageViewController.swift in Sources */,
 				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 			);

@@ -34,22 +34,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let del = UIApplication.sharedApplication().delegate as! AppDelegate
         if del.firstTime {
             del.firstTime = false
-            //Create the AlertController
-            let actionSheetController: UIAlertController = UIAlertController(title: "Palliative Mobile Demographic Survey", message: "It appears this is your first time here, would you please take the time to complete a short, anonymous survey? We won't ask for any identifying information!", preferredStyle: .ActionSheet)
             
-            //Create and add the Cancel action
-            let cancelAction: UIAlertAction = UIAlertAction(title: "No, thanks", style: .Cancel) { action -> Void in
-                //Just dismiss the action sheet
-            }
-            actionSheetController.addAction(cancelAction)
-            //Create and add first option action
-            let takePictureAction: UIAlertAction = UIAlertAction(title: "Sure!", style: .Default) { action -> Void in
-                //Code for launching the camera goes here
-                self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
-            }
-            actionSheetController.addAction(takePictureAction)
-            //Present the AlertController
-            self.presentViewController(actionSheetController, animated: true, completion: nil)
+            // Segue to tutorial
+            self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
         }
 
     }
@@ -110,14 +97,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch indexPath.row {
         case 0:
-            destination = 2;
+            destination = kRapidPCPageID;
             segueID = kArticleSegueID
         case 1, 2, 3:
-            destination = 51;
+            destination = kCareForFrailPageID;
             segueID = kArticleSegueID
         case 4: segueID = kBookmarkSegueID
         default:
-            destination = 51;
+            destination = kCareForFrailPageID;
             segueID = kArticleSegueID
         }
         

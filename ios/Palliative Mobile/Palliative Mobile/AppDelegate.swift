@@ -46,6 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         createCopyOfDatabaseIfNeeded()
         
+        // Change page control appearance
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.whiteColor()
+        pageControl.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        
         return true
     }
 
