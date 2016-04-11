@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ezQ-kx-14M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gYa-du-plv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -40,6 +40,115 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCN-nG-z8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="-398"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1s0-31-ocf">
+            <objects>
+                <viewController id="gYa-du-plv" customClass="AKPSViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="acw-Ow-eEj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Emx-Q6-rQ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T6P-cf-GC4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Australia Modified Karnofsky Performance Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-af-ajO">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AKPS Assessment Criteria.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-Y8-X10">
+                                <rect key="frame" x="20" y="58" width="560" height="277"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="277" id="khT-DT-Hxd"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iCd-0k-HGc">
+                                <rect key="frame" x="20" y="343" width="560" height="237"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The Australiamodifiedkarnofsky Performance scale (AkPs)is a measure of the patient’s overall performance status orability to perform their activities of daily living. it is a singlescore between 10 and 100 assigned by a clinician based onobservations of a patient’s ability to perform common tasksrelating to activity, work and selfcare.A score of 100signifies normal physical abilities with no evidence ofdisease. Decreasing numbers indicate a reducedperformance status.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="l6l-af-ajO" firstAttribute="top" secondItem="acw-Ow-eEj" secondAttribute="bottom" id="4bW-qz-oww"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vVx-Y8-X10" secondAttribute="leading" id="AuE-mO-BsC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iCd-0k-HGc" secondAttribute="trailing" id="KEz-UF-y0z"/>
+                            <constraint firstItem="vVx-Y8-X10" firstAttribute="top" secondItem="l6l-af-ajO" secondAttribute="bottom" constant="8" id="LlZ-Pv-OTr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iCd-0k-HGc" secondAttribute="leading" id="QZX-UH-qn6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="l6l-af-ajO" secondAttribute="leading" id="Wyn-lt-IPD"/>
+                            <constraint firstItem="Emx-Q6-rQ5" firstAttribute="top" secondItem="iCd-0k-HGc" secondAttribute="bottom" constant="20" id="Zxd-bX-tjz"/>
+                            <constraint firstItem="iCd-0k-HGc" firstAttribute="top" secondItem="vVx-Y8-X10" secondAttribute="bottom" constant="8" id="fsb-5M-Ekw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vVx-Y8-X10" secondAttribute="trailing" id="hKj-fS-A1t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l6l-af-ajO" secondAttribute="trailing" id="j2X-z1-RFr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calcTitle" destination="l6l-af-ajO" id="1SW-Qh-gPx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IB3-fN-siO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="-3335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4F0-EX-Den">
+            <objects>
+                <viewController id="gd0-OE-F7g" customClass="NYHFViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a3e-64-sw1"/>
+                        <viewControllerLayoutGuide type="bottom" id="h9H-G7-2M8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fF1-Yk-K31">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYHA Classification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-Dh-PrE">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NYHA classification chart.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-SM-MKe">
+                                <rect key="frame" x="20" y="58" width="560" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="nvx-F5-NX0"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P9F-Bb-xQq">
+                                <rect key="frame" x="20" y="367" width="560" height="213"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Class I: No symptoms and no limitations in ordinaryphysical activity, e.g. shortness of breath whenwalking, climbing stairs.Class II: Mild symptoms (mild shortness of breathand/or angina) and slight limitation in ordinaryactivityClass III: Marked limitation in activity due tosymptoms, even during less than ordinary activity,e.g. walking short distances (20100m);comfortableonly at restClass IV: Severe limitations. symptoms at rest.mostly bedbound</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="P9F-Bb-xQq" secondAttribute="leading" id="7h9-91-RGk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ecs-SM-MKe" secondAttribute="leading" id="ByO-Mc-0OQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fgB-Dh-PrE" secondAttribute="leading" id="DXO-Rl-TDS"/>
+                            <constraint firstItem="P9F-Bb-xQq" firstAttribute="top" secondItem="ecs-SM-MKe" secondAttribute="bottom" constant="8" id="Jpv-oB-XJh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ecs-SM-MKe" secondAttribute="trailing" id="NhI-4X-buY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P9F-Bb-xQq" secondAttribute="trailing" id="UVl-6n-0Do"/>
+                            <constraint firstItem="ecs-SM-MKe" firstAttribute="top" secondItem="fgB-Dh-PrE" secondAttribute="bottom" constant="8" id="dZ9-n7-IPT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fgB-Dh-PrE" secondAttribute="trailing" id="qU7-Pq-vLa"/>
+                            <constraint firstItem="fgB-Dh-PrE" firstAttribute="top" secondItem="a3e-64-sw1" secondAttribute="bottom" id="rm2-Ms-Hhi"/>
+                            <constraint firstItem="h9H-G7-2M8" firstAttribute="top" secondItem="P9F-Bb-xQq" secondAttribute="bottom" constant="20" id="zD6-FD-ChO"/>
+                            <constraint firstItem="fgB-Dh-PrE" firstAttribute="top" secondItem="a3e-64-sw1" secondAttribute="bottom" id="zSb-77-vCB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="info" destination="P9F-Bb-xQq" id="aye-Cn-VmN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-4k-9bL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="-2633"/>
         </scene>
         <!--Palliative Prognostic Index View Controller-->
         <scene sceneID="hVv-Zc-duY">
@@ -112,8 +221,8 @@
                                     <segue destination="5X6-zG-fcE" kind="show" identifier="delerium" id="7gx-fp-Bez"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-u8-2OB">
-                                <rect key="frame" x="20" y="346" width="560" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-u8-2OB">
+                                <rect key="frame" x="20" y="346" width="560" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jJn-u8-2OB" secondAttribute="height" multiplier="37:21" id="0nd-uf-Aza"/>
                                 </constraints>
@@ -474,6 +583,10 @@
             <point key="canvasLocation" x="1368" y="373"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AKPS Assessment Criteria.jpg" width="1600" height="831"/>
+        <image name="NYHA classification chart.jpg" width="898" height="602"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eI0-SZ-PCh"/>
         <segue reference="o5P-ii-LpJ"/>
