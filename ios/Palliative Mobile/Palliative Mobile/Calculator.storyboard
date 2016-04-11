@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gYa-du-plv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s4b-jy-RjG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -94,6 +94,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IB3-fN-siO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="-3335"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Sc-cA-7de">
+            <objects>
+                <viewController id="s4b-jy-RjG" customClass="ECOGViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bte-Fo-8eq"/>
+                        <viewControllerLayoutGuide type="bottom" id="MOW-u3-Stm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7F4-XP-Z6R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ECOG Performance Status Scale.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Aq-Sbs">
+                                <rect key="frame" x="20" y="20" width="560" height="316"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="QYR-xj-LjF"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VUv-uC-hwK">
+                                <rect key="frame" x="20" y="344" width="560" height="236"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Physicians are to ascertain the state of the patient by askingquestions such as these:(a) ‘’Tell me how you spend your day.’’(b) ‘’How much time do you spend lying in bed or lyingdown in a day?’’(c) ‘’More than half the day?’’(d) ‘’Has this changed recently?’’These are just guideline reminders of what types ofquestions the physician should ask to get a good picture ofhow their patient is doing.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FYJ-Aq-Sbs" firstAttribute="top" secondItem="Bte-Fo-8eq" secondAttribute="bottom" id="KSi-BK-tBJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VUv-uC-hwK" secondAttribute="leading" id="Lbg-WY-u48"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FYJ-Aq-Sbs" secondAttribute="leading" id="Y3f-Ba-gvc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FYJ-Aq-Sbs" secondAttribute="trailing" id="cXQ-R7-HtJ"/>
+                            <constraint firstItem="FYJ-Aq-Sbs" firstAttribute="centerX" secondItem="7F4-XP-Z6R" secondAttribute="centerX" id="i1z-2b-mie"/>
+                            <constraint firstItem="MOW-u3-Stm" firstAttribute="top" secondItem="VUv-uC-hwK" secondAttribute="bottom" constant="20" id="maT-bq-uVR"/>
+                            <constraint firstItem="VUv-uC-hwK" firstAttribute="top" secondItem="FYJ-Aq-Sbs" secondAttribute="bottom" constant="8" id="q9R-SR-gaa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VUv-uC-hwK" secondAttribute="trailing" id="quh-b2-jRA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXf-Ao-fmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-2633"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4F0-EX-Den">
@@ -585,6 +628,7 @@
     </scenes>
     <resources>
         <image name="AKPS Assessment Criteria.jpg" width="1600" height="831"/>
+        <image name="ECOG Performance Status Scale.jpg" width="1086" height="790"/>
         <image name="NYHA classification chart.jpg" width="898" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
