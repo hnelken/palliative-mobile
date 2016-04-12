@@ -14,7 +14,9 @@ let db = DBInterface()
 
 // PAGE ID CONSTANTS
 let kRapidPCPageID = 2
-let kCareForFrailPageID = 51
+let kCareForFrailPageID = 53
+let kDeathResusPageID = 390
+let kCommonSymptomsPageID = 169
 
 // SEGUE IDENTIFIERS
 let kHomeSegueID = "toHome"

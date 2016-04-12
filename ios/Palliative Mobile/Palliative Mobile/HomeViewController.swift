@@ -27,7 +27,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = .None
+        //self.tableView.separatorStyle = .None
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -99,8 +99,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 0:
             destination = kRapidPCPageID;
             segueID = kArticleSegueID
-        case 1, 2, 3:
+        case 1:
             destination = kCareForFrailPageID;
+            segueID = kArticleSegueID
+        case 2:
+            destination = kDeathResusPageID;
+            segueID = kArticleSegueID
+        case 3:
+            destination = kCommonSymptomsPageID;
             segueID = kArticleSegueID
         case 4: segueID = kBookmarkSegueID
         default:

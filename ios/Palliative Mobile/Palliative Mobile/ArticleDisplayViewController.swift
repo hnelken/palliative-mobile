@@ -161,6 +161,14 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     private func formatView() {
         // Get page
         thisPage = db.getPage(pageID)
+        if let page = thisPage {
+            print("HORRAY")
+            
+            if page.keys.contains(kPageContentKey) {
+                print("HIPTT")
+                print(page[kPageContentKey])
+            }
+        }
         let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
         links = thisPage![kPageLinksKey] as! [[AnyObject]]
         parentID = (thisPage![kPageParentIDKey] as! NSNumber).integerValue
@@ -196,6 +204,10 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             currentView = textScrollView
             detailScrollView.hidden = true
             tableView.hidden = true
+            
+            if (detailText!.isEmpty) {
+                segmentControl.setEnabled(false, forSegmentAtIndex: 2)
+            }
         }
         else {
             viewType = .Links
@@ -203,6 +215,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             textScrollView.hidden = true
             detailScrollView.hidden = true
             
+            if (normalText!.isEmpty) {
+                segmentControl.setEnabled(false, forSegmentAtIndex: 1)
+            }
             if (detailText!.isEmpty) {
                 segmentControl.setEnabled(false, forSegmentAtIndex: 2)
             }
@@ -274,9 +289,11 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     // Cell height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return links.count > 4
-            ? tableView.frame.height / CGFloat(links.count)
-            : tableView.frame.height / 4
+        return links.count <= 4
+            ? tableView.frame.height / 4
+            : (links.count < 7
+                ? tableView.frame.height / CGFloat(links.count)
+                : tableView.frame.height / 6)
     }
     
     // Formats the cells in the table
