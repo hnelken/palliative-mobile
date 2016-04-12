@@ -20,12 +20,13 @@ let kCareForFrailPageID = 51
 let kHomeSegueID = "toHome"
 let kSurveySegueID = "toSurvey"
 let kRapidPCSegueID = "toRapidPC"
-let kBookmarkSegueID = "toBookmarks"
-let kArticleSegueID = "toArticleDisplay"
-let kFirstTimeSegueID = "toFirstTime"
 let kUnstableSegueID = "toUnstable"
-let kShowBookmarkSegueID = "displayBookmark"
+let kBookmarkSegueID = "toBookmarks"
+let kFirstTimeSegueID = "toFirstTime"
+let kArticleSegueID = "toArticleDisplay"
+let kFinishSurveySegueID = "finishSurvey"
 let kShowSearchSegueID = "showSearchResults"
+let kShowBookmarkSegueID = "displayBookmark"
 let kShowSearchResultSegueID = "displaySearchResult"
 
 // CELL IDENTIFIERS

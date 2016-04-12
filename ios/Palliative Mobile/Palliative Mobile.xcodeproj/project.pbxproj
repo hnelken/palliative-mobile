@@ -241,6 +241,7 @@
 		D895551B1CB9F5B2000EFA18 /* bookshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555181CB9F5B2000EFA18 /* bookshot.png */; };
 		D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555191CB9F5B2000EFA18 /* artshot.png */; };
 		D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D895551A1CB9F5B2000EFA18 /* searchshot.png */; };
+		D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -489,6 +490,7 @@
 		D89555181CB9F5B2000EFA18 /* bookshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookshot.png; sourceTree = "<group>"; };
 		D89555191CB9F5B2000EFA18 /* artshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artshot.png; sourceTree = "<group>"; };
 		D895551A1CB9F5B2000EFA18 /* searchshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchshot.png; sourceTree = "<group>"; };
+		D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -585,6 +587,7 @@
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
 				D87754951C9B8AD8002D831E /* SearchViewController.swift */,
+				D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -1185,6 +1188,7 @@
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
+				D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
 				D81E12BC1CA3640C0011FACE /* ArticleLinkCell.swift in Sources */,

@@ -21,9 +21,9 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
         pageVC = self.storyboard?.instantiateViewControllerWithIdentifier(kPageViewControllerID) as! UIPageViewController
         pageVC.dataSource = self
         
-        // Add first page
         if let contentVC = viewControllerForIndex(0) {
-            pageVC.setViewControllers([contentVC], direction: .Forward, animated: false, completion: nil)
+            // Set the first page
+            pageVC.setViewControllers([contentVC], direction: .Forward, animated: true, completion: nil)
             
             // Add the page controller to the view
             let width = view.frame.size.width
@@ -33,7 +33,6 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
             view.addSubview(pageVC.view)
             pageVC.didMoveToParentViewController(self)
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +41,9 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func segueToSurvey() {
+        pageVC.willMoveToParentViewController(self)
+        pageVC.view.removeFromSuperview()
+        pageVC.removeFromParentViewController()
         self.performSegueWithIdentifier(kSurveySegueID, sender: self)
     }
     
