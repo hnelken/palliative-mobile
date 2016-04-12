@@ -7,9 +7,9 @@ CREATE TABLE pages (
   id               integer,--  PRIMARY KEY,
   parent_id        integer,-- NOT NULL,
   title            text,
-  subtitle         text,
   is_bookmarked    integer(1),-- NOT NULL,
   text             blob,
+  detail           blob,
   link_text        text,	
   content_id       integer
 );
@@ -40,17 +40,30 @@ CREATE TABLE quizzes (
 );
 
 CREATE TABLE questions (
-  id      integer PRIMARY KEY,
-  quiz_id integer,
-  text    integer
+  id       integer PRIMARY KEY,
+  quiz_id  integer,
+  question text
+);
+
+CREATE TABLE answers (
+  id          integer,
+  question_id integer,
+  answer      text,
+  is_correct  integer
+);
+
+CREATE TABLE answers (
+  id          integer PRIMARY KEY,
+  question_id integer,
+  text        text,
+  is_correct  integer(1)
 );
 
 CREATE TABLE quiz_session (
-  id integer
+  id      integer PRIMARY KEY,
+  quiz_id integer,
+  score   real
 );
 
-CREATE TABLE question_session (
-  id integer
-);
 
 
