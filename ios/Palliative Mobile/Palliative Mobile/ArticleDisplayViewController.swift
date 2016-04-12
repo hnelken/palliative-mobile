@@ -20,6 +20,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -44,8 +45,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     private var currentView: UIView?
     
     private var titleText: String?
-    private var subtitleText: String?
-    private var descriptionText: String?
+    private var normalText: String?
+    private var detailText: String?
     
     private var bookmarked: Bool = false
     private var initMarked: Bool = false
@@ -86,7 +87,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func detailPressed(sender: AnyObject) {
         // Show detail view if not already showing
-        if viewType != .Detail && !descriptionText!.isEmpty {
+        if viewType != .Detail && !detailText!.isEmpty {
             UIView.transitionFromView(currentView!,
                                       toView: detailScrollView,
                                       duration: 1,
@@ -169,12 +170,13 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         // Pass on the next article's info for display
         if let content = contentArray {
             titleText = content[kContentTitleIndex]
-            subtitleText = content[kContentSubtitleIndex]
-            descriptionText = content[kContentTextIndex]
+            normalText = content[kContentTextIndex]
+            detailText = content[kContentDetailIndex]
             
             // Update text labels with article text
             titleLabel.text = titleText
-            detailLabel.text = descriptionText
+            textLabel.text = normalText
+            detailLabel.text = detailText
         }
         
         // Check bookmarked status
@@ -188,11 +190,11 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         // Set first view
         if links.count == 0 {
             segmentControl.setEnabled(false, forSegmentAtIndex: 0)
-            segmentControl.selectedSegmentIndex = 2
+            segmentControl.selectedSegmentIndex = 1
             
-            viewType = .Detail
-            currentView = detailScrollView
-            textScrollView.hidden = true
+            viewType = .Text
+            currentView = textScrollView
+            detailScrollView.hidden = true
             tableView.hidden = true
         }
         else {
@@ -201,7 +203,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             textScrollView.hidden = true
             detailScrollView.hidden = true
             
-            if (descriptionText!.isEmpty) {
+            if (detailText!.isEmpty) {
                 segmentControl.setEnabled(false, forSegmentAtIndex: 2)
             }
         }
@@ -226,7 +228,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         if nextType == .Links && links.count > 0 {
             nextView = tableView
         }
-        else if nextType == .Detail && !descriptionText!.isEmpty {
+        else if nextType == .Detail && !detailText!.isEmpty {
             nextView = detailScrollView
         }
         else if nextType == .Text {

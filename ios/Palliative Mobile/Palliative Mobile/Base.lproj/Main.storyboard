@@ -19,7 +19,7 @@
                     <view key="view" contentMode="scaleToFill" id="evu-0H-kHZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="MNP-Xv-ere" kind="show" identifier="toSurvey" id="295-ak-CPB"/>
@@ -813,6 +813,7 @@
                         <outlet property="segmentControl" destination="r9B-PZ-dJz" id="rZC-Oe-zfa"/>
                         <outlet property="tableView" destination="DAB-YE-wcH" id="xjs-jI-41k"/>
                         <outlet property="textButton" destination="aEq-AD-hWJ" id="qZQ-Pi-Wpy"/>
+                        <outlet property="textLabel" destination="Z99-Dn-JYe" id="fX3-Dq-arf"/>
                         <outlet property="textScrollView" destination="XCD-Cl-d8o" id="27f-Po-x8x"/>
                         <outlet property="titleLabel" destination="Y2Z-bY-gmf" id="iO6-kT-f6r"/>
                         <segue destination="5ec-uJ-Hfm" kind="unwind" identifier="toHome" unwindAction="backToHomeSegue:" id="dSp-Ca-r6X"/>
@@ -847,7 +848,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lbR-mb-RSm" firstAttribute="centerY" secondItem="OaA-Bt-Uut" secondAttribute="centerY" id="5qr-tx-35A"/>
                             <constraint firstItem="lbR-mb-RSm" firstAttribute="top" secondItem="28I-kR-Lza" secondAttribute="bottom" constant="55" id="C03-c2-9rj"/>
@@ -1008,7 +1009,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1083,7 +1084,7 @@
                                     <constraint firstAttribute="height" constant="35" id="ky7-J2-NiU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since it's your first time here, let's walk you through some tips and tricks to get the most out of the information we provide." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-Z9-BfJ">
@@ -1093,7 +1094,7 @@
                                     <constraint firstAttribute="width" constant="560" id="noD-A3-ZYh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1103,7 +1104,7 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8c9-Z9-BfJ" firstAttribute="top" secondItem="ytx-f6-5Ax" secondAttribute="bottom" constant="50" id="2uU-gQ-hL6"/>
                             <constraint firstItem="8c9-Z9-BfJ" firstAttribute="centerY" secondItem="3HM-iT-LsZ" secondAttribute="centerY" id="Gdp-IG-xMf"/>
@@ -1145,7 +1146,7 @@
                                     <constraint firstAttribute="height" constant="35" id="mrA-ol-TMN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1163,7 +1164,7 @@
                                     <constraint firstAttribute="height" constant="264" id="UxW-Iu-vKt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1182,13 +1183,13 @@
                                 </constraints>
                                 <string key="text">All you have to do is take a quick demographic survey, no personally identifying information necessary, and you'll never hear about it again!</string>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="sCD-oH-3vu"/>
                                         <exclude reference="23P-UI-Hg7"/>
                                         <exclude reference="DId-5Q-gXB"/>
+                                        <exclude reference="sCD-oH-3vu"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -1201,7 +1202,7 @@
                                     <constraint firstAttribute="height" constant="37" id="ixB-KT-llG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1241,7 +1242,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="L6L-9z-Dyf" secondAttribute="trailing" constant="30" id="0hO-fW-agy"/>
                             <constraint firstItem="aIv-Hj-UGb" firstAttribute="top" secondItem="VGA-gP-Rdi" secondAttribute="bottom" constant="15" id="4qw-hp-0fe"/>

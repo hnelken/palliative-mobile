@@ -27,10 +27,10 @@ class DBInterface: NSObject {
                 // Get the page with the given ID
                 
                 let title = results.stringForColumn("title")
-                let subtitle = results.stringForColumn("subtitle")
                 let text = results.stringForColumn("text")
+                let detail = results.stringForColumn("detail")
                 let parentID = results.intForColumn("parent_id")
-                let content = [title, subtitle, text]
+                let content = [title, text, detail]
                 
                 let bookmarked = results.intForColumn("is_bookmarked")
                 
