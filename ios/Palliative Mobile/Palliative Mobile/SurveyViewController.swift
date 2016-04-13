@@ -10,11 +10,14 @@ import UIKit
 
 class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    var certifications: [String] = ["Cert. 1", "Cert. 2", "Cert. 3"]
-    var practiceSettings: [String] = ["Setting 1", "Setting 2", "Setting 3"]
-    var postGradText: String = ""
+    var certifications: [String] = specialties
+    var practiceSettings: [String] = settings
+    var postGradText: String = "Post-graduate year: "
     var pickingCert: Bool = true
     var picking: Bool = false
+    var selection = 0
+    var certSelection = 0
+    var pracSelection = 0
     
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var switchLabel: UILabel!
@@ -73,7 +76,13 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             postGradSlider.maximumValue = 35
             postGradSlider.minimumValue = 5
             postGradText = "Years as physician: "
-            postGradLabel.text = "\(postGradText)\(Int(postGradSlider.value))"
+            if Int(postGradSlider.value) == Int(postGradSlider.minimumValue) {
+                postGradLabel.text = "\(postGradText)5 or less"
+                return
+            }
+            else {
+                postGradLabel.text = "\(postGradText)\(Int(postGradSlider.value))"
+            }
         }
     }
     
@@ -97,12 +106,14 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBAction func certFieldTapped(sender: AnyObject) {
         // Flip to picker for certifications
         pickingCert = true
+        selection = certSelection
         flipSurvey()
     }
     
     @IBAction func practiceFieldTapped(sender: AnyObject) {
         // Flip to picker for practice settings
         pickingCert = false
+        selection = pracSelection
         flipSurvey()
     }
     
@@ -135,10 +146,12 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             // Show picker selection in text fields
             let row = pickerView.selectedRowInComponent(0)
             if pickingCert {
+                certSelection = row
                 certField.text = certifications[row]
                 certField.endEditing(true)
             }
             else {
+                pracSelection = row
                 practiceField.text = practiceSettings[row]
                 practiceField.endEditing(true)
             }
@@ -147,6 +160,7 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             // Flip to show the picker
             picking = true
             pickerView.reloadComponent(0)
+            pickerView.selectRow(selection, inComponent: 0, animated: false)
             UIView.transitionFromView(surveyView,
                 toView: pickerView,
                 duration: 0.75,
@@ -171,17 +185,28 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        
-        var choice: String
-        if pickingCert {
-            choice = certifications[row]
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        var labelView: UILabel
+        if let label = view as? UILabel {
+            labelView = label
         }
         else {
-            choice = practiceSettings[row]
+            labelView = UILabel(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width-10, height: 75))
         }
-        return NSAttributedString(string: choice,
-            attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        
+        // Customize the label
+        if pickingCert {
+            labelView.text = certifications[row]
+        }
+        else {
+            labelView.text = practiceSettings[row]
+        }
+        labelView.font = UIFont(name: "Verdana", size: 12)
+        labelView.lineBreakMode = .ByWordWrapping
+        labelView.textAlignment = .Center
+        labelView.textColor = UIColor.blackColor()
+        labelView.numberOfLines = 0
+        return labelView
     }
     
     // MARK: - Navigation

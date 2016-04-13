@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(animated: Bool) {
         let del = UIApplication.sharedApplication().delegate as! AppDelegate
-        if del.firstTime {
+        if true {//del.firstTime {
             del.firstTime = false
             
             // Segue to tutorial

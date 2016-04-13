@@ -132,15 +132,17 @@ class DBInterface: NSObject {
         // Get all bookmarks of the form [Link text, page id]
         do {
             let titleSearch = "title LIKE '%\(query)%' OR "
-            let subtitleSearch = "subtitle LIKE '%\(query)%' OR "
-            let textSearch = "text LIKE '%\(query)%'"
+            let textSearch = "text LIKE '%\(query)%' OR "
+            let detailSearch = "detail LIKE '%\(query)%'"
 
-            let searchQuery = "SELECT * FROM pages WHERE \(titleSearch)\(subtitleSearch)\(textSearch)"
+            let searchQuery = "SELECT id, title FROM pages WHERE \(titleSearch)\(textSearch)\(detailSearch)"
             let results = try database.executeQuery(searchQuery, values: [])
             
             while results.next() {
                 let pageID = NSNumber(int: results.intForColumn("id"))
                 let text = results.stringForColumn("title")
+                //print(text)
+                print(pageID)
                 let searchResult = [text, pageID]
                 searchResults.append(searchResult)
             }
