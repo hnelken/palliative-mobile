@@ -18,9 +18,21 @@ let kCareForFrailPageID = 53
 let kDeathResusPageID = 390
 let kCommonSymptomsPageID = 169
 
+let imagePages = [
+    23:["Terminal Illness", "terminal.png"],
+    41:["Frailty", "frailty.png"],
+    16:["Organ Failure", "organ.png"],
+    37:["Sudden Death", "sudden.png"]
+]
+let calcPages = [ 12, 14, 16, 15 ]
+
 // SEGUE IDENTIFIERS
+let kQuizSegueID = "toQuiz"
 let kHomeSegueID = "toHome"
+let kWikiSegueID = "toWiki"
+let kImageSegueID = "toImage"
 let kSurveySegueID = "toSurvey"
+let kAboutSegueID = "toAboutTeam"
 let kRapidPCSegueID = "toRapidPC"
 let kUnstableSegueID = "toUnstable"
 let kBookmarkSegueID = "toBookmarks"
@@ -36,6 +48,7 @@ let kHomeCellID = "homeCell"
 let kBookmarkCellID = "bookmarkCell"
 let kArticleLinkCellID = "articleLinkCell"
 let kSearchCellID = "searchCell"
+let kBranchCellID = "branchCell"
 
 // STORYBOARD IDS
 let kPageContentControllerID = "PageContentController"

@@ -11,11 +11,13 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var links: [String] = [
+        "Bookmarks",
         "Rapid PC Assessment",
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
-        "Bookmarks"
+        "About the Team",
+        "Interactive Learning"
     ]
     
     var searchResults: [[AnyObject]] = []
@@ -32,7 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(animated: Bool) {
         let del = UIApplication.sharedApplication().delegate as! AppDelegate
-        if true {//del.firstTime {
+        if del.firstTime {
             del.firstTime = false
             
             // Segue to tutorial
@@ -96,19 +98,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 0:
+        case 0: segueID = kBookmarkSegueID
+        case 1:
             destination = kRapidPCPageID;
             segueID = kArticleSegueID
-        case 1:
+        case 2:
             destination = kCareForFrailPageID;
             segueID = kArticleSegueID
-        case 2:
+        case 3:
             destination = kDeathResusPageID;
             segueID = kArticleSegueID
-        case 3:
+        case 4:
             destination = kCommonSymptomsPageID;
             segueID = kArticleSegueID
-        case 4: segueID = kBookmarkSegueID
+        case 5:
+            segueID = kAboutSegueID
+        case 6:
+            segueID = kQuizSegueID
         default:
             destination = kCareForFrailPageID;
             segueID = kArticleSegueID

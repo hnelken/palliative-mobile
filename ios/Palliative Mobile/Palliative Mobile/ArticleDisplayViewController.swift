@@ -30,7 +30,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     var lastPage: ArticleDisplayViewController?
     var thisPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
-    
+    var nextImage: Int?
     var pageID: Int!
     private var lastPageID: Int!
     private var parentID: Int!
@@ -326,18 +326,29 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         let link = links[indexPath.row]
         let dstID = link[kLinkIDIndex] as! NSNumber
-        transitionToPage(dstID.integerValue)
+        
+        if imagePages.keys.contains(dstID.integerValue) {
+            
+            nextImage = dstID.integerValue
+            performSegueWithIdentifier(kImageSegueID, sender: self)
+        }
+        else {
+            transitionToPage(dstID.integerValue)
+        }
         
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let vc = segue.destinationViewController as? ImageViewController {
+            vc.titleText = imagePages[nextImage!]![0]
+            vc.imageName = imagePages[nextImage!]![1]
+        }
     }
-    */
 
 }

@@ -242,6 +242,11 @@
 		D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D895551A1CB9F5B2000EFA18 /* searchshot.png */; };
 		D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */; };
 		D8BC804F1CBD964B008E3FCA /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D8BC804E1CBD964B008E3FCA /* master_local.db */; };
+		D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */; };
+		D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6C1CBF499700ADFCF3 /* frailty.png */; };
+		D8C90C711CBF499700ADFCF3 /* organ.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6D1CBF499700ADFCF3 /* organ.png */; };
+		D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6E1CBF499700ADFCF3 /* sudden.png */; };
+		D8C90C731CBF499700ADFCF3 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6F1CBF499700ADFCF3 /* terminal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -491,6 +496,11 @@
 		D895551A1CB9F5B2000EFA18 /* searchshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchshot.png; sourceTree = "<group>"; };
 		D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D8BC804E1CBD964B008E3FCA /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
+		D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D8C90C6C1CBF499700ADFCF3 /* frailty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frailty.png; sourceTree = "<group>"; };
+		D8C90C6D1CBF499700ADFCF3 /* organ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organ.png; sourceTree = "<group>"; };
+		D8C90C6E1CBF499700ADFCF3 /* sudden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sudden.png; sourceTree = "<group>"; };
+		D8C90C6F1CBF499700ADFCF3 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +567,10 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D8C90C6C1CBF499700ADFCF3 /* frailty.png */,
+				D8C90C6D1CBF499700ADFCF3 /* organ.png */,
+				D8C90C6E1CBF499700ADFCF3 /* sudden.png */,
+				D8C90C6F1CBF499700ADFCF3 /* terminal.png */,
 				D89555181CB9F5B2000EFA18 /* bookshot.png */,
 				D89555191CB9F5B2000EFA18 /* artshot.png */,
 				D895551A1CB9F5B2000EFA18 /* searchshot.png */,
@@ -586,6 +600,7 @@
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
+				D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */,
 				D87754951C9B8AD8002D831E /* SearchViewController.swift */,
 				D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */,
 			);
@@ -920,6 +935,7 @@
 				D8767A241C7A8BC500F23541 /* cart2.png in Resources */,
 				D8767A1E1C7A8BC500F23541 /* call.png in Resources */,
 				D8767A2E1C7A8BC500F23541 /* custom.png in Resources */,
+				D8C90C711CBF499700ADFCF3 /* organ.png in Resources */,
 				D87754901C9B5556002D831E /* bookmark-white.png in Resources */,
 				D8767A2F1C7A8BC500F23541 /* CUT.png in Resources */,
 				D8767A111C7A8BC500F23541 /* book-tags.png in Resources */,
@@ -947,6 +963,7 @@
 				D8767A821C7A8BC500F23541 /* power-off.png in Resources */,
 				D8767A601C7A8BC500F23541 /* lock.png in Resources */,
 				D8767A771C7A8BC500F23541 /* next.png in Resources */,
+				D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */,
 				D876793B1C7A87BF00F23541 /* logo.png in Resources */,
 				D8767A1D1C7A8BC500F23541 /* Calendartime.png in Resources */,
 				D8767A811C7A8BC500F23541 /* pop-out.png in Resources */,
@@ -1012,6 +1029,7 @@
 				D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */,
 				D8767A401C7A8BC500F23541 /* file-add.png in Resources */,
 				D8767A911C7A8BC500F23541 /* right-arrow.png in Resources */,
+				D8C90C731CBF499700ADFCF3 /* terminal.png in Resources */,
 				D8767A611C7A8BC500F23541 /* look.png in Resources */,
 				D8767A751C7A8BC500F23541 /* network2.png in Resources */,
 				D8767A251C7A8BC500F23541 /* CD.png in Resources */,
@@ -1051,6 +1069,7 @@
 				D8767A2B1C7A8BC500F23541 /* colour.png in Resources */,
 				D8767A361C7A8BC500F23541 /* download.png in Resources */,
 				D8767A4E1C7A8BC500F23541 /* gift.png in Resources */,
+				D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */,
 				D8767A561C7A8BC500F23541 /* info.png in Resources */,
 				D8767A891C7A8BC500F23541 /* reduce1.png in Resources */,
 				D8767A6E1C7A8BC500F23541 /* mouse_pointers.png in Resources */,
@@ -1191,6 +1210,7 @@
 				D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
+				D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */,
 				D81E12BC1CA3640C0011FACE /* ArticleLinkCell.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
