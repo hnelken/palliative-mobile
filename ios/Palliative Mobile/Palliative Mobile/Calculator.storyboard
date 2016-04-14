@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s4b-jy-RjG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gd0-OE-F7g">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCN-nG-z8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="-398"/>
+            <point key="canvasLocation" x="1368" y="-3335"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1s0-31-ocf">
@@ -68,7 +68,17 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iCd-0k-HGc">
                                 <rect key="frame" x="20" y="343" width="560" height="237"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">The Australiamodifiedkarnofsky Performance scale (AkPs)is a measure of the patient’s overall performance status orability to perform their activities of daily living. it is a singlescore between 10 and 100 assigned by a clinician based onobservations of a patient’s ability to perform common tasksrelating to activity, work and selfcare.A score of 100signifies normal physical abilities with no evidence ofdisease. Decreasing numbers indicate a reducedperformance status.</string>
+                                <string key="text">The Australiamodified
+karnofsky Performance scale (AkPs)
+is a measure of the patient’s overall performance status or
+ability to perform their activities of daily living. it is a single
+score between 10 and 100 assigned by a clinician based on
+observations of a patient’s ability to perform common tasks
+relating to activity, work and selfcare.
+A score of 100
+signifies normal physical abilities with no evidence of
+disease. Decreasing numbers indicate a reduced
+performance status.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -116,7 +126,16 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VUv-uC-hwK">
                                 <rect key="frame" x="20" y="344" width="560" height="236"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Physicians are to ascertain the state of the patient by askingquestions such as these:(a) ‘’Tell me how you spend your day.’’(b) ‘’How much time do you spend lying in bed or lyingdown in a day?’’(c) ‘’More than half the day?’’(d) ‘’Has this changed recently?’’These are just guideline reminders of what types ofquestions the physician should ask to get a good picture ofhow their patient is doing.</string>
+                                <string key="text">Physicians are to ascertain the state of the patient by asking
+questions such as these:
+(a) ‘’Tell me how you spend your day.’’
+(b) ‘’How much time do you spend lying in bed or lying
+down in a day?’’
+(c) ‘’More than half the day?’’
+(d) ‘’Has this changed recently?’’
+These are just guideline reminders of what types of
+questions the physician should ask to get a good picture of
+how their patient is doing.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -165,7 +184,19 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P9F-Bb-xQq">
                                 <rect key="frame" x="20" y="367" width="560" height="213"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Class I: No symptoms and no limitations in ordinaryphysical activity, e.g. shortness of breath whenwalking, climbing stairs.Class II: Mild symptoms (mild shortness of breathand/or angina) and slight limitation in ordinaryactivityClass III: Marked limitation in activity due tosymptoms, even during less than ordinary activity,e.g. walking short distances (20100m);comfortableonly at restClass IV: Severe limitations. symptoms at rest.mostly bedbound</string>
+                                <string key="text">Class I: No symptoms and no limitations in ordinary
+physical activity, e.g. shortness of breath when
+walking, climbing stairs.
+Class II: Mild symptoms (mild shortness of breath
+and/or angina) and slight limitation in ordinary
+activity
+Class III: Marked limitation in activity due to
+symptoms, even during less than ordinary activity,
+e.g. walking short distances (20100m);
+comfortable
+only at rest
+Class IV: Severe limitations. symptoms at rest.
+mostly bedbound</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -205,7 +236,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palliative Performance Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Job-F6-BbL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palliative Prognostic Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Job-F6-BbL">
                                 <rect key="frame" x="20" y="20" width="560" height="56.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56.5" id="BZ7-yB-B8J"/>
@@ -463,6 +494,118 @@
             </objects>
             <point key="canvasLocation" x="1380" y="-1125"/>
         </scene>
+        <!--Opioid Calc View Controller-->
+        <scene sceneID="oDc-Ty-ONF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaa-fn-wU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fxf-Qn-HnP" customClass="OpioidCalcViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aLr-id-pOJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="X2L-ds-gXl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PK0-Ld-4up">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opioid Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-sM-CJq">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLH-zc-ebJ">
+                                <rect key="frame" x="20" y="90" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InitialMedication:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="aDn-iq-9yu"/>
+                                    <segue destination="el5-ON-pvM" kind="show" identifier="initialMedicationSegue" id="h8V-5I-Gba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-44-fPW">
+                                <rect key="frame" x="20" y="202" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="NewMedication:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="WwJ-pc-eVM"/>
+                                    <segue destination="el5-ON-pvM" kind="show" identifier="newMedicationSegue" id="adc-gr-GbL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8l-0b-htG">
+                                <rect key="frame" x="20" y="256" width="560" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Get Dosage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getDossageButton:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="eaa-Ig-WdD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc9-Vm-7DX">
+                                <rect key="frame" x="271.5" y="312" width="58.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcs-oY-W8j">
+                                <rect key="frame" x="20" y="127" width="560" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="DosageType:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="Zmh-bW-yuI"/>
+                                    <segue destination="el5-ON-pvM" kind="show" identifier="dosageTypeSegue" id="8Hg-hj-fd4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dosage (mg)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4P-Bs-gMm">
+                                <rect key="frame" x="225" y="164" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="h9j-A1-pXX"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="JLH-zc-ebJ" secondAttribute="leading" id="07Z-KP-bVU"/>
+                            <constraint firstItem="y8l-0b-htG" firstAttribute="centerX" secondItem="PK0-Ld-4up" secondAttribute="centerX" id="88s-Sy-jhx"/>
+                            <constraint firstItem="Mc9-Vm-7DX" firstAttribute="centerX" secondItem="PK0-Ld-4up" secondAttribute="centerX" id="C7l-c8-tCu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bI1-44-fPW" secondAttribute="trailing" id="Du3-UF-5C9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bI1-44-fPW" secondAttribute="leading" id="EX6-GF-b9S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y8l-0b-htG" secondAttribute="trailing" id="FCc-7O-18l"/>
+                            <constraint firstItem="kcs-oY-W8j" firstAttribute="top" secondItem="JLH-zc-ebJ" secondAttribute="bottom" constant="7" id="HKw-H8-L9N"/>
+                            <constraint firstItem="bI1-44-fPW" firstAttribute="top" secondItem="d4P-Bs-gMm" secondAttribute="bottom" constant="8" id="HXO-KD-aIo"/>
+                            <constraint firstItem="jeA-sM-CJq" firstAttribute="top" secondItem="aLr-id-pOJ" secondAttribute="bottom" constant="8" id="I5j-h0-3kz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kcs-oY-W8j" secondAttribute="trailing" id="Ix2-Y0-4B7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kcs-oY-W8j" secondAttribute="leading" id="O7F-ow-PdJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jeA-sM-CJq" secondAttribute="trailing" id="Rj2-ay-BkR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="y8l-0b-htG" secondAttribute="leading" id="VfV-2e-oON"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JLH-zc-ebJ" secondAttribute="trailing" id="XZR-u0-bu3"/>
+                            <constraint firstItem="y8l-0b-htG" firstAttribute="top" secondItem="bI1-44-fPW" secondAttribute="bottom" constant="24" id="cjB-2j-DKn"/>
+                            <constraint firstItem="JLH-zc-ebJ" firstAttribute="top" secondItem="jeA-sM-CJq" secondAttribute="bottom" constant="31.5" id="eRl-FR-0Lg"/>
+                            <constraint firstItem="Mc9-Vm-7DX" firstAttribute="top" secondItem="y8l-0b-htG" secondAttribute="bottom" constant="8" id="lZx-RT-WA3"/>
+                            <constraint firstItem="d4P-Bs-gMm" firstAttribute="centerX" secondItem="PK0-Ld-4up" secondAttribute="centerX" id="m86-6p-49e"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jeA-sM-CJq" secondAttribute="leading" id="sTJ-6t-olq"/>
+                            <constraint firstItem="d4P-Bs-gMm" firstAttribute="top" secondItem="kcs-oY-W8j" secondAttribute="bottom" constant="7" id="sdD-OE-nSd"/>
+                            <constraint firstItem="JLH-zc-ebJ" firstAttribute="centerX" secondItem="PK0-Ld-4up" secondAttribute="centerX" id="z25-4L-6mQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DossageType" destination="kcs-oY-W8j" id="0R1-sa-2RC"/>
+                        <outlet property="dosage" destination="Mc9-Vm-7DX" id="lgt-N9-bcF"/>
+                        <outlet property="getDosage" destination="y8l-0b-htG" id="mHO-v4-doV"/>
+                        <outlet property="initialDosage" destination="d4P-Bs-gMm" id="xx3-gm-sO2"/>
+                        <outlet property="initialMedication" destination="JLH-zc-ebJ" id="cYN-Y1-MUH"/>
+                        <outlet property="newMedication" destination="bI1-44-fPW" id="w43-Yv-LLV"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="618" y="-372"/>
+        </scene>
         <!--Palliative Performance Calculator View Controller-->
         <scene sceneID="RMr-AT-a1R">
             <objects>
@@ -593,6 +736,38 @@
             </objects>
             <point key="canvasLocation" x="618" y="373"/>
         </scene>
+        <!--Opioid Calc Table View Controller-->
+        <scene sceneID="knf-QD-SHm">
+            <objects>
+                <tableViewController id="el5-ON-pvM" customClass="OpioidCalcTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z6C-Z5-LL1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="opioidCalcCell" id="iEu-wR-arg">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iEu-wR-arg" id="77b-8d-9AW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Gd9-pu-pMF" kind="unwind" identifier="backToHomeSegue" unwindAction="OpioidCalcSegue:" id="Dbo-W7-gE7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="el5-ON-pvM" id="Nvt-6n-aQF"/>
+                            <outlet property="delegate" destination="el5-ON-pvM" id="fBb-A6-Qcu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsZ-BK-xN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gd9-pu-pMF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="-372"/>
+        </scene>
         <!--Palliative Performance Table View Controller-->
         <scene sceneID="5Bs-wh-TVp">
             <objects>
@@ -632,8 +807,9 @@
         <image name="NYHA classification chart.jpg" width="898" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="8Hg-hj-fd4"/>
+        <segue reference="7gx-fp-Bez"/>
         <segue reference="eI0-SZ-PCh"/>
         <segue reference="o5P-ii-LpJ"/>
-        <segue reference="7gx-fp-Bez"/>
     </inferredMetricsTieBreakers>
 </document>

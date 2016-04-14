@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		212C78C41CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */; };
 		212C78C61CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */; };
+		216EA6961CBD56C600C605FA /* OpioidCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EA6951CBD56C600C605FA /* OpioidCalcViewController.swift */; };
+		216EA6981CBD6A5F00C605FA /* OpioidCalcTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216EA6971CBD6A5F00C605FA /* OpioidCalcTableViewController.swift */; };
 		219710B01CBB1963004AE453 /* NYHFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219710AF1CBB1963004AE453 /* NYHFViewController.swift */; };
 		219710B21CBB1E5C004AE453 /* NYHA classification chart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 219710B11CBB1E5C004AE453 /* NYHA classification chart.jpg */; };
 		219710B51CBB227B004AE453 /* AKPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219710B41CBB227B004AE453 /* AKPSViewController.swift */; };
@@ -250,6 +252,8 @@
 /* Begin PBXFileReference section */
 		212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePrognosticIndexViewController.swift; sourceTree = "<group>"; };
 		212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePrognosticIndexTableViewController.swift; sourceTree = "<group>"; };
+		216EA6951CBD56C600C605FA /* OpioidCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpioidCalcViewController.swift; sourceTree = "<group>"; };
+		216EA6971CBD6A5F00C605FA /* OpioidCalcTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpioidCalcTableViewController.swift; sourceTree = "<group>"; };
 		219710AF1CBB1963004AE453 /* NYHFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYHFViewController.swift; sourceTree = "<group>"; };
 		219710B11CBB1E5C004AE453 /* NYHA classification chart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "NYHA classification chart.jpg"; path = "../../../../../../spring/Senior_Project/NYHA classification chart.jpg"; sourceTree = "<group>"; };
 		219710B41CBB227B004AE453 /* AKPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPSViewController.swift; sourceTree = "<group>"; };
@@ -534,6 +538,8 @@
 				219710AF1CBB1963004AE453 /* NYHFViewController.swift */,
 				219710B41CBB227B004AE453 /* AKPSViewController.swift */,
 				219710BA1CBB2CBA004AE453 /* ECOGViewController.swift */,
+				216EA6951CBD56C600C605FA /* OpioidCalcViewController.swift */,
+				216EA6971CBD6A5F00C605FA /* OpioidCalcTableViewController.swift */,
 			);
 			name = "calculator view controllers";
 			sourceTree = "<group>";
@@ -1203,6 +1209,7 @@
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				212C78C41CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				216EA6981CBD6A5F00C605FA /* OpioidCalcTableViewController.swift in Sources */,
 				212C78C61CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
 				D826B38E1C9A260700BF83CC /* RapidPCViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
@@ -1218,6 +1225,7 @@
 				219710B51CBB227B004AE453 /* AKPSViewController.swift in Sources */,
 				21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */,
 				21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */,
+				216EA6961CBD56C600C605FA /* OpioidCalcViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
