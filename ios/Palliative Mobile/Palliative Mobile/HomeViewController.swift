@@ -16,7 +16,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
-        "About the Team",
         "Interactive Learning"
     ]
     
@@ -29,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.separatorStyle = .None
+        self.tableView.separatorStyle = .None
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -88,7 +87,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel?.text = links[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
-        
+        if indexPath.row == 0 || indexPath.row == links.count - 1 {
+            cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
+            cell.contentView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        }
         return cell
     }
     

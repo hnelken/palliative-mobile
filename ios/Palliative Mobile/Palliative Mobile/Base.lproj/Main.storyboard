@@ -351,42 +351,31 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-AI-uQM">
-                                <rect key="frame" x="550" y="127" width="32" height="32"/>
+                                <rect key="frame" x="550" y="132" width="32" height="32"/>
                                 <state key="normal" backgroundImage="mic-white.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAI-py-KeI">
-                                <rect key="frame" x="20" y="127" width="30" height="32"/>
+                                <rect key="frame" x="20" y="132" width="30" height="32"/>
                                 <state key="normal" backgroundImage="look-white.png"/>
                                 <connections>
                                     <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5g-RC-5mQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-S6-c91">
-                                <rect key="frame" x="70" y="127" width="472" height="30"/>
+                                <rect key="frame" x="70" y="132" width="472" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pUq-LK-jQ0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvR-yG-1TQ">
-                                <rect key="frame" x="20" y="28" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LlU-wD-jhy"/>
-                                    <constraint firstAttribute="width" constant="30" id="eb9-Ac-aGK"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="backarrow-white.png"/>
-                                <connections>
-                                    <action selector="backPressed:" destination="iEU-RJ-q1D" eventType="touchUpInside" id="Ped-hL-Rl2"/>
-                                    <segue destination="lOd-qb-Hb0" kind="unwind" unwindAction="backToTopSegue:" id="yX5-Ls-Vos"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0TZ-Jz-ZXb">
                                 <rect key="frame" x="200" y="20" width="201" height="102"/>
                                 <color key="tintColor" red="1" green="0.33352221970000001" blue="0.34522390850000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="DSo-Br-8Ik"/>
                                     <constraint firstAttribute="width" secondItem="0TZ-Jz-ZXb" secondAttribute="height" multiplier="15:8" id="FGM-wx-CaA"/>
+                                    <constraint firstAttribute="height" constant="102" id="KVI-eI-2Ru"/>
                                     <constraint firstAttribute="width" constant="201" id="jfK-qs-bzd"/>
                                 </constraints>
                                 <variation key="default">
@@ -405,18 +394,15 @@
                             <constraint firstItem="0TZ-Jz-ZXb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BQI-wY-gpS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cMY-b1-s5B" secondAttribute="leading" id="Foc-9n-veI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Z9-S6-c91" secondAttribute="trailing" constant="38" id="GVr-Fk-ddd"/>
-                            <constraint firstItem="kvR-yG-1TQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="N7r-Z0-sde"/>
                             <constraint firstItem="0Z9-S6-c91" firstAttribute="top" secondItem="0TZ-Jz-ZXb" secondAttribute="bottom" constant="8" id="Prv-d4-cLK"/>
-                            <constraint firstItem="0Z9-S6-c91" firstAttribute="top" secondItem="kvR-yG-1TQ" secondAttribute="bottom" constant="69" id="SMz-IC-K6P"/>
                             <constraint firstItem="rAI-py-KeI" firstAttribute="top" secondItem="0Z9-S6-c91" secondAttribute="top" id="VJo-L9-GID"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="kvR-yG-1TQ" secondAttribute="leading" id="Zp5-kj-2Ac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cMY-b1-s5B" secondAttribute="trailing" id="dEt-83-OE2"/>
-                            <constraint firstItem="cMY-b1-s5B" firstAttribute="top" secondItem="0Z9-S6-c91" secondAttribute="bottom" constant="20" id="dgU-YG-ujK"/>
+                            <constraint firstItem="cMY-b1-s5B" firstAttribute="top" secondItem="0Z9-S6-c91" secondAttribute="bottom" constant="15" id="dgU-YG-ujK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cMY-b1-s5B" secondAttribute="bottom" constant="20" id="fLl-gI-4sQ"/>
                             <constraint firstItem="0Z9-S6-c91" firstAttribute="leading" secondItem="rAI-py-KeI" secondAttribute="trailing" constant="20" id="j7j-0W-YyZ"/>
                             <constraint firstItem="0TZ-Jz-ZXb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lbs-ck-GkV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rAI-py-KeI" secondAttribute="leading" id="p1b-aE-ocX"/>
-                            <constraint firstItem="0Z9-S6-c91" firstAttribute="top" secondItem="0TZ-Jz-ZXb" secondAttribute="bottom" constant="5" id="sTT-Aw-754"/>
+                            <constraint firstItem="0Z9-S6-c91" firstAttribute="top" secondItem="0TZ-Jz-ZXb" secondAttribute="bottom" constant="10" id="sTT-Aw-754"/>
                             <constraint firstItem="0Z9-S6-c91" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="uIT-aG-Xks"/>
                             <constraint firstItem="cpV-AI-uQM" firstAttribute="leading" secondItem="0Z9-S6-c91" secondAttribute="trailing" constant="8" id="vAW-cW-b0Z"/>
                         </constraints>
@@ -439,7 +425,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="lOd-qb-Hb0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="488" y="239"/>
         </scene>
@@ -1430,6 +1415,6 @@
         <image name="network2-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MzH-uR-I2B"/>
+        <segue reference="yxc-af-N95"/>
     </inferredMetricsTieBreakers>
 </document>
