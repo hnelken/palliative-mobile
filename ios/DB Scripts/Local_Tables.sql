@@ -8,8 +8,8 @@ CREATE TABLE pages (
   parent_id        integer,-- NOT NULL,
   title            text,
   is_bookmarked    integer(1),-- NOT NULL,
-  text             blob,
-  detail           blob,
+  text             text,
+  detail           text,
   link_text        text,	
   content_id       integer
 );
@@ -63,6 +63,11 @@ CREATE TABLE quiz_session (
   id      integer PRIMARY KEY,
   quiz_id integer,
   score   real
+);
+----------------USAGE STUFF--------------------
+CREATE TABLE page_hits (
+  page_id integer PRIMARY KEY,
+  hits    integer
 );
 
 
