@@ -27,27 +27,32 @@ class DBInterface: NSObject {
                 // Get the page with the given ID
                 
                 let title = results.stringForColumn("title")
+                print(title)
                 let text = results.stringForColumn("text")
+                print(text)
                 let detail = results.stringForColumn("detail")
+                print(detail)
                 let parentID = results.intForColumn("parent_id")
+                print(parentID)
                 let content = [title, text, detail]
-                
                 let bookmarked = results.intForColumn("is_bookmarked")
                 
                 page[kPageContentKey] = content
                 page[kPageParentIDKey] = NSNumber(int: parentID)
                 page[kPageBookmarkedKey] = NSNumber(int: bookmarked)
+                
+                // Update this pages hits
+                addPageHit(id)
             }
             
             var links: [[AnyObject]] = []
             results = try database.executeQuery(getLinksQuery, values: [])
             while results.next() {
                 // Get the children of the given page ID
-                
-                let link_text = results.stringForColumn("title")//"link_text")
+                let link_text = results.stringForColumn("title")
+                print(link_text)
                 let link_id = NSNumber(int: results.intForColumn("id"))
                 let link: [AnyObject] = [link_text, link_id]
-                
                 links.append(link)
             }
             
@@ -110,7 +115,7 @@ class DBInterface: NSObject {
                 let getBookmarksQuery: String = "SELECT title FROM pages WHERE id=\(pageID)"
                 let pages = try database.executeQuery(getBookmarksQuery, values: [])
                 while pages.next() {
-                    let text = pages.stringForColumn("title")//"link_text")
+                    let text = pages.stringForColumn("title")
                     let bookmark = [text, pageID]
                     bookmarks.append(bookmark)
                 }
@@ -152,6 +157,41 @@ class DBInterface: NSObject {
             database.close()
         }
         return searchResults
+    }
+    
+    // Add a "hit" to a page in the DB
+    func addPageHit(pageID: Int) {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        // Update the page
+        do {
+            let getPageHitsQuery: String = "SELECT hits FROM page_hits WHERE page_id=\(pageID)"
+            let results = try database.executeQuery(getPageHitsQuery, values: [])
+            
+            var pageHit: Bool = false
+
+            while results.next() {
+                let hits = results.intForColumn("hits")
+                if hits > 0 {
+                    print("Page: \(pageID) - \(hits)")
+                    pageHit = true
+                    let updatePageHitsQuery: String =
+                        "UPDATE page_hits SET hits = \(hits + 1) WHERE page_id=\(pageID)"
+                    try database.executeQuery(updatePageHitsQuery, values: [])
+                }
+            }
+            
+            if !pageHit {
+                let insertPageHitsQuery: String = "INSERT INTO page_hits VALUES (\(pageID), \(1))"
+                try database.executeQuery(insertPageHitsQuery, values: [])
+            }
+            
+            database.close()
+        }
+        catch {
+            database.close()
+        }
     }
     
 }
