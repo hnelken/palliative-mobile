@@ -37,6 +37,7 @@ let kRapidPCSegueID = "toRapidPC"
 let kUnstableSegueID = "toUnstable"
 let kBookmarkSegueID = "toBookmarks"
 let kFirstTimeSegueID = "toFirstTime"
+let kSkipSurveySegueID = "skipSurvey"
 let kArticleSegueID = "toArticleDisplay"
 let kFinishSurveySegueID = "finishSurvey"
 let kShowSearchSegueID = "showSearchResults"
@@ -57,8 +58,9 @@ let kFirstTimePageID = "FirstTimePage"
 let kOptOutPageID = "OptOutPage"
 
 // SERVER URL CONSTANTS
-let kServerURL = "http://our server domain here/api/"
-let kVerifyUserRoute = "verifyuser"
+let kServerURL = "http://palliative-serv.herokuapp.com/"
+let kPushPageUsageRoute = "analytics/retrieve.php"
+let kUpdatePagesRoute = "infopages/getchanges.php"
 
 // DATABASE CONSTANTS
 let kDBName = "master_local.db"

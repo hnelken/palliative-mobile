@@ -116,7 +116,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 5:
             segueID = kAboutSegueID
         case 6:
-            segueID = kQuizSegueID
+            destination = kCareForFrailPageID
+            segueID = kArticleSegueID
         default:
             destination = kCareForFrailPageID;
             segueID = kArticleSegueID

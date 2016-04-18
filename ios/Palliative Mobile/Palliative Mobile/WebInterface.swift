@@ -14,68 +14,34 @@ class WebInterface: NSObject {
     var responseParser: ((response: AnyObject) -> Void)?
     var errorHandler: (() -> Void)?
     
-    // EXAMPLE API CALL
-    func doStuff() {
-        let parameters = [
-            "foo": [1,2,3],
-            "bar": [
-                "baz": "qux"
-            ]
+    // Pushes all page hit rows with user credentials for aggregation on master server
+    func pushPageUsage() {
+
+        let urlString = "\(kServerURL)\(kPushPageUsageRoute)"
+        let parameters: [String : AnyObject] = [
+            "credentials" : db.getCredentials(),
+            "page_hits" : db.getPageHits()
         ]
-        Alamofire.request(.POST, "https://httpbin.org/post", parameters: parameters, encoding: .JSON)
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
-            .response { response in
-                print(response)
-                
-                
-                // USE THIS TO UPDATE UI DURING ASYNC RESPONSE HANDLERS
-                dispatch_async(dispatch_get_main_queue()) {
-                    print("UPDATE ON UI THREAD")
-                }
-        }
-    }
-    
-    // Common user verification API call
-    func verifyUser(email: String, password: String,
-        parser: (response: AnyObject)-> Void, errorHandler: (() -> Void)?) {
         
-            self.responseParser = parser
-            self.errorHandler = errorHandler
-        
-            let urlString = "\(kServerURL)\(kVerifyUserRoute)"
-        
-            let parameters = [
-                "email": email,
-                "password": password
-            ]
-        
-            makeAPICall(urlString, parameters: parameters)
-    }
-    
-    // Abstraction for making an HTTP POST request using JSON encoded parameters
-    private func makeAPICall(urlString: String, parameters: [String : AnyObject]) {
+        print(parameters)
         
         Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
-            .responseJSON { response in
+            .response { response in
                 
-                print(response)
-                
-                // Hand response to parser if valid
-                if let JSON = response.result.value {
-                    if let parser = self.responseParser {
-                        parser(response: JSON)
-                    }
-                }
-                else {
-                    // Handle error
-                    if let errorHandler = self.errorHandler {
-                        errorHandler()
-                    }
-                }
+                // Page hits successfully updated, clear DB count
+                db.clearPageHits()
         }
-        
     }
     
+    func updatePages() {
+        let urlString = "\(kServerURL)\(kUpdatePagesRoute)"
+        let dbNumber = 1
+        
+        Alamofire.request(.POST, urlString, parameters: ["v" : dbNumber], encoding: .URLEncodedInURL).responseJSON { response in
+            
+            print(response.request?.URLString)
+            
+        }
+    }
     
 }

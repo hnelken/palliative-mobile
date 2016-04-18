@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var optedOut: Bool = false
     var firstTime: Bool = false
     
     func createCopyOfDatabaseIfNeeded() {
@@ -26,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         success = fileManager.fileExistsAtPath(appDBPath)
         if (success) {
             print("Database already exists in app's document")
+            optedOut = db.getOptOutStatus()
+            
+            if !optedOut {
+                print("pushing usage")
+                web.pushPageUsage()
+                print("cleared usage")
+                web.updatePages()
+                print("updated")
+            }
+            
             return;
         }
         

@@ -212,7 +212,14 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Commit demographic info to DB with device ID
-        let deviceID = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        let device = (UIDevice.currentDevice().identifierForVendor?.UUIDString)!
+        let age = Int(ageSlider.value)
+        let postGrad: Bool = postGradSwitch.on
+        let years = Int(postGradSlider.value)
+        let cert = certField.text!
+        let prac = practiceField.text!
+        
+        db.commitUserInfo(device, age: age, postGrad: postGrad, years: years, cert: cert, prac: prac)
     }
     
 

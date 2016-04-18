@@ -28,29 +28,27 @@ class DBInterface: NSObject {
                 
                 let title = results.stringForColumn("title")
                 print(title)
+                
                 let text = results.stringForColumn("text")
-                print(text)
                 let detail = results.stringForColumn("detail")
-                print(detail)
                 let parentID = results.intForColumn("parent_id")
-                print(parentID)
                 let content = [title, text, detail]
                 let bookmarked = results.intForColumn("is_bookmarked")
                 
                 page[kPageContentKey] = content
                 page[kPageParentIDKey] = NSNumber(int: parentID)
                 page[kPageBookmarkedKey] = NSNumber(int: bookmarked)
-                
-                // Update this pages hits
-                addPageHit(id)
             }
+            
+            // Update this pages hits
+            addPageHit(id)
             
             var links: [[AnyObject]] = []
             results = try database.executeQuery(getLinksQuery, values: [])
             while results.next() {
                 // Get the children of the given page ID
                 let link_text = results.stringForColumn("title")
-                print(link_text)
+                //print(link_text)
                 let link_id = NSNumber(int: results.intForColumn("id"))
                 let link: [AnyObject] = [link_text, link_id]
                 links.append(link)
@@ -146,8 +144,6 @@ class DBInterface: NSObject {
             while results.next() {
                 let pageID = NSNumber(int: results.intForColumn("id"))
                 let text = results.stringForColumn("title")
-                //print(text)
-                print(pageID)
                 let searchResult = [text, pageID]
                 searchResults.append(searchResult)
             }
@@ -164,27 +160,21 @@ class DBInterface: NSObject {
         let database = FMDatabase(path: dbPath)
         database.open()
         
-        // Update the page
         do {
-            let getPageHitsQuery: String = "SELECT hits FROM page_hits WHERE page_id=\(pageID)"
+            var hits = 0
+            let getPageHitsQuery: String = "SELECT * FROM page_hits WHERE page_id=\(pageID)"
             let results = try database.executeQuery(getPageHitsQuery, values: [])
-            
-            var pageHit: Bool = false
-
             while results.next() {
-                let hits = results.intForColumn("hits")
-                if hits > 0 {
-                    print("Page: \(pageID) - \(hits)")
-                    pageHit = true
-                    let updatePageHitsQuery: String =
-                        "UPDATE page_hits SET hits = \(hits + 1) WHERE page_id=\(pageID)"
-                    try database.executeQuery(updatePageHitsQuery, values: [])
-                }
+                hits = Int(results.intForColumn("hits"))
             }
             
-            if !pageHit {
-                let insertPageHitsQuery: String = "INSERT INTO page_hits VALUES (\(pageID), \(1))"
-                try database.executeQuery(insertPageHitsQuery, values: [])
+            if hits > 0 {
+                let addPageHitQuery: String = "UPDATE page_hits SET hits=\(hits + 1) WHERE page_id=\(pageID)"
+                try database.executeUpdate(addPageHitQuery, values: [])
+            }
+            else {
+                let addPageHitQuery: String = "INSERT INTO page_hits (page_id, hits) VALUES (\(pageID), 1);"
+                try database.executeUpdate(addPageHitQuery, values: [])
             }
             
             database.close()
@@ -194,4 +184,180 @@ class DBInterface: NSObject {
         }
     }
     
+    // Assembles the page hit rows into a dictionary
+    func getPageHits() -> [String:Int] {
+        var hits: [String:Int] = [ : ]
+        
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let clearPageHitsQuery: String = "SELECT * FROM page_hits"
+            let results = try database.executeQuery(clearPageHitsQuery, values: [])
+            
+            while results.next() {
+                let pageID = results.intForColumn("page_id")
+                hits["\(pageID)"] = Int(results.intForColumn("hits"))
+            }
+            
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        print("Hits: \(hits.count)")
+        return hits
+    }
+    
+    // Reset all page hit counts
+    func clearPageHits() {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let clearPageHitsQuery: String = "DELETE FROM page_hits"
+            try database.executeUpdate(clearPageHitsQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Commits that the user skipped the survey
+    func optOut() {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let optOutQuery: String = "INSERT INTO settings (name, value) VALUES (\"opt_out\", 1)"
+            try database.executeUpdate(optOutQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Commits that the user latently opted in to the survey
+    func optIn() {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let optInQuery: String = "DELETE FROM settings WHERE name=\"opt_out\""
+            try database.executeUpdate(optInQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Determine if the user opted out of the survey
+    func getOptOutStatus() -> Bool {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let optOutQuery: String = "SELECT value FROM settings WHERE name=\"opt_out\""
+            let results = try database.executeQuery(optOutQuery, values: [])
+            while results.next() {
+                return results.boolForColumn("value")
+            }
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        
+        return false
+    }
+    
+    // Add user demographic info to the DB
+    func commitUserInfo(device: String, age: Int, postGrad: Bool, years: Int, cert: String, prac: String) {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let isPostGrad = NSNumber(bool: postGrad).integerValue
+            let deviceUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"device\", \"\(device)\")"
+            let ageUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"age\", \(age))"
+            let postGradUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"postGrad\", \(isPostGrad))"
+            let yearsUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"years\", \(years))"
+            let certUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"certification\", \"\(cert)\")"
+            let pracUpdate: String =
+                "INSERT INTO settings (name, value) VALUES (\"practice\", \"\(prac)\")"
+            
+            try database.executeUpdate(deviceUpdate, values: [])
+            try database.executeUpdate(ageUpdate, values: [])
+            try database.executeUpdate(postGradUpdate, values: [])
+            try database.executeUpdate(yearsUpdate, values: [])
+            try database.executeUpdate(certUpdate, values: [])
+            try database.executeUpdate(pracUpdate, values: [])
+            
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Returns a dictionary of the user's demographics from the survey
+    func getCredentials() -> [String:String] {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        var creds: [String:String] = [ : ]
+        do {
+            let deviceUpdate: String = "SELECT value FROM settings WHERE name=\"device\""
+            let ageUpdate: String = "SELECT value FROM settings WHERE name=\"age\""
+            let postGradUpdate: String = "SELECT value FROM settings WHERE name=\"postGrad\""
+            let yearsUpdate: String = "SELECT value FROM settings WHERE name=\"years\""
+            let certUpdate: String = "SELECT value FROM settings WHERE name=\"certification\""
+            let pracUpdate: String = "SELECT value FROM settings WHERE name=\"practice\""
+            
+            var results = try database.executeQuery(deviceUpdate, values: [])
+            while results.next() {
+                creds["device"] = results.stringForColumn("value")
+            }
+            
+            results = try database.executeQuery(ageUpdate, values: [])
+            while results.next() {
+                creds["age"] = results.stringForColumn("value")
+            }
+            
+            results = try database.executeQuery(postGradUpdate, values: [])
+            while results.next() {
+                creds["postGrad"] = results.stringForColumn("value")
+            }
+            
+            results = try database.executeQuery(yearsUpdate, values: [])
+            while results.next() {
+                creds["years"] = results.stringForColumn("value")
+            }
+            
+            results = try database.executeQuery(certUpdate, values: [])
+            while results.next() {
+                creds["certification"] = results.stringForColumn("value")
+            }
+            
+            results = try database.executeQuery(pracUpdate, values: [])
+            while results.next() {
+                creds["practice"] = results.stringForColumn("value")
+            }
+            
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        print(creds)
+        return creds
+    }
 }

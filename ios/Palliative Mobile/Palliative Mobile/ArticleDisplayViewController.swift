@@ -161,14 +161,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     private func formatView() {
         // Get page
         thisPage = db.getPage(pageID)
-        if let page = thisPage {
-            print("HORRAY")
-            
-            if page.keys.contains(kPageContentKey) {
-                print("HIPTT")
-                print(page[kPageContentKey])
-            }
-        }
         let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
         links = thisPage![kPageLinksKey] as! [[AnyObject]]
         parentID = (thisPage![kPageParentIDKey] as! NSNumber).integerValue
