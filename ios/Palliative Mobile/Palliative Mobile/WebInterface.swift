@@ -18,18 +18,22 @@ class WebInterface: NSObject {
     func pushPageUsage() {
 
         let urlString = "\(kServerURL)\(kPushPageUsageRoute)"
-        let parameters: [String : AnyObject] = [
-            "credentials" : db.getCredentials(),
-            "page_hits" : db.getPageHits()
-        ]
         
-        print(parameters)
-        
-        Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
-            .response { response in
-                
-                // Page hits successfully updated, clear DB count
-                db.clearPageHits()
+        let pageHits = db.getPageHits()
+        if pageHits.count > 0 {
+            let parameters: [String : AnyObject] = [
+                "credentials" : db.getCredentials(),
+                "page_hits" : pageHits
+            ]
+            
+            print(parameters)
+            
+            Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
+                .response { response in
+                    
+                    // Page hits successfully updated, clear DB count
+                    db.clearPageHits()
+            }
         }
     }
     
