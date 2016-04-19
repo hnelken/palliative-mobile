@@ -8,12 +8,20 @@
 
 import UIKit
 
-class QuestionsHomeViewController: UIViewController {
+class QuestionsHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var quizes: [String] = [
+        "quiz 1",
+        "quiz 2",
+        "quiz 3"
+    ]
 
+    @IBOutlet weak var quizTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.quizTable.separatorStyle = .None
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +29,28 @@ class QuestionsHomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
-    */
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quizes.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(kHomeCellID, forIndexPath: indexPath)
+        
+        cell.textLabel?.text = quizes[indexPath.row]
+        cell.accessoryType = .DisclosureIndicator
+        
+        return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+    }
 }

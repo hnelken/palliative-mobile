@@ -21,6 +21,10 @@
 		21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */; };
 		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
 		21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */; };
+		21DA34481CC6A256000A0989 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA34471CC6A256000A0989 /* ResultPageViewController.swift */; };
+		21DB6BCF1CC00A1D0054D9F7 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DB6BCE1CC00A1D0054D9F7 /* Questions.storyboard */; };
+		21DB6BD21CC00A830054D9F7 /* QuestionsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB6BD11CC00A830054D9F7 /* QuestionsHomeViewController.swift */; };
+		21DB6BD41CC00A900054D9F7 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB6BD31CC00A900054D9F7 /* QuestionsViewController.swift */; };
 		21F7996E1CA9F66A0080926A /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F7996D1CA9F66A0080926A /* Calculator.storyboard */; };
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
@@ -264,6 +268,10 @@
 		21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceTableViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/PalliativePerformanceTableViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KernofskyTableViewController.swift; sourceTree = "<group>"; };
+		21DA34471CC6A256000A0989 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
+		21DB6BCE1CC00A1D0054D9F7 /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Questions.storyboard; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/Questions.storyboard"; sourceTree = "<group>"; };
+		21DB6BD11CC00A830054D9F7 /* QuestionsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsHomeViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/QuestionsHomeViewController.swift"; sourceTree = "<group>"; };
+		21DB6BD31CC00A900054D9F7 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/QuestionsViewController.swift"; sourceTree = "<group>"; };
 		21F7996D1CA9F66A0080926A /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
@@ -542,6 +550,16 @@
 				216EA6971CBD6A5F00C605FA /* OpioidCalcTableViewController.swift */,
 			);
 			name = "calculator view controllers";
+			sourceTree = "<group>";
+		};
+		21DB6BD01CC00A4C0054D9F7 /* question view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21DB6BD11CC00A830054D9F7 /* QuestionsHomeViewController.swift */,
+				21DB6BD31CC00A900054D9F7 /* QuestionsViewController.swift */,
+				21DA34471CC6A256000A0989 /* ResultPageViewController.swift */,
+			);
+			name = "question view controllers";
 			sourceTree = "<group>";
 		};
 		7B68356638F6722864756B63 /* Frameworks */ = {
@@ -848,10 +866,12 @@
 			isa = PBXGroup;
 			children = (
 				219710B31CBB1E6C004AE453 /* Pictures */,
+				21DB6BD01CC00A4C0054D9F7 /* question view controllers */,
 				21C2AAF41CB725A3006C1F1E /* calculator view controllers */,
 				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
 				21F7996D1CA9F66A0080926A /* Calculator.storyboard */,
+				21DB6BCE1CC00A1D0054D9F7 /* Questions.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
@@ -1030,6 +1050,7 @@
 				D8767A761C7A8BC500F23541 /* network3.png in Resources */,
 				D8767A921C7A8BC500F23541 /* right.png in Resources */,
 				D8767AA31C7A8BC500F23541 /* star.png in Resources */,
+				21DB6BCF1CC00A1D0054D9F7 /* Questions.storyboard in Resources */,
 				D8767A401C7A8BC500F23541 /* file-add.png in Resources */,
 				D8767A911C7A8BC500F23541 /* right-arrow.png in Resources */,
 				D8767A611C7A8BC500F23541 /* look.png in Resources */,
@@ -1206,8 +1227,10 @@
 				21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				219710B01CBB1963004AE453 /* NYHFViewController.swift in Sources */,
+				21DB6BD41CC00A900054D9F7 /* QuestionsViewController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				212C78C41CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift in Sources */,
+				21DA34481CC6A256000A0989 /* ResultPageViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
 				216EA6981CBD6A5F00C605FA /* OpioidCalcTableViewController.swift in Sources */,
 				212C78C61CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
@@ -1224,6 +1247,7 @@
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 				219710B51CBB227B004AE453 /* AKPSViewController.swift in Sources */,
 				21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */,
+				21DB6BD21CC00A830054D9F7 /* QuestionsHomeViewController.swift in Sources */,
 				21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */,
 				216EA6961CBD56C600C605FA /* OpioidCalcViewController.swift in Sources */,
 			);
