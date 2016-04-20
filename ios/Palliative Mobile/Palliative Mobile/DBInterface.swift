@@ -27,7 +27,7 @@ class DBInterface: NSObject {
                 // Get the page with the given ID
                 
                 let title = results.stringForColumn("title")
-                print(title)
+                //print(title)
                 
                 let text = results.stringForColumn("text")
                 let detail = results.stringForColumn("detail")
@@ -263,6 +263,7 @@ class DBInterface: NSObject {
             let optOutQuery: String = "SELECT value FROM settings WHERE name=\"opt_out\""
             let results = try database.executeQuery(optOutQuery, values: [])
             while results.next() {
+                print("OptOutFromDB: \(results.boolForColumn("value"))")
                 return results.boolForColumn("value")
             }
             database.close()
@@ -271,6 +272,7 @@ class DBInterface: NSObject {
             database.close()
         }
         
+        print("No Db Opt Out: false")
         return false
     }
     
@@ -359,5 +361,110 @@ class DBInterface: NSObject {
         }
         print(creds)
         return creds
+    }
+    
+    // Executes arbitrary updates received from the master server
+    func executeUpdate(sql: String) {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            try database.executeUpdate(sql, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Updates the DB version after new updates
+    func updateVersion(version: Int) {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let verUpdateQuery: String
+            if version == 0 {
+                verUpdateQuery = "INSERT INTO settings (name, value) VALUES (\"version\", \(version))"
+            }
+            else {
+                verUpdateQuery = "UPDATE settings SET value=\(version) WHERE name=\"version\""
+            }
+            try database.executeUpdate(verUpdateQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    func getVersionNumber() -> Int {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            // Query for the version setting set on first launch
+            let versionQuery = "SELECT value FROM settings WHERE name=\"version\""
+            let results = try database.executeQuery(versionQuery, values: [])
+            while results.next() {
+                return Int(results.intForColumn("value"))
+            }
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        
+        // Give base database version
+        return 0
+    }
+    
+    // Check if the app has not been initialized yet
+    func getFirstTimeStatus() -> Bool {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        var firstTime: Bool = false
+        do {
+            let firstTimeQuery = "SELECT * FROM settings WHERE name=\"first_time\""
+            let results = try database.executeQuery(firstTimeQuery, values: [])
+            while results.next() {
+                firstTime = true
+            }
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        return firstTime
+    }
+    
+    // Set the app to "first time" status
+    func setFirstTimeTrue() {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let firstTimeQuery = "INSERT INTO settings (name, value) VALUES (\"first_time\", 1)"
+            try database.executeUpdate(firstTimeQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+    }
+    
+    // Release the app from the "first time" status
+    func releaseFirstTime() {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        do {
+            let releaseQuery = "DELETE FROM settings WHERE name=\"first_time\""
+            try database.executeUpdate(releaseQuery, values: [])
+            database.close()
+        }
+        catch {
+            database.close()
+        }
     }
 }

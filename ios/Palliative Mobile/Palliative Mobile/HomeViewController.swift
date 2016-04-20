@@ -11,12 +11,12 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var links: [String] = [
-        "Bookmarks",
         "Rapid PC Assessment",
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
-        "Interactive Learning"
+        "Interactive Learning",
+        "Bookmarks"
     ]
     
     var searchResults: [[AnyObject]] = []
@@ -32,10 +32,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidAppear(animated: Bool) {
-        let del = UIApplication.sharedApplication().delegate as! AppDelegate
-        if del.firstTime {
-            del.firstTime = false
-            
+        if db.getFirstTimeStatus() {
             // Segue to tutorial
             self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
         }
@@ -64,6 +61,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    
+    
     //
     // MARK: Table View Delegate/Data Source
     //
@@ -87,7 +86,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel?.text = links[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
-        if indexPath.row == 0 || indexPath.row == links.count - 1 {
+        if indexPath.row == links.count - 2 || indexPath.row == links.count - 1 {
             cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
             cell.contentView.backgroundColor = UIColor.groupTableViewBackgroundColor()
         }
@@ -100,24 +99,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 0: segueID = kBookmarkSegueID
-        case 1:
+        case 0:
             destination = kRapidPCPageID;
             segueID = kArticleSegueID
-        case 2:
+        case 1:
             destination = kCareForFrailPageID;
             segueID = kArticleSegueID
-        case 3:
+        case 2:
             destination = kDeathResusPageID;
             segueID = kArticleSegueID
-        case 4:
+        case 3:
             destination = kCommonSymptomsPageID;
             segueID = kArticleSegueID
-        case 5:
-            segueID = kAboutSegueID
-        case 6:
+        case 4:
             destination = kCareForFrailPageID
             segueID = kArticleSegueID
+        case 5:
+            segueID = kBookmarkSegueID
         default:
             destination = kCareForFrailPageID;
             segueID = kArticleSegueID

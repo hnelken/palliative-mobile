@@ -219,6 +219,9 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let cert = certField.text!
         let prac = practiceField.text!
         
+        db.optIn()
+        db.releaseFirstTime()
+        print("Took survey - first: \(db.getFirstTimeStatus()) - optOut: \(db.getOptOutStatus())")
         db.commitUserInfo(device, age: age, postGrad: postGrad, years: years, cert: cert, prac: prac)
     }
     

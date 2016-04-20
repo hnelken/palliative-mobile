@@ -62,7 +62,13 @@ let kServerURL = "http://palliative-serv.herokuapp.com/"
 let kPushPageUsageRoute = "analytics/retrieve.php"
 let kUpdatePagesRoute = "infopages/getchanges.php"
 
+// WEB INTERFACE KEY CONSTANTS
+let kCredentialsKey = "credentials"
+let kPageHitsKey = "page_hits"
+let kVersionParamKey = "v"
+
 // DATABASE CONSTANTS
+let kBaseDBVersion = 0
 let kDBName = "master_local.db"
 let kLinkNameIndex = 0
 let kLinkIDIndex = 1
@@ -73,6 +79,8 @@ let kPageParentIDKey = "parentID"
 let kPageContentKey = "content"
 let kPageLinksKey = "links"
 let kPageBookmarkedKey = "bookmarked"
+let kBookmarksTableName = "bookmarks"
+let kPagesTableName = "pages"
 
 var dbPath: String {
     let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)

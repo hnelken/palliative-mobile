@@ -13,10 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var optedOut: Bool = false
-    var firstTime: Bool = false
     
     func createCopyOfDatabaseIfNeeded() {
-        firstTime = false
         var success: Bool
         let fileManager = NSFileManager.defaultManager()
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
@@ -29,15 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Database already exists in app's document")
             optedOut = db.getOptOutStatus()
             
-            if !optedOut {
-                print("pushing usage")
+            if !optedOut && !db.getFirstTimeStatus() {
                 web.pushPageUsage()
-                print("cleared usage")
                 web.updatePages()
-                print("updated")
             }
             
-            return;
+            return
         }
         
         do {
@@ -45,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
             try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
             print("Successfully copied database from bundle to app's document")
-            firstTime = true
+            db.updateVersion(kBaseDBVersion)
+            db.setFirstTimeTrue()
+            web.updatePages()
         }
         catch {
             print("Failed to create writable database file")

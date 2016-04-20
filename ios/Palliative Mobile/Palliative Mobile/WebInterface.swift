@@ -11,7 +11,7 @@ import Alamofire
 class WebInterface: NSObject {
     
     // Optional response handlers
-    var responseParser: ((response: AnyObject) -> Void)?
+    var callBack: (() -> Void)?
     var errorHandler: (() -> Void)?
     
     // Pushes all page hit rows with user credentials for aggregation on master server
@@ -22,29 +22,64 @@ class WebInterface: NSObject {
         let pageHits = db.getPageHits()
         if pageHits.count > 0 {
             let parameters: [String : AnyObject] = [
-                "credentials" : db.getCredentials(),
-                "page_hits" : pageHits
+                kCredentialsKey : db.getCredentials(),
+                kPageHitsKey : pageHits
             ]
             
-            print(parameters)
-            
+            // Send HTTP POST request
             Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
-                .response { response in
+                .responseString(encoding: NSUTF8StringEncoding) { response in
                     
-                    // Page hits successfully updated, clear DB count
-                    db.clearPageHits()
+                    if (response.result.isSuccess) {
+                        // Page hits successfully updated, clear DB count
+                        db.clearPageHits()
+                    }
             }
         }
     }
     
+    // Requests updates since last version
     func updatePages() {
         let urlString = "\(kServerURL)\(kUpdatePagesRoute)"
-        let dbNumber = 1
+        let dbNumber = db.getVersionNumber()
+        var maxVersion = dbNumber
         
-        Alamofire.request(.POST, urlString, parameters: ["v" : dbNumber], encoding: .URLEncodedInURL).responseJSON { response in
-            
-            print(response.request?.URLString)
-            
+        print("Version: \(dbNumber)")
+        
+        // Post the latest version number to get updates since then
+        Alamofire.request(.POST, urlString, parameters: [kVersionParamKey : dbNumber], encoding: .URLEncodedInURL).responseJSON { response in
+        
+            if let stmts = response.result.value as? [AnyObject] {
+                
+                if let callback = self.callBack {
+                    
+                    // Update UI on main queue
+                    dispatch_async(dispatch_get_main_queue()) {
+                        callback()
+                    }
+                }
+                self.callBack = nil
+                
+                print("UPDATES:")
+                for stmt in stmts {
+                    let dict = stmt as! [String : AnyObject]
+                    let id = Int(dict["id"] as! String)!
+                    
+                    // Keep track of the highest ID
+                    if id > maxVersion {
+                        maxVersion = id
+                    }
+                    
+                    // Execute the update
+                    print(dict["statement"])
+                    //db.executeUpdate(dict["statement"] as! String)
+                }
+                
+                // Update the DB version with the highest ID
+                if maxVersion > dbNumber {
+                    db.updateVersion(maxVersion)
+                }
+            }
         }
     }
     

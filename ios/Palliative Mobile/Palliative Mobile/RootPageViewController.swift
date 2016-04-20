@@ -41,6 +41,7 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func segueToSurvey() {
+        // Transition to survey view
         pageVC.willMoveToParentViewController(self)
         pageVC.view.removeFromSuperview()
         pageVC.removeFromParentViewController()
@@ -107,16 +108,4 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
         controller.pageIndex = index
         return controller
     }
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == kSkipSurveySegueID {
-            db.optOut()
-        }
-    }
-    
-
 }
