@@ -19,6 +19,7 @@
 		21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */; };
 		21B9E85E1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85D1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift */; };
 		21B9E8601CC985FA00CF667F /* KarnofskySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85F1CC985FA00CF667F /* KarnofskySelectionViewController.swift */; };
+		21B9E8621CC9890F00CF667F /* PalliativePrognosticIndexSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E8611CC9890F00CF667F /* PalliativePrognosticIndexSelectionViewController.swift */; };
 		21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */; };
 		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
 		21DA34481CC6A256000A0989 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA34471CC6A256000A0989 /* ResultPageViewController.swift */; };
@@ -266,6 +267,7 @@
 		21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
 		21B9E85D1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpiodCalculatorSelectionViewController.swift; sourceTree = "<group>"; };
 		21B9E85F1CC985FA00CF667F /* KarnofskySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarnofskySelectionViewController.swift; sourceTree = "<group>"; };
+		21B9E8611CC9890F00CF667F /* PalliativePrognosticIndexSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePrognosticIndexSelectionViewController.swift; sourceTree = "<group>"; };
 		21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/KarnofskyViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
 		21DA34471CC6A256000A0989 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
 				21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */,
 				212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */,
+				21B9E8611CC9890F00CF667F /* PalliativePrognosticIndexSelectionViewController.swift */,
 				212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */,
 				219710AF1CBB1963004AE453 /* NYHFViewController.swift */,
 				219710B41CBB227B004AE453 /* AKPSViewController.swift */,
@@ -1238,6 +1241,7 @@
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */,
 				21B9E8601CC985FA00CF667F /* KarnofskySelectionViewController.swift in Sources */,
+				21B9E8621CC9890F00CF667F /* PalliativePrognosticIndexSelectionViewController.swift in Sources */,
 				21B9E85E1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,

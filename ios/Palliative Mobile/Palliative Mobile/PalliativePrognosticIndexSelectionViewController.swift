@@ -1,14 +1,16 @@
 //
-//  PalliativePrognosticIndexTableViewController.swift
+//  PalliativePrognosticIndexSelectionViewController.swift
 //  Palliative Mobile
 //
-//  Created by Andrew Marmorstein on 4/9/16.
+//  Created by Andrew Marmorstein on 4/21/16.
 //  Copyright © 2016 CWRU-SP16. All rights reserved.
 //
 
 import UIKit
 
-class PalliativePrognosticIndexTableViewController: UITableViewController {
+class PalliativePrognosticIndexSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var selectionLabel: UILabel!
 
     //the options to choose from
     var options = []
@@ -19,32 +21,50 @@ class PalliativePrognosticIndexTableViewController: UITableViewController {
     //place holder for the name it will set for the button on the main calculator screen
     var buttonLabel = ""
     
+    var selection = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectionLabel.text = selection
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if options.count > 7
+        {
+            return tableView.frame.size.height / CGFloat(6.3)
+        }
+        else if options.count < 7 && options.count > 3
+        {
+            return tableView.frame.size.height / CGFloat(options.count)
+        }
+        else
+        {
+            return tableView.frame.size.height / CGFloat(4)
+        }
+    }
     
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(kPalliativePrognosticIndexCellID, forIndexPath: indexPath)
         
         cell.textLabel?.text = options[indexPath.row] as? String
@@ -53,7 +73,7 @@ class PalliativePrognosticIndexTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         buttonLabel = (options[indexPath.row] as? String)!
@@ -122,29 +142,5 @@ class PalliativePrognosticIndexTableViewController: UITableViewController {
             
         }
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

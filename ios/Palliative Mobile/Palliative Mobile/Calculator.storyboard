@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pBh-MK-oeg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ezQ-kx-14M">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -252,7 +252,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="palliativePerformanceButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="ndr-WC-Cr1"/>
-                                    <segue destination="5X6-zG-fcE" kind="show" identifier="palliativePerformanceScale" id="MuA-rl-9cf"/>
+                                    <segue destination="pck-Mw-Ypk" kind="show" identifier="palliativePerformanceScale" id="REo-J8-DaL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-dj-9S1">
@@ -262,7 +262,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="oralIntakeButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="1fA-Bd-f8I"/>
-                                    <segue destination="5X6-zG-fcE" kind="show" identifier="oralIntake" id="7HC-in-oAI"/>
+                                    <segue destination="pck-Mw-Ypk" kind="show" identifier="oralIntake" id="QoT-21-OI1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmW-kK-a51">
@@ -272,7 +272,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="edemaButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="ae0-5j-EzB"/>
-                                    <segue destination="5X6-zG-fcE" kind="show" identifier="edema" id="rsX-BO-gt6"/>
+                                    <segue destination="pck-Mw-Ypk" kind="show" identifier="edema" id="FFT-be-FEg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-v8-xmk">
@@ -282,7 +282,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="dyspneaAtRestButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="nKV-ea-Nx4"/>
-                                    <segue destination="5X6-zG-fcE" kind="show" identifier="dyspneaAtRest" id="RQt-Y9-JUz"/>
+                                    <segue destination="pck-Mw-Ypk" kind="show" identifier="dyspneaAtRest" id="BoQ-lP-X3Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-4g-aKZ">
@@ -292,7 +292,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="deliriumButton:" destination="ezQ-kx-14M" eventType="touchUpInside" id="56s-sf-Yzi"/>
-                                    <segue destination="5X6-zG-fcE" kind="show" identifier="delerium" id="7gx-fp-Bez"/>
+                                    <segue destination="pck-Mw-Ypk" kind="show" identifier="delerium" id="15C-MR-AgQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-u8-2OB">
@@ -386,7 +386,7 @@ mostly bedbound</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZS9-Wu-mfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OGm-zR-VAW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="-1906"/>
+            <point key="canvasLocation" x="-184" y="-1878"/>
         </scene>
         <!--Karnofsky View Controller-->
         <scene sceneID="TpV-sM-A4D">
@@ -887,6 +887,68 @@ mostly bedbound</string>
             </objects>
             <point key="canvasLocation" x="1368" y="-1125"/>
         </scene>
+        <!--Palliative Prognostic Index Selection View Controller-->
+        <scene sceneID="JYS-o2-OT3">
+            <objects>
+                <viewController id="pck-Mw-Ypk" customClass="PalliativePrognosticIndexSelectionViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="493-hW-9fD"/>
+                        <viewControllerLayoutGuide type="bottom" id="W8s-8R-kuh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bMZ-nf-zj1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xba-N2-Hba">
+                                <rect key="frame" x="20" y="74" width="560" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PalliativePrognosticIndexTableCell" id="tTh-ww-Lrc">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTh-ww-Lrc" id="4Hl-54-6Wz">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pck-Mw-Ypk" id="hvF-CX-Vy7"/>
+                                    <outlet property="delegate" destination="pck-Mw-Ypk" id="B90-An-ly8"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-Zq-luX">
+                                <rect key="frame" x="20" y="28" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="qn7-Xm-9At"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="MEH-Zq-luX" secondAttribute="trailing" id="JUc-bp-Txq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MEH-Zq-luX" secondAttribute="leading" id="Kz3-6e-E44"/>
+                            <constraint firstItem="W8s-8R-kuh" firstAttribute="top" secondItem="xba-N2-Hba" secondAttribute="bottom" constant="20" id="LEE-Np-WTR"/>
+                            <constraint firstItem="MEH-Zq-luX" firstAttribute="top" secondItem="493-hW-9fD" secondAttribute="bottom" constant="8" id="Lrw-JG-npo"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xba-N2-Hba" secondAttribute="leading" id="Ryk-Ox-YBF"/>
+                            <constraint firstItem="xba-N2-Hba" firstAttribute="top" secondItem="MEH-Zq-luX" secondAttribute="bottom" constant="8" id="egE-sa-gsd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xba-N2-Hba" secondAttribute="trailing" id="vLR-QY-eBO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectionLabel" destination="MEH-Zq-luX" id="8vt-2c-jiy"/>
+                        <segue destination="HwR-Hw-3MB" kind="unwind" identifier="backToHomeSegue" unwindAction="backToHomeSegue:" id="J38-nw-P5s"/>
+                        <segue destination="HwR-Hw-3MB" kind="unwind" unwindAction="backToHomeSegue:" id="MKL-Ue-BFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIW-68-fZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HwR-Hw-3MB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-1906"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AKPS Assessment Criteria.jpg" width="1600" height="831"/>
@@ -894,9 +956,9 @@ mostly bedbound</string>
         <image name="NYHA classification chart.jpg" width="898" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7gx-fp-Bez"/>
         <segue reference="7hm-AV-SM6"/>
         <segue reference="bsR-Tk-8nR"/>
+        <segue reference="15C-MR-AgQ"/>
         <segue reference="dhx-d3-4od"/>
     </inferredMetricsTieBreakers>
 </document>

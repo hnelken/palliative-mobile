@@ -74,7 +74,7 @@ class PalliativePrognosticIndexViewController: UIViewController {
         score.hidden = true
     }
     
-    @IBAction func palliativePrognosticIndexSegue(segue:UIStoryboardSegue) {
+    @IBAction func backToHomeSegue(segue:UIStoryboardSegue) {
         palliativePerformanceScale.setTitle(button1, forState: UIControlState.Normal)
         oralIntake.setTitle(button2, forState: UIControlState.Normal)
         edema.setTitle(button3, forState: UIControlState.Normal)
@@ -110,32 +110,37 @@ class PalliativePrognosticIndexViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! PalliativePrognosticIndexTableViewController
+        let vc = segue.destinationViewController as! PalliativePrognosticIndexSelectionViewController
         
         if id == "palliativePerformanceScale"
         {
             vc.options = palliativePerformanceScaleOptions
             vc.button = 1
+            vc.selection = button1Type
         }
         else if id == "oralIntake"
         {
             vc.options = oralIntakeOptions
             vc.button = 2
+            vc.selection = button2Type
         }
         else if id == "edema"
         {
             vc.options = edemaOptions
             vc.button = 3
+            vc.selection = button3Type
         }
         else if id == "dyspneaAtRest"
         {
             vc.options = dyspneaAtRestOptions
             vc.button = 4
+            vc.selection = button4Type
         }
         else if id == "delerium"
         {
             vc.options = deliriumOptions
             vc.button = 5
+            vc.selection = button5Type
         }
         
     }
