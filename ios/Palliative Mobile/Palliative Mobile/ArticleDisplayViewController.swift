@@ -30,7 +30,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     var lastPage: ArticleDisplayViewController?
     var thisPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
-    var nextImage: Int?
     var pageID: Int!
     private var lastPageID: Int!
     private var parentID: Int!
@@ -332,15 +331,50 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         let link = links[indexPath.row]
         let dstID = link[kLinkIDIndex] as! NSNumber
         
-        if imagePages.keys.contains(dstID.integerValue) {
+        transitionToPage(dstID.integerValue)
+        
+        // Check if the destination is a special page
+        if specialPages.contains(dstID.integerValue) {
             
-            nextImage = dstID.integerValue
-            performSegueWithIdentifier(kImageSegueID, sender: self)
+            segueToSpecialPage(dstID.integerValue)
         }
         else {
             transitionToPage(dstID.integerValue)
         }
         
+    }
+    
+    // Recognizes a special page ID and performs the corresponding segue
+    private func segueToSpecialPage(dstID: Int) {
+        let segue: String?
+        
+        switch (dstID) {
+        case kSeattlePageID:
+            segue = kSeattleSegueID
+        case kNewYorkPageID:
+            segue = kNewYorkSegueID
+        case kKarnofskyPageID:
+            segue = kKarnofskySegueID
+        case kAustrailiaPageID:
+            segue = kAustraliaSegueID
+        case kPrognosticPageID:
+            segue = kPrognosticSegueID
+        case kPerformancePageID:
+            segue = kPerformanceSegueID
+        case kECOGPageID:
+            segue = kECOGSegueID
+        case kSAAGPageID:
+            segue = kSAAGSegueID
+        case kTrajectoryPageID:
+            segue = kTrajectorySegueID
+        default:
+            segue = nil
+            print("Unidentified special page ID")
+        }
+        
+        if let id = segue {
+            //performSegueWithIdentifier(id, sender: self)
+        }
     }
 
     // MARK: - Navigation
@@ -349,11 +383,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if let vc = segue.destinationViewController as? ImageViewController {
-            vc.titleText = imagePages[nextImage!]![0]
-            vc.imageName = imagePages[nextImage!]![1]
-        }
     }
 
 }

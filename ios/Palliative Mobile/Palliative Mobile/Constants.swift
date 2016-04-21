@@ -17,16 +17,29 @@ let kRapidPCPageID = 2
 let kCareForFrailPageID = 53
 let kDeathResusPageID = 390
 let kCommonSymptomsPageID = 169
+let kSeattlePageID = 19
+let kNewYorkPageID = 20
+let kKarnofskyPageID = 79
+let kAustrailiaPageID = 29
+let kPrognosticPageID = 30
+let kPerformancePageID = 31
+let kECOGPageID = 36
+let kSAAGPageID = 305
+let kTrajectoryPageID = 67
 
-let imagePages = [
-    23:["Terminal Illness", "terminal.png"],
-    41:["Frailty", "frailty.png"],
-    16:["Organ Failure", "organ.png"],
-    37:["Sudden Death", "sudden.png"]
-]
-let calcPages = [ 12, 14, 16, 15 ]
+let specialPages = [ 19, 20, 79, 29, 30, 31, 36, 305, 67]
 
 // SEGUE IDENTIFIERS
+let kSeattleSegueID = "toSeattle"
+let kNewYorkSegueID = "toNewYork"
+let kKarnofskySegueID = "toKarnofsky"
+let kAustraliaSegueID = "toAustralia"
+let kPrognosticSegueID = "toPrognostic"
+let kPerformanceSegueID = "toPerformance"
+let kTrajectorySegueID = "toTrajectory"
+let kECOGSegueID = "toECOG"
+let kSAAGSegueID = "toSAAG"
+
 let kQuizSegueID = "toQuiz"
 let kHomeSegueID = "toHome"
 let kWikiSegueID = "toWiki"
