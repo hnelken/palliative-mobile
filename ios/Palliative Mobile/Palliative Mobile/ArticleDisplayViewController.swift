@@ -161,64 +161,69 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     private func formatView() {
         // Get page
         thisPage = db.getPage(pageID)
-        let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
-        links = thisPage![kPageLinksKey] as! [[AnyObject]]
-        parentID = (thisPage![kPageParentIDKey] as! NSNumber).integerValue
-        bookmarked = (thisPage![kPageBookmarkedKey] as! NSNumber).boolValue
-        initMarked = bookmarked
-        
-        // Pass on the next article's info for display
-        if let content = contentArray {
-            titleText = content[kContentTitleIndex]
-            normalText = content[kContentTextIndex]
-            detailText = content[kContentDetailIndex]
+        if let content = thisPage![kPageContentKey] {
+            let contentArray = content as! [String]
+            links = thisPage![kPageLinksKey] as! [[AnyObject]]
+            parentID = (thisPage![kPageParentIDKey] as! NSNumber).integerValue
+            bookmarked = (thisPage![kPageBookmarkedKey] as! NSNumber).boolValue
+            initMarked = bookmarked
             
-            // Update text labels with article text
-            titleLabel.text = titleText
-            if normalText != "" {
-                textLabel.text = normalText
+            // Pass on the next article's info for display
+            //if let content = contentArray {
+                titleText = contentArray[kContentTitleIndex]
+                normalText = contentArray[kContentTextIndex]
+                detailText = contentArray[kContentDetailIndex]
+                
+                // Update text labels with article text
+                titleLabel.text = titleText
+                if normalText != "" {
+                    textLabel.text = normalText
+                }
+                else {
+                    textLabel.text = "No text to display.\nSee detail tab if available."
+                }
+                detailLabel.text = detailText
+            //}
+            
+            // Check bookmarked status
+            if bookmarked {
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
             }
             else {
-                textLabel.text = "No text to display.\nSee detail tab if available."
+                bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
             }
-            detailLabel.text = detailText
+            
+            // Set first view
+            if links.count == 0 {
+                segmentControl.setEnabled(false, forSegmentAtIndex: 0)
+                segmentControl.selectedSegmentIndex = 1
+                
+                viewType = .Text
+                currentView = textScrollView
+                detailScrollView.hidden = true
+                tableView.hidden = true
+                
+                if (detailText!.isEmpty) {
+                    segmentControl.setEnabled(false, forSegmentAtIndex: 2)
+                }
+            }
+            else {
+                viewType = .Links
+                currentView = tableView
+                textScrollView.hidden = true
+                detailScrollView.hidden = true
+                
+                if (normalText!.isEmpty) {
+                    segmentControl.setEnabled(false, forSegmentAtIndex: 1)
+                }
+                if (detailText!.isEmpty) {
+                    segmentControl.setEnabled(false, forSegmentAtIndex: 2)
+                }
+            }
         }
         
-        // Check bookmarked status
-        if bookmarked {
-            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
-        }
-        else {
-            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
-        }
+        //let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
         
-        // Set first view
-        if links.count == 0 {
-            segmentControl.setEnabled(false, forSegmentAtIndex: 0)
-            segmentControl.selectedSegmentIndex = 1
-            
-            viewType = .Text
-            currentView = textScrollView
-            detailScrollView.hidden = true
-            tableView.hidden = true
-            
-            if (detailText!.isEmpty) {
-                segmentControl.setEnabled(false, forSegmentAtIndex: 2)
-            }
-        }
-        else {
-            viewType = .Links
-            currentView = tableView
-            textScrollView.hidden = true
-            detailScrollView.hidden = true
-            
-            if (normalText!.isEmpty) {
-                segmentControl.setEnabled(false, forSegmentAtIndex: 1)
-            }
-            if (detailText!.isEmpty) {
-                segmentControl.setEnabled(false, forSegmentAtIndex: 2)
-            }
-        }
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
