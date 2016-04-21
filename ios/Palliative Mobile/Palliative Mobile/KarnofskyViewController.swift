@@ -55,7 +55,7 @@ class KarnofskyViewController: UIViewController {
         score.hidden = true
     }
     
-    @IBAction func karnofskyCalulatorSegue(segue:UIStoryboardSegue) {
+    @IBAction func backToHomeSegue(segue:UIStoryboardSegue) {
         condition.setTitle(button1, forState: UIControlState.Normal)
         levelOfFunctionalCapacity.setTitle(button2, forState: UIControlState.Normal)
                     //if all of the buttons have been selected then it should calculate the score
@@ -89,17 +89,19 @@ class KarnofskyViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! KernofskyTableViewController
+        let vc = segue.destinationViewController as! KarnofskySelectionViewController
         
         if id == "conditionSegue"
         {
             vc.options = conditions
             vc.button = 1
+            vc.selection = button1Type
         }
         else
         {
             vc.options = levelsOfFunctionalCapcity
             vc.button = 2
+            vc.selection = button2Type
         }
         
         vc.showFrom = vc.getShowFrom(self)

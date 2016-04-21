@@ -1,37 +1,57 @@
 //
-//  KernofskyTableViewController.swift
+//  KarnofskySelectionViewController.swift
 //  Palliative Mobile
 //
-//  Created by Andrew Marmorstein on 4/8/16.
+//  Created by Andrew Marmorstein on 4/21/16.
 //  Copyright © 2016 CWRU-SP16. All rights reserved.
 //
 
 import UIKit
 
-class KernofskyTableViewController: UITableViewController {
+class KarnofskySelectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var selectionLabel: UILabel!
+
     var options = []
     var button = 0
     var buttonLabel = ""
     var showFrom = 0
-    var showTo = 0;
-
+    var showTo = 0
+    var selection = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         options = getViableOptions()
+        selectionLabel.text = selection
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if options.count > 7
+        {
+            return tableView.frame.size.height / CGFloat(6.3)
+        }
+        else if options.count < 7 && options.count > 3
+        {
+            return tableView.frame.size.height / CGFloat(options.count)
+        }
+        else
+        {
+            return tableView.frame.size.height / CGFloat(4)
+        }
     }
     
     func getViableOptions() -> [String] {
@@ -41,8 +61,8 @@ class KernofskyTableViewController: UITableViewController {
         }
         return newOptionList
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(kKarnofskyCellID, forIndexPath: indexPath)
         
         cell.textLabel?.text = options[indexPath.row] as? String
@@ -51,8 +71,8 @@ class KernofskyTableViewController: UITableViewController {
         
         return cell
     }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         buttonLabel = (options[indexPath.row] as? String)!
@@ -115,6 +135,5 @@ class KernofskyTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-   
+
 }

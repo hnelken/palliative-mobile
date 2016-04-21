@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fxf-Qn-HnP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pBh-MK-oeg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -416,7 +416,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="condition:" destination="pBh-MK-oeg" eventType="touchUpInside" id="Y9e-vP-OBS"/>
-                                    <segue destination="CGL-AQ-FEt" kind="show" identifier="conditionSegue" id="eI0-SZ-PCh"/>
+                                    <segue destination="nKC-tO-YLD" kind="show" identifier="conditionSegue" id="7hm-AV-SM6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtY-FE-rlN">
@@ -426,7 +426,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="level:" destination="pBh-MK-oeg" eventType="touchUpInside" id="tWj-rk-y2A"/>
-                                    <segue destination="CGL-AQ-FEt" kind="show" identifier="levelSegue" id="ay4-ga-kvt"/>
+                                    <segue destination="nKC-tO-YLD" kind="show" identifier="levelSegue" id="CbI-5W-LUW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luU-Ml-XV4">
@@ -461,38 +461,6 @@ mostly bedbound</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bap-4c-adK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="-1125"/>
-        </scene>
-        <!--Kernofsky Table View Controller-->
-        <scene sceneID="sI6-rO-cK2">
-            <objects>
-                <tableViewController id="CGL-AQ-FEt" customClass="KernofskyTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GEJ-t1-iP4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="karnofskyCell" id="NDF-XW-KIA">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDF-XW-KIA" id="SdN-uW-0eO">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="VQu-6q-078" kind="unwind" identifier="backToHomeSegue" unwindAction="karnofskyCalulatorSegue:" id="hfv-GA-BZI"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="CGL-AQ-FEt" id="HTg-KT-0wh"/>
-                            <outlet property="delegate" destination="CGL-AQ-FEt" id="co3-Cb-rVd"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Esl-Y7-6u5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="VQu-6q-078" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1380" y="-1125"/>
         </scene>
         <!--Opioid Calc View Controller-->
         <scene sceneID="oDc-Ty-ONF">
@@ -858,6 +826,67 @@ mostly bedbound</string>
             </objects>
             <point key="canvasLocation" x="1380" y="373"/>
         </scene>
+        <!--Karnofsky Selection View Controller-->
+        <scene sceneID="Yth-It-uTH">
+            <objects>
+                <viewController id="nKC-tO-YLD" customClass="KarnofskySelectionViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Clo-mf-1Yo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gtd-BJ-s2A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JpD-h6-zvI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-YX-XFI">
+                                <rect key="frame" x="20" y="74" width="560" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="karnofskyCell" id="ysF-fX-5mo">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ysF-fX-5mo" id="bml-Xd-Mpn">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nKC-tO-YLD" id="KVr-Tb-LDW"/>
+                                    <outlet property="delegate" destination="nKC-tO-YLD" id="b99-Of-g6D"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJp-UN-1Un">
+                                <rect key="frame" x="20" y="28" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="fp1-2r-189"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RVF-YX-XFI" firstAttribute="top" secondItem="IJp-UN-1Un" secondAttribute="bottom" constant="8" id="FQy-qQ-6K7"/>
+                            <constraint firstItem="Gtd-BJ-s2A" firstAttribute="top" secondItem="RVF-YX-XFI" secondAttribute="bottom" constant="20" id="REv-Qm-9h2"/>
+                            <constraint firstItem="IJp-UN-1Un" firstAttribute="top" secondItem="Clo-mf-1Yo" secondAttribute="bottom" constant="8" id="YoK-O5-J6l"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IJp-UN-1Un" secondAttribute="leading" id="asz-4f-YhC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RVF-YX-XFI" secondAttribute="leading" id="ggb-gC-cVg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RVF-YX-XFI" secondAttribute="trailing" id="oDG-yj-cMj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IJp-UN-1Un" secondAttribute="trailing" id="txo-p0-SwB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectionLabel" destination="IJp-UN-1Un" id="ddC-or-nnN"/>
+                        <segue destination="oTa-pU-8an" kind="unwind" identifier="backToHomeSegue" unwindAction="backToHomeSegue:" id="LLA-IC-5AV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWp-jd-W0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oTa-pU-8an" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-1125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AKPS Assessment Criteria.jpg" width="1600" height="831"/>
@@ -866,7 +895,7 @@ mostly bedbound</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7gx-fp-Bez"/>
-        <segue reference="eI0-SZ-PCh"/>
+        <segue reference="7hm-AV-SM6"/>
         <segue reference="bsR-Tk-8nR"/>
         <segue reference="dhx-d3-4od"/>
     </inferredMetricsTieBreakers>

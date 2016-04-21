@@ -18,9 +18,9 @@
 		219710BB1CBB2CBA004AE453 /* ECOGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219710BA1CBB2CBA004AE453 /* ECOGViewController.swift */; };
 		21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */; };
 		21B9E85E1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85D1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift */; };
+		21B9E8601CC985FA00CF667F /* KarnofskySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85F1CC985FA00CF667F /* KarnofskySelectionViewController.swift */; };
 		21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */; };
 		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
-		21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */; };
 		21DA34481CC6A256000A0989 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA34471CC6A256000A0989 /* ResultPageViewController.swift */; };
 		21DB6BCF1CC00A1D0054D9F7 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DB6BCE1CC00A1D0054D9F7 /* Questions.storyboard */; };
 		21DB6BD21CC00A830054D9F7 /* QuestionsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB6BD11CC00A830054D9F7 /* QuestionsHomeViewController.swift */; };
@@ -265,9 +265,9 @@
 		219710BA1CBB2CBA004AE453 /* ECOGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECOGViewController.swift; sourceTree = "<group>"; };
 		21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
 		21B9E85D1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpiodCalculatorSelectionViewController.swift; sourceTree = "<group>"; };
+		21B9E85F1CC985FA00CF667F /* KarnofskySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarnofskySelectionViewController.swift; sourceTree = "<group>"; };
 		21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/KarnofskyViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
-		21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KernofskyTableViewController.swift; sourceTree = "<group>"; };
 		21DA34471CC6A256000A0989 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
 		21DB6BCE1CC00A1D0054D9F7 /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Questions.storyboard; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/Questions.storyboard"; sourceTree = "<group>"; };
 		21DB6BD11CC00A830054D9F7 /* QuestionsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsHomeViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/QuestionsHomeViewController.swift"; sourceTree = "<group>"; };
@@ -538,7 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */,
-				21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */,
+				21B9E85F1CC985FA00CF667F /* KarnofskySelectionViewController.swift */,
 				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
 				21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */,
 				212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */,
@@ -1222,7 +1222,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */,
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
@@ -1238,6 +1237,7 @@
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
 				21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */,
+				21B9E8601CC985FA00CF667F /* KarnofskySelectionViewController.swift in Sources */,
 				21B9E85E1CC97E3300CF667F /* OpiodCalculatorSelectionViewController.swift in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
