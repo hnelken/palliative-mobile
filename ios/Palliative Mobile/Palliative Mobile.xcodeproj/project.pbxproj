@@ -244,6 +244,24 @@
 		D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */; };
 		D8965EEE1CC94A6700C74C52 /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D8965EED1CC94A6700C74C52 /* master_local.db */; };
 		D8965EF31CC9813600C74C52 /* foldback-white2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8965EF21CC9813600C74C52 /* foldback-white2.png */; };
+		D8965F251CC9931F00C74C52 /* AKPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F171CC9931F00C74C52 /* AKPSViewController.swift */; };
+		D8965F261CC9931F00C74C52 /* ECOGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F181CC9931F00C74C52 /* ECOGViewController.swift */; };
+		D8965F271CC9931F00C74C52 /* KarnofskySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */; };
+		D8965F281CC9931F00C74C52 /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */; };
+		D8965F291CC9931F00C74C52 /* NYHFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */; };
+		D8965F2A1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */; };
+		D8965F2B1CC9931F00C74C52 /* OpioidCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */; };
+		D8965F2C1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */; };
+		D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */; };
+		D8965F2E1CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */; };
+		D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */; };
+		D8965F301CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */; };
+		D8965F311CC9931F00C74C52 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */; };
+		D8965F321CC9931F00C74C52 /* SeatleHeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */; };
+		D8965F351CC9932800C74C52 /* QuestionsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */; };
+		D8965F361CC9932800C74C52 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F341CC9932800C74C52 /* QuestionsViewController.swift */; };
+		D8965F391CC9933000C74C52 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F371CC9933000C74C52 /* Calculator.storyboard */; };
+		D8965F3A1CC9933000C74C52 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F381CC9933000C74C52 /* Questions.storyboard */; };
 		D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */; };
 		D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6C1CBF499700ADFCF3 /* frailty.png */; };
 		D8C90C711CBF499700ADFCF3 /* organ.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6D1CBF499700ADFCF3 /* organ.png */; };
@@ -500,6 +518,24 @@
 		D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		D8965EED1CC94A6700C74C52 /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
 		D8965EF21CC9813600C74C52 /* foldback-white2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldback-white2.png"; sourceTree = "<group>"; };
+		D8965F171CC9931F00C74C52 /* AKPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AKPSViewController.swift; path = Andrews/AKPSViewController.swift; sourceTree = "<group>"; };
+		D8965F181CC9931F00C74C52 /* ECOGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECOGViewController.swift; path = Andrews/ECOGViewController.swift; sourceTree = "<group>"; };
+		D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskySelectionViewController.swift; path = Andrews/KarnofskySelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = Andrews/KarnofskyViewController.swift; sourceTree = "<group>"; };
+		D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NYHFViewController.swift; path = Andrews/NYHFViewController.swift; sourceTree = "<group>"; };
+		D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpiodCalculatorSelectionViewController.swift; path = Andrews/OpiodCalculatorSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpioidCalcViewController.swift; path = Andrews/OpioidCalcViewController.swift; sourceTree = "<group>"; };
+		D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = Andrews/PalliativePerformanceCalculatorViewController.swift; sourceTree = "<group>"; };
+		D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerormanceSelectionViewController.swift; path = Andrews/PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexSelectionViewController.swift; path = Andrews/PalliativePrognosticIndexSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexTableViewController.swift; path = Andrews/PalliativePrognosticIndexTableViewController.swift; sourceTree = "<group>"; };
+		D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexViewController.swift; path = Andrews/PalliativePrognosticIndexViewController.swift; sourceTree = "<group>"; };
+		D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultPageViewController.swift; path = Andrews/ResultPageViewController.swift; sourceTree = "<group>"; };
+		D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatleHeartViewController.swift; path = Andrews/SeatleHeartViewController.swift; sourceTree = "<group>"; };
+		D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsHomeViewController.swift; path = Andrews/QuestionsHomeViewController.swift; sourceTree = "<group>"; };
+		D8965F341CC9932800C74C52 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewController.swift; path = Andrews/QuestionsViewController.swift; sourceTree = "<group>"; };
+		D8965F371CC9933000C74C52 /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calculator.storyboard; path = Andrews/Calculator.storyboard; sourceTree = "<group>"; };
+		D8965F381CC9933000C74C52 /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Questions.storyboard; path = Andrews/Questions.storyboard; sourceTree = "<group>"; };
 		D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D8C90C6C1CBF499700ADFCF3 /* frailty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frailty.png; sourceTree = "<group>"; };
 		D8C90C6D1CBF499700ADFCF3 /* organ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organ.png; sourceTree = "<group>"; };
@@ -593,6 +629,9 @@
 		D87679391C7A765000F23541 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8965EF61CC9903500C74C52 /* Questions */,
+				D8965EF51CC9902600C74C52 /* Calculators */,
+				D8965EF41CC9901200C74C52 /* Main */,
 				D89555141CB9C243000EFA18 /* RootPageViewController.swift */,
 				D89555161CB9F29D000EFA18 /* PageContentController.swift */,
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
@@ -843,11 +882,50 @@
 				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
+				D8965F371CC9933000C74C52 /* Calculator.storyboard */,
+				D8965F381CC9933000C74C52 /* Questions.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
 				D87679381C7A762E00F23541 /* Extras */,
 			);
 			path = "Palliative Mobile";
+			sourceTree = "<group>";
+		};
+		D8965EF41CC9901200C74C52 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D8965EF51CC9902600C74C52 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				D8965F171CC9931F00C74C52 /* AKPSViewController.swift */,
+				D8965F181CC9931F00C74C52 /* ECOGViewController.swift */,
+				D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */,
+				D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */,
+				D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */,
+				D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */,
+				D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */,
+				D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */,
+				D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */,
+				D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */,
+				D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */,
+				D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */,
+				D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */,
+				D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */,
+			);
+			name = Calculators;
+			sourceTree = "<group>";
+		};
+		D8965EF61CC9903500C74C52 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */,
+				D8965F341CC9932800C74C52 /* QuestionsViewController.swift */,
+			);
+			name = Questions;
 			sourceTree = "<group>";
 		};
 		FE77B35328373E1EA5CD62EC /* Pods */ = {
@@ -988,6 +1066,7 @@
 				D8767A421C7A8BC500F23541 /* file-group1.png in Resources */,
 				D8767A2D1C7A8BC500F23541 /* cup.png in Resources */,
 				D8767A831C7A8BC500F23541 /* prev.png in Resources */,
+				D8965F391CC9933000C74C52 /* Calculator.storyboard in Resources */,
 				D8767A081C7A8BC500F23541 /* add-database.png in Resources */,
 				D8767A171C7A8BC500F23541 /* brush.png in Resources */,
 				D8767A631C7A8BC500F23541 /* mac_folder-add.png in Resources */,
@@ -1133,6 +1212,7 @@
 				D8767ABA1C7A8BC500F23541 /* video2.png in Resources */,
 				D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */,
 				D8767AB01C7A8BC500F23541 /* Thumbs.db in Resources */,
+				D8965F3A1CC9933000C74C52 /* Questions.storyboard in Resources */,
 				D8767A7B1C7A8BC500F23541 /* pencil2.png in Resources */,
 				D8767AA01C7A8BC500F23541 /* signal1.png in Resources */,
 				D8767AC11C7A8BC500F23541 /* zoom-in.png in Resources */,
@@ -1200,22 +1280,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8965F2C1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift in Sources */,
+				D8965F261CC9931F00C74C52 /* ECOGViewController.swift in Sources */,
+				D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */,
+				D8965F281CC9931F00C74C52 /* KarnofskyViewController.swift in Sources */,
+				D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
+				D8965F291CC9931F00C74C52 /* NYHFViewController.swift in Sources */,
 				D89555171CB9F29D000EFA18 /* PageContentController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				D8965F321CC9931F00C74C52 /* SeatleHeartViewController.swift in Sources */,
 				D804A45C1CC807740003AC2E /* SettingsViewController.swift in Sources */,
+				D8965F2A1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift in Sources */,
+				D8965F311CC9931F00C74C52 /* ResultPageViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
+				D8965F361CC9932800C74C52 /* QuestionsViewController.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
 				D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */,
+				D8965F271CC9931F00C74C52 /* KarnofskySelectionViewController.swift in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
+				D8965F351CC9932800C74C52 /* QuestionsHomeViewController.swift in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
 				D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
+				D8965F301CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift in Sources */,
+				D8965F2E1CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift in Sources */,
+				D8965F251CC9931F00C74C52 /* AKPSViewController.swift in Sources */,
 				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,
 				D89555151CB9C243000EFA18 /* RootPageViewController.swift in Sources */,
+				D8965F2B1CC9931F00C74C52 /* OpioidCalcViewController.swift in Sources */,
 				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 			);
