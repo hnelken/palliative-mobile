@@ -17,8 +17,8 @@
 		219710B71CBB27F2004AE453 /* AKPS Assessment Criteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 219710B61CBB27F2004AE453 /* AKPS Assessment Criteria.jpg */; };
 		219710B91CBB2C79004AE453 /* ECOG Performance Status Scale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 219710B81CBB2C79004AE453 /* ECOG Performance Status Scale.jpg */; };
 		219710BB1CBB2CBA004AE453 /* ECOGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219710BA1CBB2CBA004AE453 /* ECOGViewController.swift */; };
+		21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */; };
 		21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */; };
-		21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */; };
 		21C2AAF31CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */; };
 		21C2AAF61CB77281006C1F1E /* KernofskyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */; };
 		21DA34481CC6A256000A0989 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA34471CC6A256000A0989 /* ResultPageViewController.swift */; };
@@ -264,8 +264,8 @@
 		219710B61CBB27F2004AE453 /* AKPS Assessment Criteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "AKPS Assessment Criteria.jpg"; path = "../../../../../../spring/Senior_Project/AKPS Assessment Criteria.jpg"; sourceTree = "<group>"; };
 		219710B81CBB2C79004AE453 /* ECOG Performance Status Scale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ECOG Performance Status Scale.jpg"; path = "../../../../../../spring/Senior_Project/ECOG Performance Status Scale.jpg"; sourceTree = "<group>"; };
 		219710BA1CBB2CBA004AE453 /* ECOGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECOGViewController.swift; sourceTree = "<group>"; };
+		21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
 		21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/KarnofskyViewController.swift"; sourceTree = "<group>"; };
-		21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceTableViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/Palliative Mobile/PalliativePerformanceTableViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = "../../../../../../spring/Senior_Project/palliative-mobile/ios/Palliative Mobile/PalliativePerformanceCalculatorViewController.swift"; sourceTree = "<group>"; };
 		21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KernofskyTableViewController.swift; sourceTree = "<group>"; };
 		21DA34471CC6A256000A0989 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
@@ -540,7 +540,7 @@
 				21C2AAEE1CB72501006C1F1E /* KarnofskyViewController.swift */,
 				21C2AAF51CB77281006C1F1E /* KernofskyTableViewController.swift */,
 				21C2AAF21CB72593006C1F1E /* PalliativePerformanceCalculatorViewController.swift */,
-				21C2AAF01CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift */,
+				21B9E85B1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift */,
 				212C78C31CB98E7000DD7A84 /* PalliativePrognosticIndexViewController.swift */,
 				212C78C51CB9AB6700DD7A84 /* PalliativePrognosticIndexTableViewController.swift */,
 				219710AF1CBB1963004AE453 /* NYHFViewController.swift */,
@@ -1238,6 +1238,7 @@
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
+				21B9E85C1CC973EF00CF667F /* PalliativePerormanceSelectionViewController.swift in Sources */,
 				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
@@ -1246,7 +1247,6 @@
 				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 				219710B51CBB227B004AE453 /* AKPSViewController.swift in Sources */,
-				21C2AAF11CB7253B006C1F1E /* PalliativePerformanceTableViewController.swift in Sources */,
 				21DB6BD21CC00A830054D9F7 /* QuestionsHomeViewController.swift in Sources */,
 				21C2AAEF1CB72501006C1F1E /* KarnofskyViewController.swift in Sources */,
 				216EA6961CBD56C600C605FA /* OpioidCalcViewController.swift in Sources */,

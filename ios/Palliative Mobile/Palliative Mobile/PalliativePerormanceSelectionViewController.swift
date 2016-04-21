@@ -1,15 +1,17 @@
 //
-//  PalliativePerformanceTableViewController.swift
+//  PalliativePerormanceSelectionViewController.swift
 //  Palliative Mobile
 //
-//  Created by Andrew Marmorstein on 3/19/16.
+//  Created by Andrew Marmorstein on 4/21/16.
 //  Copyright © 2016 CWRU-SP16. All rights reserved.
 //
 
 import UIKit
 
-class PalliativePerformanceTableViewController: UITableViewController {
+class PalliativePerormanceSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var selectionLabel: UILabel!
+    
     //the options to choose from
     var options = []
     
@@ -23,12 +25,16 @@ class PalliativePerformanceTableViewController: UITableViewController {
     // a counter which will indicate wich variables are able to be used
     var showFrom = 0
     
+    // the title of the selctuon being made
+    var selection = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         options = getViableOptions(options as! [String])
+        selectionLabel.text = selection
         
-        }
+    }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -41,15 +47,31 @@ class PalliativePerformanceTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if options.count > 7
+        {
+            return tableView.frame.size.height / CGFloat(6.3)
+        }
+        else if options.count < 7 && options.count > 3
+        {
+            return tableView.frame.size.height / CGFloat(options.count)
+        }
+        else
+        {
+            return tableView.frame.size.height / CGFloat(4)
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(kPalliativePerformanceCellID, forIndexPath: indexPath)
         
         cell.textLabel?.text = options[indexPath.row] as? String
@@ -58,7 +80,7 @@ class PalliativePerformanceTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         buttonLabel = (options[indexPath.row] as? String)!

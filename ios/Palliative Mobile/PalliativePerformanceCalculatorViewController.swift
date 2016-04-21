@@ -96,7 +96,7 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func palliativePerformanceCalulatorSegue(segue:UIStoryboardSegue) {
+    @IBAction func backToHomeSegue(segue:UIStoryboardSegue) {
         ambulation.setTitle(button1, forState: UIControlState.Normal)
         activity.setTitle(button2, forState: UIControlState.Normal)
         selfCare.setTitle(button3, forState: UIControlState.Normal)
@@ -115,6 +115,10 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
         {
             score.text = getScore()
             score.hidden = false
+        }
+        else
+        {
+            score.hidden = true
         }
     }
 
@@ -143,32 +147,37 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! PalliativePerformanceTableViewController
+        let vc = segue.destinationViewController as! PalliativePerormanceSelectionViewController
         
         if id == "ambulation"
         {
             vc.options = ambulationOptions
             vc.button = 1
+            vc.selection = button1Type
         }
         else if id == "activity"
         {
             vc.options = activityOptions
             vc.button = 2
+            vc.selection = button2Type
         }
         else if id == "selfCare"
         {
             vc.options = selfCareOptions
             vc.button = 3
+            vc.selection = button3Type
         }
         else if id == "intake"
         {
             vc.options = intakeOptions
             vc.button = 4
+            vc.selection = button4Type
         }
         else if id == "conscious"
         {
             vc.options = consciousOptions
             vc.button = 5
+            vc.selection = button5Type
         }
         
         vc.showFrom = vc.getShowFrom(self)
