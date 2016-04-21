@@ -11,25 +11,46 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var links: [String] = [
+        "Rapid PC Assessment",
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
         "Bookmarks"
     ]
     
+    var searchResults: [[AnyObject]] = []
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var rapidButton: UIButton!
-
+    @IBOutlet weak var searchText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        db.getAllData()
-        
-        rapidButton.layer.cornerRadius = 20
-        rapidButton.clipsToBounds = true
         
         self.tableView.separatorStyle = .None
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let del = UIApplication.sharedApplication().delegate as! AppDelegate
+        if del.firstTime {
+            del.firstTime = false
+            //Create the AlertController
+            let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "It appears this is your first time here, complete this survey.", preferredStyle: .ActionSheet)
+            
+            //Create and add the Cancel action
+            let cancelAction: UIAlertAction = UIAlertAction(title: "Skip", style: .Cancel) { action -> Void in
+                //Just dismiss the action sheet
+            }
+            actionSheetController.addAction(cancelAction)
+            //Create and add first option action
+            let takePictureAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
+                //Code for launching the camera goes here
+                self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
+            }
+            actionSheetController.addAction(takePictureAction)
+            //Present the AlertController
+            self.presentViewController(actionSheetController, animated: true, completion: nil)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +60,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLayoutSubviews() {
         navigationController?.navigationBarHidden = true
+        self.tableView.separatorStyle = .None
     }
 
     @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
 
+    @IBAction func searchPressed(sender: AnyObject) {
+        
+        if let query = searchText.text {
+            if query != "" {
+                searchResults = db.performSearch(query)
+                performSegueWithIdentifier(kShowSearchSegueID, sender: self)
+            }
+        }
+    }
+    
+    //
+    // MARK: Table View Delegate/Data Source
+    //
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -72,12 +108,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 3: segueID = kBookmarkSegueID
+        case 0: segueID = kRapidPCSegueID
+        case 4: segueID = kBookmarkSegueID
         default: segueID = kArticleSegueID
         }
         
         if let id = segueID {
            performSegueWithIdentifier(id, sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? ArticleDisplayViewController {
+            // Pass on page ID
+            vc.pageID = 51
+        }
+        else if let vc = segue.destinationViewController as? SearchViewController {
+            
+            vc.results = searchResults
         }
     }
 }

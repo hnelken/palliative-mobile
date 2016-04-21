@@ -13,18 +13,51 @@ let web = WebInterface()
 let db = DBInterface()
 
 // SEGUE IDENTIFIERS
+let kHomeSegueID = "toHome"
+let kRapidPCSegueID = "toRapidPC"
 let kBookmarkSegueID = "toBookmarks"
 let kArticleSegueID = "toArticleDisplay"
+let kFirstTimeSegueID = "toFirstTime"
+let kUnstableSegueID = "toUnstable"
+let kShowBookmarkSegueID = "displayBookmark"
+let kShowSearchSegueID = "showSearchResults"
+let kShowSearchResultSegueID = "displaySearchResult"
 
 // CELL IDENTIFIERS
 let kHomeCellID = "homeCell"
+let kPalliativePerformanceCellID = "palliativePerformanceCell"
+let kKarnofskyCellID = "karnofskyCell"
+let kPalliativePrognosticIndexCellID = "PalliativePrognosticIndexTableCell"
+let kActivityCellID = "activityCell"
+let kSelfCareCellID = "selfCareCell"
+let kIntakeCellID = "inatkeCell"
+let kConsciousCellID = "consciousCell"
+let kOpioidCellID = "opioidCalcCell"
+let kBookmarkCellID = "bookmarkCell"
+let kArticleLinkCellID = "articleLinkCell"
+let kSearchCellID = "searchCell"
 
-// SERVER URL STRINGS
+// SERVER URL CONSTANTS
 let kServerURL = "http://our server domain here/api/"
 let kVerifyUserRoute = "verifyuser"
 
-// DATABASE STRINGS
-let kDBName = "hierarchy_test.db"
+// DATABASE CONSTANTS
+let kDBName = "master_local.db"
+let kLinkNameIndex = 0
+let kLinkIDIndex = 1
+let kContentTitleIndex = 0
+let kContentSubtitleIndex = 1
+let kContentTextIndex = 2
+let kPageContentKey = "content"
+let kPageLinksKey = "links"
+let kPageBookmarkedKey = "bookmarked"
+
+var dbPath: String {
+    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    let docsPath = paths[0]
+    let dbPath = docsPath.NS.stringByAppendingPathComponent(kDBName)
+    return dbPath
+}
 
 
 public extension String {
