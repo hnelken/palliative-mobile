@@ -923,6 +923,14 @@
                         <outlet property="titleLabel" destination="Y2Z-bY-gmf" id="iO6-kT-f6r"/>
                         <segue destination="5ec-uJ-Hfm" kind="unwind" identifier="toHome" unwindAction="backToHomeSegue:" id="dSp-Ca-r6X"/>
                         <segue destination="zjU-2s-1Yu" kind="show" identifier="toTrajectory" id="H3B-AU-AsC"/>
+                        <segue destination="N4p-8m-udG" kind="show" identifier="toKarnofsky" id="poV-8W-s4r"/>
+                        <segue destination="GxC-jj-aik" kind="show" identifier="toPerformance" id="7pd-iM-NOf"/>
+                        <segue destination="bxy-tJ-uIP" kind="show" identifier="toPrognostic" id="53p-fg-yGR"/>
+                        <segue destination="J8b-NW-LOv" kind="show" identifier="toOpioid" id="s7W-Lv-qOc"/>
+                        <segue destination="N7Z-Yq-do8" kind="show" identifier="toNewYork" id="ulm-Pg-zgH"/>
+                        <segue destination="eDn-oI-Af2" kind="show" identifier="toECOG" id="oA8-ev-G6C"/>
+                        <segue destination="3hn-2m-d43" kind="show" identifier="toAustralia" id="g8J-1T-YFG"/>
+                        <segue destination="e3H-CN-ohT" kind="show" identifier="toSeattle" id="qIp-VA-tSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vny-rl-ff1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1063,6 +1071,15 @@
                     <connections>
                         <outlet property="bookmarkTableView" destination="1zA-4K-eXd" id="WJ1-7j-tbF"/>
                         <segue destination="iEU-RJ-q1D" kind="show" identifier="displayBookmark" id="G7E-bF-vQr"/>
+                        <segue destination="bxy-tJ-uIP" kind="show" identifier="toPrognostic" id="603-G6-VHE"/>
+                        <segue destination="N4p-8m-udG" kind="show" identifier="toKarnofsky" id="Kjj-uD-TaP"/>
+                        <segue destination="GxC-jj-aik" kind="show" identifier="toPerformance" id="ieQ-MV-jDm"/>
+                        <segue destination="J8b-NW-LOv" kind="show" identifier="toOpioid" id="c6f-Lm-Aqd"/>
+                        <segue destination="3hn-2m-d43" kind="show" identifier="toAustralia" id="ZZs-QJ-pFl"/>
+                        <segue destination="N7Z-Yq-do8" kind="show" identifier="toNewYork" id="B9U-8W-1NI"/>
+                        <segue destination="eDn-oI-Af2" kind="show" identifier="toECOG" id="MSs-ci-gGH"/>
+                        <segue destination="e3H-CN-ohT" kind="show" identifier="toSeattle" id="ORE-nn-WTd"/>
+                        <segue destination="zjU-2s-1Yu" kind="show" identifier="toTrajectory" id="ITb-Tk-8AM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1X-Mf-GVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1146,6 +1163,15 @@
                     </view>
                     <connections>
                         <segue destination="iEU-RJ-q1D" kind="show" identifier="displaySearchResult" id="MzH-uR-I2B"/>
+                        <segue destination="N4p-8m-udG" kind="show" identifier="toKarnofsky" id="t11-bh-DtV"/>
+                        <segue destination="GxC-jj-aik" kind="show" identifier="toPerformance" id="l8g-up-if6"/>
+                        <segue destination="bxy-tJ-uIP" kind="show" identifier="toPrognostic" id="NXX-9a-Ydp"/>
+                        <segue destination="J8b-NW-LOv" kind="show" identifier="toOpioid" id="9pd-OP-NOA"/>
+                        <segue destination="3hn-2m-d43" kind="show" identifier="toAustralia" id="6Wd-id-oJY"/>
+                        <segue destination="N7Z-Yq-do8" kind="show" identifier="toNewYork" id="3G3-vR-PBh"/>
+                        <segue destination="eDn-oI-Af2" kind="show" identifier="toECOG" id="gGW-2C-cJn"/>
+                        <segue destination="e3H-CN-ohT" kind="show" identifier="toSeattle" id="aTd-Jx-E6h"/>
+                        <segue destination="zjU-2s-1Yu" kind="show" identifier="toTrajectory" id="92Q-nZ-Vz1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHU-Zl-vrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1667,7 +1693,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jge-Fx-lZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217" y="845"/>
+            <point key="canvasLocation" x="776" y="861"/>
         </scene>
         <!--Palliative Perormance Selection View Controller-->
         <scene sceneID="w3D-sx-z6j">
@@ -1728,7 +1754,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aV3-ub-ZIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7Hw-aZ-ru2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1979" y="845"/>
+            <point key="canvasLocation" x="1467" y="837"/>
         </scene>
         <!--Opioid Calc View Controller-->
         <scene sceneID="NE3-zP-KPJ">
@@ -1846,7 +1872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hlo-wO-AAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="1540"/>
+            <point key="canvasLocation" x="784" y="1560"/>
         </scene>
         <!--Opiod Calculator Selection View Controller-->
         <scene sceneID="mU9-7I-zWU">
@@ -1907,7 +1933,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm9-KU-1er" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4rs-qa-gc9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1984" y="1540"/>
+            <point key="canvasLocation" x="1496" y="1524"/>
         </scene>
         <!--Karnofsky View Controller-->
         <scene sceneID="nfJ-eQ-fin">
@@ -1985,7 +2011,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53e-hQ-oA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442" y="867"/>
+            <point key="canvasLocation" x="90" y="871"/>
         </scene>
         <!--Karnofsky Selection View Controller-->
         <scene sceneID="vIE-8p-2ti">
@@ -2046,7 +2072,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyT-1k-jTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uls-xA-qm5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="867"/>
+            <point key="canvasLocation" x="-581" y="853"/>
         </scene>
         <!--Palliative Prognostic Index View Controller-->
         <scene sceneID="wWe-IX-cVM">
@@ -2188,7 +2214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVZ-SJ-rhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442" y="1598"/>
+            <point key="canvasLocation" x="85" y="1566"/>
         </scene>
         <!--Palliative Prognostic Index Selection View Controller-->
         <scene sceneID="K6R-ia-0gx">
@@ -2250,7 +2276,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ld2-wT-7tM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QHW-F7-jfx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="1598"/>
+            <point key="canvasLocation" x="-581" y="1566"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2oK-EV-0JT">
@@ -2302,7 +2328,7 @@ how their patient is doing.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKY-Ph-MpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="2339"/>
+            <point key="canvasLocation" x="776" y="2287"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J75-y6-iwI">
@@ -2369,7 +2395,7 @@ mostly bedbound</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfA-Ib-zSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="2339"/>
+            <point key="canvasLocation" x="85" y="2287"/>
         </scene>
         <!--Seatle Heart View Controller-->
         <scene sceneID="F9J-KK-hKu">
@@ -2403,7 +2429,7 @@ mostly bedbound</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPN-3n-NQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="3047"/>
+            <point key="canvasLocation" x="1508" y="2259"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Djb-UN-vMd">
@@ -2467,13 +2493,13 @@ performance status.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIz-wB-DVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450" y="3047"/>
+            <point key="canvasLocation" x="-589" y="2287"/>
         </scene>
     </scenes>
     <resources>
         <image name="AKPS Assessment Criteria.jpg" width="1600" height="831"/>
-        <image name="ECOG Performance Status Scale.jpg" width="1600" height="831"/>
-        <image name="NYHA classification chart.jpg" width="1600" height="831"/>
+        <image name="ECOG Performance Status Scale.jpg" width="1086" height="790"/>
+        <image name="NYHA classification chart.jpg" width="898" height="602"/>
         <image name="backarrow-white.png" width="32" height="32"/>
         <image name="bookmark-white.png" width="32" height="32"/>
         <image name="clipboard-white.png" width="32" height="32"/>
@@ -2486,11 +2512,20 @@ performance status.</string>
         <image name="settings-white.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MzH-uR-I2B"/>
         <segue reference="295-ak-CPB"/>
-        <segue reference="Ugo-de-Ilw"/>
-        <segue reference="k3u-jY-Dh1"/>
-        <segue reference="o1V-Lw-auO"/>
+        <segue reference="ORE-nn-WTd"/>
+        <segue reference="ITb-Tk-8AM"/>
+        <segue reference="Kjj-uD-TaP"/>
+        <segue reference="ieQ-MV-jDm"/>
+        <segue reference="G7E-bF-vQr"/>
+        <segue reference="c6f-Lm-Aqd"/>
+        <segue reference="ZZs-QJ-pFl"/>
+        <segue reference="B9U-8W-1NI"/>
+        <segue reference="603-G6-VHE"/>
+        <segue reference="MSs-ci-gGH"/>
         <segue reference="N0P-l3-JvE"/>
+        <segue reference="Ugo-de-Ilw"/>
+        <segue reference="HAh-vx-Jw9"/>
+        <segue reference="o1V-Lw-auO"/>
     </inferredMetricsTieBreakers>
 </document>

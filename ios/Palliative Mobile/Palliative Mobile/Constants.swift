@@ -115,6 +115,36 @@ public extension String {
     var NS: NSString { return (self as NSString) }
 }
 
+// Recognizes a special page ID and performs the corresponding segue
+func getSpecialPageSegue(dstID: Int) -> String? {
+    let segue: String?
+    
+    switch (dstID) {
+    case kSeattlePageID:
+        segue = kSeattleSegueID
+    case kNewYorkPageID:
+        segue = kNewYorkSegueID
+    case kKarnofskyPageID:
+        segue = kKarnofskySegueID
+    case kAustrailiaPageID:
+        segue = kAustraliaSegueID
+    case kPrognosticPageID:
+        segue = kPrognosticSegueID
+    case kPerformancePageID:
+        segue = kPerformanceSegueID
+    case kECOGPageID:
+        segue = kECOGSegueID
+    case kSAAGPageID:
+        segue = kSAAGSegueID
+    case kTrajectoryPageID:
+        segue = kTrajectorySegueID
+    default:
+        segue = nil
+        print("Unidentified special page ID")
+    }
+    
+    return segue
+}
 
 // SURVEY CHOICES
 let settings = [

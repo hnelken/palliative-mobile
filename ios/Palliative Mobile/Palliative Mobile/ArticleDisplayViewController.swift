@@ -231,39 +231,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    // Recognizes a special page ID and performs the corresponding segue
-    private func segueToSpecialPage(dstID: Int) {
-        let segue: String?
-        
-        switch (dstID) {
-        case kSeattlePageID:
-            segue = kSeattleSegueID
-        case kNewYorkPageID:
-            segue = kNewYorkSegueID
-        case kKarnofskyPageID:
-            segue = kKarnofskySegueID
-        case kAustrailiaPageID:
-            segue = kAustraliaSegueID
-        case kPrognosticPageID:
-            segue = kPrognosticSegueID
-        case kPerformancePageID:
-            segue = kPerformanceSegueID
-        case kECOGPageID:
-            segue = kECOGSegueID
-        case kSAAGPageID:
-            segue = kSAAGSegueID
-        case kTrajectoryPageID:
-            segue = kTrajectorySegueID
-        default:
-            segue = nil
-            print("Unidentified special page ID")
-        }
-        
-        if let id = segue {
-            performSegueWithIdentifier(id, sender: self)
-        }
-    }
-    
     //
     // MARK: Table View Delegate/Data Source
     //
@@ -318,10 +285,15 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         let link = links[indexPath.row]
         let dstID = link[kLinkIDIndex] as! NSNumber
         
-        
-        // Check if the destination is a special page
+        // Check if the destination is a special page or a normal article
         if specialPages.contains(dstID.integerValue) {
-            segueToSpecialPage(dstID.integerValue)
+            let segueID = getSpecialPageSegue(dstID.integerValue)
+            if let id = segueID {
+                performSegueWithIdentifier(id, sender: self)
+            }
+            else {
+                print("Unidentified special page")
+            }
         }
         else {
             segueToNormalPage(dstID.integerValue)

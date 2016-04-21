@@ -262,6 +262,9 @@
 		D8965F361CC9932800C74C52 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F341CC9932800C74C52 /* QuestionsViewController.swift */; };
 		D8965F391CC9933000C74C52 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F371CC9933000C74C52 /* Calculator.storyboard */; };
 		D8965F3A1CC9933000C74C52 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F381CC9933000C74C52 /* Questions.storyboard */; };
+		D8965F3E1CC9993900C74C52 /* AKPS Assessment Criteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */; };
+		D8965F3F1CC9993900C74C52 /* ECOG Performance Status Scale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */; };
+		D8965F401CC9993900C74C52 /* NYHA classification chart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */; };
 		D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */; };
 		D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6C1CBF499700ADFCF3 /* frailty.png */; };
 		D8C90C711CBF499700ADFCF3 /* organ.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6D1CBF499700ADFCF3 /* organ.png */; };
@@ -536,6 +539,9 @@
 		D8965F341CC9932800C74C52 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewController.swift; path = Andrews/QuestionsViewController.swift; sourceTree = "<group>"; };
 		D8965F371CC9933000C74C52 /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calculator.storyboard; path = Andrews/Calculator.storyboard; sourceTree = "<group>"; };
 		D8965F381CC9933000C74C52 /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Questions.storyboard; path = Andrews/Questions.storyboard; sourceTree = "<group>"; };
+		D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AKPS Assessment Criteria.jpg"; sourceTree = "<group>"; };
+		D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ECOG Performance Status Scale.jpg"; sourceTree = "<group>"; };
+		D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NYHA classification chart.jpg"; sourceTree = "<group>"; };
 		D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D8C90C6C1CBF499700ADFCF3 /* frailty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frailty.png; sourceTree = "<group>"; };
 		D8C90C6D1CBF499700ADFCF3 /* organ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organ.png; sourceTree = "<group>"; };
@@ -599,6 +605,9 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */,
+				D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */,
+				D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */,
 				D8965EF21CC9813600C74C52 /* foldback-white2.png */,
 				D804A4591CC7F2300003AC2E /* settings-white.png */,
 				D8C90C6C1CBF499700ADFCF3 /* frailty.png */,
@@ -641,6 +650,7 @@
 				D87754951C9B8AD8002D831E /* SearchViewController.swift */,
 				D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */,
 				D804A45B1CC807740003AC2E /* SettingsViewController.swift */,
+				D87679371C7A761400F23541 /* Data Model */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -885,7 +895,6 @@
 				D8965F371CC9933000C74C52 /* Calculator.storyboard */,
 				D8965F381CC9933000C74C52 /* Questions.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
-				D87679371C7A761400F23541 /* Data Model */,
 				D87679381C7A762E00F23541 /* Extras */,
 			);
 			path = "Palliative Mobile";
@@ -1018,6 +1027,7 @@
 				D8767A3A1C7A8BC500F23541 /* earphone.png in Resources */,
 				D8767A411C7A8BC500F23541 /* file-group.png in Resources */,
 				D8767A431C7A8BC500F23541 /* file-transfer.png in Resources */,
+				D8965F3E1CC9993900C74C52 /* AKPS Assessment Criteria.jpg in Resources */,
 				D8767AA71C7A8BC500F23541 /* stop.png in Resources */,
 				D8767A981C7A8BC500F23541 /* safari.png in Resources */,
 				D8767A471C7A8BC500F23541 /* file.png in Resources */,
@@ -1073,6 +1083,7 @@
 				D87836641C768A1A00DDFF27 /* LaunchScreen.storyboard in Resources */,
 				D8767A3B1C7A8BC500F23541 /* face.png in Resources */,
 				D8767A461C7A8BC500F23541 /* file-x.png in Resources */,
+				D8965F3F1CC9993900C74C52 /* ECOG Performance Status Scale.jpg in Resources */,
 				D8767A5C1C7A8BC500F23541 /* lightning.png in Resources */,
 				D8767ABB1C7A8BC500F23541 /* vlc.png in Resources */,
 				D8767A621C7A8BC500F23541 /* loudspeaker.png in Resources */,
@@ -1118,6 +1129,7 @@
 				D8965EF31CC9813600C74C52 /* foldback-white2.png in Resources */,
 				D8767A9C1C7A8BC500F23541 /* security.png in Resources */,
 				D8767A701C7A8BC500F23541 /* music.png in Resources */,
+				D8965F401CC9993900C74C52 /* NYHA classification chart.jpg in Resources */,
 				D8767A991C7A8BC500F23541 /* safari1.png in Resources */,
 				D8767A681C7A8BC500F23541 /* mail.png in Resources */,
 				D8767A781C7A8BC500F23541 /* next1.png in Resources */,
