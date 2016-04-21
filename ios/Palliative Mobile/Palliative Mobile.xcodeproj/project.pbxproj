@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
-		D804A4581CC429210003AC2E /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D804A4571CC429210003AC2E /* master_local.db */; };
 		D804A45A1CC7F2300003AC2E /* settings-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D804A4591CC7F2300003AC2E /* settings-white.png */; };
 		D804A45C1CC807740003AC2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804A45B1CC807740003AC2E /* SettingsViewController.swift */; };
+		D804A45E1CC86BDD0003AC2E /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D804A45D1CC86BDD0003AC2E /* master_local.db */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
 		D81E12B91CA3501A0011FACE /* foldback-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D81E12B81CA3501A0011FACE /* foldback-white.png */; };
 		D81E12BC1CA3640C0011FACE /* ArticleLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81E12BB1CA3640C0011FACE /* ArticleLinkCell.swift */; };
@@ -255,9 +255,9 @@
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D804A4571CC429210003AC2E /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
 		D804A4591CC7F2300003AC2E /* settings-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-white.png"; sourceTree = "<group>"; };
 		D804A45B1CC807740003AC2E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D804A45D1CC86BDD0003AC2E /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
 		D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDisplayViewController.swift; sourceTree = "<group>"; };
 		D81E12B81CA3501A0011FACE /* foldback-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldback-white.png"; sourceTree = "<group>"; };
 		D81E12BB1CA3640C0011FACE /* ArticleLinkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleLinkCell.swift; sourceTree = "<group>"; };
@@ -563,7 +563,7 @@
 				D87679301C7A645F00F23541 /* WebInterface.swift */,
 				D826B36C1C9A022800BF83CC /* DBInterface.swift */,
 				D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */,
-				D804A4571CC429210003AC2E /* master_local.db */,
+				D804A45D1CC86BDD0003AC2E /* master_local.db */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -972,6 +972,7 @@
 				D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */,
 				D876793B1C7A87BF00F23541 /* logo.png in Resources */,
 				D8767A1D1C7A8BC500F23541 /* Calendartime.png in Resources */,
+				D804A45E1CC86BDD0003AC2E /* master_local.db in Resources */,
 				D8767A811C7A8BC500F23541 /* pop-out.png in Resources */,
 				D8767A291C7A8BC500F23541 /* clock.png in Resources */,
 				D8767AAA1C7A8BC500F23541 /* tablet.png in Resources */,
@@ -1066,7 +1067,6 @@
 				D8767A691C7A8BC500F23541 /* mail1.png in Resources */,
 				D8767A8C1C7A8BC500F23541 /* refresh1.png in Resources */,
 				D8767A661C7A8BC500F23541 /* mac_folder-set.png in Resources */,
-				D804A4581CC429210003AC2E /* master_local.db in Resources */,
 				D8767A9B1C7A8BC500F23541 /* security-x.png in Resources */,
 				D8767AD11C7A9E8700F23541 /* home-white.png in Resources */,
 				D8767AAB1C7A8BC500F23541 /* tags-group.png in Resources */,

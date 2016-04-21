@@ -175,7 +175,12 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             
             // Update text labels with article text
             titleLabel.text = titleText
-            textLabel.text = normalText
+            if normalText != "" {
+                textLabel.text = normalText
+            }
+            else {
+                textLabel.text = "No text to display.\nSee detail tab if available."
+            }
             detailLabel.text = detailText
         }
         

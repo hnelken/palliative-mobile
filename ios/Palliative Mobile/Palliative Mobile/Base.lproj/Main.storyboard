@@ -643,7 +643,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.7498619002525253" green="0.7498619002525253" blue="0.7498619002525253" alpha="0.29299514358108109" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Obt-92-u5B" secondAttribute="bottom" constant="230" id="4fe-nl-zJg"/>
+                                            <constraint firstAttribute="bottom" secondItem="Obt-92-u5B" secondAttribute="bottom" constant="15" id="4fe-nl-zJg"/>
                                             <constraint firstAttribute="trailing" secondItem="Obt-92-u5B" secondAttribute="trailing" constant="15" id="6WH-BL-S9k"/>
                                             <constraint firstAttribute="trailing" secondItem="Obt-92-u5B" secondAttribute="trailing" constant="15" id="Avv-ed-Yjm"/>
                                             <constraint firstItem="Obt-92-u5B" firstAttribute="centerX" secondItem="qSV-f3-kL6" secondAttribute="centerX" id="GBn-8d-aME"/>
@@ -701,7 +701,7 @@
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leading" constant="15" id="Pw8-il-fq7"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="centerX" secondItem="XCD-Cl-d8o" secondAttribute="centerX" id="RpM-JM-8gQ"/>
                                             <constraint firstAttribute="width" constant="560" id="TUf-4q-uVv"/>
-                                            <constraint firstAttribute="bottom" secondItem="Z99-Dn-JYe" secondAttribute="bottom" constant="230" id="YYO-Vu-ebh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z99-Dn-JYe" secondAttribute="bottom" constant="15" id="YYO-Vu-ebh"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leading" constant="20" id="ZHu-h9-RHA"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="trailing" secondItem="XCD-Cl-d8o" secondAttribute="trailingMargin" constant="-48" id="ZZl-17-Wo3"/>
                                             <constraint firstItem="Z99-Dn-JYe" firstAttribute="leading" secondItem="XCD-Cl-d8o" secondAttribute="leadingMargin" constant="15" id="ahD-XW-OQW"/>
