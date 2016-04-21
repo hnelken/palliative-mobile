@@ -135,7 +135,7 @@ class OpioidCalcViewController: UIViewController {
         dosage.hidden = true
     }
     
-    @IBAction func OpioidCalcSegue(segue:UIStoryboardSegue) {
+    @IBAction func backToHomeSegue(segue:UIStoryboardSegue) {
         initialMedication.setTitle(button1, forState: UIControlState.Normal)
         DossageType.setTitle(button2, forState: UIControlState.Normal)
         newMedication.setTitle(button3, forState: UIControlState.Normal)
@@ -163,22 +163,25 @@ class OpioidCalcViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! OpioidCalcTableViewController
+        let vc = segue.destinationViewController as! OpiodCalculatorSelectionViewController
         
         if id == "initialMedicationSegue"
         {
             vc.options = medications
             vc.button = 1
+            vc.selection = button1Type
         }
         else if id == "dosageTypeSegue"
         {
             vc.options = getOptionsFromMedication()
             vc.button = 2
+            vc.selection = button2Type
         }
         else if id == "newMedicationSegue"
         {
             vc.options = getOptionsFromDosageType()
             vc.button = 3
+            vc.selection = button3Type
         }
     }
     

@@ -519,7 +519,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="InitialMedication:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="aDn-iq-9yu"/>
-                                    <segue destination="el5-ON-pvM" kind="show" identifier="initialMedicationSegue" id="h8V-5I-Gba"/>
+                                    <segue destination="Vdv-yl-qAa" kind="show" identifier="initialMedicationSegue" id="HWh-gF-Tx5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-44-fPW">
@@ -529,7 +529,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="NewMedication:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="WwJ-pc-eVM"/>
-                                    <segue destination="el5-ON-pvM" kind="show" identifier="newMedicationSegue" id="adc-gr-GbL"/>
+                                    <segue destination="Vdv-yl-qAa" kind="show" identifier="newMedicationSegue" id="dhx-d3-4od"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8l-0b-htG">
@@ -555,7 +555,7 @@ mostly bedbound</string>
                                 </state>
                                 <connections>
                                     <action selector="DosageType:" destination="fxf-Qn-HnP" eventType="touchUpInside" id="Zmh-bW-yuI"/>
-                                    <segue destination="el5-ON-pvM" kind="show" identifier="dosageTypeSegue" id="8Hg-hj-fd4"/>
+                                    <segue destination="Vdv-yl-qAa" kind="show" identifier="dosageTypeSegue" id="7e5-r1-DHa"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dosage (mg)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4P-Bs-gMm">
@@ -605,6 +605,67 @@ mostly bedbound</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaa-fn-wU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="-372"/>
+        </scene>
+        <!--Opiod Calculator Selection View Controller-->
+        <scene sceneID="yhB-26-GEL">
+            <objects>
+                <viewController id="Vdv-yl-qAa" customClass="OpiodCalculatorSelectionViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gUY-Fg-Tbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ngi-0g-RIg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vIJ-zB-VEv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eys-Zh-4kG">
+                                <rect key="frame" x="20" y="74" width="560" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="opioidCalcCell" id="pwg-Lo-a5V">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pwg-Lo-a5V" id="B2B-VM-KVC">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vdv-yl-qAa" id="8xw-q4-jUV"/>
+                                    <outlet property="delegate" destination="Vdv-yl-qAa" id="A1s-HW-kDx"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-dm-z70">
+                                <rect key="frame" x="20" y="28" width="560" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="T3f-D3-25j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1556202981" green="0.65702189060000005" blue="0.78841610029999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eys-Zh-4kG" firstAttribute="top" secondItem="ZlV-dm-z70" secondAttribute="bottom" constant="8" id="2Kg-uB-8jy"/>
+                            <constraint firstItem="ngi-0g-RIg" firstAttribute="top" secondItem="eys-Zh-4kG" secondAttribute="bottom" constant="20" id="FN7-Oj-uQx"/>
+                            <constraint firstItem="ZlV-dm-z70" firstAttribute="top" secondItem="gUY-Fg-Tbb" secondAttribute="bottom" constant="8" id="PfJ-az-k92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eys-Zh-4kG" secondAttribute="trailing" id="drW-EN-7Ui"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eys-Zh-4kG" secondAttribute="leading" id="ffd-12-NAN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZlV-dm-z70" secondAttribute="leading" id="p2O-7B-pyS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZlV-dm-z70" secondAttribute="trailing" id="vVY-3M-laJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectionLabel" destination="ZlV-dm-z70" id="KIz-51-p9G"/>
+                        <segue destination="RT4-u9-aUL" kind="unwind" identifier="backToHomeSegue" unwindAction="backToHomeSegue:" id="gaU-Ma-Cz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-MR-r4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RT4-u9-aUL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="-372"/>
         </scene>
         <!--Palliative Performance Calculator View Controller-->
         <scene sceneID="RMr-AT-a1R">
@@ -736,38 +797,6 @@ mostly bedbound</string>
             </objects>
             <point key="canvasLocation" x="618" y="373"/>
         </scene>
-        <!--Opioid Calc Table View Controller-->
-        <scene sceneID="knf-QD-SHm">
-            <objects>
-                <tableViewController id="el5-ON-pvM" customClass="OpioidCalcTableViewController" customModule="Palliative_Mobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z6C-Z5-LL1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="opioidCalcCell" id="iEu-wR-arg">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iEu-wR-arg" id="77b-8d-9AW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Gd9-pu-pMF" kind="unwind" identifier="backToHomeSegue" unwindAction="OpioidCalcSegue:" id="Dbo-W7-gE7"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="el5-ON-pvM" id="Nvt-6n-aQF"/>
-                            <outlet property="delegate" destination="el5-ON-pvM" id="fBb-A6-Qcu"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zsZ-BK-xN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Gd9-pu-pMF" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-186" y="-372"/>
-        </scene>
         <!--Palliative Perormance Selection View Controller-->
         <scene sceneID="qiv-Bv-nNx">
             <objects>
@@ -839,6 +868,6 @@ mostly bedbound</string>
         <segue reference="7gx-fp-Bez"/>
         <segue reference="eI0-SZ-PCh"/>
         <segue reference="bsR-Tk-8nR"/>
-        <segue reference="8Hg-hj-fd4"/>
+        <segue reference="dhx-d3-4od"/>
     </inferredMetricsTieBreakers>
 </document>
