@@ -11,11 +11,8 @@ import UIKit
 class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var bookmarkButton: UIButton!
-    @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var navUpButton: UIButton!
-    @IBOutlet weak var linksButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var textButton: UIButton!
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
@@ -31,6 +28,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     var thisPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
     var pageID: Int!
+    
     private var lastPageID: Int!
     private var parentID: Int!
     
@@ -87,54 +85,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    @IBAction func detailPressed(sender: AnyObject) {
-        // Show detail view if not already showing
-        if viewType != .Detail && !detailText!.isEmpty {
-            UIView.transitionFromView(currentView!,
-                                      toView: detailScrollView,
-                                      duration: 1,
-                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
-                                      completion: nil)
-            
-            // Set current view
-            currentView = detailScrollView
-            viewType = .Detail
-        }
-    }
-    
-    @IBAction func linksPressed(sender: AnyObject) {
-        // Show links view if not already showing
-        if viewType != .Links && links.count > 0 {
-            UIView.transitionFromView(currentView!,
-                                      toView: tableView,
-                                      duration: 1,
-                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
-                                      completion: nil)
-            
-            // Set current view
-            currentView = tableView
-            viewType = .Links
-        }
-    }
-    
-    @IBAction func textPressed(sender: AnyObject) {
-        // Show links view if not already showing
-        if viewType != .Text {
-            UIView.transitionFromView(currentView!,
-                                      toView: textScrollView,
-                                      duration: 1,
-                                      options: [.TransitionFlipFromTop, .ShowHideTransitionViews],
-                                      completion: nil)
-            
-            // Set current view
-            currentView = textScrollView
-            viewType = .Text
-        }
-    }
-    
     @IBAction func navUpPressed(sender: AnyObject) {
         if (parentID > 1) {
-            transitionToPage(parentID)
+            segueToNormalPage(parentID)
         }
     }
     
@@ -267,7 +220,8 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    private func transitionToPage(dstID: Int) {
+    // Performs a segue to an article page
+    private func segueToNormalPage(dstID: Int) {
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
         
@@ -275,73 +229,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         vc.pageID = dstID
         
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    //
-    // MARK: Table View Delegate/Data Source
-    //
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    // Cell count
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return links.count
-    }
-    
-    // Cell height
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        return links.count <= 4
-            ? tableView.frame.height / 4
-            : (links.count < 7
-                ? tableView.frame.height / CGFloat(links.count)
-                : tableView.frame.height / 6)
-    }
-    
-    // Formats the cells in the table
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath) as! ArticleLinkCell
-        
-        // Get link titles
-        let link = links[indexPath.row]
-        if let linkName = link[kLinkNameIndex] as? String {
-            cell.linkLabel?.text = linkName
-        }
-        else {  // Link text is missing in db
-            cell.linkLabel?.text = "(title missing)"
-        }
-        cell.linkLabel.sizeToFit()
-        cell.accessoryType = .DisclosureIndicator
-        
-        return cell
-    }
-    
-    // Reformats article upon select
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        // Commit bookmark changes
-        if bookmarked != initMarked {
-            db.commitBookmarkChanges(bookmarked, pageID: pageID)
-        }
-        
-        let link = links[indexPath.row]
-        let dstID = link[kLinkIDIndex] as! NSNumber
-        
-        transitionToPage(dstID.integerValue)
-        
-        // Check if the destination is a special page
-        if specialPages.contains(dstID.integerValue) {
-            
-            segueToSpecialPage(dstID.integerValue)
-        }
-        else {
-            transitionToPage(dstID.integerValue)
-        }
-        
     }
     
     // Recognizes a special page ID and performs the corresponding segue
@@ -373,8 +260,73 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         }
         
         if let id = segue {
-            //performSegueWithIdentifier(id, sender: self)
+            performSegueWithIdentifier(id, sender: self)
         }
+    }
+    
+    //
+    // MARK: Table View Delegate/Data Source
+    //
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // Cell count
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return links.count
+    }
+    
+    // Cell height
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return links.count <= 4
+            ? tableView.frame.height / 4
+            : (links.count < 7
+                ? tableView.frame.height / CGFloat(links.count)
+                : tableView.frame.height / 6.5)
+    }
+    
+    // Formats the cells in the table
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(kArticleLinkCellID, forIndexPath: indexPath)
+        
+        // Get link titles
+        let link = links[indexPath.row]
+        if let linkName = link[kLinkNameIndex] as? String {
+            cell.textLabel?.text = linkName
+        }
+        else {  // Link text is missing in db
+            cell.textLabel?.text = "(title missing)"
+        }
+        cell.textLabel?.sizeToFit()
+        cell.accessoryType = .DisclosureIndicator
+        
+        return cell
+    }
+    
+    // Reformats article upon select
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // Commit bookmark changes
+        if bookmarked != initMarked {
+            db.commitBookmarkChanges(bookmarked, pageID: pageID)
+        }
+        
+        let link = links[indexPath.row]
+        let dstID = link[kLinkIDIndex] as! NSNumber
+        
+        
+        // Check if the destination is a special page
+        if specialPages.contains(dstID.integerValue) {
+            segueToSpecialPage(dstID.integerValue)
+        }
+        else {
+            segueToNormalPage(dstID.integerValue)
+        }
+        
     }
 
     // MARK: - Navigation

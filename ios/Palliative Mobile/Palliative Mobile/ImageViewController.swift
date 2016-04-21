@@ -9,30 +9,41 @@
 import UIKit
 
 class ImageViewController: UIViewController {
-
-    var titleText: String?
-    var imageName: String?
+    
+    let imageNames = ["terminal.png", "frailty.png", "organ.png", "sudden.png"]
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    
     @IBAction func backPressed(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        if let title = titleText {
-            titleLabel.text = title
+        titleLabel.text = "Global Trajectories"
+        
+        // Set image views
+        if let image1 = UIImage(named: imageNames[0]) {
+            imageView.image = image1
+        }
+        if let image2 = UIImage(named: imageNames[1]) {
+            imageView2.image = image2
+        }
+        if let image3 = UIImage(named: imageNames[2]) {
+            imageView3.image = image3
+        }
+        if let image4 = UIImage(named: imageNames[3]) {
+            imageView4.image = image4
         }
         
-        if let name = imageName {
-            if let image = UIImage(named: name) {
-                imageView.image = image
-            }
-        }
+        imageView2.hidden = true
+        imageView3.hidden = true
+        imageView4.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
