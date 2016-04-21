@@ -140,7 +140,7 @@ Detail Text: Normalize presence of psychological distress seen w/ terminal illne
    8. Any condition causing coma where fluids are not given, e.g. massive cerebrovascular accident, post-resuscitative hypoxic encephalopathy"|||0
 28|0|Prognostication in Cancer|0||||0
 29|77|Australia Modified Karnosky Scale|0||The Australia-modified karnofsky Performance scale (AkPs) is a measure of the patient's overall performance status or ability to perform their activities of daily living. it is a single score between 10 and 100 assigned by a clinician based on observations of a patient's ability to perform common tasks relating to activity, work and self-care. A score of 100 signifies normal physical abilities with no evidence of disease. Decreasing numbers indicate a reduced performance status.||0
-30|77|Palliative Prognostic Index|0||"PPI uses Palliative Performance Scale along with measures of oral intake, edema, delirium, and dyspnea at rest to predict survival. It has been shown that a PPI of > 6 correlates to a clinical survival of less than 3 weeks.  ~10% patients score <50% would be expected to survive > 6 mo. Certain clinical factors inc predictive value of estimated length of survival when used with performance status. In one small prospective study, for example, it was demonstrated that there was a significant relationship between length of survival and dysphagia, cognitive failure and weight loss. The presence of all three factors – weight loss of 10 kg or more, MMSE of < 24, and dysphagia to solids or liquids predicted survival of less than 4 weeks with an accuracy of 74 %. The estimates in this study were equivalent to that of two physician estimates.	PPI score > 6 = survival shorter than 3 weeks; PPI score >4 = survival shorter than 6 weeks; PPI score ?4 = survival more than 6 weeks"||0
+30|77|Palliative Prognostic Index|0||"PPI uses Palliative Performance Scale along with measures of oral intake, edema, delirium, and dyspnea at rest to predict survival. It has been shown that a PPI of > 6 correlates to a clinical survival of less than 3 weeks.  ~10% patients score <50% would be expected to survive > 6 mo. Certain clinical factors inc predictive value of estimated length of survival when used with performance status. In one small prospective study, for example, it was demonstrated that there was a significant relationship between length of survival and dysphagia, cognitive failure and weight loss. The presence of all three factors - weight loss of 10 kg or more, MMSE of < 24, and dysphagia to solids or liquids predicted survival of less than 4 weeks with an accuracy of 74 %. The estimates in this study were equivalent to that of two physician estimates.	PPI score > 6 = survival shorter than 3 weeks; PPI score >4 = survival shorter than 6 weeks; PPI score ?4 = survival more than 6 weeks"||0
 31|77|Palliative Performance Scale - Calculator|0||"Read horizontally at each level to find a 'best fit' for the patient, who is then assigned as the PPS% score. Begin at the left column and read downwards until the appropriate ambulation level is reached, then read across to the next column and downwards again until the activity/evidence of disease is located. Repeat until all five columns are covered before assigning the actual PPS for that patient. In this way, 'leftward' columns (columns to the left of any specific column) are 'stronger' determinants and generally take precedence over others. 		 	 	 
 	
 PPS scores are in 10% increments only. Sometimes, there are several columns easily placed at one level but one or two which seem better at a higher or lower level. One then needs to make a 'best fit' decision. Choosing a 'half-fit' value of PPS 45%, for example, is not correct. The combination of clinical judgment and 'leftward precedence' is used to determine whether 40% or 50% is the more accurate score for that patient. PPS may be used for several purposes. First, it is an excellent communication tool for quickly describing a patient's current functional level. Second, it may have value in criteria for workload assessment or other measurements and comparisons. Finally, it appears to have prognostic value. "||0
@@ -361,7 +361,7 @@ PPS scores are in 10% increments only. Sometimes, there are several columns easi
    3. Ask that they designate spokesperson, esp if no designated proxy"|"Summarize all decisions made. confirm your continued availability regardless of decisions. (Use a consensus approach whenever possible. EP can est goals of care with patients daily. any of your team can assess goals of care. Regularly reviewing goals, priorities can help pt, family, MD, team reach like-minded outcomes, detect divergent expectations, prevent unwanted Rx, After the patient and family (or proxy) agree on GOC, restate goals, ascertain comfort. agreement may emerge during the ED visit, but more likely you are stimulating a discussion which improves/eases later discussions as they've had more time to think about that discussion.
 1. Err on the side of aggressive care but inform appropriately - When agreement cannot be reached regarding the goals of care, err on the side of the most aggressive care. patient and surrogate should be notified this is the case.
 2. Communicate clearly with the clinical team - If differences of opinion on or opposition to goals of care exists, team MUST verbalize this to reach consensus."||0
-65|58|Determine the next steps|0|"   1. ''What is the best disposition for the patient – hospital, home, hospice, nursing home, assisted living, etc.''
+65|58|Determine the next steps|0|"   1. ''What is the best disposition for the patient - hospital, home, hospice, nursing home, assisted living, etc.''
    2. Your team can suggest potential sources of emotional and practical support (eg, family, significant others, friends, social worker, spiritual counselor, peer support group, professional therapist, hospice, home health agency), including support for family members"|||0
 66|2|Who needs a palliative care consult?|0||||0
 67|66|Global Trajectories|0||Palliative care recognizes 4 paradigm clinical situations.  These should become mental prompts for EP to place pt on appropriate global trajectory. Unlike hospice, palliative care is available at any stage of a life-threatening/serious illness, and is especially helpful to those who wish to continue the pursuit of curative or aggressive care while still receiving optimal symptom control and psychosocial support. Palliative care services focus on goals of care, coordination of care, and aggressive symptom management. Palliative medicine practitioners generally have more time to spend at bedside than ED providers and have expertise with drug dosing/combinations for symptom management which may be unfamiliar to ED or other consults. Early use of palliative care services has demonstrated (1) reduction in length of stay; (2) change of bed assignment based on acuity in order to improve quality care; (3) improved symptom control scores; and (4) increased patient satisfaction. Some ED presentations that might benefit from a palliative care team consult in the ED include: acute stroke in patient with advanced Parkinson's disease; urosepsis in a nursing home resident with advanced dementia; severe pain in patient receiving chemo for metastatic cancer;  pneumonia in a child who has an incurable inborn error of metabolism; unresponsive patient with ROSC after CPR||0
@@ -568,7 +568,7 @@ Parent: What is a framework for rapid Advanced Care Planning in the ED (72)"||0
          2. I would want curative intervention tried, but want to stop if it is not working
          3. I would want interventions only if they are not too invasive
          4. I would want symptom control as my top priority and want to avoid curative interventions
-   4. ''Mrs. Jones, here in the emergency department we also like to find out more about how a person's goals might change if the medical situation were to progress. So let's go over your current goals once more to find what we call your personal thresholds – that is, how your goals change depending on the medical outlook.''
+   4. ''Mrs. Jones, here in the emergency department we also like to find out more about how a person's goals might change if the medical situation were to progress. So let's go over your current goals once more to find what we call your personal thresholds - that is, how your goals change depending on the medical outlook.''
    5. ''In your current situation, if something were to happen so that you were unable to speak to us but everything else about the medical outlook remained the same, which of the following goals would you choose?'' "|"You can use scenarios w/ patients: in most scenarios of declining prognosis, increasing disability, most have threshold to switch from curative, even burdensome, intervention to comfort. strive to discern what this threshold is for a certain patient. prepare team that patients/surrogates may feel they are ""settling for less"" by choosing comfort care pathways for a loved one, so you can be sensitive and supportive. cross-check w/ pt to verify that (s)he is comfortable with chosen goals. The threshold for moving from wanting to not wanting life-sustaining intervention will be clear for most patients when this approach is used. Some patients will have crossed the threshold already for their current health; others will cease to desire life-sustaining intervention in Scenario B, others in Scenario C. More detailed scenario-based advance care planning can be accomplished with worksheets such as those provided in the appendix to this module. For rapid, advance care planning in the ED, however, this short process can provide critical information.
    1. ''In your current situation, if something were to happen so that you were unable to speak to us but everything else about the medical outlook remained the same, which of the following goals would you choose?'' 
       1. Responses may include: I want any relevant intervention that medicine can offer to attempt cure; or I want curative intervention tried, but want to stop if it is not working; or I want interventions only if they are not too invasive; or I want symptom control as my top priority and want to avoid curative interventions. after their response, cross-check w/ pt to verify, saying something c/w pt's wishes: ''So that means that I will make sure you get fluids and antibiotics, but I will also make sure that you are not put on a breathing machine. Is that right?''"||0
@@ -875,27 +875,27 @@ Example 4. Mrs. Jones is receiving hospice services for terminal breast cancer w
 174|172|Thick Secretions|0|"   1. For strong cough reflex:
       1. Loosen with nebulized saline and guaifenesin
    2. For weak cough reflex, may try drying secretions:
-      1. Scopolamine, 0.1–0.4mg SC, IV q 4 h, or 1–3 transdermal patches q 72 h or 10– 80 Pg/h by continuous IV or SC infusion
-      2. Glycopyrrolate, 0.4–1.0mg q d by SC infusion or 0.2mg SC, IV q 4–6 h prn
+      1. Scopolamine, 0.1-0.4mg SC, IV q 4 h, or 1-3 transdermal patches q 72 h or 10- 80 Pg/h by continuous IV or SC infusion
+      2. Glycopyrrolate, 0.4-1.0mg q d by SC infusion or 0.2mg SC, IV q 4-6 h prn
       3. Hyoscyamine, 0.125mg po or sl q 8 h"|Can accumulate around tracheostomy, in airway with obstruction/bronchospasm, and in the weak/frail. To minimize, optimize patient hydration, keep mucous membranes moist, increase humidity of inspired air (cognizant of any increased risk of respiratory infections||0
 175|172|Pleural Effusions|0||May reduce lung volume (considerably) and cause great distress. consider thoracentesis if fluids aren't loculated. If effusion recurs, and thoracentesis is ineffective, consider talc, tetracycline, or bleomycin pleurodesis. A Tenckhoff catheter can facilitate repeat drainage (at home by a visiting nurse) maybe include something about caveat of draining a large volume malignant effusion ||0
 176|172|Hypoxemia|0||||0
 177|172|Pneumonia|0||||0
 178|172|Bronchospasm|0|"Beyond wheezes or rhonchi note evidence of bronchoconstriction, increased inspiratory pressures, e.g. intercostal retractions. might trial alpha-agonists, e.g. albuterol, considering adverse effects in those with cardiac compromise. try nebulized aerosols for the frail, who may be unable to use puffers, even with aerochambers. And, if ineffective, remember to discontinue/minimize number of meds, effects, cost. Possible options include: 
-   1. Steroids to reduce swelling/inflammation (dexamethasone, 2–20mg po, IV, SC q d (long half-life permits once-daily dosing; minimal glucocorticoid effects and edema)
-   2. Albuterol, 2–3 puffs q 4–8 h (with aerochamber), or albuterol 0.5%, 2.5–5.0mg diluted to 4.0mL with saline by nebulizer q 4 h
-   3. Ipratropium bromide, 2–3 puffs q 4–8 h prn or 0.125mg q 4 h via nebulizer
+   1. Steroids to reduce swelling/inflammation (dexamethasone, 2-20mg po, IV, SC q d (long half-life permits once-daily dosing; minimal glucocorticoid effects and edema)
+   2. Albuterol, 2-3 puffs q 4-8 h (with aerochamber), or albuterol 0.5%, 2.5-5.0mg diluted to 4.0mL with saline by nebulizer q 4 h
+   3. Ipratropium bromide, 2-3 puffs q 4-8 h prn or 0.125mg q 4 h via nebulizer
    4. Theophylline and adrenergic agents (may cause tremor/anxiety and exacerbate dyspnea)"|||0
 179|172|Anxiety|0||||0
 180|172|Stress|0||Family, financial, legal, spiritual issues can exacerbate chronic/acute dyspnea||0
 181|172|Airway Obstruction|0|"High-pitched inspiratory stridor audible at a distance can be distressing. make sure tracheostomy appliances are cleaned regularly. If the patient still eats and aspiration is likely, puree solids, thicken liquids with cornstarch/other thickeners, and instruct caregivers to on positioning during feeding/suctioning. Surgery/radiation may be appropriate. consider: 
-   1. Steroids eg, dexamethasone, 2–20mg po, IV, SC q d 
+   1. Steroids eg, dexamethasone, 2-20mg po, IV, SC q d 
       1. To reduce swelling and inflammation, dexamthasone's long half-life permits once-a-day dosing and has minimal mineralocorticoid effect or edema)
    1. Manage thick secretions
    2. Racemic epinephrine by inhaler
    3. Oxygen mixed with helium"|||0
 182|172|Pulmonary Edema|0||||0
-183|171|Manage Symptoms|0||Breathlessness a symptom not a sign, with variable prevalence in end of life (12%–74%), depending on diagnosis and illness stage.  Research shows: measures of respiratory rate, oxygen saturation, blood gas levels, and perceptions of professionals and family members don't  correlate with patient's perception of breathlessness. accept the patient's self-report of his or her experience even if objective measurements tell you otherwise. Some patients don't report breathlessness, unless directly asked about walking: breathlessness has limited walking at a usual pace or distance.||0
+183|171|Manage Symptoms|0||Breathlessness a symptom not a sign, with variable prevalence in end of life (12%-74%), depending on diagnosis and illness stage.  Research shows: measures of respiratory rate, oxygen saturation, blood gas levels, and perceptions of professionals and family members don't  correlate with patient's perception of breathlessness. accept the patient's self-report of his or her experience even if objective measurements tell you otherwise. Some patients don't report breathlessness, unless directly asked about walking: breathlessness has limited walking at a usual pace or distance.||0
 184|183|Non-drug|0|"   1. Educate/support family
    2. Elevate HOB
    3. Move patient to one side or other, reposition regularly for comfort
@@ -933,22 +933,22 @@ Example 4. Mrs. Jones is receiving hospice services for terminal breast cancer w
       3. Morphine 5-10 mg po q 1-2 hours
       4. Hydrocodone, 5mg tab q 4 h and breakthrough of 5mg q 2 h prn;
       5. Acetaminophen, 325mg, with codeine, 30mg (1 tab) q 4 h with a breakthrough dose of 30mg q 2 h prn;
-      6. Hydrocodone/acetaminophen syrup, 1–3mL q 4 h with a breakthrough dose equivalent to the q 4 h dose offered q 2 h prn (for children or older adults who may require lower doses).
+      6. Hydrocodone/acetaminophen syrup, 1-3mL q 4 h with a breakthrough dose equivalent to the q 4 h dose offered q 2 h prn (for children or older adults who may require lower doses).
    5. Severe dyspnea, opioid-nai?ve:
-      1. Morphine (as elixir or tablets), 5–15mg q 4 h and titrated;
+      1. Morphine (as elixir or tablets), 5-15mg q 4 h and titrated;
       2. Morphine 2mg IV q 5-10 mins
-      3. Oxycodone, 5–10mg q 4 h and titrated;
-      4. Hydromorphone, 0.5–2mg q 4 h and titrated.
+      3. Oxycodone, 5-10mg q 4 h and titrated;
+      4. Hydromorphone, 0.5-2mg q 4 h and titrated.
    6. For patients who receive an opioid on a fixed schedule: 
-      1. Add dose of a short- acting opioid (eg, morphine) equivalent to 30%–50% of the amount of the baseline opioid taken over 4 hours can be tried q 1h titrate to effect
+      1. Add dose of a short- acting opioid (eg, morphine) equivalent to 30%-50% of the amount of the baseline opioid taken over 4 hours can be tried q 1h titrate to effect
       2. If breathlessness continues,  add lorazepam 0.5 mg po or SQ/IV q4 hr PRN and consider morphine sulfate infusion. albuterol 2.5 mg nebulizer q4 hr prn wheezing 
    7. Opioids can be administered IV or SC for urgent situations and/or if oral route not available or advisable
    8. Chlorpromazine and promethazine have both been reported to improve breathlessness, and synergistic with opioids"|"Research has shown opioids can relieve breathlessness in patients without deranged respiratory rate or ABGs, but the precise mechanism is unclear, but thought to include central and peripheral effects. Sub-analgesic doses may work in the opioid-nai?ve. To simplify dosing, establish the effective dose, and convert it to an extended-release preparation. Using opiates should equate to preparing to concomitantly manage their adverse effects (e.g. the ubiquitous, inevitable constipation). nebulized opioids anecdotally reported to be effective, but in phase II studies and placebo-controlled studies, they weren't superior to nebulized saline.
 Pharmacologic tolerance and any fear of addiction is clinically insignificant in managing breathlessness in advanced illness. Relieving the symptom of dyspnea may actually increase exercise tolerance and mobility. It has been shown that when dosing guidelines for dyspnea are followed, respiratory depression doesn't occur.The principle of double effect is commonly cited in cases where physician treats with intent/expectation of a good outcome (eg, relieve a symptom), while knowing there's a chance for an undesired, secondary effect (e.g. death). Many feel this action is ethical after informed consent is obtained.  all treatments have both intended effects and unintended, potentially adverse, consequences. Many believe opioids/anxiolytics have unusually or unacceptably high risk of adverse event that could end a life, particularly in the frail near that end of life if used improperly or, in rare cases, when used properly. we should understand then discuss all potential benefits/risks with patients with cognizance of goals for care. In symptom control, however, this principle rarely applies. The secondary adverse consequence of death is not likely to occur. Clouding this ethical construct/intuition is the notion that suffering states might make death an appealing choice. We know treatments carry a risk of adverse events, e.g. death, for many interventions and noninterventions; e.g. chemotherapy, surgery, TPN for short gut syndrome, or stopping all tests or avoiding surgery respectively. currently, most deem an action ethical if: (a) the intent is to relieve suffering and not hasten death, (b) death is a possible but not inevitable outcome of the interventions, and (c) there is fully informed consent. if action is intended to cause death as a means end suffering/control symptoms, less agree on its morality. physician-assisted suicide and euthanasia are quite different both clinically and ethically. But, an opioid can be safely used for breathlessness with very minimal risk of death, if accepted dosing guidelines are followed. So many providers grossly over estimate and don't understood the risk of respiratory depression. Drowsiness, confusion, depressed consciousness occur long before respiratory rate is compromised particularly in someone in acute pain, hence the effectiveness of PCA's and regimens based on sound pharmacology."||0
-187|183|Anxiolytics can be safe with opioids|0|"   1. Lorazepam, 0.5–2.0mg po/SL, against the buccal mucosa until settled, then dosed routinely q 4–6 h to keep settled
-   2. Lorazepam 0.5 to 1.0 mg SQ/IV q 1 h prn until settled, then dosed routinely q 4–6 h to keep settled
-   3. Diazepam, 5–10mg po, IV q 1 h until settled, then dosed routinely q 6–8 h prn;
-   4. Clonazepam, 0.25–2.0mg po q 12 h;
+187|183|Anxiolytics can be safe with opioids|0|"   1. Lorazepam, 0.5-2.0mg po/SL, against the buccal mucosa until settled, then dosed routinely q 4-6 h to keep settled
+   2. Lorazepam 0.5 to 1.0 mg SQ/IV q 1 h prn until settled, then dosed routinely q 4-6 h to keep settled
+   3. Diazepam, 5-10mg po, IV q 1 h until settled, then dosed routinely q 6-8 h prn;
+   4. Clonazepam, 0.25-2.0mg po q 12 h;
    5. Midazolam, 0.5mg IV q 15 min until settled, then by continuous SC or IV infusion."|Opioid and nondrug therapies are first line for breathlessness, and may relieve anxiety secondary to breathlessness, but they are not inherently anxiolytic, especially in continued dosing. You may need to directly treat some breathless and anxious patients' anxiety with a benzodiazepine. Use those with longer half-lives to avoid peak and trough effects which can invoke rebound anxiety.||0
 188|170|Nausea/Vomiting|0||These are common in many advanced diseases. Nausea is an unpleasant subjective sensation secondary to stimulation of GI lining, the chemoreceptor trigger zone in the base of the fourth ventricle, the vestibular apparatus, or the cerebral cortex. the vomiting center directs the neuromuscular reflex of a final common pathway, i.e.  vomiting, after stimulation of one or more of these areas. Stimulation is by the neurotransmitters serotonin, dopamine, acetylcholine, and histamine which are all within the chemoreceptor trigger zone. they are all also present (with serotonin playing a large role) in the lining of the GI tract. Acetylcholine and histamine are predominant players in vestibular apparatus. The  awareness of nausea, inability to keep food or fluids down, the associated acid and bitter tastes, and unpleasant smells of vomitus may be distressing. cortex stimulation and responses are complex, not associated with specific neurotransmitters, and seem to be learned (eg, the anticipatory nausea associated with chemotherapy or nausea related to anxiety).||0
 189|188|Etiologic categories and targeted treatment|0||Multiple causes for nausea and vomiting, but symptom relief is usually achieved if we choose the right meds and understand them.  choosing the right drug depends on targeting the etiologies, but it's frequently not possible to identify or specifically correct the underlying etiology. Therapeutic trials may suggest the etiology. When causes are known, the burden of the disease-modifying intervention may outweigh the potential benefit. Empiric antiemetics usually starts with one med that targets the presumed mechanism. optimize that dose dose before adding a second med/different mechanism of action. Sequential combination therapy may be required in some patients.||0
@@ -956,18 +956,18 @@ Pharmacologic tolerance and any fear of addiction is clinically insignificant in
    1. Dexamethasone 6-20 mg daily 
 2. Mannitol
 3. dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 4. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h"|"1. Steroids
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h"|"1. Steroids
    1. Unclear mechanisms of action that works in some patients
 2. Mannitol
 3. Dopamine antagonists
@@ -975,44 +975,44 @@ Pharmacologic tolerance and any fear of addiction is clinically insignificant in
 4. Antihistamines
    1. Those typically used for nausea can be sedating. which could be beneficial in some patients. the antihistamines have anticholinergic properties, so can serve that role for nausea/vomiting as well. "||0
 191|189|Liver (Toxin accumulation)|0|"1. Dopamine antagonists
-   1. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   2. Droperidol, 2.5–5mg IV q 6 h
-   3. Thiethylperazine, 10–20mg po q 6 h
-   4. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   5. Perphenazine, 2–8mg po, IV q 6 h
-   6. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   7. Metoclopramide, 10–20mg po q 6 h
+   1. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   2. Droperidol, 2.5-5mg IV q 6 h
+   3. Thiethylperazine, 10-20mg po q 6 h
+   4. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   5. Perphenazine, 2-8mg po, IV q 6 h
+   6. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   7. Metoclopramide, 10-20mg po q 6 h
 2. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h"|"1. Dopamine antagonists
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h"|"1. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating.
 2. Antihistamines
    1. Those typically used for nausea can be sedating. which could be beneficial in some patients. the antihistamines have anticholinergic properties, so can serve that role for nausea/vomiting as well."||0
 192|189|Meningeal Irritation|0|"Steroids
    - Dexamethasone 6-20 mg daily "|Unclear mechanisms of action that works in some patients||0
 193|189|Movement (Vestibular stimulation which morphine may worsen)|0|"Anticholinergics
-   - Scopolamine, 0.1–0.4mg SC, IV q 4 h or 1–3 transdermal patches q 72 h or 10–80Pg/h by continuous IV or SC infusion"|Opioids/anesthetics can trigger nausea via acetylcholine in the vestibular apparatus, so you might add an anticholinergic to other antiemetics empirically||0
+   - Scopolamine, 0.1-0.4mg SC, IV q 4 h or 1-3 transdermal patches q 72 h or 10-80Pg/h by continuous IV or SC infusion"|Opioids/anesthetics can trigger nausea via acetylcholine in the vestibular apparatus, so you might add an anticholinergic to other antiemetics empirically||0
 194|189|Mental, e.g. anxiety (cortisol)|0|"Benzodiazepines
-   - Lorazepam, 0.5–2mg po q 4–6 h
-Tetrahydrocannabinol (THC) 2.5–5mg po TID"|||0
+   - Lorazepam, 0.5-2mg po q 4-6 h
+Tetrahydrocannabinol (THC) 2.5-5mg po TID"|||0
 195|189|Opioids (CTZ, vestibular effect, GUT)|0|"1. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 2. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h
 3. Anticholinergics
-   1. Scopolamine, 0.1–0.4mg SC, IV q 4 h or 1–3 transdermal patches q 72 h or 10–80Pg/h by continuous IV or SC infusion
+   1. Scopolamine, 0.1-0.4mg SC, IV q 4 h or 1-3 transdermal patches q 72 h or 10-80Pg/h by continuous IV or SC infusion
 4. Prokinetic agents
-   1. Metoclopramide, 10–20mg po q 6 h
+   1. Metoclopramide, 10-20mg po q 6 h
 5. Stimulant cathartics"|"1. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating.
 2. Antihistamines
@@ -1026,42 +1026,42 @@ Tetrahydrocannabinol (THC) 2.5–5mg po TID"|||0
    1. Ondansetron, 8mg po tid
    2. Granisetron, 1mg po q d or bid
 2. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 3. Steroids
    1. Dexamethasone 6-20 mg daily"|"1. Serotonin antagonists
    1. Serotonin plays a large role in chemotherapy-associated nausea. This med class can be exceedingly effective, and very expensive. they can work for refractory nausea of diverse types, but are typically tried only when other medications have failed, and stopped if ineffective
 2. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating."||0
 197|189|NSAIDs, see mucosal irritation; (CTZ)|0|"1. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 2. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h"|"1. Dopamine antagonists
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h"|"1. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating.
 2. Antihistamines
    1. Those typically used for nausea can be sedating. which could be beneficial in some patients. the antihistamines have anticholinergic properties, so can serve that role for nausea/vomiting as well. "||0
 198|189|Mucosal irritation 2/2 NSAIDS (GUT, gastritis)|0|"1. Cytoprotective agents
-   1. Misoprostol 200Pg bid–qid
+   1. Misoprostol 200Pg bid-qid
    2. Proton pump inhibitors
       1. Omeprazole
       2. Lansoprazole"|Mucosal erosion secondary to NSAIDs||0
 199|189|Mucosal irritation 2/2 hyperacidity, gastroesophageal reflux (GUT, gastritis, duodenitis)|0|"   1. Antacids
-      1. H2 receptor antagonists (cimetidine, famotidine, ranitidine) 1–2 tablespoons q 2 hr PRN
+      1. H2 receptor antagonists (cimetidine, famotidine, ranitidine) 1-2 tablespoons q 2 hr PRN
       2. Proton pump inhibitors
          1. Omeprazole
          2. Lansoprazole"|Hyperacidity, +/- gastroesophageal reflux or gastric or duodenal erosions can cause profound nausea, heartburn, and acidic or bitter tastes, and/or vomiting||0
@@ -1070,24 +1070,24 @@ Tetrahydrocannabinol (THC) 2.5–5mg po TID"|||0
    2. Steroids
        - Unclear mechanisms of action that works in some patients
        - Dexamethasone 6-20 mg daily 
-   3. Inhibit secretions with octreotide, scopolamine 0.1–0.4mg SC, IV q 4 h or 1–3 transdermal patches q 72 h or 10–80Pg/h by continuous IV or SC infusion"|||0
+   3. Inhibit secretions with octreotide, scopolamine 0.1-0.4mg SC, IV q 4 h or 1-3 transdermal patches q 72 h or 10-80Pg/h by continuous IV or SC infusion"|||0
 202|189|Motility: opioids, ileus, other issues (GUT, CNS)|0|"   1. Prokinetic agents
-      - Metoclopramide, 10–20mg po q 6 h
+      - Metoclopramide, 10-20mg po q 6 h
    2. Stimulant laxatives"|"Prokinetic agents:
 A sluggish or dyskinetic gut (due to carcinomatosis, opioid therapy, other medications, etc) may cause profound nausea and vomiting in advanced disease. A large liver, ascites, or peritoneal disease may cause pseudo-obstruction, and constipation can exacerbate these."||0
 203|189|Metabolic: hypercalcemia, hyponatremia, hepatic/renal failure (CTZ)|0|"1. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 1. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h
 3. Rehydration
 4. Steroids
    1. Dexamethasone 6-20 mg daily"|"1. Dopamine antagonists
@@ -1096,18 +1096,18 @@ A sluggish or dyskinetic gut (due to carcinomatosis, opioid therapy, other medic
    1. Those typically used for nausea can be sedating. which could be beneficial in some patients. the antihistamines have anticholinergic properties, so can serve that role for nausea/vomiting as well. "||0
 204|189|Microbe local irritation, e.g. esophagitis, candidal gastritis, H. pylori, herpes, CMV (GUT)|0|Antibacterials, -virals, -fungals|||0
 205|189|Sepsis|0|"1. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 2. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h
 3. Antibacterials, -virals, -fungals"|"1. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating.
 2. Antihistamines
@@ -1115,20 +1115,20 @@ A sluggish or dyskinetic gut (due to carcinomatosis, opioid therapy, other medic
 206|189|Myocardial: ischemic/CHF (vagal stimulation, cortical, CTZ)|0|"1. Oxygen
 2. Opioids
 3. Dopamine antagonists
-   1. Haloperidol, 0.5–2.0mg po, IV, SC q 6 h, then titrated
-   2. Prochlorperazine, 10–20mg po q 6 h or 25mg pr q 12 h or 5–10mg IV q 6 h
-   3. Droperidol, 2.5–5mg IV q 6 h
-   4. Thiethylperazine, 10–20mg po q 6 h
-   5. Promethazine, 12.5–25mg IV, 25mg po/pr q 4–6 h
-   6. Perphenazine, 2–8mg po, IV q 6 h
-   7. Trimethobenzamide, 250mg po q 6–8 h, 200mg pr q 6–8 h
-   8. Metoclopramide, 10–20mg po q 6 h
+   1. Haloperidol, 0.5-2.0mg po, IV, SC q 6 h, then titrated
+   2. Prochlorperazine, 10-20mg po q 6 h or 25mg pr q 12 h or 5-10mg IV q 6 h
+   3. Droperidol, 2.5-5mg IV q 6 h
+   4. Thiethylperazine, 10-20mg po q 6 h
+   5. Promethazine, 12.5-25mg IV, 25mg po/pr q 4-6 h
+   6. Perphenazine, 2-8mg po, IV q 6 h
+   7. Trimethobenzamide, 250mg po q 6-8 h, 200mg pr q 6-8 h
+   8. Metoclopramide, 10-20mg po q 6 h
 4. Antihistamines
-   1. Diphenhydramine, 25–50mg po q 6 h
-   2. Meclizine, 25–50mg po q 6 h
-   3. Hydroxyzine, 25–50mg po q 6 h
+   1. Diphenhydramine, 25-50mg po q 6 h
+   2. Meclizine, 25-50mg po q 6 h
+   3. Hydroxyzine, 25-50mg po q 6 h
 5. Benzodiazepines
-   1. Lorazepam, 0.5–2mg po q 4–6 h"|"1. Dopamine antagonists
+   1. Lorazepam, 0.5-2mg po q 4-6 h"|"1. Dopamine antagonists
    1. Dopamine-mediated nausea is likely the most common and most frequently targeted initially, even if unknown etiology. Meds are phenothiazines and butyrophenone neuroleptics with potential for drowsiness and extrapyramidal symptoms, particularly in young women. Haloperidol is less sedating.
 2. Antihistamines
 Those typically used for nausea can be sedating. which could be beneficial in some patients. the antihistamines have anticholinergic properties, so can serve that role for nausea/vomiting as well. "||0
@@ -1168,20 +1168,20 @@ Those typically used for nausea can be sedating. which could be beneficial in so
 217|216|"Establish what is ""normal"""|0||'Normal'' varies greatly in number of bowel movements per day or week, consistency, color, and volume. tailor exam, work up, treatment to presentation, stage, context of person and illness. at end of life, correction of the cause may not be possible/appropriate. ||0
 218|216|Regular Toileting and the gastrocolic reflex|0||Suggest the patient toilet at the same time each day, sit upright if possible, and take advantage of the gastrocolic reflex that occurs after eating. ||0
 219|216|Cathartics|0|"   1. Stimulant laxatives 
-      1. prune juice, 120–240mL q d or bid
+      1. prune juice, 120-240mL q d or bid
       2. senna, 2 po q hs, titrated to effect (up to 9 or more per day)
       3. casanthranol, 2 po q hs, titrated to effect (up to 9 or more per day)
       4. bisacodyl, 5mg po, pr q hs, titrated to effect
    2. Osmotic laxatives
-      1. lactulose, 30mL po q 4–6 h (sorbitol is a cheaper alternative), then titrated
-      2. milk of magnesia (or other Mg salts), 1–2 tablespoons 1–3 times per day
+      1. lactulose, 30mL po q 4-6 h (sorbitol is a cheaper alternative), then titrated
+      2. milk of magnesia (or other Mg salts), 1-2 tablespoons 1-3 times per day
       3. magnesium citrate, 1-2 bottles prn
    3. Detergent laxatives (stool softeners)
-      1. sodium docusate, 1–2 po q d–bid, titrated to effect
-      2. calcium docusate, 1–2 po q d–bid, titrated to effect
+      1. sodium docusate, 1-2 po q d-bid, titrated to effect
+      2. calcium docusate, 1-2 po q d-bid, titrated to effect
       3. phosphosoda enema prn
    4. Prokinetic agents 
-      1. metoclopramide, 10–20mg po q 6 hr
+      1. metoclopramide, 10-20mg po q 6 hr
    5. Lubricant stimulants 
       1. glycerin suppositories
       2. oils (mineral or peanut)
@@ -1221,7 +1221,7 @@ Those typically used for nausea can be sedating. which could be beneficial in so
    4. Alcohol
    5. Pharmacological 
       1. Steroids
-         1. Dexamethasone 2–20mg/day
+         1. Dexamethasone 2-20mg/day
          2. Megestrol acetate
       2. Cannabinoids
       3. Androgens (eg, oxandrolone, nandrolone)"|"Anorexia (loss of appetite), cachexia (loss of weight) occur in many advanced illnesses and are frequently accompany asthenia (generalized fatigue). Wasting is seen with certain malignancies, heart and pulmonary disease, renal and hepatic failure, chronic infections, including AIDS. specific mechanisms aren't well understood, but cause significant distress to patients and, many times moreso, to families/caregivers, and can be construed as evidence of failure to provide adequate care. Or, attentive families may believe that they are doing something wrong. and that if only [she] would eat more, [she'd] regain her former weight/vigor. Sadly, this rare, even with parenteral/enteral nutrition. anorexia/cachexia are typically irreversible and represent disease progression. Loss of appetite, weight, and energy are not strictly the result of malnutrition, and providing nutrition, even parenterally, does not change the disease course. Helping patients/families navigate these distinctions can diminish guilt, hostility, or conflict; and redirect focus to things that may improve quality of life. This said, it may be worthwhile to assess dysphagia, odynophagia, meds, or infections that might be causing or exacerbating the problem. the current therapies that can improve appetite and add weight, haven't proven to affect longevity. Again this said, being able to eat again for enjoyment, and feeling a return of some normalcy and well-being may be worth the attempts/expense
@@ -1237,10 +1237,10 @@ Those typically used for nausea can be sedating. which could be beneficial in so
    5. Pharmacological 
       1. Steroids
          1. Can affect mood/energy and stimulate appetite
-         2. Dexamethasone 2–20mg/day
+         2. Dexamethasone 2-20mg/day
             1. (preferred since has long half-life which permits once-a-day dosing and it relatively lacks mineralocorticoid effects, though any corticosteroid can work
          3. Megestrol acetate
-            1. shown to stimulate appetite/weight gain in AIDS and advanced cancer patients. Dosing is unclear as there appeared to be wide individual variation. Begin with 200mg po q 6–8 h and titrate up or down to effect
+            1. shown to stimulate appetite/weight gain in AIDS and advanced cancer patients. Dosing is unclear as there appeared to be wide individual variation. Begin with 200mg po q 6-8 h and titrate up or down to effect
       2. Cannabinoids
          1. (eg, tetrahydrocannabinol) shown to promote weight gain in AIDS/cancer patients. Use small dose and titrate to effect/tolerability
       3. Androgens (eg, oxandrolone, nandrolone)
@@ -1252,13 +1252,13 @@ Those typically used for nausea can be sedating. which could be beneficial in so
    3.      increase bulk (eg, psyllium, bran, pectin)
 2. Transient or mild, consider: 
    1. attapulgite, 30mL or 2 tabs prn
-   2. bismuth salts, 15–30mL bid–qid
+   2. bismuth salts, 15-30mL bid-qid
 3. Persistent, bothersome, and slow peristalsis, consider: 
-   1. loperamide, 2–4mg po q 6 h, or higher
-   2. diphenoxylate/atropine, 2.5–5.0mg po q 6 h or higher
+   1. loperamide, 2-4mg po q 6 h, or higher
+   2. diphenoxylate/atropine, 2.5-5.0mg po q 6 h or higher
    3. tincture of opium, 0.7mL po q 4 h and titrated
 4. Persistent secretory, consider: 
-   1. octreotide, 50Pg SC q 8–12 h,  titrate up to 500Pg q 8 h SC, or higher, or 10–80Pg q 1 h by continuous SC, IV infusion
+   1. octreotide, 50Pg SC q 8-12 h,  titrate up to 500Pg q 8 h SC, or higher, or 10-80Pg q 1 h by continuous SC, IV infusion
    2. parenteral fluid support, PRN/appropriate"|More frequent and looser than normal. Can lead to dehydration, malabsorption, fatigue, hemorrhoids, perianal skin breakdown. Causes: infection, GI bleeding, malabsorption, meds, obstruction, overflow incontinence, stress. ||0
 225|169|Chronic Pain|0||Try to identify those times when [you] may have forgotten our privilege to work in the ''safety net'' to all. Presentations for chronic pain are a call for help and sign of suffering. But the only methods shown to be successful in overcoming chronic pain, include whole-person approaches, not necessarily the immediate relief of a single symptom, which is also exactly what the palliative care paradigm embodies. ||0
 226|225|Your ED and hospital should strive to have a focused framework/protocol|0|"   1. Approaches vary between chronic pain populations optimize their approach in order to deliver the most responsible pain care possible to such patients
@@ -1333,7 +1333,7 @@ Those typically used for nausea can be sedating. which could be beneficial in so
       1. Review frequency of ED visits for similar problems.
    2. Pain contract
       1. Existence of a contract does not imply addiction
-         1. Many providers/clinics initiate a contract with every patient at the outset of care, therefore they all haven't exhibited aberrant behavior. It may be difficult to delineate the reason a patient has a contract, respect the contract. Most require the patient receive opioids in a particular way or that he or she not receive opioids at all until contact is made with the contracting PCP – usually before an ED visit.
+         1. Many providers/clinics initiate a contract with every patient at the outset of care, therefore they all haven't exhibited aberrant behavior. It may be difficult to delineate the reason a patient has a contract, respect the contract. Most require the patient receive opioids in a particular way or that he or she not receive opioids at all until contact is made with the contracting PCP - usually before an ED visit.
       2. Reinforce contract stipulations to encourage compliance 
          1. Emphasize and reinforce the need to have a single provider who will monitor"||0
 230|228|Take Good Chronic Pain HandP|0|"   1. Determine usual daily pain 
@@ -1386,7 +1386,7 @@ Usually normal  in chronic pain, even during exacerbations, thought to be second
    5. rubbing or massaging affected area
    6. restlessness (constant shifting/rocking)
    7. verbalizations
-2. ask for collateral, what is pt's pain look like? "|"Assessing pain  is particularly difficult in alert nonverbal [adult] patients. Behavioral indicators have been identified as some of the most reliable indicators– particularly in the geriatric patient with severe dementia or stroke. Facial expressions, verbalizations/vocalizations, mental status changes, body movements have been identified as potential indicators of pain. 
+2. ask for collateral, what is pt's pain look like? "|"Assessing pain  is particularly difficult in alert nonverbal [adult] patients. Behavioral indicators have been identified as some of the most reliable indicators- particularly in the geriatric patient with severe dementia or stroke. Facial expressions, verbalizations/vocalizations, mental status changes, body movements have been identified as potential indicators of pain. 
 1. The Checklist of Nonverbal Pain Indicators 
    1. There are a number of validated scales for cognitively impaired +/- nonverbal patients, but pick one for repeated practice/use. this checklist for cognitively impaired adults is one that's a brief, straightforward screen of six indicators of pain. Each indicator rates either one or zero, (1= present, 0 = absent). A higher score indicates higher likelihood of pain.
    2. Grimacing
@@ -1588,7 +1588,7 @@ Emphasize importance of follow up care"|Make short- and long-term goals for and 
    5. Other palliative methods "|||0
 302|284|Pathologic Fractures|0||Common in metastatic disease. suspect if + history of bone metastases, e.g. breast/prostate. Pain management and acute orthopedic management/stabilization. refer through oncology for radiation or surgery to stabilize, all of which hinges on the goals of care discussion. this presentation may be the signal for weakness, decline||0
 303|284|Malignant Effusions|0||On this ED visit, may need acute drainage to relieve symptoms, or may be candidate for pleurodesis, or a chronic drainage device. effusions are a poor prognostic indicator < 90 days. Variable ED presentations e.g. dyspnea, chest, and/or abdominal pain.||0
-304|303|Ascites|0||10% of ascites is malignant. Epithelial malignancies, particularly ovarian, endometrial, breast, colon, gastric, pancreatic; constitute 80 % malignant ascites. Prognosis ~ 6–12 mo.  consider therapeutic paracentesis for moderate volume ascites to ease suffering until the patient can follow up with his/her oncologist. Diagnostic tap (serum-ascites albumin gradient (SAAG)) can indicate presence of portal hypertension and guide therapy.||0
+304|303|Ascites|0||10% of ascites is malignant. Epithelial malignancies, particularly ovarian, endometrial, breast, colon, gastric, pancreatic; constitute 80 % malignant ascites. Prognosis ~ 6-12 mo.  consider therapeutic paracentesis for moderate volume ascites to ease suffering until the patient can follow up with his/her oncologist. Diagnostic tap (serum-ascites albumin gradient (SAAG)) can indicate presence of portal hypertension and guide therapy.||0
 305|304|SAAG Calculator|0|User inputs numerical values: serum albumin minus the ascitic fluid albumin concentration.|High is >1.1 g/dL. low is < 1.1g/dL. A high gradient (SAAG >1.1 g/dL) indicates portal hypertension and suggests a nonperitoneal cause of ascites. A low gradient (SAAG < 1.1 g/dL) indicates nonportal hypertension and suggests a peritoneal cause of ascites. Paracentesis may be the only thing that works for the latter, and relief is faster than diuretics alone. Patients with high SAAG do better with sodium restriction and diuresis and are at risk for hemodynamic instability due to portal hypertension if paracentesis removes too much fluid.||0
 306|303|Pericardial|0||Can present with confounding cardiac symptoms. Histories of chest irradiation, especially along with anthracyclines, are at risk along with other cardiac toxicities. thrombocytopenia and coagulopathy increase the risk for hemopericardium. Use your bedside ultrasound. If goals of care align with invasive interventions in the truly unstable patient, do the bedside pericardiocentesis. ||0
 307|303|Pleural|0||Avoid removal of >1500cc of fluid. may come to the ED with critical dyspnea. Prognosis for malignant pleural effusions ~3 mo. consider ED thoracentesis to improve significantly compromised respiratory status. is this patient a candidate for pleurodesis or placement of pleural drainage devices for long term symptom control? Volumes large enough to cause symptoms make pneumothorax unlikely.||0
@@ -1761,7 +1761,7 @@ Emphasize importance of follow up care"|Make short- and long-term goals for and 
    2. Hypoalbuminemia
    3. Venous or lymphatic obstruction may contribute
    4. Limit or avoid IV fluids 
-   5. Urine output will be low (</= 300–500ml/d is normal/adequate in this setting)
+   5. Urine output will be low (</= 300-500ml/d is normal/adequate in this setting)
    6. Drink fluids with salt
    7. Fragile skin
    8. Attend to mucous membranes (mouth, lips, eyes, nose, etc) to prevent the sense of dryness that hypoalbuminemia and intravascular hypovolemia may bring 
@@ -1772,7 +1772,7 @@ Emphasize importance of follow up care"|Make short- and long-term goals for and 
    3. Venous or lymphatic obstruction may contribute
    4. Limit or avoid IV fluids 
       1. No amount of intravenous fluid and salt will restore the intravascular volume, and attempting to do so creates/exacerbates edema which leads to swollen limbs, skin breakdown, ascites, pleural effusions, pulmonary edema. Similarly, albumin infusions are ineffective/expensive and worsen edema worse if denatured albumin extravasates into the soft tissues. TPN is also ineffective for other reasons. encourage patient to eat and drink as usual and treat symptom preventing oral intake 
-   5. Urine output will be low (</= 300–500ml/d is normal/adequate in this setting)
+   5. Urine output will be low (</= 300-500ml/d is normal/adequate in this setting)
    6. Drink fluids with salt 
       1. (soups, club soda, sport drinks, red vegetable juices) to help maintain their electrolyte balance. Debilitated patients may drink only free water (tap water, tea, coffee, juice, soda). 
    7. Fragile skin 
@@ -1799,11 +1799,11 @@ Emphasize importance of follow up care"|Make short- and long-term goals for and 
 343|342|Antihistamines|0|"   1. Diphenhydramine, 25 to 50mg po qhs
    2. Meclizine, 25 to 50mg po qhs
 "|Frequently used, but tolerance may develop quickly and some may not tolerate the anticholinergic effects||0
-344|342|Benzodiazepines|0|"   1. Lorazepam, 0.5–2mg po qhs
-   2. Imidazopyridines (zolpidem, 5–10mg po qhs)
+344|342|Benzodiazepines|0|"   1. Lorazepam, 0.5-2mg po qhs
+   2. Imidazopyridines (zolpidem, 5-10mg po qhs)
  - may have fewer adverse effects "|Frequently used, but may worsen dementia and delirium particularly in frail or older adults ||0
 345|342|Neuroleptics|0|"   1. Risperidone or haloperidol, 1mg qhs (less sedating)
-   2. Chlorpromazine, 10–25mg qhs (more sedating) 
+   2. Chlorpromazine, 10-25mg qhs (more sedating) 
 "|May be required, particularly for day-night reversal or delirium||0
 346|342|Sedating antidepressants|0|"Trazodone, 25mg po qhs (up to 200mg qhs)
  - May be particularly useful in frail or older adults"|Commonly used meds can cause excessive daytime sedation||0
@@ -2229,7 +2229,7 @@ It may be appropriate for the physician to send a condolence card and attend the
       5. Should I/we stay by the bedside?
       6. What do we do after death?
    3. The patient develops symptoms that the family/caregiver cannot handle
-   4. The family feels that the patient needs more support – eg, oxygen or intravenous fluids"|Few would advocate the ED as the best place to die, actually most would rather not die in a hospital  Nonetheless, the dying will present to the ED for different reasons, we should be familiar with. Families and caregivers may insist on testing and interventions to diagnose or reverse the death. recognize their discomfort with the process of dying. Combined with the fact that EP's are trained to save lives, it can be hard for us to allow and even recognize natural death.  We must look beyond acute compromises in the A/B/C's, none of which may be present until the last minutes of chronic illness. And, imminent death may look like sepsis, electrolyte abnormality, acute CNS events, MI, etc, and.or may have elements of all of these processes as the body naturally shuts down. We are bad at predicting whether death will come in minutes or days to weeks, so tell caregivers how to expect what's next, educate, and reassure||0
+   4. The family feels that the patient needs more support - eg, oxygen or intravenous fluids"|Few would advocate the ED as the best place to die, actually most would rather not die in a hospital  Nonetheless, the dying will present to the ED for different reasons, we should be familiar with. Families and caregivers may insist on testing and interventions to diagnose or reverse the death. recognize their discomfort with the process of dying. Combined with the fact that EP's are trained to save lives, it can be hard for us to allow and even recognize natural death.  We must look beyond acute compromises in the A/B/C's, none of which may be present until the last minutes of chronic illness. And, imminent death may look like sepsis, electrolyte abnormality, acute CNS events, MI, etc, and.or may have elements of all of these processes as the body naturally shuts down. We are bad at predicting whether death will come in minutes or days to weeks, so tell caregivers how to expect what's next, educate, and reassure||0
 478|472|Recognize natural dying|0||It has been shown that the majority of patients in the last 48 hours have noisy breathing, pain, and agitation. However, there is a constellation of other signs and symptoms.||0
 479|478|Increasing weakness, fatigue|0|"   1. Decreased ability to move
    2. Joint position fatigue
@@ -2277,7 +2277,7 @@ It may be appropriate for the physician to send a condolence card and attend the
    4. Urinary catheters
    5. Absorbent pads, surfaces"|Fatigue and loss of sphincter control in the last hours of life may lead to incontinence of urine and/or stool. Both can be very distressing to patients and onlookers/family members, particularly if they are not warned in advance that these problems may arise.||0
 493|478|Inability to swallow/death rattle|0|Loss of gag reflex, Buildup of saliva, secretions|In the last hours of life, weakness and decreased neurological function frequently impair the patient's ability to swallow. The gag reflex and reflexive clearing of the oropharynx decline and secretions from the tracheobronchial tree accumulate. These conditions may become more prominent as the patient loses consciousness. Buildup of saliva and oropha- ryngeal secretions accumulate and may lead to gurgling, crackling, or rattling sounds with each breath. Some have called this the death rattle, a term frequently disconcerting to families and caregivers. For unprepared families and professional caregivers, it may sound like the patient is choking.Once the patient is unable to swallow, oral intake should be stopped. Warn families and professional caregivers of the risk of aspiration. Anecdotal evidence suggests that the earlier treatment is initiated, the better it works because larger amounts of secretions in the upper aerodigestive tract are more difficult to eliminate. However, premature use in the patient who is still alert may lead to unacceptable drying of oral and pharyngeal mucosa.||0
-494|493|Meds to dry secretions, postural drainage|0|"   - 0.2–0.4mg SC q 4 h or 1 to 3 transdermal patches q 72 h or 0.1 to 1.0mg/h by continuous IV or SC infusion
+494|493|Meds to dry secretions, postural drainage|0|"   - 0.2-0.4mg SC q 4 h or 1 to 3 transdermal patches q 72 h or 0.1 to 1.0mg/h by continuous IV or SC infusion
    - or glycopyrrolate, 0.2mg SC q 4 to 6 h or 0.4 to 1.2mg/d by continuous IV or SC 
    - Atropine eye drops 1% can be given 2 drops q 4 hours until effective
 "|"These will effectively reduce the production of saliva and other secretions. They will minimize or eliminate the gurgling and crackling sounds, and may be used prophylactically in the unconscious dying patient.
@@ -2319,10 +2319,10 @@ Although atropine IV 0.1mg may be equally effective, it has an increased risk of
    2. Infusion of 1-5 mg SC or IV q 1 hr"|||0
 514|511|For those who react paradoxically to benzodiazepines|0|"Neuroleptic medications to control their delirium
    - Haloperidol
-      -Start with 0.5–2.0mg qhs to q 6 hr IV, SQ, or PR; and titrate"|||0
-515|510|Non-active dying/death less imminent|0|"   1. Haloperidol 0.5–2.0 mg qhs to q 6 hr to start and titrated IV, SQ or rectal
+      -Start with 0.5-2.0mg qhs to q 6 hr IV, SQ, or PR; and titrate"|||0
+515|510|Non-active dying/death less imminent|0|"   1. Haloperidol 0.5-2.0 mg qhs to q 6 hr to start and titrated IV, SQ or rectal
    2. A more sedating alternative: chlorpromazine 
-      1. Start with 10–25 mg po qhs to q 6 hr and titrated), IV or PR.
+      1. Start with 10-25 mg po qhs to q 6 hr and titrated), IV or PR.
 "|||0
 516|510|Seizures|0|"   1. High doses of benzodiazepines.
    2. Other antiepileptics (phenytoin pr or IV; fosphenytoin SC; or phenobarbital, 60 to 120mg pr, IV, or IM q 10 to 20 min prn) until control established"|||0
