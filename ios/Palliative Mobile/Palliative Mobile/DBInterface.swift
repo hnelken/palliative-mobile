@@ -126,6 +126,27 @@ class DBInterface: NSObject {
         return bookmarks
     }
     
+    // Checks if a page is bookmarked
+    func isPageBookmarked(pageID: Int) -> Bool {
+        let database = FMDatabase(path: dbPath)
+        database.open()
+        
+        // Get all bookmarks of the form [Link text, page id]
+        do {
+            let getBookmarkQuery = "SELECT is_bookmarked FROM pages WHERE id=\(pageID)"
+            let results = try database.executeQuery(getBookmarkQuery, values: [])
+            
+            while results.next() {
+                return results.boolForColumn("is_bookmarked")
+            }
+            database.close()
+        }
+        catch {
+            database.close()
+        }
+        return false
+    }
+    
     // Performs search and returns all results as links
     func performSearch(query: String) -> [[AnyObject]] {
         var searchResults: [[AnyObject]] = []

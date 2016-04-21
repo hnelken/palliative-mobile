@@ -54,6 +54,9 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         formatView()
     }
     
