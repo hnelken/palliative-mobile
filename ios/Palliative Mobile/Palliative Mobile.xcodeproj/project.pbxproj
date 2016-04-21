@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7CE80B6F03C5F0F9956F64BF /* Pods_Palliative_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */; };
+		D804A45A1CC7F2300003AC2E /* settings-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D804A4591CC7F2300003AC2E /* settings-white.png */; };
+		D804A45C1CC807740003AC2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804A45B1CC807740003AC2E /* SettingsViewController.swift */; };
 		D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */; };
+		D81E12B91CA3501A0011FACE /* foldback-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D81E12B81CA3501A0011FACE /* foldback-white.png */; };
 		D826B3691C99FB5F00BF83CC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */; };
-		D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */ = {isa = PBXBuildFile; fileRef = D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */; };
 		D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D826B36C1C9A022800BF83CC /* DBInterface.swift */; };
 		D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37D1C9A106000BF83CC /* FMDatabase.m */; };
 		D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D826B37F1C9A106000BF83CC /* FMDatabaseAdditions.m */; };
@@ -222,20 +224,60 @@
 		D8767ACD1C7A90A000F23541 /* mic-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D8767ACB1C7A90A000F23541 /* mic-white.png */; };
 		D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */; };
 		D8767AD11C7A9E8700F23541 /* home-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D8767AD01C7A9E8700F23541 /* home-white.png */; };
+		D87754901C9B5556002D831E /* bookmark-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D877548F1C9B5556002D831E /* bookmark-white.png */; };
+		D87754921C9B58FC002D831E /* bookmark-red.png in Resources */ = {isa = PBXBuildFile; fileRef = D87754911C9B58FC002D831E /* bookmark-red.png */; };
+		D87754941C9B6524002D831E /* backarrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D87754931C9B6524002D831E /* backarrow-white.png */; };
+		D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87754951C9B8AD8002D831E /* SearchViewController.swift */; };
 		D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87836591C768A1A00DDFF27 /* AppDelegate.swift */; };
 		D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878365B1C768A1A00DDFF27 /* HomeViewController.swift */; };
 		D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D878365D1C768A1A00DDFF27 /* Main.storyboard */; };
 		D87836611C768A1A00DDFF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87836601C768A1A00DDFF27 /* Assets.xcassets */; };
 		D87836641C768A1A00DDFF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */; };
+		D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550E1CB7526A000EFA18 /* clipboard-white.png */; };
+		D89555111CB7526A000EFA18 /* network2-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D895550F1CB7526A000EFA18 /* network2-white.png */; };
+		D89555131CB83AFE000EFA18 /* info-white.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555121CB83AFE000EFA18 /* info-white.png */; };
+		D89555151CB9C243000EFA18 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89555141CB9C243000EFA18 /* RootPageViewController.swift */; };
+		D89555171CB9F29D000EFA18 /* PageContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89555161CB9F29D000EFA18 /* PageContentController.swift */; };
+		D895551B1CB9F5B2000EFA18 /* bookshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555181CB9F5B2000EFA18 /* bookshot.png */; };
+		D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D89555191CB9F5B2000EFA18 /* artshot.png */; };
+		D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */ = {isa = PBXBuildFile; fileRef = D895551A1CB9F5B2000EFA18 /* searchshot.png */; };
+		D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */; };
+		D8965EEE1CC94A6700C74C52 /* master_local.db in Resources */ = {isa = PBXBuildFile; fileRef = D8965EED1CC94A6700C74C52 /* master_local.db */; };
+		D8965EF31CC9813600C74C52 /* foldback-white2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8965EF21CC9813600C74C52 /* foldback-white2.png */; };
+		D8965F251CC9931F00C74C52 /* AKPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F171CC9931F00C74C52 /* AKPSViewController.swift */; };
+		D8965F261CC9931F00C74C52 /* ECOGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F181CC9931F00C74C52 /* ECOGViewController.swift */; };
+		D8965F271CC9931F00C74C52 /* KarnofskySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */; };
+		D8965F281CC9931F00C74C52 /* KarnofskyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */; };
+		D8965F291CC9931F00C74C52 /* NYHFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */; };
+		D8965F2A1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */; };
+		D8965F2B1CC9931F00C74C52 /* OpioidCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */; };
+		D8965F2C1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */; };
+		D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */; };
+		D8965F2E1CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */; };
+		D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */; };
+		D8965F301CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */; };
+		D8965F311CC9931F00C74C52 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */; };
+		D8965F321CC9931F00C74C52 /* SeatleHeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */; };
+		D8965F351CC9932800C74C52 /* QuestionsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */; };
+		D8965F361CC9932800C74C52 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F341CC9932800C74C52 /* QuestionsViewController.swift */; };
+		D8965F391CC9933000C74C52 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F371CC9933000C74C52 /* Calculator.storyboard */; };
+		D8965F3A1CC9933000C74C52 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8965F381CC9933000C74C52 /* Questions.storyboard */; };
+		D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */; };
+		D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6C1CBF499700ADFCF3 /* frailty.png */; };
+		D8C90C711CBF499700ADFCF3 /* organ.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6D1CBF499700ADFCF3 /* organ.png */; };
+		D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6E1CBF499700ADFCF3 /* sudden.png */; };
+		D8C90C731CBF499700ADFCF3 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6F1CBF499700ADFCF3 /* terminal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47A673DB50EABF62171B9684 /* Pods-Palliative Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		82A74314098DF66305B6C577 /* Pods-Palliative Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palliative Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palliative Mobile/Pods-Palliative Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		8B1D418CD88E800F797C54FE /* Pods_Palliative_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palliative_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D804A4591CC7F2300003AC2E /* settings-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-white.png"; sourceTree = "<group>"; };
+		D804A45B1CC807740003AC2E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDisplayViewController.swift; sourceTree = "<group>"; };
+		D81E12B81CA3501A0011FACE /* foldback-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldback-white.png"; sourceTree = "<group>"; };
 		D826B3681C99FB5F00BF83CC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hierarchy_test.db; sourceTree = "<group>"; };
 		D826B36C1C9A022800BF83CC /* DBInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
 		D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Palliative Mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		D826B37C1C9A106000BF83CC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -454,6 +496,10 @@
 		D8767ACB1C7A90A000F23541 /* mic-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mic-white.png"; sourceTree = "<group>"; };
 		D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		D8767AD01C7A9E8700F23541 /* home-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-white.png"; sourceTree = "<group>"; };
+		D877548F1C9B5556002D831E /* bookmark-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-white.png"; sourceTree = "<group>"; };
+		D87754911C9B58FC002D831E /* bookmark-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark-red.png"; sourceTree = "<group>"; };
+		D87754931C9B6524002D831E /* backarrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backarrow-white.png"; sourceTree = "<group>"; };
+		D87754951C9B8AD8002D831E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D87836561C768A1A00DDFF27 /* Palliative Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palliative Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87836591C768A1A00DDFF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D878365B1C768A1A00DDFF27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -461,6 +507,40 @@
 		D87836601C768A1A00DDFF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D87836631C768A1A00DDFF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D87836651C768A1A00DDFF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D895550E1CB7526A000EFA18 /* clipboard-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clipboard-white.png"; sourceTree = "<group>"; };
+		D895550F1CB7526A000EFA18 /* network2-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network2-white.png"; sourceTree = "<group>"; };
+		D89555121CB83AFE000EFA18 /* info-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-white.png"; sourceTree = "<group>"; };
+		D89555141CB9C243000EFA18 /* RootPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
+		D89555161CB9F29D000EFA18 /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
+		D89555181CB9F5B2000EFA18 /* bookshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookshot.png; sourceTree = "<group>"; };
+		D89555191CB9F5B2000EFA18 /* artshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artshot.png; sourceTree = "<group>"; };
+		D895551A1CB9F5B2000EFA18 /* searchshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchshot.png; sourceTree = "<group>"; };
+		D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		D8965EED1CC94A6700C74C52 /* master_local.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = master_local.db; sourceTree = "<group>"; };
+		D8965EF21CC9813600C74C52 /* foldback-white2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldback-white2.png"; sourceTree = "<group>"; };
+		D8965F171CC9931F00C74C52 /* AKPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AKPSViewController.swift; path = Andrews/AKPSViewController.swift; sourceTree = "<group>"; };
+		D8965F181CC9931F00C74C52 /* ECOGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECOGViewController.swift; path = Andrews/ECOGViewController.swift; sourceTree = "<group>"; };
+		D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskySelectionViewController.swift; path = Andrews/KarnofskySelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KarnofskyViewController.swift; path = Andrews/KarnofskyViewController.swift; sourceTree = "<group>"; };
+		D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NYHFViewController.swift; path = Andrews/NYHFViewController.swift; sourceTree = "<group>"; };
+		D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpiodCalculatorSelectionViewController.swift; path = Andrews/OpiodCalculatorSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpioidCalcViewController.swift; path = Andrews/OpioidCalcViewController.swift; sourceTree = "<group>"; };
+		D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = Andrews/PalliativePerformanceCalculatorViewController.swift; sourceTree = "<group>"; };
+		D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerormanceSelectionViewController.swift; path = Andrews/PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexSelectionViewController.swift; path = Andrews/PalliativePrognosticIndexSelectionViewController.swift; sourceTree = "<group>"; };
+		D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexTableViewController.swift; path = Andrews/PalliativePrognosticIndexTableViewController.swift; sourceTree = "<group>"; };
+		D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexViewController.swift; path = Andrews/PalliativePrognosticIndexViewController.swift; sourceTree = "<group>"; };
+		D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultPageViewController.swift; path = Andrews/ResultPageViewController.swift; sourceTree = "<group>"; };
+		D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatleHeartViewController.swift; path = Andrews/SeatleHeartViewController.swift; sourceTree = "<group>"; };
+		D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsHomeViewController.swift; path = Andrews/QuestionsHomeViewController.swift; sourceTree = "<group>"; };
+		D8965F341CC9932800C74C52 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsViewController.swift; path = Andrews/QuestionsViewController.swift; sourceTree = "<group>"; };
+		D8965F371CC9933000C74C52 /* Calculator.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calculator.storyboard; path = Andrews/Calculator.storyboard; sourceTree = "<group>"; };
+		D8965F381CC9933000C74C52 /* Questions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Questions.storyboard; path = Andrews/Questions.storyboard; sourceTree = "<group>"; };
+		D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D8C90C6C1CBF499700ADFCF3 /* frailty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frailty.png; sourceTree = "<group>"; };
+		D8C90C6D1CBF499700ADFCF3 /* organ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organ.png; sourceTree = "<group>"; };
+		D8C90C6E1CBF499700ADFCF3 /* sudden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sudden.png; sourceTree = "<group>"; };
+		D8C90C6F1CBF499700ADFCF3 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,11 +587,11 @@
 			isa = PBXGroup;
 			children = (
 				D87836591C768A1A00DDFF27 /* AppDelegate.swift */,
-				D87679301C7A645F00F23541 /* WebInterface.swift */,
 				D87679351C7A686200F23541 /* Constants.swift */,
+				D87679301C7A645F00F23541 /* WebInterface.swift */,
 				D826B36C1C9A022800BF83CC /* DBInterface.swift */,
 				D826B37B1C9A0D9400BF83CC /* Palliative Mobile-Bridging-Header.h */,
-				D826B36A1C99FD8B00BF83CC /* hierarchy_test.db */,
+				D8965EED1CC94A6700C74C52 /* master_local.db */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -519,9 +599,25 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D8965EF21CC9813600C74C52 /* foldback-white2.png */,
+				D804A4591CC7F2300003AC2E /* settings-white.png */,
+				D8C90C6C1CBF499700ADFCF3 /* frailty.png */,
+				D8C90C6D1CBF499700ADFCF3 /* organ.png */,
+				D8C90C6E1CBF499700ADFCF3 /* sudden.png */,
+				D8C90C6F1CBF499700ADFCF3 /* terminal.png */,
+				D89555181CB9F5B2000EFA18 /* bookshot.png */,
+				D89555191CB9F5B2000EFA18 /* artshot.png */,
+				D895551A1CB9F5B2000EFA18 /* searchshot.png */,
+				D89555121CB83AFE000EFA18 /* info-white.png */,
+				D895550E1CB7526A000EFA18 /* clipboard-white.png */,
+				D895550F1CB7526A000EFA18 /* network2-white.png */,
+				D81E12B81CA3501A0011FACE /* foldback-white.png */,
 				D8767ACA1C7A90A000F23541 /* look-white.png */,
 				D8767ACB1C7A90A000F23541 /* mic-white.png */,
 				D8767AD01C7A9E8700F23541 /* home-white.png */,
+				D877548F1C9B5556002D831E /* bookmark-white.png */,
+				D87754911C9B58FC002D831E /* bookmark-red.png */,
+				D87754931C9B6524002D831E /* backarrow-white.png */,
 				D876793C1C7A8BC500F23541 /* 192 Vector icons($4.99) */,
 				D876793A1C7A87BF00F23541 /* logo.png */,
 				D87836651C768A1A00DDFF27 /* Info.plist */,
@@ -533,9 +629,18 @@
 		D87679391C7A765000F23541 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8965EF61CC9903500C74C52 /* Questions */,
+				D8965EF51CC9902600C74C52 /* Calculators */,
+				D8965EF41CC9901200C74C52 /* Main */,
+				D89555141CB9C243000EFA18 /* RootPageViewController.swift */,
+				D89555161CB9F29D000EFA18 /* PageContentController.swift */,
 				D8767ACE1C7A968100F23541 /* BookmarksViewController.swift */,
 				D878365B1C768A1A00DDFF27 /* HomeViewController.swift */,
 				D8158F131C81485E0045891E /* ArticleDisplayViewController.swift */,
+				D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */,
+				D87754951C9B8AD8002D831E /* SearchViewController.swift */,
+				D895551E1CBB0E0B000EFA18 /* SurveyViewController.swift */,
+				D804A45B1CC807740003AC2E /* SettingsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -777,11 +882,50 @@
 				D826B38C1C9A106900BF83CC /* FMDB */,
 				D878365D1C768A1A00DDFF27 /* Main.storyboard */,
 				D87836621C768A1A00DDFF27 /* LaunchScreen.storyboard */,
+				D8965F371CC9933000C74C52 /* Calculator.storyboard */,
+				D8965F381CC9933000C74C52 /* Questions.storyboard */,
 				D87679391C7A765000F23541 /* View Controllers */,
 				D87679371C7A761400F23541 /* Data Model */,
 				D87679381C7A762E00F23541 /* Extras */,
 			);
 			path = "Palliative Mobile";
+			sourceTree = "<group>";
+		};
+		D8965EF41CC9901200C74C52 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D8965EF51CC9902600C74C52 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				D8965F171CC9931F00C74C52 /* AKPSViewController.swift */,
+				D8965F181CC9931F00C74C52 /* ECOGViewController.swift */,
+				D8965F191CC9931F00C74C52 /* KarnofskySelectionViewController.swift */,
+				D8965F1A1CC9931F00C74C52 /* KarnofskyViewController.swift */,
+				D8965F1B1CC9931F00C74C52 /* NYHFViewController.swift */,
+				D8965F1C1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift */,
+				D8965F1D1CC9931F00C74C52 /* OpioidCalcViewController.swift */,
+				D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */,
+				D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */,
+				D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */,
+				D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */,
+				D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */,
+				D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */,
+				D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */,
+			);
+			name = Calculators;
+			sourceTree = "<group>";
+		};
+		D8965EF61CC9903500C74C52 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */,
+				D8965F341CC9932800C74C52 /* QuestionsViewController.swift */,
+			);
+			name = Questions;
 			sourceTree = "<group>";
 		};
 		FE77B35328373E1EA5CD62EC /* Pods */ = {
@@ -854,7 +998,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D826B36B1C9A00E600BF83CC /* hierarchy_test.db in Resources */,
 				D8767A951C7A8BC500F23541 /* rss.png in Resources */,
 				D8767A4F1C7A8BC500F23541 /* hand-search.png in Resources */,
 				D8767A061C7A8BC500F23541 /* !.png in Resources */,
@@ -868,6 +1011,8 @@
 				D8767A241C7A8BC500F23541 /* cart2.png in Resources */,
 				D8767A1E1C7A8BC500F23541 /* call.png in Resources */,
 				D8767A2E1C7A8BC500F23541 /* custom.png in Resources */,
+				D8C90C711CBF499700ADFCF3 /* organ.png in Resources */,
+				D87754901C9B5556002D831E /* bookmark-white.png in Resources */,
 				D8767A2F1C7A8BC500F23541 /* CUT.png in Resources */,
 				D8767A111C7A8BC500F23541 /* book-tags.png in Resources */,
 				D8767A3A1C7A8BC500F23541 /* earphone.png in Resources */,
@@ -877,6 +1022,7 @@
 				D8767A981C7A8BC500F23541 /* safari.png in Resources */,
 				D8767A471C7A8BC500F23541 /* file.png in Resources */,
 				D8767AA11C7A8BC500F23541 /* sound.png in Resources */,
+				D804A45A1CC7F2300003AC2E /* settings-white.png in Resources */,
 				D8767A301C7A8BC500F23541 /* cut1.png in Resources */,
 				D8767A281C7A8BC500F23541 /* climate.png in Resources */,
 				D8767A1C1C7A8BC500F23541 /* Calendar.png in Resources */,
@@ -889,11 +1035,14 @@
 				D8767A1F1C7A8BC500F23541 /* camera.png in Resources */,
 				D8767A231C7A8BC500F23541 /* cart1.png in Resources */,
 				D8767A651C7A8BC500F23541 /* mac_folder-font.png in Resources */,
+				D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */,
 				D8767A821C7A8BC500F23541 /* power-off.png in Resources */,
 				D8767A601C7A8BC500F23541 /* lock.png in Resources */,
 				D8767A771C7A8BC500F23541 /* next.png in Resources */,
+				D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */,
 				D876793B1C7A87BF00F23541 /* logo.png in Resources */,
 				D8767A1D1C7A8BC500F23541 /* Calendartime.png in Resources */,
+				D8965EEE1CC94A6700C74C52 /* master_local.db in Resources */,
 				D8767A811C7A8BC500F23541 /* pop-out.png in Resources */,
 				D8767A291C7A8BC500F23541 /* clock.png in Resources */,
 				D8767AAA1C7A8BC500F23541 /* tablet.png in Resources */,
@@ -917,6 +1066,7 @@
 				D8767A421C7A8BC500F23541 /* file-group1.png in Resources */,
 				D8767A2D1C7A8BC500F23541 /* cup.png in Resources */,
 				D8767A831C7A8BC500F23541 /* prev.png in Resources */,
+				D8965F391CC9933000C74C52 /* Calculator.storyboard in Resources */,
 				D8767A081C7A8BC500F23541 /* add-database.png in Resources */,
 				D8767A171C7A8BC500F23541 /* brush.png in Resources */,
 				D8767A631C7A8BC500F23541 /* mac_folder-add.png in Resources */,
@@ -932,8 +1082,11 @@
 				D8767A1A1C7A8BC500F23541 /* calculator.png in Resources */,
 				D8767AB61C7A8BC500F23541 /* upload.png in Resources */,
 				D8767AA61C7A8BC500F23541 /* step.png in Resources */,
+				D89555111CB7526A000EFA18 /* network2-white.png in Resources */,
 				D8767A071C7A8BC500F23541 /* 360.png in Resources */,
 				D8767A5F1C7A8BC500F23541 /* link.png in Resources */,
+				D895551B1CB9F5B2000EFA18 /* bookshot.png in Resources */,
+				D87754921C9B58FC002D831E /* bookmark-red.png in Resources */,
 				D8767AB71C7A8BC500F23541 /* USB.png in Resources */,
 				D8767A7F1C7A8BC500F23541 /* pic.png in Resources */,
 				D8767AC81C7A8BC500F23541 /* readme.txt in Resources */,
@@ -951,8 +1104,10 @@
 				D8767A761C7A8BC500F23541 /* network3.png in Resources */,
 				D8767A921C7A8BC500F23541 /* right.png in Resources */,
 				D8767AA31C7A8BC500F23541 /* star.png in Resources */,
+				D895551C1CB9F5B2000EFA18 /* artshot.png in Resources */,
 				D8767A401C7A8BC500F23541 /* file-add.png in Resources */,
 				D8767A911C7A8BC500F23541 /* right-arrow.png in Resources */,
+				D8C90C731CBF499700ADFCF3 /* terminal.png in Resources */,
 				D8767A611C7A8BC500F23541 /* look.png in Resources */,
 				D8767A751C7A8BC500F23541 /* network2.png in Resources */,
 				D8767A251C7A8BC500F23541 /* CD.png in Resources */,
@@ -960,6 +1115,7 @@
 				D8767A3E1C7A8BC500F23541 /* fast-forward.png in Resources */,
 				D8767ABD1C7A8BC500F23541 /* wallet.png in Resources */,
 				D8767A8A1C7A8BC500F23541 /* refresh-86.png in Resources */,
+				D8965EF31CC9813600C74C52 /* foldback-white2.png in Resources */,
 				D8767A9C1C7A8BC500F23541 /* security.png in Resources */,
 				D8767A701C7A8BC500F23541 /* music.png in Resources */,
 				D8767A991C7A8BC500F23541 /* safari1.png in Resources */,
@@ -986,11 +1142,13 @@
 				D8767A9B1C7A8BC500F23541 /* security-x.png in Resources */,
 				D8767AD11C7A9E8700F23541 /* home-white.png in Resources */,
 				D8767AAB1C7A8BC500F23541 /* tags-group.png in Resources */,
+				D81E12B91CA3501A0011FACE /* foldback-white.png in Resources */,
 				D8767A8B1C7A8BC500F23541 /* Refresh.png in Resources */,
 				D8767A271C7A8BC500F23541 /* click.png in Resources */,
 				D8767A2B1C7A8BC500F23541 /* colour.png in Resources */,
 				D8767A361C7A8BC500F23541 /* download.png in Resources */,
 				D8767A4E1C7A8BC500F23541 /* gift.png in Resources */,
+				D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */,
 				D8767A561C7A8BC500F23541 /* info.png in Resources */,
 				D8767A891C7A8BC500F23541 /* reduce1.png in Resources */,
 				D8767A6E1C7A8BC500F23541 /* mouse_pointers.png in Resources */,
@@ -1009,6 +1167,7 @@
 				D8767A201C7A8BC500F23541 /* card.png in Resources */,
 				D8767A531C7A8BC500F23541 /* house.png in Resources */,
 				D8767A931C7A8BC500F23541 /* right1.png in Resources */,
+				D89555131CB83AFE000EFA18 /* info-white.png in Resources */,
 				D8767A671C7A8BC500F23541 /* mac_folder.png in Resources */,
 				D8767A351C7A8BC500F23541 /* download-171.png in Resources */,
 				D8767A371C7A8BC500F23541 /* DV.png in Resources */,
@@ -1018,10 +1177,12 @@
 				D8767A2A1C7A8BC500F23541 /* clock1.png in Resources */,
 				D8767A121C7A8BC500F23541 /* books.png in Resources */,
 				D8767AB91C7A8BC500F23541 /* video1.png in Resources */,
+				D895551D1CB9F5B2000EFA18 /* searchshot.png in Resources */,
 				D8767AA91C7A8BC500F23541 /* sucker.png in Resources */,
 				D8767ACC1C7A90A000F23541 /* look-white.png in Resources */,
 				D8767A841C7A8BC500F23541 /* prev1.png in Resources */,
 				D8767AA41C7A8BC500F23541 /* star1.png in Resources */,
+				D87754941C9B6524002D831E /* backarrow-white.png in Resources */,
 				D8767A8D1C7A8BC500F23541 /* refresh2.png in Resources */,
 				D8767AC71C7A8BC500F23541 /* preview.jpg in Resources */,
 				D8767A641C7A8BC500F23541 /* mac_folder-check.png in Resources */,
@@ -1051,6 +1212,7 @@
 				D8767ABA1C7A8BC500F23541 /* video2.png in Resources */,
 				D878365F1C768A1A00DDFF27 /* Main.storyboard in Resources */,
 				D8767AB01C7A8BC500F23541 /* Thumbs.db in Resources */,
+				D8965F3A1CC9933000C74C52 /* Questions.storyboard in Resources */,
 				D8767A7B1C7A8BC500F23541 /* pencil2.png in Resources */,
 				D8767AA01C7A8BC500F23541 /* signal1.png in Resources */,
 				D8767AC11C7A8BC500F23541 /* zoom-in.png in Resources */,
@@ -1118,16 +1280,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8965F2C1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift in Sources */,
+				D8965F261CC9931F00C74C52 /* ECOGViewController.swift in Sources */,
+				D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */,
+				D8965F281CC9931F00C74C52 /* KarnofskyViewController.swift in Sources */,
+				D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
+				D8965F291CC9931F00C74C52 /* NYHFViewController.swift in Sources */,
+				D89555171CB9F29D000EFA18 /* PageContentController.swift in Sources */,
 				D8158F141C81485E0045891E /* ArticleDisplayViewController.swift in Sources */,
 				D878365A1C768A1A00DDFF27 /* AppDelegate.swift in Sources */,
+				D8965F321CC9931F00C74C52 /* SeatleHeartViewController.swift in Sources */,
+				D804A45C1CC807740003AC2E /* SettingsViewController.swift in Sources */,
+				D8965F2A1CC9931F00C74C52 /* OpiodCalculatorSelectionViewController.swift in Sources */,
+				D8965F311CC9931F00C74C52 /* ResultPageViewController.swift in Sources */,
 				D87679311C7A645F00F23541 /* WebInterface.swift in Sources */,
+				D8965F361CC9932800C74C52 /* QuestionsViewController.swift in Sources */,
 				D826B3881C9A106000BF83CC /* FMDatabaseAdditions.m in Sources */,
+				D895551F1CBB0E0B000EFA18 /* SurveyViewController.swift in Sources */,
+				D8965F271CC9931F00C74C52 /* KarnofskySelectionViewController.swift in Sources */,
 				D826B38B1C9A106000BF83CC /* FMResultSet.m in Sources */,
+				D8965F351CC9932800C74C52 /* QuestionsHomeViewController.swift in Sources */,
+				D87754961C9B8AD8002D831E /* SearchViewController.swift in Sources */,
+				D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */,
 				D87679361C7A686200F23541 /* Constants.swift in Sources */,
 				D826B3891C9A106000BF83CC /* FMDatabasePool.m in Sources */,
+				D8965F301CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift in Sources */,
+				D8965F2E1CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift in Sources */,
+				D8965F251CC9931F00C74C52 /* AKPSViewController.swift in Sources */,
 				D826B38A1C9A106000BF83CC /* FMDatabaseQueue.m in Sources */,
+				D89555151CB9C243000EFA18 /* RootPageViewController.swift in Sources */,
+				D8965F2B1CC9931F00C74C52 /* OpioidCalcViewController.swift in Sources */,
 				D826B36D1C9A022800BF83CC /* DBInterface.swift in Sources */,
 				D826B3871C9A106000BF83CC /* FMDatabase.m in Sources */,
 			);

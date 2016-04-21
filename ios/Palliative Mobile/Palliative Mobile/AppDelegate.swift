@@ -12,19 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var optedOut: Bool = false
+    
     func createCopyOfDatabaseIfNeeded() {
         var success: Bool
         let fileManager = NSFileManager.defaultManager()
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
         // Database filename can have extension db/sqlite.
         let documentsDirectory = paths[0]
-        let appDBPath = documentsDirectory.NS.stringByAppendingString(kDBName)
+        let appDBPath = documentsDirectory.NS.stringByAppendingPathComponent(kDBName)
         
         success = fileManager.fileExistsAtPath(appDBPath)
         if (success) {
             print("Database already exists in app's document")
-            return;
+            optedOut = db.getOptOutStatus()
+            
+            if !optedOut && !db.getFirstTimeStatus() {
+                web.pushPageUsage()
+                web.updatePages()
+            }
+            
+            return
         }
         
         do {
@@ -32,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
             try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
             print("Successfully copied database from bundle to app's document")
+            db.updateVersion(kBaseDBVersion)
+            db.setFirstTimeTrue()
+            web.updatePages()
         }
         catch {
             print("Failed to create writable database file")
@@ -42,6 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         createCopyOfDatabaseIfNeeded()
+        
+        // Change page control appearance
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.whiteColor()
+        pageControl.backgroundColor = UIColor.groupTableViewBackgroundColor()
         
         return true
     }

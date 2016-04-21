@@ -11,71 +11,76 @@ import Alamofire
 class WebInterface: NSObject {
     
     // Optional response handlers
-    var responseParser: ((response: AnyObject) -> Void)?
+    var callBack: (() -> Void)?
     var errorHandler: (() -> Void)?
     
-    // EXAMPLE API CALL
-    func doStuff() {
-        let parameters = [
-            "foo": [1,2,3],
-            "bar": [
-                "baz": "qux"
+    // Pushes all page hit rows with user credentials for aggregation on master server
+    func pushPageUsage() {
+
+        let urlString = "\(kServerURL)\(kPushPageUsageRoute)"
+        
+        let pageHits = db.getPageHits()
+        if pageHits.count > 0 {
+            let parameters: [String : AnyObject] = [
+                kCredentialsKey : db.getCredentials(),
+                kPageHitsKey : pageHits
             ]
-        ]
-        Alamofire.request(.POST, "https://httpbin.org/post", parameters: parameters, encoding: .JSON)
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
-            .response { response in
-                print(response)
-                
-                
-                // USE THIS TO UPDATE UI DURING ASYNC RESPONSE HANDLERS
-                dispatch_async(dispatch_get_main_queue()) {
-                    print("UPDATE ON UI THREAD")
-                }
+            
+            // Send HTTP POST request
+            Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
+                .responseString(encoding: NSUTF8StringEncoding) { response in
+                    
+                    if (response.result.isSuccess) {
+                        // Page hits successfully updated, clear DB count
+                        db.clearPageHits()
+                    }
+            }
         }
     }
     
-    // Common user verification API call
-    func verifyUser(email: String, password: String,
-        parser: (response: AnyObject)-> Void, errorHandler: (() -> Void)?) {
+    // Requests updates since last version
+    func updatePages() {
+        let urlString = "\(kServerURL)\(kUpdatePagesRoute)"
+        let dbNumber = db.getVersionNumber()
+        var maxVersion = dbNumber
         
-            self.responseParser = parser
-            self.errorHandler = errorHandler
+        print("Version: \(dbNumber)")
         
-            let urlString = "\(kServerURL)\(kVerifyUserRoute)"
+        // Post the latest version number to get updates since then
+        Alamofire.request(.POST, urlString, parameters: [kVersionParamKey : dbNumber], encoding: .URLEncodedInURL).responseJSON { response in
         
-            let parameters = [
-                "email": email,
-                "password": password
-            ]
-        
-            makeAPICall(urlString, parameters: parameters)
-    }
-    
-    // Abstraction for making an HTTP POST request using JSON encoded parameters
-    private func makeAPICall(urlString: String, parameters: [String : AnyObject]) {
-        
-        Alamofire.request(.POST, urlString, parameters: parameters, encoding: .JSON)
-            .responseJSON { response in
+            if let stmts = response.result.value as? [AnyObject] {
                 
-                print(response)
-                
-                // Hand response to parser if valid
-                if let JSON = response.result.value {
-                    if let parser = self.responseParser {
-                        parser(response: JSON)
+                if let callback = self.callBack {
+                    
+                    // Update UI on main queue
+                    dispatch_async(dispatch_get_main_queue()) {
+                        callback()
                     }
                 }
-                else {
-                    // Handle error
-                    if let errorHandler = self.errorHandler {
-                        errorHandler()
+                self.callBack = nil
+                
+                print("UPDATES:")
+                for stmt in stmts {
+                    let dict = stmt as! [String : AnyObject]
+                    let id = Int(dict["id"] as! String)!
+                    
+                    // Keep track of the highest ID
+                    if id > maxVersion {
+                        maxVersion = id
                     }
+                    
+                    // Execute the update
+                    print(dict["statement"])
+                    //db.executeUpdate(dict["statement"] as! String)
                 }
+                
+                // Update the DB version with the highest ID
+                if maxVersion > dbNumber {
+                    db.updateVersion(maxVersion)
+                }
+            }
         }
-        
     }
-    
     
 }

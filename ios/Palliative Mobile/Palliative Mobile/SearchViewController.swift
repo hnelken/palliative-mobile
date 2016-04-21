@@ -1,31 +1,25 @@
 //
-//  BookmarksViewController.swift
+//  SearchViewController.swift
 //  Palliative Mobile
 //
-//  Created by Harry Nelken on 2/21/16.
+//  Created by Harry Nelken on 3/17/16.
 //  Copyright © 2016 CWRU-SP16. All rights reserved.
 //
 
 import UIKit
 
-class BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController {
 
-    @IBOutlet weak var bookmarkTableView: UITableView!
     var nextPageID: Int!
-    var bookmarks: [[AnyObject]] = []
+    var results: [[AnyObject]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
-        bookmarks = db.getBookmarks()
-        bookmarkTableView.reloadData()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,7 +34,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookmarks.count
+        return results.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -49,9 +43,9 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(kBookmarkCellID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kSearchCellID, forIndexPath: indexPath)
         
-        cell.textLabel?.text = bookmarks[indexPath.row][kLinkNameIndex] as? String
+        cell.textLabel?.text = results[indexPath.row][kLinkNameIndex] as? String
         cell.accessoryType = .DisclosureIndicator
         
         return cell
@@ -61,14 +55,14 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         // Save designated bookmark page id
-        nextPageID = bookmarks[indexPath.row][kLinkIDIndex] as! Int
+        nextPageID = results[indexPath.row][kLinkIDIndex] as! Int
         
         // Transition to article view
-        performSegueWithIdentifier(kShowBookmarkSegueID, sender: self)
+        performSegueWithIdentifier(kShowSearchResultSegueID, sender: self)
     }
-
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -78,5 +72,4 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
     }
-
 }

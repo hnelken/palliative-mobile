@@ -11,25 +11,32 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var links: [String] = [
+        "Rapid PC Assessment",
         "Care for the Frail",
         "Death & Resuscitation",
         "Managing Common Symptoms",
+        "Interactive Learning",
         "Bookmarks"
     ]
     
+    var searchResults: [[AnyObject]] = []
+    var destination: Int = -1
+    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var rapidButton: UIButton!
-
+    @IBOutlet weak var searchText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        db.getAllData()
-        
-        rapidButton.layer.cornerRadius = 20
-        rapidButton.clipsToBounds = true
         
         self.tableView.separatorStyle = .None
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if db.getFirstTimeStatus() {
+            // Segue to tutorial
+            self.performSegueWithIdentifier(kFirstTimeSegueID, sender: self)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +46,27 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLayoutSubviews() {
         navigationController?.navigationBarHidden = true
+        self.tableView.separatorStyle = .None
     }
 
     @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
 
+    @IBAction func searchPressed(sender: AnyObject) {
+        
+        if let query = searchText.text {
+            if query != "" {
+                searchResults = db.performSearch(query)
+                performSegueWithIdentifier(kShowSearchSegueID, sender: self)
+            }
+        }
+    }
+    
+    
+    
+    //
+    // MARK: Table View Delegate/Data Source
+    //
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -62,7 +86,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel?.text = links[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
-        
+        if indexPath.row == links.count - 2 || indexPath.row == links.count - 1 {
+            cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
+            cell.contentView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        }
         return cell
     }
     
@@ -72,12 +99,40 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var segueID: String?
         
         switch indexPath.row {
-        case 3: segueID = kBookmarkSegueID
-        default: segueID = kArticleSegueID
+        case 0:
+            destination = kRapidPCPageID;
+            segueID = kArticleSegueID
+        case 1:
+            destination = kCareForFrailPageID;
+            segueID = kArticleSegueID
+        case 2:
+            destination = kDeathResusPageID;
+            segueID = kArticleSegueID
+        case 3:
+            destination = kCommonSymptomsPageID;
+            segueID = kArticleSegueID
+        case 4:
+            destination = kCareForFrailPageID
+            segueID = kArticleSegueID
+        case 5:
+            segueID = kBookmarkSegueID
+        default:
+            destination = kCareForFrailPageID;
+            segueID = kArticleSegueID
         }
         
         if let id = segueID {
            performSegueWithIdentifier(id, sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? ArticleDisplayViewController {
+            // Pass on page ID
+            vc.pageID = destination
+        }
+        else if let vc = segue.destinationViewController as? SearchViewController {
+            vc.results = searchResults
         }
     }
 }
