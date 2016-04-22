@@ -88,6 +88,10 @@ class PalliativePrognosticIndexViewController: UIViewController {
             score.numberOfLines = 0
             score.hidden = false
         }
+        else
+        {
+            score.hidden = true
+        }
     }
 
 

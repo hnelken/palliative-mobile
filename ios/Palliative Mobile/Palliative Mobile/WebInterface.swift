@@ -72,7 +72,7 @@ class WebInterface: NSObject {
                     
                     // Execute the update
                     print(dict["statement"])
-                    //db.executeUpdate(dict["statement"] as! String)
+                    db.executeUpdate(dict["statement"] as! String)
                 }
                 
                 // Update the DB version with the highest ID
