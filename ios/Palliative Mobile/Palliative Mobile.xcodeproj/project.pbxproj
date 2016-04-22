@@ -254,7 +254,6 @@
 		D8965F2C1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */; };
 		D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */; };
 		D8965F2E1CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */; };
-		D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */; };
 		D8965F301CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */; };
 		D8965F311CC9931F00C74C52 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */; };
 		D8965F321CC9931F00C74C52 /* SeatleHeartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */; };
@@ -561,7 +560,6 @@
 		D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerformanceCalculatorViewController.swift; path = Andrews/PalliativePerformanceCalculatorViewController.swift; sourceTree = "<group>"; };
 		D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePerormanceSelectionViewController.swift; path = Andrews/PalliativePerormanceSelectionViewController.swift; sourceTree = "<group>"; };
 		D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexSelectionViewController.swift; path = Andrews/PalliativePrognosticIndexSelectionViewController.swift; sourceTree = "<group>"; };
-		D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexTableViewController.swift; path = Andrews/PalliativePrognosticIndexTableViewController.swift; sourceTree = "<group>"; };
 		D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PalliativePrognosticIndexViewController.swift; path = Andrews/PalliativePrognosticIndexViewController.swift; sourceTree = "<group>"; };
 		D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultPageViewController.swift; path = Andrews/ResultPageViewController.swift; sourceTree = "<group>"; };
 		D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeatleHeartViewController.swift; path = Andrews/SeatleHeartViewController.swift; sourceTree = "<group>"; };
@@ -982,7 +980,6 @@
 				D8965F1E1CC9931F00C74C52 /* PalliativePerformanceCalculatorViewController.swift */,
 				D8965F1F1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift */,
 				D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */,
-				D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */,
 				D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */,
 				D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */,
 			);
@@ -1495,7 +1492,6 @@
 				D8965F261CC9931F00C74C52 /* ECOGViewController.swift in Sources */,
 				D8965F2D1CC9931F00C74C52 /* PalliativePerormanceSelectionViewController.swift in Sources */,
 				D8965F281CC9931F00C74C52 /* KarnofskyViewController.swift in Sources */,
-				D8965F2F1CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift in Sources */,
 				D8767ACF1C7A968100F23541 /* BookmarksViewController.swift in Sources */,
 				D878365C1C768A1A00DDFF27 /* HomeViewController.swift in Sources */,
 				D8965F291CC9931F00C74C52 /* NYHFViewController.swift in Sources */,
