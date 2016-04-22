@@ -163,25 +163,28 @@ class OpioidCalcViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! OpiodCalculatorSelectionViewController
-        
-        if id == "initialMedicationSegue"
-        {
-            vc.options = medications
-            vc.button = 1
-            vc.selection = button1Type
+        if let vc = segue.destinationViewController as? OpiodCalculatorSelectionViewController {
+            if id == "initialMedicationSegue"
+            {
+                vc.options = medications
+                vc.button = 1
+                vc.selection = button1Type
+            }
+            else if id == "dosageTypeSegue"
+            {
+                vc.options = getOptionsFromMedication()
+                vc.button = 2
+                vc.selection = button2Type
+            }
+            else if id == "newMedicationSegue"
+            {
+                vc.options = getOptionsFromDosageType()
+                vc.button = 3
+                vc.selection = button3Type
+            }
         }
-        else if id == "dosageTypeSegue"
-        {
-            vc.options = getOptionsFromMedication()
-            vc.button = 2
-            vc.selection = button2Type
-        }
-        else if id == "newMedicationSegue"
-        {
-            vc.options = getOptionsFromDosageType()
-            vc.button = 3
-            vc.selection = button3Type
+        else {
+            // Going home
         }
     }
     

@@ -136,6 +136,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
                 }
                 else {
                     textLabel.text = "No text to display.\nSee detail tab if available."
+                    textLabel.textAlignment = .Center
                 }
                 detailLabel.text = detailText
             //}

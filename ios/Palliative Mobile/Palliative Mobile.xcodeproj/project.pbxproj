@@ -265,6 +265,7 @@
 		D8965F3E1CC9993900C74C52 /* AKPS Assessment Criteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */; };
 		D8965F3F1CC9993900C74C52 /* ECOG Performance Status Scale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */; };
 		D8965F401CC9993900C74C52 /* NYHA classification chart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */; };
+		D8965F421CCA6E5D00C74C52 /* ECOG-new.png in Resources */ = {isa = PBXBuildFile; fileRef = D8965F411CCA6E5D00C74C52 /* ECOG-new.png */; };
 		D8C90C6B1CBF426A00ADFCF3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */; };
 		D8C90C701CBF499700ADFCF3 /* frailty.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6C1CBF499700ADFCF3 /* frailty.png */; };
 		D8C90C711CBF499700ADFCF3 /* organ.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C90C6D1CBF499700ADFCF3 /* organ.png */; };
@@ -542,6 +543,7 @@
 		D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AKPS Assessment Criteria.jpg"; sourceTree = "<group>"; };
 		D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ECOG Performance Status Scale.jpg"; sourceTree = "<group>"; };
 		D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NYHA classification chart.jpg"; sourceTree = "<group>"; };
+		D8965F411CCA6E5D00C74C52 /* ECOG-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ECOG-new.png"; sourceTree = "<group>"; };
 		D8C90C6A1CBF426A00ADFCF3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D8C90C6C1CBF499700ADFCF3 /* frailty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frailty.png; sourceTree = "<group>"; };
 		D8C90C6D1CBF499700ADFCF3 /* organ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = organ.png; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 		D87679381C7A762E00F23541 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				D8965F411CCA6E5D00C74C52 /* ECOG-new.png */,
 				D8965F3B1CC9993900C74C52 /* AKPS Assessment Criteria.jpg */,
 				D8965F3C1CC9993900C74C52 /* ECOG Performance Status Scale.jpg */,
 				D8965F3D1CC9993900C74C52 /* NYHA classification chart.jpg */,
@@ -922,7 +925,6 @@
 				D8965F201CC9931F00C74C52 /* PalliativePrognosticIndexSelectionViewController.swift */,
 				D8965F211CC9931F00C74C52 /* PalliativePrognosticIndexTableViewController.swift */,
 				D8965F221CC9931F00C74C52 /* PalliativePrognosticIndexViewController.swift */,
-				D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */,
 				D8965F241CC9931F00C74C52 /* SeatleHeartViewController.swift */,
 			);
 			name = Calculators;
@@ -931,6 +933,7 @@
 		D8965EF61CC9903500C74C52 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				D8965F231CC9931F00C74C52 /* ResultPageViewController.swift */,
 				D8965F331CC9932800C74C52 /* QuestionsHomeViewController.swift */,
 				D8965F341CC9932800C74C52 /* QuestionsViewController.swift */,
 			);
@@ -1047,6 +1050,7 @@
 				D8767A651C7A8BC500F23541 /* mac_folder-font.png in Resources */,
 				D89555101CB7526A000EFA18 /* clipboard-white.png in Resources */,
 				D8767A821C7A8BC500F23541 /* power-off.png in Resources */,
+				D8965F421CCA6E5D00C74C52 /* ECOG-new.png in Resources */,
 				D8767A601C7A8BC500F23541 /* lock.png in Resources */,
 				D8767A771C7A8BC500F23541 /* next.png in Resources */,
 				D8C90C721CBF499700ADFCF3 /* sudden.png in Resources */,

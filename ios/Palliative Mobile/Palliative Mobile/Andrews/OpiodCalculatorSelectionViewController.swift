@@ -81,9 +81,9 @@ class OpiodCalculatorSelectionViewController: UIViewController, UITableViewDeleg
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc = segue.destinationViewController as! OpioidCalcViewController
-        
-        setButton(buttonLabel, vc: vc)
+        if let vc = segue.destinationViewController as? OpioidCalcViewController {
+            setButton(buttonLabel, vc: vc)
+        }
         
     }
     

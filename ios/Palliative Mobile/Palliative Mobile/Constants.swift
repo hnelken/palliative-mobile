@@ -27,7 +27,7 @@ let kECOGPageID = 36
 let kSAAGPageID = 305
 let kTrajectoryPageID = 67
 
-let specialPages = [ 19, 20, 79, 29, 30, 31, 36, 305, 67]
+let specialPages = [ 19, 20, 79, 29, 30, 31, 36, 67]
 
 // SEGUE IDENTIFIERS
 let kSeattleSegueID = "toSeattle"
@@ -134,8 +134,8 @@ func getSpecialPageSegue(dstID: Int) -> String? {
         segue = kPerformanceSegueID
     case kECOGPageID:
         segue = kECOGSegueID
-    case kSAAGPageID:
-        segue = kSAAGSegueID
+//    case kSAAGPageID:
+//        segue = kSAAGSegueID
     case kTrajectoryPageID:
         segue = kTrajectorySegueID
     default:

@@ -147,40 +147,44 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! PalliativePerormanceSelectionViewController
+        if let vc = segue.destinationViewController as? PalliativePerormanceSelectionViewController {
         
-        if id == "ambulation"
-        {
-            vc.options = ambulationOptions
-            vc.button = 1
-            vc.selection = button1Type
-        }
-        else if id == "activity"
-        {
-            vc.options = activityOptions
-            vc.button = 2
-            vc.selection = button2Type
-        }
-        else if id == "selfCare"
-        {
-            vc.options = selfCareOptions
-            vc.button = 3
-            vc.selection = button3Type
-        }
-        else if id == "intake"
-        {
-            vc.options = intakeOptions
-            vc.button = 4
-            vc.selection = button4Type
-        }
-        else if id == "conscious"
-        {
-            vc.options = consciousOptions
-            vc.button = 5
-            vc.selection = button5Type
-        }
+            if id == "ambulation"
+            {
+                vc.options = ambulationOptions
+                vc.button = 1
+                vc.selection = button1Type
+            }
+            else if id == "activity"
+            {
+                vc.options = activityOptions
+                vc.button = 2
+                vc.selection = button2Type
+            }
+            else if id == "selfCare"
+            {
+                vc.options = selfCareOptions
+                vc.button = 3
+                vc.selection = button3Type
+            }
+            else if id == "intake"
+            {
+                vc.options = intakeOptions
+                vc.button = 4
+                vc.selection = button4Type
+            }
+            else if id == "conscious"
+            {
+                vc.options = consciousOptions
+                vc.button = 5
+                vc.selection = button5Type
+            }
         
-        vc.showFrom = vc.getShowFrom(self)
+            vc.showFrom = vc.getShowFrom(self)
+        }
+        else {
+            // going home
+        }
     }
     
     func getScore() -> String {
@@ -197,49 +201,49 @@ class PalliativePerformanceCalculatorViewController: UIViewController{
             // if it is, then raise it to this choice, else dont lower it
             if bar <= 0 {bar = 0}
             // check to make sure the index above the bar before adding points
-            for i in 0...2 { if bar <= i {scoreTracker[i]++}}
+            for i in 0...2 { if bar <= i {scoreTracker[i] += 1}}
         case ambulationOptions[1] :
             if bar <= 3 {bar = 3}
-            for i in 3...4 {if bar <= i {scoreTracker[i]++}}
+            for i in 3...4 {if bar <= i {scoreTracker[i] += 1}}
         case ambulationOptions[2] :
             // for cases where the option only exists in one index, the bar will always be either lower or the same 
             // this is due to the structure of the table
             bar = 5
-            scoreTracker[5]++
+            scoreTracker[5] += 1
         case ambulationOptions[3] :
             bar = 5
-            scoreTracker[6]++
+            scoreTracker[6] += 1
         default :
             if bar <= 7 {bar = 7}
-            for i in 7...9 {if bar <= i {scoreTracker[i]++}}
+            for i in 7...9 {if bar <= i {scoreTracker[i] += 1}}
         }
         
         // set score from button 2 (activity & eveidence)
         switch button2 {
         case activityOptions[0] :
             bar = 0
-            scoreTracker[0]++
+            scoreTracker[0] += 1
         case activityOptions[1] :
             bar = 1
-            scoreTracker[1]++
+            scoreTracker[1] += 1
         case activityOptions[2] :
             bar = 2
-            scoreTracker[2]++
+            scoreTracker[2] += 1
         case activityOptions[3] :
             bar = 3
-            scoreTracker[3]++
+            scoreTracker[3] += 1
         case activityOptions[4] :
             bar = 4
-            scoreTracker[4]++
+            scoreTracker[4] += 1
         case activityOptions[5] :
             bar = 5
-            scoreTracker[5]++
+            scoreTracker[5] += 1
         case activityOptions[6] :
             bar = 6
-            scoreTracker[6]++
+            scoreTracker[6] += 1
         default :
             if bar <= 7 {bar = 7}
-            for i in 7...9 {if bar <= i {scoreTracker[i]++}}
+            for i in 7...9 {if bar <= i {scoreTracker[i] += 1}}
         }
         
         // set score from button3 (self care)

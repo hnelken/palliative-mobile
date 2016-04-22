@@ -64,10 +64,9 @@ class PalliativePrognosticIndexTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc = segue.destinationViewController as! PalliativePrognosticIndexViewController
-        
-        setButton(buttonLabel, vc: vc)
-        
+        if let vc = segue.destinationViewController as? PalliativePrognosticIndexViewController {
+            setButton(buttonLabel, vc: vc)
+        }
     }
     
     //method which sets the buttons in the calculator based off your selection

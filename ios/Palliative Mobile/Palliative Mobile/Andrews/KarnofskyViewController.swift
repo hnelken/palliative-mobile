@@ -17,22 +17,22 @@ class KarnofskyViewController: UIViewController {
     
     
     var conditions = [
-        "Able to carry on normal activity and work; \n no special care needed",
-        "Unable to work;" + "\n" + "able to live at home and care for most personal needs;" + "\n" + "varying amount of assitance needed",
-        "Unable to care for self;" + "\n" + "requires equivalent of instatutional or hospital care;" + "\n" + "diseases may be progressing rapidly"
+        "Able to carry on normal activity and work; no special care needed",
+        "Unable to work; able to live at home and care for most personal needs; varying amount of assitance needed",
+        "Unable to care for self; requires equivalent of institutional or hospital care; diseases may be progressing rapidly"
     ]
     
     var levelsOfFunctionalCapcity = [
         "No complaints, no evidence of disease",
-        "Able to carry on normal activity;" +  "\n" + "minor signs or symptoms of disease",
-        "Normal activity with effort;" + "\n" + "some signs or symptoms of disease",
-        "Care for self;" + "\n" + "unable to carry on normal activity or to do active work",
+        "Able to carry on normal activity; minor signs or symptoms of disease",
+        "Normal activity with effort; some signs or symptoms of disease",
+        "Care for self; unable to carry on normal activity or to do active work",
         "Requires occasional assistance but is able to care for most personal needs",
         "Requires considerable assistance and frequent medical care",
         "Disabled; requires special care and assistance",
-        "Severely disabled;" + "\n" + "hospital admission indicated although death not imminent",
-        "very sick;" + "\n" + "hospital admission necessary; \n active supportive treatment necessary",
-        "Moribund;" + "\n" + "fatal processes progressing rapidly",
+        "Severely disabled; hospital admission indicated although death not imminent",
+        "Very sick; hospital admission necessary; active supportive treatment necessary",
+        "Moribund; fatal processes progressing rapidly",
         "Death"
     ]
     
@@ -89,23 +89,24 @@ class KarnofskyViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! KarnofskySelectionViewController
+        if let vc = segue.destinationViewController as? KarnofskySelectionViewController {
         
-        if id == "conditionSegue"
-        {
-            vc.options = conditions
-            vc.button = 1
-            vc.selection = button1Type
-        }
-        else
-        {
-            vc.options = levelsOfFunctionalCapcity
-            vc.button = 2
-            vc.selection = button2Type
-        }
+            if id == "conditionSegue"
+            {
+                vc.options = conditions
+                vc.button = 1
+                vc.selection = button1Type
+            }
+            else
+            {
+                vc.options = levelsOfFunctionalCapcity
+                vc.button = 2
+                vc.selection = button2Type
+            }
         
-        vc.showFrom = vc.getShowFrom(self)
-        vc.showTo = vc.getShowTo(self)
+            vc.showFrom = vc.getShowFrom(self)
+            vc.showTo = vc.getShowTo(self)
+        }
     }
     
     func getScore() -> String {

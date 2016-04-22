@@ -84,9 +84,9 @@ class PalliativePrognosticIndexSelectionViewController: UIViewController, UITabl
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc = segue.destinationViewController as! PalliativePrognosticIndexViewController
-        
-        setButton(buttonLabel, vc: vc)
+        if let vc = segue.destinationViewController as? PalliativePrognosticIndexViewController {
+            setButton(buttonLabel, vc: vc)
+        }
         
     }
     
