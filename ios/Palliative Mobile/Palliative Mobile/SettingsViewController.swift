@@ -56,7 +56,7 @@ class SettingsViewController: UIViewController {
         // Stop activity indicator
         activityIndicator.hidden = true
         activityIndicator.stopAnimating()
-        activityLabel.text = "Update complete!"
+        activityLabel.text = "You are up to date!"
     }
     
     /*

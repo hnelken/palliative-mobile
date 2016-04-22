@@ -44,6 +44,50 @@ class KarnofskyViewController: UIViewController {
     
     var value = ["100%", "90%", "80%", "70%", "60%", "50%", "40%", "30%", "20%", "10%", "0%"]
     
+    private let parentID = 77
+    private var bookmarked: Bool = false
+    
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
+    @IBAction func backPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func navUpPressed(sender: AnyObject) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
+        
+        vc.pageID = parentID
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func bookmarkPressed(sender: AnyObject) {
+        
+        // Change bookmark status (visual and in DB)
+        if !bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            bookmarked = true
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
+        
+        db.commitBookmarkChanges(bookmarked, pageID: kKarnofskyPageID)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        bookmarked = db.isPageBookmarked(kKarnofskyPageID)
+        
+        // Set bookmark button view
+        if bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

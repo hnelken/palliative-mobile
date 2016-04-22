@@ -24,12 +24,10 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var textScrollView: UIScrollView!
     @IBOutlet weak var detailScrollView: UIScrollView!
     
-    var lastPage: ArticleDisplayViewController?
     var thisPage: [String : AnyObject]?
     var links: [[AnyObject]] = []
     var pageID: Int!
     
-    private var lastPageID: Int!
     private var parentID: Int!
     
     private enum ViewType {
@@ -156,6 +154,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
                 
                 viewType = .Text
                 currentView = textScrollView
+                textScrollView.hidden = false
                 detailScrollView.hidden = true
                 tableView.hidden = true
                 
@@ -166,6 +165,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             else {
                 viewType = .Links
                 currentView = tableView
+                tableView.hidden = false
                 textScrollView.hidden = true
                 detailScrollView.hidden = true
                 
@@ -177,9 +177,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
                 }
             }
         }
-        
-        //let contentArray: [String]? = thisPage![kPageContentKey] as? [String]
-        
         
         // Resize labels and scroll view
         titleLabel.sizeToFit()
@@ -226,7 +223,6 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
         
-        vc.lastPage = self
         vc.pageID = dstID
         
         self.navigationController?.pushViewController(vc, animated: true)

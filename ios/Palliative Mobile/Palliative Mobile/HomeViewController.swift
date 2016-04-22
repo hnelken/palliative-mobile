@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     var links: [String] = [
         "Rapid PC Assessment",
@@ -28,7 +28,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.separatorStyle = .None
+        searchText.delegate = self
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,7 +49,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLayoutSubviews() {
         navigationController?.navigationBarHidden = true
-        self.tableView.separatorStyle = .None
     }
 
     @IBAction func backToHomeSegue(segue: UIStoryboardSegue) { }
@@ -112,13 +114,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             destination = kCommonSymptomsPageID;
             segueID = kArticleSegueID
         case 4:
-            destination = kCareForFrailPageID
-            segueID = kArticleSegueID
+            segueID = kQuizSegueID
         case 5:
             segueID = kBookmarkSegueID
         default:
-            destination = kCareForFrailPageID;
-            segueID = kArticleSegueID
+            segueID = kQuizSegueID
         }
         
         if let id = segueID {
@@ -134,6 +134,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if let vc = segue.destinationViewController as? SearchViewController {
             vc.results = searchResults
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        if let query = textField.text {
+            if query != "" {
+                textField.resignFirstResponder()
+                searchResults = db.performSearch(query)
+                performSegueWithIdentifier(kShowSearchSegueID, sender: self)
+            }
+        }
+        return true
+    }
+    
+    func dismissKeyboard() {
+        searchText.resignFirstResponder()
     }
 }
 

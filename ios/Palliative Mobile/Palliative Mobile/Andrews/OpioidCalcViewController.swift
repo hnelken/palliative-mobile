@@ -121,6 +121,49 @@ class OpioidCalcViewController: UIViewController {
     
     var dosageLabel = ""
     
+    private let parentID = 225
+    private var bookmarked: Bool = false
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
+    @IBAction func backPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func navUpPressed(sender: AnyObject) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
+        
+        vc.pageID = parentID
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func bookmarkPressed(sender: AnyObject) {
+        
+        // Change bookmark status (visual and in DB)
+        if !bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            bookmarked = true
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
+        
+        db.commitBookmarkChanges(bookmarked, pageID: kOpioidPageID)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        bookmarked = db.isPageBookmarked(kOpioidPageID)
+        
+        // Set bookmark button view
+        if bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

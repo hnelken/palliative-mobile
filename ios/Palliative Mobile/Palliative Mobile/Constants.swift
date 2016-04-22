@@ -20,11 +20,10 @@ let kCommonSymptomsPageID = 169
 let kSeattlePageID = 19
 let kNewYorkPageID = 20
 let kKarnofskyPageID = 79
-let kAustrailiaPageID = 29
+let kAustraliaPageID = 29
 let kPrognosticPageID = 30
 let kPerformancePageID = 31
 let kECOGPageID = 36
-let kSAAGPageID = 305
 let kTrajectoryPageID = 67
 let kOpioidPageID = 597
 
@@ -39,10 +38,9 @@ let kPrognosticSegueID = "toPrognostic"
 let kPerformanceSegueID = "toPerformance"
 let kTrajectorySegueID = "toTrajectory"
 let kECOGSegueID = "toECOG"
-let kSAAGSegueID = "toSAAG"
 let kOpioidSegueID = "toOpioid"
 
-let kQuizSegueID = "toQuiz"
+let kQuizSegueID = "toILMS"
 let kHomeSegueID = "toHome"
 let kWikiSegueID = "toWiki"
 let kImageSegueID = "toImage"
@@ -112,7 +110,6 @@ var dbPath: String {
     return dbPath
 }
 
-
 public extension String {
     var NS: NSString { return (self as NSString) }
 }
@@ -128,7 +125,7 @@ func getSpecialPageSegue(dstID: Int) -> String? {
         segue = kNewYorkSegueID
     case kKarnofskyPageID:
         segue = kKarnofskySegueID
-    case kAustrailiaPageID:
+    case kAustraliaPageID:
         segue = kAustraliaSegueID
     case kPrognosticPageID:
         segue = kPrognosticSegueID
@@ -136,8 +133,6 @@ func getSpecialPageSegue(dstID: Int) -> String? {
         segue = kPerformanceSegueID
     case kECOGPageID:
         segue = kECOGSegueID
-//    case kSAAGPageID:
-//        segue = kSAAGSegueID
     case kOpioidPageID:
         segue = kOpioidSegueID
     case kTrajectoryPageID:
