@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OpioidCalcViewController: UIViewController {
+class OpioidCalcViewController: UIViewController, UITextFieldDelegate {
 
     // buttons for the calculator
     @IBOutlet weak var initialMedication: UIButton!
@@ -125,6 +125,7 @@ class OpioidCalcViewController: UIViewController {
     
     private let parentID = 225
     private var bookmarked: Bool = false
+    
     @IBOutlet weak var bookmarkButton: UIButton!
     
     @IBAction func backPressed(sender: AnyObject) {
@@ -178,6 +179,12 @@ class OpioidCalcViewController: UIViewController {
         getDosage.hidden = true
         initialDosage.hidden = true
         dosage.hidden = true
+        
+        // Add tap to dismiss keyboard
+        initialDosage.delegate = self
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func backToHomeSegue(segue:UIStoryboardSegue) {
@@ -305,14 +312,29 @@ class OpioidCalcViewController: UIViewController {
 //        }
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.text != "" && !(textField.text?.containsString("mg"))! {
+            textField.text = textField.text?.stringByAppendingString(" mg")
+        }
+    }
+    
+    func dismissKeyboard() {
+        initialDosage.resignFirstResponder()
+    }
+    
     func getNewDosage(dosageValue: Double) -> String {
         
         let initialMedicationNormalDosage : Double = getMedicationNormalDosage(button2)
         let newMedicationNormalDosage : Double = getMedicationNormalDosage(button3)
         
         let finalDosage = (dosageValue / initialMedicationNormalDosage) * newMedicationNormalDosage
+        let roundDosage = Double(round(1000 * finalDosage) / 1000)
         
-        return String(format:"%f", finalDosage)
+        return "\(roundDosage) mg"
     }
     
     func getMedicationNormalDosage(button : String) -> Double {
@@ -386,34 +408,3 @@ class OpioidCalcViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
