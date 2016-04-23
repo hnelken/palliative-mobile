@@ -79,16 +79,16 @@ class ImageViewController: UIViewController {
         }
         
         viewShowing = 0
-        typeLabel.text = "Terminal"
+        typeLabel.text = "Terminal Illness"
         imageView2.hidden = true
         imageView3.hidden = true
         imageView4.hidden = true
         
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: "rightSwipeHandler")
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: "rightSwipeHandler:")
         rightSwipe.direction = .Right
         rightSwipe.cancelsTouchesInView = false
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: "leftSwipeHandler")
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: "leftSwipeHandler:")
         leftSwipe.direction = .Left
         leftSwipe.cancelsTouchesInView = false
         
@@ -134,7 +134,7 @@ class ImageViewController: UIViewController {
             switch (viewShowing) {
             case 1:
                 flipView(imageView2, toView: imageView, dir: .TransitionFlipFromLeft)
-                typeLabel.text = "Terminal"
+                typeLabel.text = "Terminal Illness"
             case 2:
                 flipView(imageView3, toView: imageView2, dir: .TransitionFlipFromLeft)
                 typeLabel.text = "Frailty"
