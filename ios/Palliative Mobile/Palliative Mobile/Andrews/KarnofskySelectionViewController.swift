@@ -83,10 +83,9 @@ class KarnofskySelectionViewController: UIViewController, UITableViewDataSource,
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc = segue.destinationViewController as! KarnofskyViewController
-        
-        setButton(buttonLabel, vc: vc)
-        
+        if let vc = segue.destinationViewController as? KarnofskyViewController {
+            setButton(buttonLabel, vc: vc)
+        }
     }
     
     func setButton(newLabel: String, vc: KarnofskyViewController) {

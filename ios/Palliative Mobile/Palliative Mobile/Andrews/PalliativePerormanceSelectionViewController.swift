@@ -91,9 +91,9 @@ class PalliativePerormanceSelectionViewController: UIViewController, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let vc = segue.destinationViewController as! PalliativePerformanceCalculatorViewController
-        
-        setButton(buttonLabel, vc: vc)
+        if let vc = segue.destinationViewController as? PalliativePerformanceCalculatorViewController {
+            setButton(buttonLabel, vc: vc)
+        }
         
     }
     

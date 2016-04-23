@@ -14,37 +14,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var optedOut: Bool = false
     
+    // Installs the database if not already installed
     func createCopyOfDatabaseIfNeeded() {
         var success: Bool
         let fileManager = NSFileManager.defaultManager()
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true);
-        // Database filename can have extension db/sqlite.
-        let documentsDirectory = paths[0]
-        let appDBPath = documentsDirectory.NS.stringByAppendingPathComponent(kDBName)
         
-        success = fileManager.fileExistsAtPath(appDBPath)
+        // Check if the database is installed
+        success = fileManager.fileExistsAtPath(dbPath)
         if (success) {
             print("Database already exists in app's document")
             optedOut = db.getOptOutStatus()
             
+            // Not first launch, so upload
+            // page usage and get updates
             if !optedOut && !db.getFirstTimeStatus() {
                 web.pushPageUsage()
                 web.updatePages()
             }
-            
             return
         }
         
         do {
             // The writable database does not exist, so copy the default to the appropriate location.
             let defaultDBPath = NSBundle.mainBundle().resourcePath?.NS.stringByAppendingPathComponent(kDBName);
-            try fileManager.copyItemAtPath(defaultDBPath!, toPath: appDBPath)
+            try fileManager.copyItemAtPath(defaultDBPath!, toPath: dbPath)
             print("Successfully copied database from bundle to app's document")
+            
+            // Initialize the application and get updates
             db.updateVersion(kBaseDBVersion)
             db.setFirstTimeTrue()
             web.updatePages()
         }
         catch {
+            // Something went wrong
             print("Failed to create writable database file")
         }
     }
@@ -84,7 +86,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

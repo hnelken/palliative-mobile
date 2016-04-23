@@ -56,17 +56,7 @@ class SettingsViewController: UIViewController {
         // Stop activity indicator
         activityIndicator.hidden = true
         activityIndicator.stopAnimating()
-        activityLabel.text = "Update complete!"
+        activityLabel.text = "You are up to date!"
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -10,9 +10,51 @@ import UIKit
 
 class SeatleHeartViewController: UIViewController {
 
-    @IBOutlet weak var seatleHeartWeb: UIWebView!
+    private let url = "https://depts.washington.edu/shfm/iPhone/app.php"
+    private let parentID = 18
+    private var bookmarked: Bool = false
     
-    let url = "https://depts.washington.edu/shfm/iPhone/app.php"
+    @IBOutlet weak var seatleHeartWeb: UIWebView!
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
+    @IBAction func backPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func navUpPressed(sender: AnyObject) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
+        
+        vc.pageID = parentID
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func bookmarkPressed(sender: AnyObject) {
+        
+        // Change bookmark status (visual and in DB)
+        if !bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            bookmarked = true
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
+        
+        db.commitBookmarkChanges(bookmarked, pageID: kSeattlePageID)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        bookmarked = db.isPageBookmarked(kSeattlePageID)
+        
+        // Set bookmark button view
+        if bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +62,8 @@ class SeatleHeartViewController: UIViewController {
         let requestURL = NSURL(string:url)
         let request = NSURLRequest(URL: requestURL!)
         seatleHeartWeb.loadRequest(request)
+        seatleHeartWeb.scrollView.scrollEnabled = false
+        seatleHeartWeb.scrollView.bounces = false
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SurveyViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var certifications: [String] = specialties
     var practiceSettings: [String] = settings
@@ -43,6 +43,8 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.pickerView.hidden = true
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        self.practiceField.delegate = self
+        self.certField.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,21 +104,7 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // If not at ends or displaying post grad year, just show value as integer
         postGradLabel.text = "\(postGradText)\(Int(postGradSlider.value))"
     }
-    
-    @IBAction func certFieldTapped(sender: AnyObject) {
-        // Flip to picker for certifications
-        pickingCert = true
-        selection = certSelection
-        flipSurvey()
-    }
-    
-    @IBAction func practiceFieldTapped(sender: AnyObject) {
-        // Flip to picker for practice settings
-        pickingCert = false
-        selection = pracSelection
-        flipSurvey()
-    }
-    
+
     @IBAction func buttonPressed(sender: AnyObject) {
         // When the "Done/Submit" button is pressed,
         if picking {
@@ -225,5 +213,24 @@ class SurveyViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         db.commitUserInfo(device, age: age, postGrad: postGrad, years: years, cert: cert, prac: prac)
     }
     
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+       
+        // Recognize text field taps
+        if textField.isEqual(practiceField) {
+            // Flip to picker for practice settings
+            pickingCert = false
+            selection = pracSelection
+            flipSurvey()
+        }
+        else if textField.isEqual(certField) {
+            // Flip to picker for practice settings
+            pickingCert = true
+            selection = certSelection
+            flipSurvey()
+        }
+        
+        // Stop keyboard from popping up
+        return false
+    }
 
 }

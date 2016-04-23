@@ -57,6 +57,49 @@ class PalliativePrognosticIndexViewController: UIViewController {
     var button4 = "Dyspnea at rest"
     var button5 = "Delirium"
     
+    private let parentID = 77
+    private var bookmarked:Bool = false
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
+    @IBAction func backPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func navUpPressed(sender: AnyObject) {
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
+        
+        vc.pageID = parentID
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func bookmarkPressed(sender: AnyObject) {
+        
+        // Change bookmark status (visual and in DB)
+        if !bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+            bookmarked = true
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+            bookmarked = false
+        }
+        
+        db.commitBookmarkChanges(bookmarked, pageID: kPrognosticPageID)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        bookmarked = db.isPageBookmarked(kPrognosticPageID)
+        
+        // Set bookmark button view
+        if bookmarked {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-red"), forState: .Normal)
+        }
+        else {
+            bookmarkButton.setBackgroundImage(UIImage(named: "bookmark-white"), forState: .Normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -88,6 +131,10 @@ class PalliativePrognosticIndexViewController: UIViewController {
             score.numberOfLines = 0
             score.hidden = false
         }
+        else
+        {
+            score.hidden = true
+        }
     }
 
 
@@ -110,37 +157,41 @@ class PalliativePrognosticIndexViewController: UIViewController {
         
         let id = segue.identifier
         
-        let vc = segue.destinationViewController as! PalliativePrognosticIndexSelectionViewController
+        if let vc = segue.destinationViewController as? PalliativePrognosticIndexSelectionViewController {
         
-        if id == "palliativePerformanceScale"
-        {
-            vc.options = palliativePerformanceScaleOptions
-            vc.button = 1
-            vc.selection = button1Type
+            if id == "palliativePerformanceScale"
+            {
+                vc.options = palliativePerformanceScaleOptions
+                vc.button = 1
+                vc.selection = button1Type
+            }
+            else if id == "oralIntake"
+            {
+                vc.options = oralIntakeOptions
+                vc.button = 2
+                vc.selection = button2Type
+            }
+            else if id == "edema"
+            {
+                vc.options = edemaOptions
+                vc.button = 3
+                vc.selection = button3Type
+            }
+            else if id == "dyspneaAtRest"
+            {
+                vc.options = dyspneaAtRestOptions
+                vc.button = 4
+                vc.selection = button4Type
+            }
+            else if id == "delerium"
+            {
+                vc.options = deliriumOptions
+                vc.button = 5
+                vc.selection = button5Type
+            }
         }
-        else if id == "oralIntake"
-        {
-            vc.options = oralIntakeOptions
-            vc.button = 2
-            vc.selection = button2Type
-        }
-        else if id == "edema"
-        {
-            vc.options = edemaOptions
-            vc.button = 3
-            vc.selection = button3Type
-        }
-        else if id == "dyspneaAtRest"
-        {
-            vc.options = dyspneaAtRestOptions
-            vc.button = 4
-            vc.selection = button4Type
-        }
-        else if id == "delerium"
-        {
-            vc.options = deliriumOptions
-            vc.button = 5
-            vc.selection = button5Type
+        else {
+            // Going home
         }
         
     }

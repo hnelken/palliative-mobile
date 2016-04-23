@@ -63,8 +63,20 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         // Save designated bookmark page id
         nextPageID = bookmarks[indexPath.row][kLinkIDIndex] as! Int
         
-        // Transition to article view
-        performSegueWithIdentifier(kShowBookmarkSegueID, sender: self)
+        // Check if the page is special or a normal article
+        if specialPages.contains(nextPageID) {
+            let segueID = getSpecialPageSegue(nextPageID)
+            if let id = segueID {
+                performSegueWithIdentifier(id, sender: self)
+            }
+            else {
+                print("Unidentified special page")
+            }
+        }
+        else {
+            // Transition to article view
+            performSegueWithIdentifier(kShowBookmarkSegueID, sender: self)
+        }
     }
 
     // MARK: - Navigation
