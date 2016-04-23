@@ -108,9 +108,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80785472970000005" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="practiceFieldTapped:" destination="MNP-Xv-ere" eventType="editingDidBegin" id="x7P-ZL-XuK"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Z-7T-9rs">
                                                 <rect key="frame" x="7" y="0.0" width="530" height="24"/>
@@ -154,9 +151,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80785472970000005" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="certFieldTapped:" destination="MNP-Xv-ere" eventType="editingDidBegin" id="2yX-Uo-FD7"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of practice setting:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0k-Ni-72d">
                                                 <rect key="frame" x="7" y="286" width="530" height="24"/>

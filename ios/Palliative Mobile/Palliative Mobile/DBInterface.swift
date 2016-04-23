@@ -419,6 +419,7 @@ class DBInterface: NSObject {
         }
     }
     
+    // Gets the "version number" setting if it exists
     func getVersionNumber() -> Int {
         let database = FMDatabase(path: dbPath)
         database.open()

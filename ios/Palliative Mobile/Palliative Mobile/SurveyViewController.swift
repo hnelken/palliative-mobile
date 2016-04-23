@@ -104,21 +104,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         // If not at ends or displaying post grad year, just show value as integer
         postGradLabel.text = "\(postGradText)\(Int(postGradSlider.value))"
     }
-    
-    @IBAction func certFieldTapped(sender: AnyObject) {
-        // Flip to picker for certifications
-//        pickingCert = true
-//        selection = certSelection
-//        flipSurvey()
-    }
-    
-    @IBAction func practiceFieldTapped(sender: AnyObject) {
-        // Flip to picker for practice settings
-//        pickingCert = false
-//        selection = pracSelection
-//        flipSurvey()
-    }
-    
+
     @IBAction func buttonPressed(sender: AnyObject) {
         // When the "Done/Submit" button is pressed,
         if picking {
@@ -229,6 +215,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
        
+        // Recognize text field taps
         if textField.isEqual(practiceField) {
             // Flip to picker for practice settings
             pickingCert = false
@@ -242,6 +229,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             flipSurvey()
         }
         
+        // Stop keyboard from popping up
         return false
     }
 
