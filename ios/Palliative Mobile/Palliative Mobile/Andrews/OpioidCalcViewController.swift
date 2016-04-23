@@ -111,10 +111,12 @@ class OpioidCalcViewController: UIViewController {
         var po = 10.0
     }
     
+    // buttons which store the type of each button
     var button1Type = "Current Medication"
     var button2Type = "Dosage Type"
     var button3Type = "New Medication"
     
+    // buttons which store the election made for each button
     var button1 = "Current Medication"
     var button2 = "Dosage Type"
     var button3 = "New Medication"
@@ -231,6 +233,7 @@ class OpioidCalcViewController: UIViewController {
         }
     }
     
+    // fucntion for getting the options to choose from for the different medication types
     func getOptionsFromMedication() -> [String] {
         
         if button1 == medications[0]
@@ -316,6 +319,7 @@ class OpioidCalcViewController: UIViewController {
         
         let med = button
         
+        // if statements determine get the correcet value based of of the selected dosage type
         if button1 == medications[0]
         {
             if med == MorphineSulfate().dosageTypes[0]
