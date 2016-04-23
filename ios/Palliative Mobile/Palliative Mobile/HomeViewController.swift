@@ -64,7 +64,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    
     //
     // MARK: Table View Delegate/Data Source
     //
@@ -86,8 +85,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCellWithIdentifier(kHomeCellID, forIndexPath: indexPath)
         
+        // Customize the cell label and style
         cell.textLabel?.text = links[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
+        
+        // Color the background differently depending on the cell
         if indexPath.row == links.count - 2 || indexPath.row == links.count - 1 {
             cell.backgroundColor = UIColor.groupTableViewBackgroundColor()
             cell.contentView.backgroundColor = UIColor.groupTableViewBackgroundColor()
@@ -100,6 +102,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         var segueID: String?
         
+        // Segue to selected section of the app from the home view
         switch indexPath.row {
         case 0:
             destination = kRapidPCPageID;
@@ -127,19 +130,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Pass on page ID or search results depending on destination
         if let vc = segue.destinationViewController as? ArticleDisplayViewController {
             // Pass on page ID
             vc.pageID = destination
         }
         else if let vc = segue.destinationViewController as? SearchViewController {
+            // Pass on search results
             vc.results = searchResults
         }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
+        // If search field is not empty
         if let query = textField.text {
             if query != "" {
+                // Perform the search
                 textField.resignFirstResponder()
                 searchResults = db.performSearch(query)
                 performSegueWithIdentifier(kShowSearchSegueID, sender: self)
@@ -149,6 +156,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func dismissKeyboard() {
+        // Dismisses on tap gesture
         searchText.resignFirstResponder()
     }
 }

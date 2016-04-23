@@ -84,11 +84,11 @@ class ImageViewController: UIViewController {
         imageView3.hidden = true
         imageView4.hidden = true
         
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ImageViewController.rightSwipeHandler(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: "rightSwipeHandler")
         rightSwipe.direction = .Right
         rightSwipe.cancelsTouchesInView = false
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(ImageViewController.leftSwipeHandler(_:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: "leftSwipeHandler")
         leftSwipe.direction = .Left
         leftSwipe.cancelsTouchesInView = false
         
