@@ -36,9 +36,11 @@ class KarnofskyViewController: UIViewController {
         "Death"
     ]
     
+    // these will keep track of the original titles for the buttons on the calculator
     var button1Type = "Condition"
     var button2Type = "Level of Functional Capacity"
     
+    // these will hold the values for the selection
     var button1 = "Condition"
     var button2 = "level of Functional Capacity"
     
