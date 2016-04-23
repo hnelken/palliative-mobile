@@ -11,7 +11,15 @@ import UIKit
 class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
 
     var pageIndex: Int = 0
-    var images: [String?] = [nil, "artshot.png", "bookshot.png", "searchshot.png", nil]
+    var texts: [String?] = [ nil,
+        "Use links to move from page to page",
+        "Bookmark a page to make it easier to access",
+        "Bookmark any page, even our special calculators!",
+        "Any text you see can be searched for",
+        "Don't forget to check the detail text where available!",
+        nil
+    ]
+    var images: [String?] = [nil, "links-tut", "bookmark-tut.png", "calc-tut.png", "search-tut.png", "detail-tut", nil]
     var pageVC: UIPageViewController!
     
     override func viewDidLoad() {
@@ -105,6 +113,7 @@ class RootPageViewController: UIViewController, UIPageViewControllerDataSource {
         // Customize the page
         controller.rootController = self
         controller.imageName = images[index]
+        controller.labelText = texts[index]
         controller.pageIndex = index
         return controller
     }
