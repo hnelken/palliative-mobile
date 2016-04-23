@@ -11,15 +11,20 @@ import UIKit
 class PageContentController: UIViewController {
     
     var pageIndex: Int!
+    var labelText: String!
     var imageName: String!
     var rootController: RootPageViewController!
 
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let text = labelText {
+            label.text = text
+        }
         if let image = imageName {
             imageView.image = UIImage(named: image)
         }

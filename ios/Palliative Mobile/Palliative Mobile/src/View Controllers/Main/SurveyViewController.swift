@@ -112,8 +112,11 @@ class SurveyViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             flipSurvey()
         }
         else {
-            // Or segue to home page and commit submission
-            performSegueWithIdentifier(kFinishSurveySegueID, sender: self)
+            
+            if certField.text != "" && practiceField.text != "" {
+                // Or segue to home page and commit submission
+                performSegueWithIdentifier(kFinishSurveySegueID, sender: self)
+            }
         }
     }
     
