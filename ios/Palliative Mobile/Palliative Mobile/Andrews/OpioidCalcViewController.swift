@@ -178,6 +178,7 @@ class OpioidCalcViewController: UIViewController, UITextFieldDelegate {
         initialDosage.hidden = true
         dosage.hidden = true
         
+        // Add tap to dismiss keyboard
         initialDosage.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
@@ -312,6 +313,12 @@ class OpioidCalcViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.text != "" && !(textField.text?.containsString("mg"))! {
+            textField.text = textField.text?.stringByAppendingString(" mg")
+        }
+    }
+    
     func dismissKeyboard() {
         initialDosage.resignFirstResponder()
     }
@@ -322,8 +329,9 @@ class OpioidCalcViewController: UIViewController, UITextFieldDelegate {
         let newMedicationNormalDosage : Double = getMedicationNormalDosage(button3)
         
         let finalDosage = (dosageValue / initialMedicationNormalDosage) * newMedicationNormalDosage
+        let roundDosage = Double(round(1000 * finalDosage) / 1000)
         
-        return String(format:"%f", finalDosage)
+        return "\(roundDosage) mg"
     }
     
     func getMedicationNormalDosage(button : String) -> Double {
