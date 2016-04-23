@@ -148,27 +148,36 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             }
             
             // Set first view
+            
+            // If there arent any links
             if links.count == 0 {
+                
+                // Disable the links tab
                 segmentControl.setEnabled(false, forSegmentAtIndex: 0)
                 segmentControl.selectedSegmentIndex = 1
                 
+                // Set text tab as selected and showing
                 viewType = .Text
                 currentView = textScrollView
                 textScrollView.hidden = false
                 detailScrollView.hidden = true
                 tableView.hidden = true
                 
+                // Disable detail tab if need be
                 if (detailText!.isEmpty) {
                     segmentControl.setEnabled(false, forSegmentAtIndex: 2)
                 }
             }
-            else {
+            else {  // There are links
+                
+                // Display links tab
                 viewType = .Links
                 currentView = tableView
                 tableView.hidden = false
                 textScrollView.hidden = true
                 detailScrollView.hidden = true
                 
+                // Disable other tabs if need be
                 if (normalText!.isEmpty) {
                     segmentControl.setEnabled(false, forSegmentAtIndex: 1)
                 }
@@ -188,6 +197,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         var nextType: ViewType?
         var nextView: UIView?
         
+        // Set next tab from selection
         switch (sender.selectedSegmentIndex) {
         case 0: nextType = .Links
         case 1: nextType = .Text
@@ -195,6 +205,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         default: break
         }
         
+        // Double check that the tab selection is valid
         if nextType == .Links && links.count > 0 {
             nextView = tableView
         }
@@ -205,6 +216,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
             nextView = textScrollView
         }
         
+        // Flip the view
         if let toView = nextView {
             UIView.transitionFromView(
                 currentView!,
@@ -218,7 +230,7 @@ class ArticleDisplayViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    // Performs a segue to an article page
+    // Performs a segue to another article page
     private func segueToNormalPage(dstID: Int) {
         
         let vc = storyboard?.instantiateViewControllerWithIdentifier("articleViewController") as! ArticleDisplayViewController
