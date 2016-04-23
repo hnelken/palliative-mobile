@@ -13,8 +13,9 @@ class AKPSViewController: UIViewController {
     private let parentID = 77
     private var bookmarked: Bool = false
     
+    // the title for the calc
     @IBOutlet weak var calcTitle: UILabel!
-    
+
     @IBOutlet weak var bookmarkButton: UIButton!
     
     @IBAction func backPressed(sender: AnyObject) {

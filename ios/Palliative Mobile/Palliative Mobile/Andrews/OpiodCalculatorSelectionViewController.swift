@@ -10,15 +10,13 @@ import UIKit
 
 class OpiodCalculatorSelectionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // the label which is the title of the table
     @IBOutlet weak var selectionLabel: UILabel!
 
-    var options = []
-    
-    var button = 0
-    
-    var buttonLabel = ""
-    
-    var selection = ""
+    var options = []        // the options to choose from
+    var button = 0          // the button whcih is being selected for
+    var buttonLabel = ""    // the label that will the button on the home calc page will be set too
+    var selection = ""      // the title for this table selection
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +85,7 @@ class OpiodCalculatorSelectionViewController: UIViewController, UITableViewDeleg
         
     }
     
+    // this function is for setting the button on the original calc page to show your selection
     func setButton(newLabel: String, vc: OpioidCalcViewController) {
         
         if button == 1

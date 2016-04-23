@@ -10,14 +10,15 @@ import UIKit
 
 class KarnofskySelectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // the title for the selection table
     @IBOutlet weak var selectionLabel: UILabel!
-
-    var options = []
-    var button = 0
-    var buttonLabel = ""
-    var showFrom = 0
-    var showTo = 0
-    var selection = ""
+    
+    var options = []            // the options that can be selected from
+    var button = 0              // the button being selected
+    var buttonLabel = ""        // the lebel that will be set for the button on the original calc page
+    var showFrom = 0            // where to start showing the options from the list
+    var showTo = 0              // where to finsih shwoing the choices from the list
+    var selection = ""          // the title of the selection
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +89,7 @@ class KarnofskySelectionViewController: UIViewController, UITableViewDataSource,
         }
     }
     
+    // sets the button lablels in the home calculator page so users can see their previous selecitons
     func setButton(newLabel: String, vc: KarnofskyViewController) {
         
         if button == 1
